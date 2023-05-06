@@ -10,7 +10,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/common_title_back_fav"
+        android:id="@+id/commonTitleBackFav"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:elevation="1dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <FrameLayout
-            android:id="@+id/common_title_back_fav_color"
+            android:id="@+id/commonTitleBackFavColor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="?attr/colorPrimary"
@@ -38,7 +38,7 @@
                 android:layout_height="56dp">
 
                 <ImageButton
-                    android:id="@+id/back_btn_fav"
+                    android:id="@+id/backBtnFav"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
@@ -49,7 +49,7 @@
                     android:src="@drawable/ic_arrow_back_whit" />
 
                 <TextView
-                    android:id="@+id/favorite_set_title"
+                    android:id="@+id/favoriteSetTitle"
                     android:layout_width="wrap_content"
                     android:layout_marginStart="70dp"
                     android:alpha="0.9"
@@ -67,7 +67,7 @@
     </FrameLayout>
 
     <ScrollView
-        android:id="@+id/fav_set_scroll"
+        android:id="@+id/favSetScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="0dp">
@@ -78,7 +78,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/favorite_set_title_downstate"
+                android:id="@+id/favoriteSetTitleDownstate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:elevation="0dp"
@@ -113,7 +113,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/molar_mass_check"
+                    android:id="@+id/molarMassCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -144,7 +144,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/phase_check"
+                    android:id="@+id/phaseCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -204,7 +204,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/density_check"
+                    android:id="@+id/densityCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -240,7 +240,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/kelvin_btn"
+                    android:id="@+id/kelvinBtn"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
@@ -260,7 +260,7 @@
                     android:textSize="14sp" />
 
                 <Button
-                    android:id="@+id/celsius_btn"
+                    android:id="@+id/celsiusBtn"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
@@ -277,7 +277,7 @@
                     android:textSize="14sp" />
 
                 <Button
-                    android:id="@+id/fahrenheit_btn"
+                    android:id="@+id/fahrenheitbtn"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
@@ -314,7 +314,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/boiling_check"
+                    android:id="@+id/boilingCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -346,7 +346,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/melting_check"
+                    android:id="@+id/meltingCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -385,7 +385,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/atomic_radius_empirical_check"
+                    android:id="@+id/atomicRadiusEmpiricalCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -416,7 +416,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/atomic_radius_calculated_check"
+                    android:id="@+id/atomicRadiusCalculatedCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -447,7 +447,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/covalent_radius_check"
+                    android:id="@+id/covalentRadiusCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -478,7 +478,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/van_der_waals_radius_check"
+                    android:id="@+id/vanDerWaalsRadiusCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -517,7 +517,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/fusion_heat_check"
+                    android:id="@+id/fusionHeatCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -548,7 +548,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/specific_heat_check"
+                    android:id="@+id/specificHeatCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -579,7 +579,7 @@
                 android:foreground="@drawable/d_ripple">
 
                 <CheckBox
-                    android:id="@+id/vaporization_heat_check"
+                    android:id="@+id/vaporizationHeatCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"

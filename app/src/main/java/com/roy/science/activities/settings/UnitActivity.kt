@@ -10,12 +10,10 @@ import com.roy.science.R
 import com.roy.science.activities.BaseActivity
 import com.roy.science.preferences.TemperatureUnits
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.*
-import kotlinx.android.synthetic.main.activity_ph.*
 import kotlinx.android.synthetic.main.activity_unit.*
-import kotlinx.android.synthetic.main.activity_unit.celsius_btn
-import kotlinx.android.synthetic.main.activity_unit.fahrenheit_btn
-import kotlinx.android.synthetic.main.activity_unit.kelvin_btn
+import kotlinx.android.synthetic.main.activity_unit.celsiusBtn
+import kotlinx.android.synthetic.main.activity_unit.fahrenheitbtn
+import kotlinx.android.synthetic.main.activity_unit.kelvinBtn
 
 
 class UnitActivity : BaseActivity()  {
@@ -69,37 +67,37 @@ class UnitActivity : BaseActivity()  {
         val tempPreference = TemperatureUnits(this)
         val tempPrefValue = tempPreference.getValue()
         if (tempPrefValue == "kelvin") {
-            kelvin_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            celsius_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheit_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
         }
         if (tempPrefValue == "celsius") {
-            kelvin_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsius_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            fahrenheit_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
         }
         if (tempPrefValue == "fahrenheit") {
-            kelvin_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsius_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheit_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
         }
-        kelvin_btn.setOnClickListener {
+        kelvinBtn.setOnClickListener {
             tempPreference.setValue("kelvin")
-            kelvin_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            celsius_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheit_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
         }
-        celsius_btn.setOnClickListener {
+        celsiusBtn.setOnClickListener {
             tempPreference.setValue("celsius")
-            kelvin_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsius_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            fahrenheit_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
         }
-        fahrenheit_btn.setOnClickListener {
+        fahrenheitbtn.setOnClickListener {
             tempPreference.setValue("fahrenheit")
-            kelvin_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsius_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheit_btn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
         }
     }
 

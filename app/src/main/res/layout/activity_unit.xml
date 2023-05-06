@@ -56,7 +56,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/kelvin_btn"
+                        android:id="@+id/kelvinBtn"
                         style="@style/Widget.AppCompat.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
@@ -76,7 +76,7 @@
                         android:textSize="14sp" />
 
                     <Button
-                        android:id="@+id/celsius_btn"
+                        android:id="@+id/celsiusBtn"
                         style="@style/Widget.AppCompat.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
@@ -93,7 +93,7 @@
                         android:textSize="14sp" />
 
                     <Button
-                        android:id="@+id/fahrenheit_btn"
+                        android:id="@+id/fahrenheitbtn"
                         style="@style/Widget.AppCompat.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
