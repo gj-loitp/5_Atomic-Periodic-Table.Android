@@ -32,10 +32,10 @@ class ShortCommandWidget : AppWidgetProvider() {
             remoteViews.setOnClickPendingIntent(
                 R.id.widget_search_bar,
                 PendingIntent.getActivity(
-                    context,
-                    0,
-                    Intent(context, MainActivity::class.java),
-                    PendingIntent.FLAG_IMMUTABLE
+                    /* context = */ context,
+                    /* requestCode = */ 0,
+                    /* intent = */ Intent(context, MainActivity::class.java),
+                    /* flags = */ PendingIntent.FLAG_IMMUTABLE
                 )
             )
 
@@ -50,17 +50,5 @@ class ShortCommandWidget : AppWidgetProvider() {
 
     override fun onDisabled(context: Context) {
         // Enter relevant functionality for when the last widget is disabled
-    }
-}
-
-internal fun updateAppWidget(
-    context: Context,
-    appWidgetManager: AppWidgetManager,
-    appWidgetId: Int
-) {
-
-    val widgetIds = appWidgetManager.getAppWidgetIds((ComponentName(context, Short::class.java)))
-    for (appWidgetId in widgetIds) {
-        val views = RemoteViews(context.packageName, R.layout.short_command_widget)
     }
 }
