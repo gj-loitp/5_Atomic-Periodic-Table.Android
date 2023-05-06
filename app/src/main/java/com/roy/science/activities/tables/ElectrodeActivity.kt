@@ -19,7 +19,7 @@ import com.roy.science.model.Series
 import com.roy.science.model.SeriesModel
 import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
-import kotlinx.android.synthetic.main.activity_dictionary.search_btn
+import kotlinx.android.synthetic.main.activity_dictionary.searchBtn
 import kotlinx.android.synthetic.main.activity_dictionary.title_box
 import kotlinx.android.synthetic.main.activity_electrode.*
 import java.util.*
@@ -119,7 +119,7 @@ class ElectrodeActivity : BaseActivity() {
     }
 
     private fun clickSearch() {
-        search_btn.setOnClickListener {
+        searchBtn.setOnClickListener {
             Utils.fadeInAnim(search_bar_ele, 150)
             Utils.fadeOutAnim(title_box, 1)
 

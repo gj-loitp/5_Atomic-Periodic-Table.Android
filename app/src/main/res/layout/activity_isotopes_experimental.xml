@@ -117,7 +117,7 @@
                         android:src="@drawable/ic_arrow_back_whit" />
 
                     <ImageButton
-                        android:id="@+id/search_btn"
+                        android:id="@+id/searchBtn"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -163,7 +163,7 @@
                         app:fabSize="auto" />
 
                     <ImageButton
-                        android:id="@+id/close_iso_search"
+                        android:id="@+id/closeIsoSearch"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -183,7 +183,7 @@
                         android:elevation="0dp">
 
                         <EditText
-                            android:id="@+id/edit_iso"
+                            android:id="@+id/editIso"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"

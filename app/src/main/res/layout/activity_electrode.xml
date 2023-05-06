@@ -94,7 +94,7 @@
                         android:src="@drawable/ic_arrow_back_whit" />
 
                     <ImageButton
-                        android:id="@+id/search_btn"
+                        android:id="@+id/searchBtn"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"

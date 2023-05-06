@@ -59,7 +59,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
         val adapter = IsotopeAdapter(elements, this, this)
         recyclerView.adapter = adapter
 
-        edit_iso.addTextChangedListener(object : TextWatcher {
+        editIso.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable) { filter(s.toString(), elements, recyclerView) }
@@ -136,15 +136,15 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
     }
 
     private fun clickSearch() {
-        search_btn.setOnClickListener {
+        searchBtn.setOnClickListener {
             Utils.fadeInAnim(search_bar_iso, 300)
             Utils.fadeOutAnim(title_box, 300)
 
-            edit_iso.requestFocus()
+            editIso.requestFocus()
             val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.showSoftInput(edit_iso, InputMethodManager.SHOW_IMPLICIT)
+            imm.showSoftInput(editIso, InputMethodManager.SHOW_IMPLICIT)
         }
-        close_iso_search.setOnClickListener {
+        closeIsoSearch.setOnClickListener {
             Utils.fadeOutAnim(search_bar_iso, 300)
             Utils.fadeInAnim(title_box, 300)
 

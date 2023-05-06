@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/view_dic"
+        android:id="@+id/viewDic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/backgroundColor"
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toStartOf="parent">
 
         <LinearLayout
-            android:id="@+id/empty_search_box_dic"
+            android:id="@+id/emptySearchBoxDic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="56dp"
@@ -56,7 +56,7 @@
         </LinearLayout>
 
         <FrameLayout
-            android:id="@+id/common_title_back_dic"
+            android:id="@+id/commonTitleBackDic"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="?attr/colorSurface"
@@ -95,7 +95,7 @@
                         android:src="@drawable/ic_arrow_back_whit" />
 
                     <ImageButton
-                        android:id="@+id/search_btn"
+                        android:id="@+id/searchBtn"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -134,7 +134,7 @@
                         android:alpha="0.5" />
 
                     <ImageButton
-                        android:id="@+id/close_iso_search"
+                        android:id="@+id/closeIsoSearch"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -154,7 +154,7 @@
                         android:elevation="0dp">
 
                         <EditText
-                            android:id="@+id/edit_iso"
+                            android:id="@+id/editIso"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
@@ -183,7 +183,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/clear_btn"
+                            android:id="@+id/clearBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_marginStart="18dp"
@@ -202,7 +202,7 @@
                             android:textColor="?attr/colorOnSecondaryContainer" />
 
                         <Button
-                            android:id="@+id/chemistry_btn"
+                            android:id="@+id/chemistryBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_marginStart="18dp"
@@ -219,7 +219,7 @@
                             android:textColor="?attr/colorOnSecondaryContainer" />
 
                         <Button
-                            android:id="@+id/physics_btn"
+                            android:id="@+id/physicsBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_marginStart="9dp"
@@ -236,7 +236,7 @@
                             android:textColor="?attr/colorOnSecondaryContainer" />
 
                         <Button
-                            android:id="@+id/math_btn"
+                            android:id="@+id/mathBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_marginStart="9dp"
@@ -254,7 +254,7 @@
                             android:textColor="?attr/colorOnSecondaryContainer" />
 
                         <Button
-                            android:id="@+id/reactions_btn"
+                            android:id="@+id/reactionsBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_marginStart="9dp"
@@ -279,7 +279,7 @@
         </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id='@+id/rc_view'
+            android:id='@+id/rcView'
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="?attr/backgroundColor"
