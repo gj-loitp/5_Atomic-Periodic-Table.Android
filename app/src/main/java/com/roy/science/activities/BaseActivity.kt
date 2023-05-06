@@ -1,11 +1,8 @@
 package com.roy.science.activities
 
-import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import androidx.appcompat.app.AppCompatActivity
-import com.roy.science.utils.Pasteur
-
 
 abstract class BaseActivity : AppCompatActivity(), View.OnApplyWindowInsetsListener {
     companion object {
@@ -13,10 +10,6 @@ abstract class BaseActivity : AppCompatActivity(), View.OnApplyWindowInsetsListe
     }
 
     private var systemUiConfigured = false
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onStart() {
         super.onStart()
@@ -28,11 +21,21 @@ abstract class BaseActivity : AppCompatActivity(), View.OnApplyWindowInsetsListe
         }
     }
 
-    open fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) = Unit
+    open fun onApplySystemInsets(
+        top: Int,
+        bottom: Int,
+        left: Int,
+        right: Int
+    ) = Unit
 
     override fun onApplyWindowInsets(v: View, insets: WindowInsets): WindowInsets {
-        Pasteur.info(TAG, "height: ${insets.systemWindowInsetBottom}")
-        onApplySystemInsets(insets.systemWindowInsetTop, insets.systemWindowInsetBottom, insets.systemWindowInsetLeft, insets.systemWindowInsetRight)
+//        Pasteur.info(TAG, "height: ${insets.systemWindowInsetBottom}")
+        onApplySystemInsets(
+            insets.systemWindowInsetTop,
+            insets.systemWindowInsetBottom,
+            insets.systemWindowInsetLeft,
+            insets.systemWindowInsetRight
+        )
         return insets.consumeSystemWindowInsets()
     }
 }

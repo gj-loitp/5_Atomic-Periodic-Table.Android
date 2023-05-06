@@ -6,19 +6,23 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.roy.science.R
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_calculator.*
+import kotlinx.android.synthetic.main.activity_calculator.backBtn
+import kotlinx.android.synthetic.main.activity_calculator.editElement1
+import kotlinx.android.synthetic.main.activity_calculator.edit_number_1
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStream
-
 
 class CalculatorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupViews()
+    }
 
+    private fun setupViews() {
         val themePreference = ThemePreference(this)
-        var themePrefValue = themePreference.getValue()
+        val themePrefValue = themePreference.getValue()
         if (themePrefValue == 0) {
             setTheme(R.style.AppTheme)
         }
@@ -32,11 +36,10 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         initUi()
-
     }
 
     private fun initUi() {
-        edit_element_1.setOnKeyListener { _, keyCode, event ->
+        editElement1.setOnKeyListener { _, keyCode, event ->
             if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
                 onClickSearch()
                 return@setOnKeyListener true
@@ -45,26 +48,26 @@ class CalculatorActivity : AppCompatActivity() {
         }
     }
 
-    fun onClickSearch() {
-
+    private fun onClickSearch() {
         val mArray = resources.getStringArray(R.array.calcArray)
-        val text = edit_element_1.text.toString()
+        val text = editElement1.text.toString()
 
         for (i in 0 until 2) {
-            var jsonstring : String? = null
-            if (text == mArray.get(i).toString()) {
+            var jsonstring: String?
+            if (text == mArray[i].toString()) {
 
                 if (text == "H") {
                     val ext = ".json"
-                    val ElementJson: String? = "1$ext"
+                    val elementJson = "1$ext"
 
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
+                    val inputStream: InputStream = assets.open(elementJson)
                     jsonstring = inputStream.bufferedReader().use { it.readText() }
                     val jsonArray = JSONArray(jsonstring)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
                     val elementAtomicWeight1 = jsonObject.optString("element_atomicmass", "---")
 
-                    val final = elementAtomicWeight1.toInt()*(edit_number_1.text.toString().toInt())
+                    val final =
+                        elementAtomicWeight1.toInt() * (edit_number_1.text.toString().toInt())
 
                     Toast.makeText(this, final, Toast.LENGTH_SHORT).show()
                 }
@@ -73,6 +76,3 @@ class CalculatorActivity : AppCompatActivity() {
         }
     }
 }
-
-
-
