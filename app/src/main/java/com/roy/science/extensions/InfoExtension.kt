@@ -52,9 +52,9 @@ import kotlinx.android.synthetic.main.d_electromagnetic.element_electrical_type
 import kotlinx.android.synthetic.main.d_electromagnetic.element_magnetic_type
 import kotlinx.android.synthetic.main.d_electromagnetic.elementResistivity
 import kotlinx.android.synthetic.main.d_electromagnetic.element_superconducting_point
-import kotlinx.android.synthetic.main.d_nuclear.isotopes_frame
-import kotlinx.android.synthetic.main.d_nuclear.neutron_cross_sectional_text
-import kotlinx.android.synthetic.main.d_nuclear.radioactive_text
+import kotlinx.android.synthetic.main.d_nuclear.isotopesFrame
+import kotlinx.android.synthetic.main.d_nuclear.neutronCrossSectionalText
+import kotlinx.android.synthetic.main.d_nuclear.radioactiveText
 import kotlinx.android.synthetic.main.d_overview.descriptionName
 import kotlinx.android.synthetic.main.d_overview.dscBtn
 import kotlinx.android.synthetic.main.d_overview.electronsEl
@@ -71,7 +71,7 @@ import kotlinx.android.synthetic.main.d_properties.element_atomic_weight
 import kotlinx.android.synthetic.main.d_properties.element_block
 import kotlinx.android.synthetic.main.d_properties.element_density
 import kotlinx.android.synthetic.main.d_properties.element_electronegativty
-import kotlinx.android.synthetic.main.d_properties.element_shells_electrons
+import kotlinx.android.synthetic.main.d_properties.elementShellsElectrons
 import kotlinx.android.synthetic.main.d_properties.model_view
 import kotlinx.android.synthetic.main.d_properties.spImg
 import kotlinx.android.synthetic.main.d_properties.spOffline
@@ -290,7 +290,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             elementName.text = element
             electronsEl.text = elementElectrons
             element_year.text = elementYear
-            element_shells_electrons.text = elementShellElectrons
+            elementShellsElectrons.text = elementShellElectrons
             element_discovered_by.text = elementDiscoveredBy
             element_electrons.text = elementElectrons
             element_protons.text = elementProtons
@@ -310,9 +310,9 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             element_appearance.text = elementAppearance
 
             //Nuclear Properties
-            radioactive_text.text = isRadioactive
-            neutron_cross_sectional_text.text = neutronCrossSection
-            isotopes_frame.setOnClickListener {
+            radioactiveText.text = isRadioactive
+            neutronCrossSectionalText.text = neutronCrossSection
+            isotopesFrame.setOnClickListener {
                 val isoPreference = ElementSendAndLoad(this)
                 isoPreference.setValue(element.lowercase(Locale.getDefault())) //Send element number
                 val isoSend = sendIso(this)

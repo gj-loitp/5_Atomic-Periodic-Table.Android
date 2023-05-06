@@ -50,7 +50,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/radioactive_text"
+            android:id="@+id/radioactiveText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -71,7 +71,7 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <FrameLayout
-            android:id="@+id/isotopes_frame"
+            android:id="@+id/isotopesFrame"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="true"
@@ -142,7 +142,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/neutron_cross_sectional_text"
+            android:id="@+id/neutronCrossSectionalText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
