@@ -1,8 +1,12 @@
 package com.roy.science.model
 
-data class Element(val element: String,
-                   val short: String,
-                   val number: Int,
-                   val electro: Double,
-                   val isotopes: Int)
+import androidx.annotation.Keep
 
+@Keep
+data class Element(
+    val element: String,
+    val short: String,
+    val number: Int,
+    val electro: Double,
+    val isotopes: Int,
+)
