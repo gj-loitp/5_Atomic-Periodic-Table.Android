@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toStartOf="parent">
 
         <LinearLayout
-            android:id="@+id/empty_search_box_iso"
+            android:id="@+id/emptySearchBoxIso"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="56dp"
@@ -56,7 +56,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/filter_background"
+            android:id="@+id/filterBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="true"
@@ -65,7 +65,7 @@
             android:visibility="gone" />
 
         <include
-            android:id="@+id/iso_filter_box"
+            android:id="@+id/isoFilterBox"
             layout="@layout/filter_view_iso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -143,13 +143,13 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:id="@+id/search_bar_iso"
+                    android:id="@+id/searchBarIso"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:visibility="gone">
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/filter_btn2"
+                        android:id="@+id/filterBtn2"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical|end"
@@ -203,7 +203,7 @@
         </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id='@+id/r_view'
+            android:id='@+id/rView'
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="?attr/backgroundColor"
@@ -218,7 +218,7 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/background_i2"
+        android:id="@+id/backgroundI2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.6"
@@ -226,7 +226,7 @@
         android:visibility="gone" />
 
     <include
-        android:id="@+id/panel_info"
+        android:id="@+id/panelInfo"
         layout="@layout/panel_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -237,7 +237,7 @@
 
     <include
         layout="@layout/isotope_panel"
-        android:id="@+id/slid_panel"
+        android:id="@+id/slidPanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="24dp"

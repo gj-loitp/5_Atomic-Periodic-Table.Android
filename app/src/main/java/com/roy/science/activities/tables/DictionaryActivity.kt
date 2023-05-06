@@ -40,7 +40,7 @@ import kotlinx.android.synthetic.main.activity_dictionary.mathBtn
 import kotlinx.android.synthetic.main.activity_dictionary.physicsBtn
 import kotlinx.android.synthetic.main.activity_dictionary.rcView
 import kotlinx.android.synthetic.main.activity_dictionary.reactionsBtn
-import kotlinx.android.synthetic.main.activity_dictionary.search_bar_iso
+import kotlinx.android.synthetic.main.activity_dictionary.searchBarIso
 import kotlinx.android.synthetic.main.activity_dictionary.searchBtn
 import kotlinx.android.synthetic.main.activity_dictionary.titleBox
 import kotlinx.android.synthetic.main.activity_dictionary.viewDic
@@ -237,7 +237,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
 
     private fun clickSearch() {
         searchBtn.setOnClickListener {
-            Utils.fadeInAnim(search_bar_iso, 150)
+            Utils.fadeInAnim(searchBarIso, 150)
             Utils.fadeOutAnim(titleBox, 1)
 
             editIso.requestFocus()
@@ -246,7 +246,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
             imm.showSoftInput(editIso, InputMethodManager.SHOW_IMPLICIT)
         }
         closeIsoSearch.setOnClickListener {
-            Utils.fadeOutAnim(search_bar_iso, 1)
+            Utils.fadeOutAnim(searchBarIso, 1)
 
             val delayClose = Handler()
             delayClose.postDelayed({

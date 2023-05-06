@@ -23,7 +23,7 @@
             android:alpha="0.11"/>
 
         <TextView
-            android:id="@+id/iso_alphabet_btn"
+            android:id="@+id/isoAlphabetBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -51,7 +51,7 @@
             android:alpha="0.11"/>
 
         <TextView
-            android:id="@+id/iso_element_numb_btn"
+            android:id="@+id/isoElementNumbBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="18dp"

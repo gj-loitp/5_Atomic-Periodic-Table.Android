@@ -122,7 +122,7 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:id="@+id/search_bar_iso"
+                    android:id="@+id/searchBarIso"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:visibility="gone">
