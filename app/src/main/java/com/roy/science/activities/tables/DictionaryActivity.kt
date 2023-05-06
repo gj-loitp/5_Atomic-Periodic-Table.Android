@@ -33,10 +33,6 @@ import kotlinx.android.synthetic.main.activity_dictionary.edit_iso
 import kotlinx.android.synthetic.main.activity_dictionary.search_bar_iso
 import kotlinx.android.synthetic.main.activity_dictionary.search_btn
 import kotlinx.android.synthetic.main.activity_dictionary.title_box
-import kotlinx.android.synthetic.main.activity_electrode.*
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.*
-import kotlinx.android.synthetic.main.activity_ph.*
-import kotlinx.android.synthetic.main.isotope_panel.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -71,7 +67,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
 
         val dictionaryPreference = DictionaryPreferences(this)
         view_dic.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-        back_btn_d.setOnClickListener {
+        backBtnD.setOnClickListener {
             this.onBackPressed()
         }
     }
