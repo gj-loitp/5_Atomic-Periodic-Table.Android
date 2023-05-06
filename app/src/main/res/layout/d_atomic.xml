@@ -70,7 +70,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/electron_config_text"
+            android:id="@+id/electronConfigText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -105,7 +105,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/ion_charge_text"
+            android:id="@+id/ionChargeText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -140,7 +140,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/ionization_energies_text"
+            android:id="@+id/ionizationEnergiesText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -175,7 +175,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/atomic_radius_e_text"
+            android:id="@+id/atomicRadiusEText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -210,7 +210,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/atomic_radius_text"
+            android:id="@+id/atomicRadiusText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -244,7 +244,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/covalent_radius_text"
+            android:id="@+id/covalentRadiusText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -278,7 +278,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/van_der_waals_radius_text"
+            android:id="@+id/vanDerWaalsRadiusText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"

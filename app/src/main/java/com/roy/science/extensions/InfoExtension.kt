@@ -40,38 +40,38 @@ import kotlinx.android.synthetic.main.activity_element_info.nextBtn
 import kotlinx.android.synthetic.main.activity_element_info.offline_div
 import kotlinx.android.synthetic.main.activity_element_info.previousBtn
 import kotlinx.android.synthetic.main.activity_element_info.wikipedia_btn
-import kotlinx.android.synthetic.main.d_atomic.atomic_radius_e_text
-import kotlinx.android.synthetic.main.d_atomic.atomic_radius_text
-import kotlinx.android.synthetic.main.d_atomic.covalent_radius_text
-import kotlinx.android.synthetic.main.d_atomic.electron_config_text
-import kotlinx.android.synthetic.main.d_atomic.ion_charge_text
-import kotlinx.android.synthetic.main.d_atomic.ionization_energies_text
+import kotlinx.android.synthetic.main.d_atomic.atomicRadiusEText
+import kotlinx.android.synthetic.main.d_atomic.atomicRadiusText
+import kotlinx.android.synthetic.main.d_atomic.covalentRadiusText
+import kotlinx.android.synthetic.main.d_atomic.electronConfigText
+import kotlinx.android.synthetic.main.d_atomic.ionChargeText
+import kotlinx.android.synthetic.main.d_atomic.ionizationEnergiesText
 import kotlinx.android.synthetic.main.d_atomic.oxView
-import kotlinx.android.synthetic.main.d_atomic.van_der_waals_radius_text
-import kotlinx.android.synthetic.main.d_electromagnetic.element_electrical_type
-import kotlinx.android.synthetic.main.d_electromagnetic.element_magnetic_type
+import kotlinx.android.synthetic.main.d_atomic.vanDerWaalsRadiusText
+import kotlinx.android.synthetic.main.d_electromagnetic.elementElectricalType
+import kotlinx.android.synthetic.main.d_electromagnetic.elementMagneticType
 import kotlinx.android.synthetic.main.d_electromagnetic.elementResistivity
-import kotlinx.android.synthetic.main.d_electromagnetic.element_superconducting_point
+import kotlinx.android.synthetic.main.d_electromagnetic.elementSuperconductingPoint
 import kotlinx.android.synthetic.main.d_nuclear.isotopesFrame
 import kotlinx.android.synthetic.main.d_nuclear.neutronCrossSectionalText
 import kotlinx.android.synthetic.main.d_nuclear.radioactiveText
 import kotlinx.android.synthetic.main.d_overview.descriptionName
 import kotlinx.android.synthetic.main.d_overview.dscBtn
 import kotlinx.android.synthetic.main.d_overview.electronsEl
+import kotlinx.android.synthetic.main.d_overview.elementName
 import kotlinx.android.synthetic.main.d_overview.element_appearance
 import kotlinx.android.synthetic.main.d_overview.element_discovered_by
 import kotlinx.android.synthetic.main.d_overview.element_electrons
 import kotlinx.android.synthetic.main.d_overview.element_group
-import kotlinx.android.synthetic.main.d_overview.elementName
 import kotlinx.android.synthetic.main.d_overview.element_neutrons_common
 import kotlinx.android.synthetic.main.d_overview.element_protons
 import kotlinx.android.synthetic.main.d_overview.element_year
+import kotlinx.android.synthetic.main.d_properties.elementShellsElectrons
 import kotlinx.android.synthetic.main.d_properties.element_atomic_number
 import kotlinx.android.synthetic.main.d_properties.element_atomic_weight
 import kotlinx.android.synthetic.main.d_properties.element_block
 import kotlinx.android.synthetic.main.d_properties.element_density
 import kotlinx.android.synthetic.main.d_properties.element_electronegativty
-import kotlinx.android.synthetic.main.d_properties.elementShellsElectrons
 import kotlinx.android.synthetic.main.d_properties.model_view
 import kotlinx.android.synthetic.main.d_properties.spImg
 import kotlinx.android.synthetic.main.d_properties.spOffline
@@ -82,7 +82,7 @@ import kotlinx.android.synthetic.main.d_temperatures.element_melting_celsius
 import kotlinx.android.synthetic.main.d_temperatures.element_melting_fahrenheit
 import kotlinx.android.synthetic.main.d_temperatures.element_melting_kelvin
 import kotlinx.android.synthetic.main.d_thermodynamic.fusion_heat_text
-import kotlinx.android.synthetic.main.d_thermodynamic.phase_icon
+import kotlinx.android.synthetic.main.d_thermodynamic.phaseIcon
 import kotlinx.android.synthetic.main.d_thermodynamic.phase_text
 import kotlinx.android.synthetic.main.d_thermodynamic.specific_heat_text
 import kotlinx.android.synthetic.main.d_thermodynamic.vaporization_heat_text
@@ -131,8 +131,8 @@ import kotlinx.android.synthetic.main.oxidiation_states.p7ox
 import kotlinx.android.synthetic.main.oxidiation_states.p8ox
 import kotlinx.android.synthetic.main.oxidiation_states.p9ox
 import kotlinx.android.synthetic.main.shell_view.card_model_view
-import kotlinx.android.synthetic.main.shell_view.config_data
-import kotlinx.android.synthetic.main.shell_view.e_config_data
+import kotlinx.android.synthetic.main.shell_view.configData
+import kotlinx.android.synthetic.main.shell_view.eConfigData
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -326,31 +326,31 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             specific_heat_text.text = specificHeatCapacity
             vaporization_heat_text.text = vaporizationHeat
 
-            electron_config_text.text = electronConfig
-            ion_charge_text.text = ionCharge
-            ionization_energies_text.text = ionizationEnergies
-            atomic_radius_text.text = atomicRadius
-            atomic_radius_e_text.text = atomicRadiusE
-            covalent_radius_text.text = covalentRadius
-            van_der_waals_radius_text.text = vanDerWaalsRadius
+            electronConfigText.text = electronConfig
+            ionChargeText.text = ionCharge
+            ionizationEnergiesText.text = ionizationEnergies
+            atomicRadiusText.text = atomicRadius
+            atomicRadiusEText.text = atomicRadiusE
+            covalentRadiusText.text = covalentRadius
+            vanDerWaalsRadiusText.text = vanDerWaalsRadius
 
             //Shell View items
-            config_data.text = elementShellElectrons
-            e_config_data.text = electronConfig
+            configData.text = elementShellElectrons
+            eConfigData.text = electronConfig
 
             //Electromagnetic Properties Items
-            element_electrical_type.text = electricalType
-            element_magnetic_type.text = magneticType
-            element_superconducting_point.text = superconductingPoint + " (K)"
+            elementElectricalType.text = electricalType
+            elementMagneticType.text = magneticType
+            elementSuperconductingPoint.text = "$superconductingPoint (K)"
 
             if (phaseText.toString() == "Solid") {
-                phase_icon.setImageDrawable(getDrawable(R.drawable.solid))
+                phaseIcon.setImageDrawable(getDrawable(R.drawable.solid))
             }
             if (phaseText.toString() == "Gas") {
-                phase_icon.setImageDrawable(getDrawable(R.drawable.gas))
+                phaseIcon.setImageDrawable(getDrawable(R.drawable.gas))
             }
             if (phaseText.toString() == "Liquid") {
-                phase_icon.setImageDrawable(getDrawable(R.drawable.liquid))
+                phaseIcon.setImageDrawable(getDrawable(R.drawable.liquid))
             }
 
             if (oxidationNeg1.contains(0.toString())) { ox0.text = "0"
@@ -365,7 +365,6 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
                 m4ox.background.setTint(getColor(R.color.noble_gas)) }
             if (oxidationNeg1.contains(5.toString())) { m5ox.text = "-5"
                 m5ox.background.setTint(getColor(R.color.noble_gas)) }
-
 
             if (oxidationPos1.contains(1.toString())) { p1ox.text = "+1"
                 p1ox.background.setTint(getColor(R.color.alkali_metals)) }

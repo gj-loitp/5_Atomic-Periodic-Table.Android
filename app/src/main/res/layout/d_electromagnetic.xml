@@ -47,7 +47,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/element_electrical_type"
+            android:id="@+id/elementElectricalType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -115,7 +115,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/element_magnetic_type"
+            android:id="@+id/elementMagneticType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -149,7 +149,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/element_superconducting_point"
+            android:id="@+id/elementSuperconductingPoint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
