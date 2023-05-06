@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_solubility.boxm
 import kotlinx.android.synthetic.main.activity_solubility.common_title_back_sul
 import kotlinx.android.synthetic.main.activity_solubility.info_btn
 import kotlinx.android.synthetic.main.activity_solubility.info_panel
-import kotlinx.android.synthetic.main.activity_solubility.view_sub
+import kotlinx.android.synthetic.main.activity_solubility.viewSub
 import kotlinx.android.synthetic.main.panel_info.info_back_btn
 import kotlinx.android.synthetic.main.panel_info.info_background
 import kotlinx.android.synthetic.main.panel_info.info_text
@@ -43,7 +43,7 @@ class SolubilityActivity : BaseActivity() {
             setTheme(R.style.AppThemeDark)
         }
         setContentView(R.layout.activity_solubility) //Don't move down (Needs to be before we call our functions)
-        view_sub.systemUiVisibility =
+        viewSub.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         infoPanel()

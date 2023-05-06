@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <FrameLayout
-        android:id="@+id/view_sub"
+        android:id="@+id/viewSub"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:focusable="true" />
 
             <ScrollView
-                android:id="@+id/submit_scroll"
+                android:id="@+id/submitScroll"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -26,7 +26,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/submit_title_downstate"
+                        android:id="@+id/submitTitleDownstate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:elevation="0dp"
@@ -43,7 +43,7 @@
                         android:layout_height="match_parent">
 
                 <include
-                    android:id="@+id/drop_issue"
+                    android:id="@+id/dropIssue"
                     layout="@layout/drop_issue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/drop_btn"
+                            android:id="@+id/dropBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
@@ -133,7 +133,7 @@
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/i_btn"
+                        android:id="@+id/iBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_marginStart="@dimen/margin"
@@ -163,7 +163,7 @@
                 </LinearLayout>
             </ScrollView>
     <FrameLayout
-            android:id="@+id/common_title_back_sub"
+            android:id="@+id/commonTitleBackSub"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:elevation="1dp"
@@ -172,7 +172,7 @@
             android:orientation="horizontal">
 
         <FrameLayout
-            android:id="@+id/common_title_back_sub_color"
+            android:id="@+id/commonTitleBackSubColor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="?attr/colorPrimary"
@@ -200,7 +200,7 @@
                         android:src="@drawable/ic_arrow_back_whit" />
 
                     <TextView
-                        android:id="@+id/submit_title"
+                        android:id="@+id/submitTitle"
                         android:layout_width="wrap_content"
                         android:layout_marginStart="70dp"
                         android:alpha="0.9"

@@ -59,7 +59,7 @@ class ElementInfoActivity : InfoExtension() {
             val intent = Intent(this, FavoritePageActivity::class.java)
             startActivity(intent)
         }
-        i_btn.setOnClickListener {
+        iBtn.setOnClickListener {
             val intent = Intent(this, SubmitActivity::class.java)
             startActivity(intent)
         }
