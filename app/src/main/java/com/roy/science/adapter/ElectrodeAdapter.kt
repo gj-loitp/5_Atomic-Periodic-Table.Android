@@ -1,5 +1,6 @@
 package com.roy.science.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -10,14 +11,26 @@ import androidx.recyclerview.widget.RecyclerView
 import com.roy.science.R
 import com.roy.science.activities.tables.ElectrodeActivity
 import com.roy.science.model.Series
+import java.util.Locale
 
-class ElectrodeAdapter(var list: ArrayList<Series>, var clickListener: ElectrodeActivity, val context: Context) : RecyclerView.Adapter<ElectrodeAdapter.ViewHolder>() {
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+class ElectrodeAdapter(
+    var list: ArrayList<Series>,
+    var clickListener: ElectrodeActivity,
+    val context: Context
+) : RecyclerView.Adapter<ElectrodeAdapter.ViewHolder>() {
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int
+    ) {
         holder.initialize(list[position], context)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.electrode_list_item, parent, false)
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
+        val v =
+            LayoutInflater.from(parent.context).inflate(R.layout.electrode_list_item, parent, false)
         return ViewHolder(v)
     }
 
@@ -31,9 +44,12 @@ class ElectrodeAdapter(var list: ArrayList<Series>, var clickListener: Electrode
         private val textViewCharge = itemView.findViewById(R.id.tv_charge) as TextView
         private val textViewVoltage = itemView.findViewById(R.id.tv_voltage) as TextView
 
-        fun initialize(item: Series, context: Context) {
+        fun initialize(
+            item: Series,
+            context: Context
+        ) {
             textViewName.text = item.name
-            textViewName.text = item.name.capitalize()
+            textViewName.text = item.name.capitalize(Locale.ROOT)
             textViewShort.text = item.short
             val voltage = item.voltage.toString()
             val shortVolt = " (Volt)"
@@ -49,11 +65,10 @@ class ElectrodeAdapter(var list: ArrayList<Series>, var clickListener: Electrode
     }
 
 
+    @SuppressLint("NotifyDataSetChanged")
     fun filterList(filteredList: ArrayList<Series>) {
         list = filteredList
         notifyDataSetChanged()
     }
 
 }
-
-
