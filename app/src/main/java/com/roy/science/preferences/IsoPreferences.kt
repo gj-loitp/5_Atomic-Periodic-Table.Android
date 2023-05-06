@@ -1,13 +1,15 @@
 package com.roy.science.preferences
 
 import android.content.Context
+import android.content.SharedPreferences
 
 class IsoPreferences(context : Context) {
 
     val PREFERENCE_NAME = "Iso_Preference"
     val PREFERENCE_VALUE = "Iso_Value"
 
-    val preference = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
+    private val preference: SharedPreferences =
+        context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
 
     fun getValue() : Int{
         return preference.getInt (PREFERENCE_VALUE, 0)
@@ -27,7 +29,8 @@ class sendIso(context : Context) {
     val PREFERENCE_NAME = "send_Iso_pref"
     val PREFERENCE_VALUE = "send_iso_value"
 
-    val preference = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
+    private val preference: SharedPreferences =
+        context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
 
     fun getValue() : String{
         return preference.getString (PREFERENCE_VALUE, "false")!!

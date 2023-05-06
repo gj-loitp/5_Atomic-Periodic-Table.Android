@@ -1,16 +1,18 @@
 package com.roy.science.preferences
 
 import android.content.Context
+import android.content.SharedPreferences
 
-class DictionaryPreferences(context : Context) {
+class DictionaryPreferences(context: Context) {
 
-    val PREFERENCE_NAME = "Dictionary_Preference"
-    val PREFERENCE_VALUE = "Dictionary_Value"
+    private val PREFERENCE_NAME = "Dictionary_Preference"
+    private val PREFERENCE_VALUE = "Dictionary_Value"
 
-    val preference = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
+    private val preference: SharedPreferences =
+        context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
 
-    fun getValue() : String {
-        return preference.getString (PREFERENCE_VALUE, "chemistry")!!
+    fun getValue(): String {
+        return preference.getString(PREFERENCE_VALUE, "chemistry") ?: ""
 
     }
 
@@ -20,4 +22,3 @@ class DictionaryPreferences(context : Context) {
         editor.apply()
     }
 }
-

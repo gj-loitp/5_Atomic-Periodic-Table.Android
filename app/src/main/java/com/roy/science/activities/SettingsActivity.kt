@@ -17,7 +17,7 @@ import com.roy.science.activities.settings.OrderActivity
 import com.roy.science.activities.settings.SubmitActivity
 import com.roy.science.activities.settings.UnitActivity
 import com.roy.science.preferences.ThemePreference
-import com.roy.science.preferences.offlinePreference
+import com.roy.science.preferences.OfflinePreference
 import com.roy.science.settings.ExperimentalActivity
 import com.roy.science.utils.Utils
 import kotlinx.android.synthetic.main.activity_settings.aboutSettings
@@ -220,16 +220,16 @@ class SettingsActivity : BaseActivity() {
     }
 
     private fun initOfflineSwitches() {
-        val offlinePreferences = offlinePreference(this)
+        val offlinePreferences = OfflinePreference(this)
         val offlinePrefValue = offlinePreferences.getValue()
         offlineInternetSwitch.isChecked = offlinePrefValue == 1
 
         offlineInternetSwitch.setOnCheckedChangeListener { _, _ ->
             if (offlineInternetSwitch.isChecked) {
-                val offlinePreference = offlinePreference(this)
+                val offlinePreference = OfflinePreference(this)
                 offlinePreference.setValue(1)
             } else {
-                val offlinePreference = offlinePreference(this)
+                val offlinePreference = OfflinePreference(this)
                 offlinePreference.setValue(0)
             }
         }

@@ -1,13 +1,14 @@
 package com.roy.science.preferences
 
 import android.content.Context
+import android.content.SharedPreferences
 
 class SearchPreferences(context : Context) {
 
     val PREFERENCE_NAME = "Search_Preference"
     val PREFERENCE_VALUE = "Search_Value"
 
-    val preference = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
+    private val preference: SharedPreferences = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
 
     fun getValue() : Int{
         return preference.getInt (PREFERENCE_VALUE, 0)

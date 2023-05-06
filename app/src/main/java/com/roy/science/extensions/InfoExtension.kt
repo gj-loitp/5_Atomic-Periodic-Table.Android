@@ -27,7 +27,7 @@ import com.roy.science.preferences.FusionHeatPreference
 import com.roy.science.preferences.MeltingPreference
 import com.roy.science.preferences.SpecificHeatPreference
 import com.roy.science.preferences.VaporizationHeatPreference
-import com.roy.science.preferences.offlinePreference
+import com.roy.science.preferences.OfflinePreference
 import com.roy.science.preferences.sendIso
 import com.roy.science.utils.Pasteur
 import com.roy.science.utils.ToastUtil
@@ -441,7 +441,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             covalentF.text = covalentRadius
             vanF.text = vanDerWaalsRadius
 
-            val offlinePreferences = offlinePreference(this)
+            val offlinePreferences = OfflinePreference(this)
             val offlinePrefValue = offlinePreferences.getValue()
             if (offlinePrefValue == 0) {
                 loadImage(url)

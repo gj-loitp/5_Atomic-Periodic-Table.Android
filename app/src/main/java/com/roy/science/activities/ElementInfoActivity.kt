@@ -16,7 +16,7 @@ import com.roy.science.model.Element
 import com.roy.science.model.ElementModel
 import com.roy.science.preferences.ElementSendAndLoad
 import com.roy.science.preferences.ThemePreference
-import com.roy.science.preferences.offlinePreference
+import com.roy.science.preferences.OfflinePreference
 import com.roy.science.utils.Utils
 import kotlinx.android.synthetic.main.activity_element_info.backBtn
 import kotlinx.android.synthetic.main.activity_element_info.commonTitleBack
@@ -132,7 +132,7 @@ class ElementInfoActivity : InfoExtension() {
 
     @SuppressLint("SetTextI18n")
     private fun offlineCheck() {
-        val offlinePreferences = offlinePreference(this)
+        val offlinePreferences = OfflinePreference(this)
         val offlinePrefValue = offlinePreferences.getValue()
 
         if (offlinePrefValue == 1) {
