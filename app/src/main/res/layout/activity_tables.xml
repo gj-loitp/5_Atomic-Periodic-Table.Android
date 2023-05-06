@@ -9,7 +9,7 @@
         android:background="?attr/backgroundColor">
 
     <FrameLayout
-            android:id="@+id/common_title_back_tab"
+            android:id="@+id/commonTitleBackTab"
             android:layout_width="match_parent"
             android:layout_height="@dimen/title_bar"
             android:alpha="1"
@@ -19,7 +19,7 @@
             android:orientation="horizontal">
 
         <FrameLayout
-            android:id="@+id/common_title_table_color"
+            android:id="@+id/commonTitleTableColor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="?attr/colorPrimary"
@@ -46,7 +46,7 @@
                         android:src="@drawable/ic_arrow_back_whit" />
 
                     <TextView
-                        android:id="@+id/tables_title"
+                        android:id="@+id/tablesTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/title_bar"
                         android:layout_marginStart="70dp"
@@ -64,7 +64,7 @@
         </FrameLayout>
 
     <ScrollView
-        android:id="@+id/table_scroll"
+        android:id="@+id/tableScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -75,7 +75,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tables_title_downstate"
+            android:id="@+id/tablesTitleDownstate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="0dp"
@@ -88,7 +88,7 @@
             android:textStyle="normal" />
 
         <FrameLayout
-            android:id="@+id/ph_table"
+            android:id="@+id/phTable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
@@ -132,7 +132,7 @@
                     android:textStyle="normal" />
 
                 <TextView
-                    android:id="@+id/ph_button"
+                    android:id="@+id/phButton"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:paddingStart="24dp"
@@ -155,7 +155,7 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/ele_table"
+            android:id="@+id/eleTable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
@@ -199,7 +199,7 @@
                     android:textStyle="normal" />
 
                 <TextView
-                    android:id="@+id/ele_button"
+                    android:id="@+id/eleButton"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:paddingStart="24dp"
@@ -222,7 +222,7 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/equ_table"
+            android:id="@+id/equTable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
@@ -266,7 +266,7 @@
                     android:textStyle="normal" />
 
                 <TextView
-                    android:id="@+id/equ_button"
+                    android:id="@+id/equButton"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:paddingStart="24dp"
@@ -289,7 +289,7 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/ion_table"
+            android:id="@+id/ionTable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
@@ -333,7 +333,7 @@
                     android:textStyle="normal" />
 
                 <TextView
-                    android:id="@+id/ion_button"
+                    android:id="@+id/ionButton"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:paddingStart="24dp"
@@ -356,7 +356,7 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/nuc_table"
+            android:id="@+id/nucTable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
@@ -419,7 +419,7 @@
                     android:textStyle="normal" />
 
                 <TextView
-                    android:id="@+id/nuc_button"
+                    android:id="@+id/nucButton"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:paddingStart="24dp"
@@ -442,7 +442,7 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/sol_table"
+            android:id="@+id/solTable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin"
@@ -486,7 +486,7 @@
                     android:textStyle="normal" />
 
                 <TextView
-                    android:id="@+id/sol_button"
+                    android:id="@+id/solButton"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:paddingStart="24dp"
