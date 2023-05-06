@@ -129,7 +129,7 @@
         android:layout_marginEnd="6dp">
 
         <TextView
-            android:id="@+id/lanthanoids_btn"
+            android:id="@+id/lanthanoidsBtn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
@@ -172,7 +172,7 @@
         android:layout_marginEnd="6dp">
 
         <TextView
-            android:id="@+id/actinoids_btn"
+            android:id="@+id/actinoidsBtn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"

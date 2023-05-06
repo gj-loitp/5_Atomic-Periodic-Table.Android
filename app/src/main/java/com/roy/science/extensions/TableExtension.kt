@@ -2,8 +2,8 @@ package com.roy.science.extensions
 
 import android.content.res.Configuration
 import android.graphics.Color
-import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowInsets
@@ -16,19 +16,22 @@ import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Pasteur
 import com.roy.science.utils.ToastUtil
 import com.roy.science.utils.Utils
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.group_3.*
+import kotlinx.android.synthetic.main.activity_main.hoverBackground
+import kotlinx.android.synthetic.main.activity_main.hoverMenuInclude
+import kotlinx.android.synthetic.main.group_3.actinoidsBtn
+import kotlinx.android.synthetic.main.group_3.lanthanoidsBtn
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
+import java.util.Locale
 
 abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsListener {
-    companion object { private const val TAG = "BaseActivity" }
+    companion object {
+        private const val TAG = "BaseActivity"
+    }
 
     private var systemUiConfigured = false
-
-    override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
 
     override fun onStart() {
         super.onStart()
@@ -40,13 +43,24 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
         }
     }
 
-    open fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) = Unit
+    open fun onApplySystemInsets(
+        top: Int,
+        bottom: Int,
+        left: Int,
+        right: Int
+    ) = Unit
 
     override fun onApplyWindowInsets(v: View, insets: WindowInsets): WindowInsets {
         Pasteur.info(TAG, "height: ${insets.systemWindowInsetBottom}")
-        onApplySystemInsets(insets.systemWindowInsetTop, insets.systemWindowInsetBottom, insets.systemWindowInsetLeft, insets.systemWindowInsetRight)
+        onApplySystemInsets(
+            insets.systemWindowInsetTop,
+            insets.systemWindowInsetBottom,
+            insets.systemWindowInsetLeft,
+            insets.systemWindowInsetRight
+        )
         return insets.consumeSystemWindowInsets()
     }
+
     private var elementList = ArrayList<Element>()
 
     private fun closeHover() {
@@ -66,7 +80,8 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
             val resIDB = resources.getIdentifier(eViewBtn, "id", packageName)
 
             val text = findViewById<TextView>(resID)
-            text.text = item.element.capitalize()
+            text.text =
+                item.element.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
             val btn = findViewById<TextView>(resIDB)
             val themePreference = ThemePreference(this)
             val themePrefValue = themePreference.getValue()
@@ -76,37 +91,41 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
             params.rightMargin = 0
             params.bottomMargin = resources.getDimensionPixelSize(R.dimen.groups2b)
             text.layoutParams = params
-            text.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
+            text.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
             btn.elevation = (resources.getDimension(R.dimen.zero_elevation))
-            lanthanoids_btn.elevation = (resources.getDimension(R.dimen.zero_elevation))
-            actinoids_btn.elevation = (resources.getDimension(R.dimen.zero_elevation))
-
+            lanthanoidsBtn.elevation = (resources.getDimension(R.dimen.zero_elevation))
+            actinoidsBtn.elevation = (resources.getDimension(R.dimen.zero_elevation))
 
             if (themePrefValue == 100) {
-                when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {Configuration.UI_MODE_NIGHT_NO -> {
+                when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                    Configuration.UI_MODE_NIGHT_NO -> {
                         btn.background.setTint(resources.getColor(R.color.element_box_light))
-                        lanthanoids_btn.background.setTint(resources.getColor(R.color.element_box_light))
-                        actinoids_btn.background.setTint(resources.getColor(R.color.element_box_light))
+                        lanthanoidsBtn.background.setTint(resources.getColor(R.color.element_box_light))
+                        actinoidsBtn.background.setTint(resources.getColor(R.color.element_box_light))
                     }
+
                     Configuration.UI_MODE_NIGHT_YES -> {
                         btn.background.setTint(resources.getColor(R.color.element_box_dark))
-                        lanthanoids_btn.background.setTint(resources.getColor(R.color.element_box_dark))
-                        actinoids_btn.background.setTint(resources.getColor(R.color.element_box_dark)) }
+                        lanthanoidsBtn.background.setTint(resources.getColor(R.color.element_box_dark))
+                        actinoidsBtn.background.setTint(resources.getColor(R.color.element_box_dark))
+                    }
                 }
             }
             if (themePrefValue == 0) {
-                    btn.background.setTint(resources.getColor(R.color.element_box_light))
-                    lanthanoids_btn.background.setTint(resources.getColor(R.color.element_box_light))
-                    actinoids_btn.background.setTint(resources.getColor(R.color.element_box_light)) }
+                btn.background.setTint(resources.getColor(R.color.element_box_light))
+                lanthanoidsBtn.background.setTint(resources.getColor(R.color.element_box_light))
+                actinoidsBtn.background.setTint(resources.getColor(R.color.element_box_light))
+            }
             if (themePrefValue == 1) {
-                    btn.background.setTint(resources.getColor(R.color.element_box_dark))
-                    lanthanoids_btn.background.setTint(resources.getColor(R.color.element_box_dark))
-                    actinoids_btn.background.setTint(resources.getColor(R.color.element_box_dark)) }
+                btn.background.setTint(resources.getColor(R.color.element_box_dark))
+                lanthanoidsBtn.background.setTint(resources.getColor(R.color.element_box_dark))
+                actinoidsBtn.background.setTint(resources.getColor(R.color.element_box_dark))
+            }
         }
     }
 
     fun initBoiling(list: ArrayList<Element>) {
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         initName(elementList)
         closeHover()
         delay.postDelayed({
@@ -114,25 +133,31 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
                 val name = item.element
                 val extText = "_text"
                 val eView = "$name$extText"
-                val iText = findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
-                var jsonString : String? = null
+                val iText =
+                    findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
+                var jsonString: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String? = "$name$ext"
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
-                    jsonString = inputStream.bufferedReader().use { it.readText() }
+                    val elementJson = "$name$ext"
+                    val inputStream: InputStream = assets.open(elementJson)
+                    jsonString = inputStream.bufferedReader().use {
+                        it.readText()
+                    }
                     val jsonArray = JSONArray(jsonString)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
                     val tempPreference = TemperatureUnits(this)
                     val tempPrefValue = tempPreference.getValue()
-                    val elementAtomicWeight = jsonObject.optString("element_boiling_$tempPrefValue", "---")
+                    val elementAtomicWeight =
+                        jsonObject.optString("element_boiling_$tempPrefValue", "---")
                     iText.text = elementAtomicWeight
-                } catch(e: IOException) { }
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
             } },10)
     }
 
     fun initMelting(list: ArrayList<Element>) {
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         initName(elementList)
         closeHover()
         delay.postDelayed({
@@ -140,25 +165,29 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
                 val name = item.element
                 val extText = "_text"
                 val eView = "$name$extText"
-                val iText = findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
-                var jsonString : String? = null
+                val iText =
+                    findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
+                var jsonString: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String? = "$name$ext"
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
+                    val elementJson = "$name$ext"
+                    val inputStream: InputStream = assets.open(elementJson)
                     jsonString = inputStream.bufferedReader().use { it.readText() }
                     val jsonArray = JSONArray(jsonString)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
                     val tempPreference = TemperatureUnits(this)
                     val tempPrefValue = tempPreference.getValue()
-                    val elementAtomicWeight = jsonObject.optString("element_melting_$tempPrefValue", "---")
+                    val elementAtomicWeight =
+                        jsonObject.optString("element_melting_$tempPrefValue", "---")
                     iText.text = elementAtomicWeight
-                } catch(e: IOException) { }
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
             } },10)
     }
 
     fun initPhase(list: ArrayList<Element>) {
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         initName(elementList)
         closeHover()
         delay.postDelayed({
@@ -166,23 +195,26 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
                 val name = item.element
                 val extText = "_text"
                 val eView = "$name$extText"
-                val iText = findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
-                var jsonString : String? = null
+                val iText =
+                    findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
+                var jsonString: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String? = "$name$ext"
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
+                    val elementJson = "$name$ext"
+                    val inputStream: InputStream = assets.open(elementJson)
                     jsonString = inputStream.bufferedReader().use { it.readText() }
                     val jsonArray = JSONArray(jsonString)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
                     val elementAtomicWeight = jsonObject.optString("element_phase", "---")
                     iText.text = elementAtomicWeight
-                } catch(e: IOException) { }
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
             } },10)
     }
 
     fun initYear(list: ArrayList<Element>) {
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         initName(elementList)
         closeHover()
         delay.postDelayed({
@@ -190,23 +222,26 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
                 val name = item.element
                 val extText = "_text"
                 val eView = "$name$extText"
-                val iText = findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
-                var jsonString : String? = null
+                val iText =
+                    findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
+                var jsonString: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String? = "$name$ext"
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
+                    val elementJson = "$name$ext"
+                    val inputStream: InputStream = assets.open(elementJson)
                     jsonString = inputStream.bufferedReader().use { it.readText() }
                     val jsonArray = JSONArray(jsonString)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
                     val elementAtomicWeight = jsonObject.optString("element_year", "---")
                     iText.text = elementAtomicWeight
-                } catch(e: IOException) { }
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
             } },10)
     }
 
     fun initElectro(list: ArrayList<Element>) {
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         initName(elementList)
         closeHover()
         delay.postDelayed({
@@ -260,7 +295,7 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
     }
 
     fun initGroups(list: ArrayList<Element>) {
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         initName(list)
         delay.postDelayed({
             for (item in list) {
@@ -274,10 +309,10 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
                 val resID = resources.getIdentifier(eText, "id", packageName)
 
                 val iText = findViewById<TextView>(resID)
-                var jsonstring : String? = null
+                var jsonstring: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String? = "$name$ext"
+                    val ElementJson: String = "$name$ext"
                     val inputStream: InputStream = assets.open(ElementJson.toString())
                     jsonstring = inputStream.bufferedReader().use { it.readText() }
 
@@ -290,10 +325,11 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
                     params.rightMargin = resources.getDimensionPixelSize(R.dimen.groups)
                     params.bottomMargin = resources.getDimensionPixelSize(R.dimen.groupsb)
                     iText.layoutParams = params
-                    iText.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
+                    iText.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
                     iText.requestLayout()
+                } catch (e: IOException) {
+                    e.printStackTrace()
                 }
-                catch(e: IOException) { }
 
                 val btn = findViewById<TextView>(resIDB)
                 if ((item.number == 3) or (item.number == 11) or (item.number == 19) or (item.number == 37) or (item.number == 55) or (item.number == 87)) {
@@ -322,7 +358,7 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
     }
 
     fun initWeight(list: ArrayList<Element>) {
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         initName(list)
         closeHover()
         delay.postDelayed({
@@ -334,19 +370,20 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
 
                 val iText = findViewById<TextView>(resIDB)
 
-                var jsonstring : String? = null
+                var jsonstring: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String? = "$namee$ext"
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
+                    val elementJson = "$namee$ext"
+                    val inputStream: InputStream = assets.open(elementJson)
                     jsonstring = inputStream.bufferedReader().use { it.readText() }
 
                     val jsonArray = JSONArray(jsonstring)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
                     val elementAtomicWeight = jsonObject.optString("element_atomicmass", "---")
                     iText.text = elementAtomicWeight
+                } catch (e: IOException) {
+                    e.printStackTrace()
                 }
-                catch(e: IOException) { }
             }
         }, 10)
     }
@@ -354,7 +391,7 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
     fun initHeat(list: ArrayList<Element>) {
         initName(list)
         closeHover()
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         delay.postDelayed({
             for (item in list) {
                 val name = item.element
@@ -364,19 +401,20 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
 
                 val iText = findViewById<TextView>(resID)
 
-                var jsonstring : String? = null
+                var jsonstring: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String? = "$name$ext"
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
+                    val elementJson = "$name$ext"
+                    val inputStream: InputStream = assets.open(elementJson)
                     jsonstring = inputStream.bufferedReader().use { it.readText() }
 
                     val jsonArray = JSONArray(jsonstring)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
                     val elementFusionHeat = jsonObject.optString("element_fusion_heat", "---")
                     iText.text = elementFusionHeat
+                } catch (e: IOException) {
+                    e.printStackTrace()
                 }
-                catch(e: IOException) { }
             }
 
         }, 10)
@@ -386,7 +424,7 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
     fun initSpecific(list: ArrayList<Element>) {
         initName(list)
         closeHover()
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         delay.postDelayed({
             for (item in list) {
                 val name = item.element
@@ -396,19 +434,21 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
 
                 val iText = findViewById<TextView>(resID)
 
-                var jsonstring : String? = null
+                var jsonstring: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String? = "$name$ext"
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
+                    val elementJson = "$name$ext"
+                    val inputStream: InputStream = assets.open(elementJson)
                     jsonstring = inputStream.bufferedReader().use { it.readText() }
 
                     val jsonArray = JSONArray(jsonstring)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
-                    val elementSpecificHeat = jsonObject.optString("element_specific_heat_capacity", "---")
+                    val elementSpecificHeat =
+                        jsonObject.optString("element_specific_heat_capacity", "---")
                     iText.text = elementSpecificHeat
+                } catch (e: IOException) {
+                    e.printStackTrace()
                 }
-                catch(e: IOException) { }
             }
         }, 10)
     }
@@ -416,7 +456,7 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
     fun initVape(list: ArrayList<Element>) {
         initName(list)
         closeHover()
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         delay.postDelayed({
             for (item in list) {
                 val name = item.element
@@ -426,19 +466,20 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
 
                 val iText = findViewById<TextView>(resID)
 
-                var jsonstring : String? = null
+                var jsonstring: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String? = "$name$ext"
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
+                    val elementJson = "$name$ext"
+                    val inputStream: InputStream = assets.open(elementJson)
                     jsonstring = inputStream.bufferedReader().use { it.readText() }
 
                     val jsonArray = JSONArray(jsonstring)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
                     val elementVapeHeat = jsonObject.optString("element_vaporization_heat", "---")
                     iText.text = elementVapeHeat
+                } catch (e: IOException) {
+                    e.printStackTrace()
                 }
-                catch(e: IOException) { }
             }
         }, 10)
     }

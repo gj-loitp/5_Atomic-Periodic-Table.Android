@@ -11,6 +11,7 @@ import android.app.Application
 //TODO ad
 //TODO keystore
 //TODO manifest ad id
+//TODO leak canary
 class LApp : Application() {
     override fun onCreate() {
         super.onCreate()
