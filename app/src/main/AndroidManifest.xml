@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jlindemann.science">
+    package="com.roy.science">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <receiver
-            android:name=".ShortCommandWidget"
+            android:name="com.roy.science.ShortCommandWidget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -25,7 +25,7 @@
         </receiver>
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.roy.science.activities.MainActivity"
             android:exported="true"
             android:label="MAINACTIVITY"
             android:theme="@style/AppTheme"
@@ -37,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SplashActivity"
+            android:name="com.roy.science.activities.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -47,7 +47,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.ElementInfoActivity"
+            android:name="com.roy.science.activities.ElementInfoActivity"
             android:exported="true"
             android:label="ELEMENTINFOACTIVITY"
             android:screenOrientation="portrait"
@@ -57,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name="com.roy.science.activities.SettingsActivity"
             android:exported="true"
             android:label="SETTINGS"
             android:screenOrientation="portrait"
@@ -67,7 +67,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.FavoritePageActivity"
+            android:name="com.roy.science.activities.settings.FavoritePageActivity"
             android:exported="true"
             android:label="FAVORITEPAGE"
             android:screenOrientation="portrait"
@@ -77,7 +77,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.OrderActivity"
+            android:name="com.roy.science.activities.settings.OrderActivity"
             android:exported="true"
             android:label="ORDERPAGE"
             android:screenOrientation="portrait"
@@ -87,7 +87,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.IonActivity"
+            android:name="com.roy.science.activities.tables.IonActivity"
             android:exported="true"
             android:label="IONPAGE"
             android:screenOrientation="portrait"
@@ -97,7 +97,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".settings.ExperimentalActivity"
+            android:name="com.roy.science.settings.ExperimentalActivity"
             android:exported="true"
             android:label="EXPERIMENTAL_PAGE"
             android:screenOrientation="portrait"
@@ -107,7 +107,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SolubilityActivity"
+            android:name="com.roy.science.activities.SolubilityActivity"
             android:exported="true"
             android:label="SOLUBILITYPAGE"
             android:screenOrientation="portrait">
@@ -116,7 +116,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.CalculatorActivity"
+            android:name="com.roy.science.activities.CalculatorActivity"
             android:exported="true"
             android:label="CALCULATORPAGE"
             android:screenOrientation="portrait"
@@ -126,7 +126,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.DictionaryActivity"
+            android:name="com.roy.science.activities.tables.DictionaryActivity"
             android:exported="true"
             android:label="DICTIONARYPAGE"
             android:screenOrientation="portrait"
@@ -136,7 +136,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.IsotopesActivityExperimental"
+            android:name="com.roy.science.activities.IsotopesActivityExperimental"
             android:exported="true"
             android:label="ISOTPOESPAGEEXP"
             android:screenOrientation="portrait"
@@ -146,7 +146,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.AboutActivity"
+            android:name="com.roy.science.activities.settings.AboutActivity"
             android:exported="true"
             android:label="ABOUTPAGE"
             android:screenOrientation="portrait"
@@ -156,7 +156,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.TableActivity"
+            android:name="com.roy.science.activities.TableActivity"
             android:exported="true"
             android:label="TABLEPAGE"
             android:screenOrientation="portrait"
@@ -166,7 +166,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.ElectrodeActivity"
+            android:name="com.roy.science.activities.tables.ElectrodeActivity"
             android:exported="true"
             android:label="ELECTRODEPAGE"
             android:screenOrientation="portrait"
@@ -176,7 +176,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.SubmitActivity"
+            android:name="com.roy.science.activities.settings.SubmitActivity"
             android:exported="true"
             android:label="SUBMITPAGE"
             android:screenOrientation="portrait"
@@ -187,7 +187,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.LicensesActivity"
+            android:name="com.roy.science.activities.settings.LicensesActivity"
             android:exported="true"
             android:label="LICENSESPAGE"
             android:screenOrientation="portrait"
@@ -198,7 +198,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.EquationsActivity"
+            android:name="com.roy.science.activities.tables.EquationsActivity"
             android:exported="true"
             android:label="EQUATIONSACTIVITY"
             android:screenOrientation="portrait"
@@ -209,7 +209,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.phActivity"
+            android:name="com.roy.science.activities.tables.phActivity"
             android:exported="true"
             android:label="PHACTIVITY"
             android:screenOrientation="portrait"
@@ -220,7 +220,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.UnitActivity"
+            android:name="com.roy.science.activities.settings.UnitActivity"
             android:exported="true"
             android:label="activity_unit"
             android:screenOrientation="portrait"
@@ -231,7 +231,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.NuclideActivity"
+            android:name="com.roy.science.activities.tables.NuclideActivity"
             android:exported="true"
             android:label="activity_nuclide"
             android:screenOrientation="portrait"
