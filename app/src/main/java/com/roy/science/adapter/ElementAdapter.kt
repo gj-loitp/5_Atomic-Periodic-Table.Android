@@ -1,5 +1,6 @@
 package com.roy.science.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -12,15 +13,26 @@ import androidx.recyclerview.widget.RecyclerView
 import com.roy.science.R
 import com.roy.science.model.Element
 import com.roy.science.preferences.SearchPreferences
-import kotlinx.android.synthetic.main.group_1.*
+import java.util.Locale
 
-class ElementAdapter(var elementList: ArrayList<Element>, var clickListener: OnElementClickListener2, val con: Context) : RecyclerView.Adapter<ElementAdapter.ViewHolder>() {
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.initialize(elementList[position], clickListener, con)
+class ElementAdapter(
+    var elementList: ArrayList<Element>,
+    var clickListener: OnElementClickListener2,
+    val con: Context
+) : RecyclerView.Adapter<ElementAdapter.ViewHolder>() {
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int
+    ) {
+        holder.initialize(item = elementList[position], action = clickListener, con = con)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.isotope_list_item, parent, false)
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
+        val v =
+            LayoutInflater.from(parent.context).inflate(R.layout.isotope_list_item, parent, false)
         return ViewHolder(v)
     }
 
@@ -29,22 +41,26 @@ class ElementAdapter(var elementList: ArrayList<Element>, var clickListener: OnE
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val cardHolder = itemView.findViewById(R.id.rCard) as FrameLayout
+        //        private val cardHolder = itemView.findViewById(R.id.rCard) as FrameLayout
         private val elementCard = itemView.findViewById(R.id.elemntCard) as FrameLayout
         private val textViewElement = itemView.findViewById(R.id.tv_iso_type) as TextView
         private val textViewShort = itemView.findViewById(R.id.ic_iso_type) as TextView
         private val textViewNumb = itemView.findViewById(R.id.tv_iso_numb) as TextView
 
-        fun initialize(item: Element, action: OnElementClickListener2, con: Context) {
-
+        fun initialize(
+            item: Element,
+            action: OnElementClickListener2,
+            con: Context
+        ) {
             val searchPreference = SearchPreferences(con)
             val searchPrefValue = searchPreference.getValue()
 
             textViewElement.text = item.element
-            textViewElement.text = item.element.capitalize()
+            textViewElement.text = item.element.capitalize(Locale.getDefault())
             textViewShort.text = item.short
 
-            itemView.foreground = ContextCompat.getDrawable(con, R.drawable.toast_card_outline_ripple)
+            itemView.foreground =
+                ContextCompat.getDrawable(con, R.drawable.toast_card_outline_ripple)
             itemView.isClickable = true
             itemView.isFocusable = true
 
@@ -81,6 +97,7 @@ class ElementAdapter(var elementList: ArrayList<Element>, var clickListener: OnE
         fun elementClickListener2(item: Element, position: Int)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun filterList(filteredList: ArrayList<Element>) {
         elementList = filteredList
         notifyDataSetChanged() }

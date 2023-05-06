@@ -1,5 +1,6 @@
 package com.roy.science.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -15,19 +16,32 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
+import java.util.Locale
 
-
-class IonAdapter(var list: ArrayList<Ion>, var clickListener: IonActivity, val context: Context) : RecyclerView.Adapter<IonAdapter.ViewHolder>() {
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.initialize(list[position], clickListener, context)
+class IonAdapter(
+    var list: ArrayList<Ion>,
+    var clickListener: IonActivity,
+    val context: Context
+) :
+    RecyclerView.Adapter<IonAdapter.ViewHolder>() {
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int
+    ) {
+        holder.initialize(item = list[position], action = clickListener, context = context)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.row_ions_list, parent, false)
         return ViewHolder(v)
     }
 
-    override fun getItemCount(): Int { return list.size }
+    override fun getItemCount(): Int {
+        return list.size
+    }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val cardView = itemView.findViewById(R.id.ionCard) as FrameLayout
@@ -36,14 +50,19 @@ class IonAdapter(var list: ArrayList<Ion>, var clickListener: IonActivity, val c
         private val textViewCharge = itemView.findViewById(R.id.tv_end) as TextView
         private val textViewVoltage = itemView.findViewById(R.id.tv_ionization) as TextView
 
-        fun initialize(item: Ion, action: OnIonClickListener, context: Context) {
-            var jsonString : String? = null
+        @SuppressLint("SetTextI18n")
+        fun initialize(
+            item: Ion,
+            action: OnIonClickListener,
+            context: Context
+        ) {
+            val jsonString: String?
             try {
                 val ext = ".json"
                 val element = item.name
-                val ElementJson: String? = "$element$ext"
+                val elementJson = "$element$ext"
 
-                val inputStream: InputStream = context.assets.open(ElementJson.toString())
+                val inputStream: InputStream = context.assets.open(elementJson)
                 jsonString = inputStream.bufferedReader().use { it.readText() }
 
                 val jsonArray = JSONArray(jsonString)
@@ -53,10 +72,15 @@ class IonAdapter(var list: ArrayList<Ion>, var clickListener: IonActivity, val c
                 textViewVoltage.text = ionization1
 
 
+            } catch (e: IOException) {
+                e.printStackTrace()
             }
-            catch (e: IOException) { }
             textViewName.text = item.name
-            textViewName.text = item.name.capitalize()
+            textViewName.text = item.name.replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(
+                    Locale.getDefault()
+                ) else it.toString()
+            }
             textViewShort.text = item.short
             textViewCharge.text = "View all" + " " + item.count.toString()
 
@@ -64,20 +88,20 @@ class IonAdapter(var list: ArrayList<Ion>, var clickListener: IonActivity, val c
             cardView.isClickable = true
             cardView.isFocusable = true
             cardView.setOnClickListener {
-                action.ionClickListener(item, adapterPosition)
+                action.ionClickListener(item, bindingAdapterPosition)
             }
 
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun filterList(filteredList: ArrayList<Ion>) {
         list = filteredList
         notifyDataSetChanged()
 
     }
+
     interface OnIonClickListener {
         fun ionClickListener(item: Ion, position: Int)
     }
 }
-
-
