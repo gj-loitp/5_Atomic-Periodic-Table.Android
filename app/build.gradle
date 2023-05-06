@@ -4,11 +4,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.jakewharton.butterknife'
 
 android {
-    signingConfigs {
-        config {
-            storeFile file('C:\\Users\\jonat\\OneDrive\\Skrivbord\\app\\science_keys.jks')
-        }
-    }
+//    signingConfigs {
+//        config {
+//            storeFile file('C:\\Users\\jonat\\OneDrive\\Skrivbord\\app\\science_keys.jks')
+//        }
+//    }
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
     defaultConfig {
@@ -23,7 +23,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
 
             android.applicationVariants.all { variant ->
                 variant.outputs.all {}
