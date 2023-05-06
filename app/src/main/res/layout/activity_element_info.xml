@@ -47,7 +47,7 @@
                     android:src="@drawable/ic_arrow_back_whit" />
 
                 <ImageButton
-                    android:id="@+id/wikipedia_btn"
+                    android:id="@+id/wikipediaBtn"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
@@ -148,7 +148,7 @@
             </FrameLayout>
 
             <Space
-                android:id="@+id/offline_div"
+                android:id="@+id/offlineDiv"
                 android:layout_width="wrap_content"
                 android:layout_height="110dp"
                 android:visibility="gone" />

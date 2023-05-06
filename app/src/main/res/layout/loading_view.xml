@@ -5,7 +5,7 @@
     android:layout_gravity="center">
 
     <TextView
-        android:id="@+id/no_img"
+        android:id="@+id/noImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -16,7 +16,7 @@
         android:visibility="gone" />
 
     <ProgressBar
-        android:id="@+id/pro_bar"
+        android:id="@+id/proBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"

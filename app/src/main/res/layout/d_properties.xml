@@ -254,7 +254,7 @@
                     app:srcCompat="@drawable/ic_open" />
 
                 <ImageView
-                    android:id="@+id/model_view"
+                    android:id="@+id/modelView"
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|end"

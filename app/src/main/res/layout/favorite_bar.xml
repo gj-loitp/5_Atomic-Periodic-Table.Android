@@ -32,7 +32,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/molar_mass_lay"
+                android:id="@+id/molarMassLay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -47,7 +47,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/molar_mass_f"
+                    android:id="@+id/molarMassF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -60,7 +60,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/phase_lay"
+                android:id="@+id/phaseLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -75,7 +75,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/phase_f"
+                    android:id="@+id/phaseF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -88,7 +88,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/density_lay"
+                android:id="@+id/densityLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -103,7 +103,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/density_f"
+                    android:id="@+id/densityF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -116,7 +116,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/electronegativity_lay"
+                android:id="@+id/electronegativityLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -131,7 +131,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/electronegativity_f"
+                    android:id="@+id/electronegativityF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -144,7 +144,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/boiling_lay"
+                android:id="@+id/boilingLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -159,7 +159,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/boiling_f"
+                    android:id="@+id/boilingF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -172,7 +172,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/melting_lay"
+                android:id="@+id/meltingLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -187,7 +187,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/melting_f"
+                    android:id="@+id/meltingF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -199,7 +199,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/a_empirical_lay"
+                android:id="@+id/aEmpiricalLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -214,7 +214,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/a_empirical_f"
+                    android:id="@+id/aEmpiricalF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -226,7 +226,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/a_calculated_lay"
+                android:id="@+id/aCalculatedLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -241,7 +241,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/a_calculated_f"
+                    android:id="@+id/aCalculatedF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -253,7 +253,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/covalent_lay"
+                android:id="@+id/covalentLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -268,7 +268,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/covalent_f"
+                    android:id="@+id/covalentF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -280,7 +280,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/van_lay"
+                android:id="@+id/vanLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -295,7 +295,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/van_f"
+                    android:id="@+id/vanF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -307,7 +307,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/fusion_heat_lay"
+                android:id="@+id/fusionHeatLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -322,7 +322,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/fusion_heat_f"
+                    android:id="@+id/fusionHeatF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -335,7 +335,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/specific_heat_lay"
+                android:id="@+id/specificHeatLay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -350,7 +350,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/specific_heat_f"
+                    android:id="@+id/specificHeatF"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
                     android:alpha="0.85"
@@ -363,7 +363,7 @@
             </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/vaporization_heat_lay"
+            android:id="@+id/vaporizationHeatLay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -378,7 +378,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/vaporization_heat_f"
+                android:id="@+id/vaporizationHeatF"
                 android:layout_width="wrap_content"
                 android:layout_height="52dp"
                 android:alpha="0.85"

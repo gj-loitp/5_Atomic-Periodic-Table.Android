@@ -37,7 +37,7 @@
             app:fabSize="mini" />
 
         <ImageView
-            android:id="@+id/card_model_view"
+            android:id="@+id/cardModelView"
             android:layout_width="match_parent"
             android:layout_height="240dp"
             app:srcCompat="@drawable/ic_launcher_background" />

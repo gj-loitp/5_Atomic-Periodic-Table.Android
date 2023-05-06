@@ -37,9 +37,9 @@ import kotlinx.android.synthetic.main.activity_element_info.elementTitle
 import kotlinx.android.synthetic.main.activity_element_info.element_image
 import kotlinx.android.synthetic.main.activity_element_info.frame
 import kotlinx.android.synthetic.main.activity_element_info.nextBtn
-import kotlinx.android.synthetic.main.activity_element_info.offline_div
+import kotlinx.android.synthetic.main.activity_element_info.offlineDiv
 import kotlinx.android.synthetic.main.activity_element_info.previousBtn
-import kotlinx.android.synthetic.main.activity_element_info.wikipedia_btn
+import kotlinx.android.synthetic.main.activity_element_info.wikipediaBtn
 import kotlinx.android.synthetic.main.d_atomic.atomicRadiusEText
 import kotlinx.android.synthetic.main.d_atomic.atomicRadiusText
 import kotlinx.android.synthetic.main.d_atomic.covalentRadiusText
@@ -72,7 +72,7 @@ import kotlinx.android.synthetic.main.d_properties.element_atomic_weight
 import kotlinx.android.synthetic.main.d_properties.element_block
 import kotlinx.android.synthetic.main.d_properties.element_density
 import kotlinx.android.synthetic.main.d_properties.element_electronegativty
-import kotlinx.android.synthetic.main.d_properties.model_view
+import kotlinx.android.synthetic.main.d_properties.modelView
 import kotlinx.android.synthetic.main.d_properties.spImg
 import kotlinx.android.synthetic.main.d_properties.spOffline
 import kotlinx.android.synthetic.main.d_temperatures.element_boiling_celsius
@@ -87,34 +87,34 @@ import kotlinx.android.synthetic.main.d_thermodynamic.phase_text
 import kotlinx.android.synthetic.main.d_thermodynamic.specific_heat_text
 import kotlinx.android.synthetic.main.d_thermodynamic.vaporization_heat_text
 import kotlinx.android.synthetic.main.detail_emission.sp_img_detail
-import kotlinx.android.synthetic.main.favorite_bar.a_calculated_f
-import kotlinx.android.synthetic.main.favorite_bar.a_calculated_lay
-import kotlinx.android.synthetic.main.favorite_bar.a_empirical_f
-import kotlinx.android.synthetic.main.favorite_bar.a_empirical_lay
-import kotlinx.android.synthetic.main.favorite_bar.boiling_f
-import kotlinx.android.synthetic.main.favorite_bar.boiling_lay
-import kotlinx.android.synthetic.main.favorite_bar.covalent_f
-import kotlinx.android.synthetic.main.favorite_bar.covalent_lay
-import kotlinx.android.synthetic.main.favorite_bar.density_f
-import kotlinx.android.synthetic.main.favorite_bar.density_lay
-import kotlinx.android.synthetic.main.favorite_bar.electronegativity_f
-import kotlinx.android.synthetic.main.favorite_bar.electronegativity_lay
-import kotlinx.android.synthetic.main.favorite_bar.fusion_heat_f
-import kotlinx.android.synthetic.main.favorite_bar.fusion_heat_lay
-import kotlinx.android.synthetic.main.favorite_bar.melting_f
-import kotlinx.android.synthetic.main.favorite_bar.melting_lay
-import kotlinx.android.synthetic.main.favorite_bar.molar_mass_f
-import kotlinx.android.synthetic.main.favorite_bar.molar_mass_lay
-import kotlinx.android.synthetic.main.favorite_bar.phase_f
-import kotlinx.android.synthetic.main.favorite_bar.phase_lay
-import kotlinx.android.synthetic.main.favorite_bar.specific_heat_f
-import kotlinx.android.synthetic.main.favorite_bar.specific_heat_lay
-import kotlinx.android.synthetic.main.favorite_bar.van_f
-import kotlinx.android.synthetic.main.favorite_bar.van_lay
-import kotlinx.android.synthetic.main.favorite_bar.vaporization_heat_f
-import kotlinx.android.synthetic.main.favorite_bar.vaporization_heat_lay
-import kotlinx.android.synthetic.main.loading_view.no_img
-import kotlinx.android.synthetic.main.loading_view.pro_bar
+import kotlinx.android.synthetic.main.favorite_bar.aCalculatedF
+import kotlinx.android.synthetic.main.favorite_bar.aCalculatedLay
+import kotlinx.android.synthetic.main.favorite_bar.aEmpiricalF
+import kotlinx.android.synthetic.main.favorite_bar.aEmpiricalLay
+import kotlinx.android.synthetic.main.favorite_bar.boilingF
+import kotlinx.android.synthetic.main.favorite_bar.boilingLay
+import kotlinx.android.synthetic.main.favorite_bar.covalentF
+import kotlinx.android.synthetic.main.favorite_bar.covalentLay
+import kotlinx.android.synthetic.main.favorite_bar.densityF
+import kotlinx.android.synthetic.main.favorite_bar.densityLay
+import kotlinx.android.synthetic.main.favorite_bar.electronegativityF
+import kotlinx.android.synthetic.main.favorite_bar.electronegativityLay
+import kotlinx.android.synthetic.main.favorite_bar.fusionHeatF
+import kotlinx.android.synthetic.main.favorite_bar.fusionHeatLay
+import kotlinx.android.synthetic.main.favorite_bar.meltingF
+import kotlinx.android.synthetic.main.favorite_bar.meltingLay
+import kotlinx.android.synthetic.main.favorite_bar.molarMassF
+import kotlinx.android.synthetic.main.favorite_bar.molarMassLay
+import kotlinx.android.synthetic.main.favorite_bar.phaseF
+import kotlinx.android.synthetic.main.favorite_bar.phaseLay
+import kotlinx.android.synthetic.main.favorite_bar.specificHeatF
+import kotlinx.android.synthetic.main.favorite_bar.specificHeatLay
+import kotlinx.android.synthetic.main.favorite_bar.vanF
+import kotlinx.android.synthetic.main.favorite_bar.vanLay
+import kotlinx.android.synthetic.main.favorite_bar.vaporizationHeatF
+import kotlinx.android.synthetic.main.favorite_bar.vaporizationHeatLay
+import kotlinx.android.synthetic.main.loading_view.noImg
+import kotlinx.android.synthetic.main.loading_view.proBar
 import kotlinx.android.synthetic.main.oxidiation_states.m1ox
 import kotlinx.android.synthetic.main.oxidiation_states.m2ox
 import kotlinx.android.synthetic.main.oxidiation_states.m3ox
@@ -130,7 +130,7 @@ import kotlinx.android.synthetic.main.oxidiation_states.p6ox
 import kotlinx.android.synthetic.main.oxidiation_states.p7ox
 import kotlinx.android.synthetic.main.oxidiation_states.p8ox
 import kotlinx.android.synthetic.main.oxidiation_states.p9ox
-import kotlinx.android.synthetic.main.shell_view.card_model_view
+import kotlinx.android.synthetic.main.shell_view.cardModelView
 import kotlinx.android.synthetic.main.shell_view.configData
 import kotlinx.android.synthetic.main.shell_view.eConfigData
 import org.json.JSONArray
@@ -366,62 +366,80 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             if (oxidationNeg1.contains(5.toString())) { m5ox.text = "-5"
                 m5ox.background.setTint(getColor(R.color.noble_gas)) }
 
-            if (oxidationPos1.contains(1.toString())) { p1ox.text = "+1"
-                p1ox.background.setTint(getColor(R.color.alkali_metals)) }
-            if (oxidationPos1.contains(2.toString())) { p2ox.text = "+2"
-                p2ox.background.setTint(getColor(R.color.alkali_metals)) }
-            if (oxidationPos1.contains(3.toString())) { p3ox.text = "+3"
-                p3ox.background.setTint(getColor(R.color.alkali_metals)) }
-            if (oxidationPos1.contains(4.toString())) { p4ox.text = "+4"
-                p4ox.background.setTint(getColor(R.color.alkali_metals)) }
-            if (oxidationPos1.contains(5.toString())) { p5ox.text = "+5"
-                p5ox.background.setTint(getColor(R.color.alkali_metals)) }
-            if (oxidationPos1.contains(6.toString())) { p6ox.text = "+6"
-                p6ox.background.setTint(getColor(R.color.alkali_metals)) }
-            if (oxidationPos1.contains(7.toString())) { p7ox.text = "+7"
-                p7ox.background.setTint(getColor(R.color.alkali_metals)) }
-            if (oxidationPos1.contains(8.toString())) { p8ox.text = "+8"
-                p8ox.background.setTint(getColor(R.color.alkali_metals)) }
-            if (oxidationPos1.contains(9.toString())) { p9ox.text = "+9"
-                p9ox.background.setTint(getColor(R.color.alkali_metals)) }
+            if (oxidationPos1.contains(1.toString())) {
+                p1ox.text = "+1"
+                p1ox.background.setTint(getColor(R.color.alkali_metals))
+            }
+            if (oxidationPos1.contains(2.toString())) {
+                p2ox.text = "+2"
+                p2ox.background.setTint(getColor(R.color.alkali_metals))
+            }
+            if (oxidationPos1.contains(3.toString())) {
+                p3ox.text = "+3"
+                p3ox.background.setTint(getColor(R.color.alkali_metals))
+            }
+            if (oxidationPos1.contains(4.toString())) {
+                p4ox.text = "+4"
+                p4ox.background.setTint(getColor(R.color.alkali_metals))
+            }
+            if (oxidationPos1.contains(5.toString())) {
+                p5ox.text = "+5"
+                p5ox.background.setTint(getColor(R.color.alkali_metals))
+            }
+            if (oxidationPos1.contains(6.toString())) {
+                p6ox.text = "+6"
+                p6ox.background.setTint(getColor(R.color.alkali_metals))
+            }
+            if (oxidationPos1.contains(7.toString())) {
+                p7ox.text = "+7"
+                p7ox.background.setTint(getColor(R.color.alkali_metals))
+            }
+            if (oxidationPos1.contains(8.toString())) {
+                p8ox.text = "+8"
+                p8ox.background.setTint(getColor(R.color.alkali_metals))
+            }
+            if (oxidationPos1.contains(9.toString())) {
+                p9ox.text = "+9"
+                p9ox.background.setTint(getColor(R.color.alkali_metals))
+            }
 
             //set element data for favorite bar
-            molar_mass_f.text = elementAtomicWeight
-            phase_f.text = phaseText
-            electronegativity_f.text = elementElectronegativity
-            density_f.text = elementDensity
+            molarMassF.text = elementAtomicWeight
+            phaseF.text = phaseText
+            electronegativityF.text = elementElectronegativity
+            densityF.text = elementDensity
 
             val degreePreference = DegreePreference(this)
             val degreePrefValue = degreePreference.getValue()
 
             if (degreePrefValue == 0) {
-                boiling_f.text = elementBoilingKelvin
-                melting_f.text = elementMeltingKelvin
+                boilingF.text = elementBoilingKelvin
+                meltingF.text = elementMeltingKelvin
             }
             if (degreePrefValue == 1) {
-                boiling_f.text = elementBoilingCelsius
-                melting_f.text = elementMeltingCelsius
+                boilingF.text = elementBoilingCelsius
+                meltingF.text = elementMeltingCelsius
             }
             if (degreePrefValue == 2) {
-                boiling_f.text = elementBoilingFahrenheit
-                melting_f.text = elementMeltingFahrenheit
+                boilingF.text = elementBoilingFahrenheit
+                meltingF.text = elementMeltingFahrenheit
             }
 
             if (url == "empty") {
-                Utils.fadeInAnim(no_img, 150)
-                pro_bar.visibility = View.GONE
+                Utils.fadeInAnim(noImg, 150)
+                proBar.visibility = View.GONE
             } else {
-                Utils.fadeInAnim(pro_bar, 150)
-                no_img.visibility = View.GONE
+                Utils.fadeInAnim(proBar, 150)
+                noImg.visibility = View.GONE
             }
 
-            fusion_heat_f.text = fusionHeat
-            specific_heat_f.text = specificHeatCapacity
-            vaporization_heat_f.text = vaporizationHeat
-            a_empirical_f.text = atomicRadiusE
-            a_calculated_f.text = atomicRadius
-            covalent_f.text = covalentRadius
-            van_f.text = vanDerWaalsRadius
+            fusionHeatF.text = fusionHeat
+            specificHeatF.text = specificHeatCapacity
+            vaporizationHeatF.text = vaporizationHeat
+            aEmpiricalF.text = atomicRadiusE
+            aCalculatedF.text = atomicRadius
+            covalentF.text = covalentRadius
+            vanF.text = vanDerWaalsRadius
 
             val offlinePreferences = offlinePreference(this)
             val offlinePrefValue = offlinePreferences.getValue()
@@ -434,22 +452,22 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         } catch (e: IOException) {
             elementTitle.text = "Not able to load json"
             val stringText = "Couldn't load element:"
-            val ElementSendAndLoadPreference = ElementSendAndLoad(this)
-            val ElementSendAndLoadValue = ElementSendAndLoadPreference.getValue()
-            val name = ElementSendAndLoadValue
+            val elementSendAndLoadPreference = ElementSendAndLoad(this)
+            val elementSendAndLoadValue = elementSendAndLoadPreference.getValue()
 
-            ToastUtil.showToast(this, "$stringText$name")
+            ToastUtil.showToast(this, "$stringText$elementSendAndLoadValue")
         }
     }
 
     private fun loadImage(url: String?) {
         try { Picasso.get().load(url.toString()).into(element_image) }
         catch(e: ConnectException) {
-            offline_div.visibility = View.VISIBLE
+            offlineDiv.visibility = View.VISIBLE
             frame.visibility = View.GONE
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun loadSp(url: String?) {
         val hUrl = "http://www.jlindemann.se/atomic/emission_lines/"
         val ext = ".gif"
@@ -457,9 +475,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         try {
             Picasso.get().load(fURL).into(spImg)
             Picasso.get().load(fURL).into(sp_img_detail)
-        }
-
-        catch(e: ConnectException) {
+        } catch (e: ConnectException) {
             spImg.visibility = View.GONE
             spOffline.text = "No Data"
             spOffline.visibility = View.VISIBLE
@@ -467,143 +483,176 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
     }
 
     private fun loadModelView(url: String?) {
-        Picasso.get().load(url.toString()).into(model_view)
-        Picasso.get().load(url.toString()).into(card_model_view)
+        Picasso.get().load(url.toString()).into(modelView)
+        Picasso.get().load(url.toString()).into(cardModelView)
     }
 
-    fun wikiListener(url: String?) {
-        wikipedia_btn.setOnClickListener {
-            val PACKAGE_NAME = "com.android.chrome"
+    private fun wikiListener(url: String?) {
+        wikipediaBtn.setOnClickListener {
+            val pkgName = "com.android.chrome"
             val customTabBuilder = CustomTabsIntent.Builder()
 
-            customTabBuilder.setToolbarColor(ContextCompat.getColor(this, R.color.colorLightPrimary))
-            customTabBuilder.setSecondaryToolbarColor(ContextCompat.getColor(this, R.color.colorLightPrimary))
+            customTabBuilder.setToolbarColor(
+                ContextCompat.getColor(
+                    this,
+                    R.color.colorLightPrimary
+                )
+            )
+            customTabBuilder.setSecondaryToolbarColor(
+                ContextCompat.getColor(
+                    this,
+                    R.color.colorLightPrimary
+                )
+            )
             customTabBuilder.setShowTitle(true)
 
-            val CustomTab = customTabBuilder.build()
-            val intent = CustomTab.intent
+            val customTab = customTabBuilder.build()
+            val intent = customTab.intent
             intent.data = Uri.parse(url)
 
             val packageManager = packageManager
-            val resolveInfoList = packageManager.queryIntentActivities(CustomTab.intent, PackageManager.MATCH_DEFAULT_ONLY)
+            val resolveInfoList = packageManager.queryIntentActivities(
+                customTab.intent,
+                PackageManager.MATCH_DEFAULT_ONLY
+            )
             for (resolveInfo in resolveInfoList) {
                 val packageName = resolveInfo.activityInfo.packageName
-                if (TextUtils.equals(packageName, PACKAGE_NAME))
-                    CustomTab.intent.setPackage(PACKAGE_NAME)
+                if (TextUtils.equals(packageName, pkgName))
+                    customTab.intent.setPackage(pkgName)
             }
-            CustomTab.intent.data?.let { it1 -> CustomTab.launchUrl(this, it1) }
+            customTab.intent.data?.let { it1 -> customTab.launchUrl(this, it1) }
         }
     }
 
     fun favoriteBarSetup() {
         //Favorite Molar
         val molarPreference = FavoriteBarPreferences(this)
-        var molarPrefValue = molarPreference.getValue()
+        val molarPrefValue = molarPreference.getValue()
         if (molarPrefValue == 1) {
-            molar_mass_lay.visibility = View.VISIBLE
+            molarMassLay.visibility = View.VISIBLE
         }
         if (molarPrefValue == 0) {
-            molar_mass_lay.visibility = View.GONE
+            molarMassLay.visibility = View.GONE
         }
 
         //Favorite Phase
         val phasePreferences = FavoritePhase(this)
-        var phasePrefValue = phasePreferences.getValue()
+        val phasePrefValue = phasePreferences.getValue()
         if (phasePrefValue == 1) {
-            phase_lay.visibility = View.VISIBLE
+            phaseLay.visibility = View.VISIBLE
         }
         if (phasePrefValue == 0) {
-            phase_lay.visibility = View.GONE
+            phaseLay.visibility = View.GONE
         }
 
         //Electronegativity Phase
         val electronegativityPreferences = ElectronegativityPreference(this)
-        var electronegativityPrefValue = electronegativityPreferences.getValue()
+        val electronegativityPrefValue = electronegativityPreferences.getValue()
         if (electronegativityPrefValue == 1) {
-            electronegativity_lay.visibility = View.VISIBLE
+            electronegativityLay.visibility = View.VISIBLE
         }
         if (electronegativityPrefValue == 0) {
-            electronegativity_lay.visibility = View.GONE
+            electronegativityLay.visibility = View.GONE
         }
 
         //Density
         val densityPreference = DensityPreference(this)
-        var densityPrefValue = densityPreference.getValue()
+        val densityPrefValue = densityPreference.getValue()
         if (densityPrefValue == 1) {
-            density_lay.visibility = View.VISIBLE
+            densityLay.visibility = View.VISIBLE
         }
         if (densityPrefValue == 0) {
-            density_lay.visibility = View.GONE
+            densityLay.visibility = View.GONE
         }
 
         //Boiling
         val boilingPreference = BoilingPreference(this)
-        var boilingPrefValue = boilingPreference.getValue()
+        val boilingPrefValue = boilingPreference.getValue()
         if (boilingPrefValue == 1) {
-            boiling_lay.visibility = View.VISIBLE
+            boilingLay.visibility = View.VISIBLE
         }
         if (boilingPrefValue == 0) {
-            boiling_lay.visibility = View.GONE
+            boilingLay.visibility = View.GONE
         }
 
         //Melting
         val meltingPreference = MeltingPreference(this)
         val meltingPrefValue = meltingPreference.getValue()
-        if (meltingPrefValue == 1) { melting_lay.visibility = View.VISIBLE }
-        if (meltingPrefValue == 0) { melting_lay.visibility = View.GONE }
+        if (meltingPrefValue == 1) {
+            meltingLay.visibility = View.VISIBLE
+        }
+        if (meltingPrefValue == 0) {
+            meltingLay.visibility = View.GONE
+        }
 
         //Empirical
         val empiricalPreference = AtomicRadiusEmpPreference(this)
         val empiricalPrefValue = empiricalPreference.getValue()
-        if (empiricalPrefValue == 1) { a_empirical_lay.visibility = View.VISIBLE }
-        if (empiricalPrefValue == 0) { a_empirical_lay.visibility = View.GONE }
+        if (empiricalPrefValue == 1) {
+            aEmpiricalLay.visibility = View.VISIBLE
+        }
+        if (empiricalPrefValue == 0) {
+            aEmpiricalLay.visibility = View.GONE
+        }
 
         //Calculated
         val calculatedPreference = AtomicRadiusCalPreference(this)
         val calculatedPrefValue = calculatedPreference.getValue()
-        if (calculatedPrefValue == 1) { a_calculated_lay.visibility = View.VISIBLE }
-        if (calculatedPrefValue == 0) { a_calculated_lay.visibility = View.GONE }
+        if (calculatedPrefValue == 1) {
+            aCalculatedLay.visibility = View.VISIBLE
+        }
+        if (calculatedPrefValue == 0) {
+            aCalculatedLay.visibility = View.GONE
+        }
 
         //Covalent
         val covalentPreference = AtomicCovalentPreference(this)
         val covalentPrefValue = covalentPreference.getValue()
-        if (covalentPrefValue == 1) { covalent_lay.visibility = View.VISIBLE }
-        if (covalentPrefValue == 0) { covalent_lay.visibility = View.GONE }
+        if (covalentPrefValue == 1) {
+            covalentLay.visibility = View.VISIBLE
+        }
+        if (covalentPrefValue == 0) {
+            covalentLay.visibility = View.GONE
+        }
 
         //Van Der Waals
         val vanPreference = AtomicVanPreference(this)
         val vanPrefValue = vanPreference.getValue()
-        if (vanPrefValue == 1) { van_lay.visibility = View.VISIBLE }
-        if (vanPrefValue == 0) { van_lay.visibility = View.GONE }
+        if (vanPrefValue == 1) {
+            vanLay.visibility = View.VISIBLE
+        }
+        if (vanPrefValue == 0) {
+            vanLay.visibility = View.GONE
+        }
 
         //Fusion Heat
         val fusionHeatPreference = FusionHeatPreference(this)
-        var fusionHeatValue = fusionHeatPreference.getValue()
+        val fusionHeatValue = fusionHeatPreference.getValue()
         if (fusionHeatValue == 1) {
-            fusion_heat_lay.visibility = View.VISIBLE
+            fusionHeatLay.visibility = View.VISIBLE
         }
         if (fusionHeatValue == 0) {
-            fusion_heat_lay.visibility = View.GONE
+            fusionHeatLay.visibility = View.GONE
         }
 
         //Specific Heat
         val specificHeatPreference = SpecificHeatPreference(this)
-        var specificHeatValue = specificHeatPreference.getValue()
+        val specificHeatValue = specificHeatPreference.getValue()
         if (specificHeatValue == 1) {
-            specific_heat_lay.visibility = View.VISIBLE
+            specificHeatLay.visibility = View.VISIBLE
         }
         if (specificHeatValue == 0) {
-            specific_heat_lay.visibility = View.GONE
+            specificHeatLay.visibility = View.GONE
         }
 
         //Vaporization Heat
         val vaporizationHeatPreference = VaporizationHeatPreference(this)
-        var vaporizationHeatValue = vaporizationHeatPreference.getValue()
+        val vaporizationHeatValue = vaporizationHeatPreference.getValue()
         if (vaporizationHeatValue == 1) {
-            vaporization_heat_lay.visibility = View.VISIBLE
+            vaporizationHeatLay.visibility = View.VISIBLE
         }
         if (vaporizationHeatValue == 0) {
-            vaporization_heat_lay.visibility = View.GONE
+            vaporizationHeatLay.visibility = View.GONE
         }
     }
 }
