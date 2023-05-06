@@ -9,7 +9,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/common_title_back"
+        android:id="@+id/commonTitleBack"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="?attr/colorSurface"
@@ -90,7 +90,7 @@
             android:orientation="vertical">
 
             <Space
-                android:id="@+id/offline_space"
+                android:id="@+id/offlineSpace"
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="56dp" />
@@ -118,7 +118,7 @@
                     android:src="@drawable/ic_launcher_background" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/previous_btn"
+                    android:id="@+id/previousBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center_vertical"
@@ -133,7 +133,7 @@
                     app:srcCompat="@drawable/ic_arrow_back_whit" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/next_btn"
+                    android:id="@+id/nextBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end|center_vertical"
@@ -160,13 +160,13 @@
                 android:layout_height="wrap_content" />
 
             <include
-                android:id="@+id/overview_inc"
+                android:id="@+id/overviewInc"
                 layout="@layout/d_overview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                android:id="@+id/properties_inc"
+                android:id="@+id/propertiesInc"
                 layout="@layout/d_properties"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -223,7 +223,7 @@
     </ScrollView>
 
     <com.github.mmin18.widget.RealtimeBlurView
-        android:id="@+id/shell_background"
+        android:id="@+id/shellBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#A8000000"
@@ -237,7 +237,7 @@
         app:realtimeOverlayColor="#A80B0B0B" />
 
     <com.github.mmin18.widget.RealtimeBlurView
-        android:id="@+id/detail_emission_background"
+        android:id="@+id/detailEmissionBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#A8000000"
@@ -267,7 +267,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
-        android:id="@+id/detail_emission"
+        android:id="@+id/detailEmission"
         layout="@layout/detail_emission"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -18,7 +18,6 @@ import com.roy.science.utils.ToastUtil
 import com.roy.science.utils.Utils
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_element_info.*
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.d_atomic.*
 import kotlinx.android.synthetic.main.d_electromagnetic.*
 import kotlinx.android.synthetic.main.d_nuclear.*
@@ -27,11 +26,9 @@ import kotlinx.android.synthetic.main.d_properties.*
 import kotlinx.android.synthetic.main.d_temperatures.*
 import kotlinx.android.synthetic.main.d_thermodynamic.*
 import kotlinx.android.synthetic.main.detail_emission.*
-import kotlinx.android.synthetic.main.equations_info.*
 import kotlinx.android.synthetic.main.favorite_bar.*
 import kotlinx.android.synthetic.main.loading_view.*
 import kotlinx.android.synthetic.main.oxidiation_states.*
-import kotlinx.android.synthetic.main.search_layout.*
 import kotlinx.android.synthetic.main.shell_view.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -78,16 +75,16 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             val ElementSendAndLoadPreference = ElementSendAndLoad(this)
             val ElementSendAndLoadValue = ElementSendAndLoadPreference.getValue()
             if (ElementSendAndLoadValue == "hydrogen") {
-                previous_btn.visibility = View.GONE
+                previousBtn.visibility = View.GONE
             }
             else {
-                previous_btn.visibility = View.VISIBLE
+                previousBtn.visibility = View.VISIBLE
             }
             if (ElementSendAndLoadValue == "oganesson") {
-                next_btn.visibility = View.GONE
+                nextBtn.visibility = View.GONE
             }
             else {
-                next_btn.visibility = View.VISIBLE
+                nextBtn.visibility = View.VISIBLE
             }
             val name = ElementSendAndLoadValue
             val ext = ".json"
@@ -355,14 +352,14 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         val ext = ".gif"
         val fURL = hUrl + url + ext
         try {
-            Picasso.get().load(fURL).into(sp_img)
+            Picasso.get().load(fURL).into(spImg)
             Picasso.get().load(fURL).into(sp_img_detail)
         }
 
         catch(e: ConnectException) {
-            sp_img.visibility = View.GONE
-            sp_offline.text = "No Data"
-            sp_offline.visibility = View.VISIBLE
+            spImg.visibility = View.GONE
+            spOffline.text = "No Data"
+            spOffline.visibility = View.VISIBLE
         }
     }
 

@@ -26,7 +26,7 @@
             app:realtimeOverlayColor="@color/colorDarkPrimary" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/close_emission_btn"
+            android:id="@+id/closeEmissionBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|top"

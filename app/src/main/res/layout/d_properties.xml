@@ -198,7 +198,7 @@
             android:textSize="14sp" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/electron_view"
+            android:id="@+id/electronView"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:layout_margin="16dp"
@@ -279,7 +279,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/sp_offline"
+            android:id="@+id/spOffline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -313,7 +313,7 @@
                 app:tint="?attr/colorTertiary"/>
 
             <ImageView
-                android:id="@+id/sp_img"
+                android:id="@+id/spImg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity=""

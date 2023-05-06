@@ -394,7 +394,7 @@
     </HorizontalScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/edit_fav_btn"
+        android:id="@+id/editFavBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
