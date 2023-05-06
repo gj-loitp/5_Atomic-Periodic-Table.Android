@@ -7,7 +7,7 @@
     android:background="?attr/backgroundColor">
 
     <FrameLayout
-        android:id="@+id/view_unit"
+        android:id="@+id/viewUnit"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toStartOf="parent">
 
         <ScrollView
-            android:id="@+id/unit_scroll"
+            android:id="@+id/unitScroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -25,7 +25,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/unit_title_downstate"
+                    android:id="@+id/unitTitleDownstate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:elevation="1dp"
@@ -116,7 +116,7 @@
         </ScrollView>
 
         <FrameLayout
-            android:id="@+id/common_title_back_unit"
+            android:id="@+id/commonTitleBackunit"
             android:layout_width="match_parent"
             android:layout_height="@dimen/title_bar"
             android:background="?attr/colorSurface"
@@ -126,7 +126,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <FrameLayout
-                android:id="@+id/common_title_back_unit_color"
+                android:id="@+id/commonTitleBackUnitColor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="?attr/colorPrimary"
@@ -144,7 +144,7 @@
                     android:layout_height="@dimen/title_bar">
 
                     <ImageButton
-                        android:id="@+id/back_btn_unit"
+                        android:id="@+id/backBtnUnit"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -154,7 +154,7 @@
                         android:src="@drawable/ic_arrow_back_whit" />
 
                     <TextView
-                        android:id="@+id/unit_title"
+                        android:id="@+id/unitTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/title_bar"
                         android:layout_marginStart="70dp"
