@@ -10,38 +10,50 @@ import com.roy.science.R
 import com.roy.science.activities.BaseActivity
 import com.roy.science.adapter.OrderAdapter
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_equations.*
-import kotlinx.android.synthetic.main.activity_order_settings_page.*
-import kotlinx.android.synthetic.main.equations_info.*
-import java.util.*
+import kotlinx.android.synthetic.main.activity_order_settings_page.backBtnOrd
+import kotlinx.android.synthetic.main.activity_order_settings_page.commonTitleBackOrd
+import kotlinx.android.synthetic.main.activity_order_settings_page.ordRecycler
+import kotlinx.android.synthetic.main.activity_order_settings_page.viewOrd
 
-
-class OrderActivity : BaseActivity()  {
-
+class OrderActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setupViews()
+    }
+
+    private fun setupViews() {
         val themePreference = ThemePreference(this)
         val themePrefValue = themePreference.getValue()
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_NO -> { setTheme(R.style.AppTheme) }
-                Configuration.UI_MODE_NIGHT_YES -> { setTheme(R.style.AppThemeDark) }
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    setTheme(R.style.AppTheme)
+                }
+
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    setTheme(R.style.AppThemeDark)
+                }
             }
         }
-        if (themePrefValue == 0) { setTheme(R.style.AppTheme) }
-        if (themePrefValue == 1) { setTheme(R.style.AppThemeDark) }
+        if (themePrefValue == 0) {
+            setTheme(R.style.AppTheme)
+        }
+        if (themePrefValue == 1) {
+            setTheme(R.style.AppThemeDark)
+        }
         setContentView(R.layout.activity_order_settings_page) //REMEMBER: Never move any function calls above this
         val dataSet = listOf("Item 1", "Item 2", "Item 3", "Item 4", "Item 5")
         val mAdapter = OrderAdapter(dataSet)
-        val mList = ord_recycler
+        val mList = ordRecycler
         mList.layoutManager = LinearLayoutManager(this)
         mList.adapter = mAdapter
         mList.dragListener = onItemDragListener
 
-
-        view_ord.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-        back_btn_ord.setOnClickListener {
+        viewOrd.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        backBtnOrd.setOnClickListener {
             this.onBackPressed()
         }
     }
@@ -57,22 +69,19 @@ class OrderActivity : BaseActivity()  {
     }
 
     override fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) {
-        ord_recycler.setPadding(
-            0,
+        ordRecycler.setPadding(
+            /* left = */ 0,
+            /* top = */
             resources.getDimensionPixelSize(R.dimen.title_bar) + resources.getDimensionPixelSize(R.dimen.margin_space) + top,
+            /* right = */
             0,
-            resources.getDimensionPixelSize(R.dimen.title_bar))
+            /* bottom = */
+            resources.getDimensionPixelSize(R.dimen.title_bar)
+        )
 
-        val params2 = common_title_back_ord.layoutParams as ViewGroup.LayoutParams
+        val params2 = commonTitleBackOrd.layoutParams as ViewGroup.LayoutParams
         params2.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
-        common_title_back_ord.layoutParams = params2
+        commonTitleBackOrd.layoutParams = params2
     }
 
-
-
-
-
 }
-
-
-

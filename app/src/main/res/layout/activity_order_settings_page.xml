@@ -4,12 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:id="@+id/view_ord"
+    android:id="@+id/viewOrd"
     android:fitsSystemWindows="true"
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/common_title_back_ord"
+        android:id="@+id/commonTitleBackOrd"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:alpha="0.975"
@@ -31,7 +31,7 @@
                 android:layout_height="56dp">
 
                 <ImageButton
-                    android:id="@+id/back_btn_ord"
+                    android:id="@+id/backBtnOrd"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
@@ -58,7 +58,7 @@
     </FrameLayout>
 
     <com.ernestoyaquello.dragdropswiperecyclerview.DragDropSwipeRecyclerView
-        android:id="@+id/ord_recycler"
+        android:id="@+id/ordRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:item_layout="@layout/row_order_item"
