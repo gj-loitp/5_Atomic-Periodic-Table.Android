@@ -1,4 +1,4 @@
-package com.roy.science
+package com.roy.science.widgets
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -7,7 +7,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
-import com.jlindemann.science.R
+import com.roy.science.R
 import com.roy.science.activities.MainActivity
 
 /**
@@ -31,7 +31,12 @@ class ShortCommandWidget : AppWidgetProvider() {
             //Open App on Widget Click
             remoteViews.setOnClickPendingIntent(
                 R.id.widget_search_bar,
-                PendingIntent.getActivity(context, 0, Intent(context, MainActivity::class.java), 0)
+                PendingIntent.getActivity(
+                    context,
+                    0,
+                    Intent(context, MainActivity::class.java),
+                    PendingIntent.FLAG_IMMUTABLE
+                )
             )
 
             //Update Widget

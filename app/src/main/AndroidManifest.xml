@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <receiver
-            android:name="com.roy.science.ShortCommandWidget"
+            android:name="com.roy.science.widgets.ShortCommandWidget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
