@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/view_equ"
+        android:id="@+id/viewEqu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toStartOf="parent">
 
         <LinearLayout
-            android:id="@+id/empty_search_box_equ"
+            android:id="@+id/emptySearchBoxEqu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="56dp"
@@ -56,7 +56,7 @@
         </LinearLayout>
 
         <FrameLayout
-            android:id="@+id/common_title_back_equ"
+            android:id="@+id/commonTitleBackEqu"
             android:layout_width="match_parent"
             android:layout_height="@dimen/title_bar"
             android:background="?attr/colorSurface"
@@ -79,12 +79,12 @@
                 android:orientation="vertical">
 
                 <FrameLayout
-                    android:id="@+id/title_box_equ"
+                    android:id="@+id/titleBoxEqu"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/title_bar">
 
                     <ImageButton
-                        android:id="@+id/back_btn_equ"
+                        android:id="@+id/backBtnEqu"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -94,7 +94,7 @@
                         android:src="@drawable/ic_arrow_back_whit" />
 
                     <ImageButton
-                        android:id="@+id/search_btn_equ"
+                        android:id="@+id/searchBtnEqu"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -120,13 +120,13 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:id="@+id/search_bar_equ"
+                    android:id="@+id/searchBarEqu"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:visibility="gone">
 
                     <ImageButton
-                        android:id="@+id/close_equ_search"
+                        android:id="@+id/closeEquSearch"
                         android:layout_width="56dp"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_height="56dp"
@@ -146,7 +146,7 @@
                         android:elevation="0dp">
 
                         <EditText
-                            android:id="@+id/edit_equ"
+                            android:id="@+id/editEqu"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
@@ -166,7 +166,7 @@
         </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/equ_recycler"
+            android:id="@+id/equRecycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
@@ -178,7 +178,7 @@
     </FrameLayout>
 
     <include
-        android:id="@+id/e_inc"
+        android:id="@+id/eInc"
         layout="@layout/equations_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

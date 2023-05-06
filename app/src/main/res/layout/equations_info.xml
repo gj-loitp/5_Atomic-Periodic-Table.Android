@@ -7,7 +7,7 @@
     android:elevation="28dp">
 
     <TextView
-        android:id="@+id/l_background_e"
+        android:id="@+id/lBackgroundE"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.6"
@@ -38,7 +38,7 @@
             android:alpha="0.11"/>
 
         <ImageView
-            android:id="@+id/e_title"
+            android:id="@+id/eTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -47,7 +47,7 @@
             app:srcCompat="@drawable/e_density" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/e_back_btn"
+            android:id="@+id/eBackBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -71,7 +71,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/e_text"
+                    android:id="@+id/eText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
