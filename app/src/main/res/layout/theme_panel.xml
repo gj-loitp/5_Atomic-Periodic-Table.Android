@@ -89,7 +89,7 @@
                             android:alpha="0.11"/>
 
                         <TextView
-                            android:id="@+id/system_default_btn"
+                            android:id="@+id/systemDefaultBtn"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:clickable="true"
@@ -119,7 +119,7 @@
                             android:alpha="0.11"/>
 
                         <TextView
-                            android:id="@+id/light_btn"
+                            android:id="@+id/lightBtn"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:clickable="true"
@@ -149,7 +149,7 @@
                             android:alpha="0.11"/>
 
                         <TextView
-                            android:id="@+id/dark_btn"
+                            android:id="@+id/darkBtn"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:clickable="true"
@@ -183,7 +183,7 @@
                     android:alpha="0.11"/>
 
                 <TextView
-                    android:id="@+id/cancel_btn"
+                    android:id="@+id/cancelBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -212,7 +212,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/theme_background"
+        android:id="@+id/themeBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.6"

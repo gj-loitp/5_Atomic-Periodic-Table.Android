@@ -10,7 +10,7 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:id="@+id/common_title_back_set"
+        android:id="@+id/commonTitleBackSet"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:alpha="1"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <FrameLayout
-            android:id="@+id/common_title_settings_color"
+            android:id="@+id/commonTitleSettingsColor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="?attr/colorPrimary"
@@ -40,7 +40,7 @@
                 android:layout_height="56dp">
 
                 <ImageButton
-                    android:id="@+id/back_btn_set"
+                    android:id="@+id/backBtnSet"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
@@ -60,7 +60,7 @@
                     android:src="@drawable/ic_info" />
 
                 <TextView
-                    android:id="@+id/element_title"
+                    android:id="@+id/elementTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="56dp"
                     android:layout_marginStart="70dp"
@@ -78,7 +78,7 @@
     </FrameLayout>
 
     <ScrollView
-        android:id="@+id/scroll_settings"
+        android:id="@+id/scrollSettings"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="0dp">
@@ -90,7 +90,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/element_title_downstate"
+                android:id="@+id/elementTitleDownstate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:elevation="0dp"
@@ -103,7 +103,7 @@
                 android:textStyle="normal" />
 
             <LinearLayout
-                android:id="@+id/personalization_box"
+                android:id="@+id/personalizationBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/backgroundColor"
@@ -124,7 +124,7 @@
                     android:textStyle="normal" />
 
                 <RelativeLayout
-                    android:id="@+id/themes_settings"
+                    android:id="@+id/themesSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="?attr/backgroundColor"
@@ -193,7 +193,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/favorite_settings"
+                    android:id="@+id/favoriteSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="?attr/backgroundColor"
@@ -262,7 +262,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/order_settings"
+                    android:id="@+id/orderSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="?attr/backgroundColor"
@@ -331,7 +331,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/unit_settings"
+                    android:id="@+id/unitSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="?attr/backgroundColor"
@@ -399,7 +399,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/offline_settings"
+                    android:id="@+id/offlineSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="?attr/backgroundColor"
@@ -453,7 +453,7 @@
                         </LinearLayout>
 
                         <androidx.appcompat.widget.SwitchCompat
-                            android:id="@+id/offline_internet_switch"
+                            android:id="@+id/offlineInternetSwitch"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
                             android:thumb="@drawable/switch_thumb"
@@ -484,7 +484,7 @@
                 android:background="?attr/colorOutline" />
 
             <LinearLayout
-                android:id="@+id/advanced_box"
+                android:id="@+id/advancedBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="?attr/backgroundColor"
@@ -519,7 +519,7 @@
                     android:foreground="@drawable/d_ripple">
 
                     <LinearLayout
-                        android:id="@+id/cache_lay"
+                        android:id="@+id/cacheLay"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="?attr/backgroundColor"
@@ -578,7 +578,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/submit_settings"
+                    android:id="@+id/submitSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="?attr/backgroundColor"
@@ -646,7 +646,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/licenses_settings"
+                    android:id="@+id/licensesSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="?attr/backgroundColor"
@@ -715,7 +715,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/about_settings"
+                    android:id="@+id/aboutSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="?attr/backgroundColor"
@@ -783,7 +783,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/experimental_settings"
+                    android:id="@+id/experimentalSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:elevation="8dp"
@@ -852,7 +852,7 @@
     </ScrollView>
 
     <include
-        android:id="@+id/theme_panel"
+        android:id="@+id/themePanel"
         layout="@layout/theme_panel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

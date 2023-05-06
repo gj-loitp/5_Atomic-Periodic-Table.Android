@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <include
-        android:id="@+id/theme_panel"
+        android:id="@+id/themePanel"
         layout="@layout/theme_panel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,7 +55,7 @@
                     app:fabSize="normal" />
 
                 <TextView
-                    android:id="@+id/element_title"
+                    android:id="@+id/elementTitle"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:gravity="center"

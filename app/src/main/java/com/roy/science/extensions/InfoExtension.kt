@@ -179,7 +179,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             }
 
             //set elements
-            element_title.text = element
+            elementTitle.text = element
             description_name.text = description
             element_name.text = element
             electrons_el.text = elementElectrons
@@ -329,7 +329,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             wikiListener(wikipedia)
         }
         catch (e: IOException) {
-            element_title.text = "Not able to load json"
+            elementTitle.text = "Not able to load json"
             val stringText = "Couldn't load element:"
             val ElementSendAndLoadPreference = ElementSendAndLoad(this)
             val ElementSendAndLoadValue = ElementSendAndLoadPreference.getValue()

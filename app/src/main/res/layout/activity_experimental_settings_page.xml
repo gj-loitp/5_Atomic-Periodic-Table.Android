@@ -45,7 +45,7 @@
                     app:fabSize="normal" />
 
                 <TextView
-                    android:id="@+id/element_title"
+                    android:id="@+id/elementTitle"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:gravity="center"
