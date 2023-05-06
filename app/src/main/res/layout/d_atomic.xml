@@ -51,7 +51,7 @@
             android:textStyle="bold" />
 
         <include
-            android:id="@+id/ox_view"
+            android:id="@+id/oxView"
             layout="@layout/oxidiation_states"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

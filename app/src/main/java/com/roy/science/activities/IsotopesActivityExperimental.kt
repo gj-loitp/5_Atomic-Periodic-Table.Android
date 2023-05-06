@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.roy.science.R
 import com.roy.science.adapter.IsotopeAdapter
-import com.roy.science.animations.Anim
+import com.roy.science.anim.Anim
 import com.roy.science.model.Element
 import com.roy.science.model.ElementModel
 import com.roy.science.preferences.ElementSendAndLoad

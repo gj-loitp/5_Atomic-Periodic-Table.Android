@@ -30,7 +30,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.roy.science.R
 import com.roy.science.activities.tables.DictionaryActivity
 import com.roy.science.adapter.ElementAdapter
-import com.roy.science.animations.Anim
+import com.roy.science.anim.Anim
 import com.roy.science.extensions.TableExtension
 import com.roy.science.model.Element
 import com.roy.science.model.ElementModel

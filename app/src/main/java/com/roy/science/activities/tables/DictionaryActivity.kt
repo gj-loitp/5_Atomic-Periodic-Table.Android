@@ -23,7 +23,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.roy.science.R
 import com.roy.science.activities.BaseActivity
 import com.roy.science.adapter.DictionaryAdapter
-import com.roy.science.animations.Anim
+import com.roy.science.anim.Anim
 import com.roy.science.model.Dictionary
 import com.roy.science.model.DictionaryModel
 import com.roy.science.preferences.DictionaryPreferences

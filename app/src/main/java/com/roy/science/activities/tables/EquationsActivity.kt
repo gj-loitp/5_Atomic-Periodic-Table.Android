@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.roy.science.R
 import com.roy.science.activities.BaseActivity
 import com.roy.science.adapter.EquationsAdapter
-import com.roy.science.animations.Anim
+import com.roy.science.anim.Anim
 import com.roy.science.model.Equation
 import com.roy.science.model.EquationModel
 import com.roy.science.preferences.ThemePreference

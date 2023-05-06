@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import com.roy.science.R
-import com.roy.science.animations.Anim
+import com.roy.science.anim.Anim
 import com.roy.science.preferences.ThemePreference
 import kotlinx.android.synthetic.main.activity_solubility.backBtn
 import kotlinx.android.synthetic.main.activity_solubility.boxm

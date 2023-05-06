@@ -1,9 +1,9 @@
 package com.roy.science.extensions
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.view.WindowInsets
@@ -12,31 +12,134 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import com.roy.science.R
 import com.roy.science.activities.IsotopesActivityExperimental
-import com.roy.science.preferences.*
+import com.roy.science.preferences.AtomicCovalentPreference
+import com.roy.science.preferences.AtomicRadiusCalPreference
+import com.roy.science.preferences.AtomicRadiusEmpPreference
+import com.roy.science.preferences.AtomicVanPreference
+import com.roy.science.preferences.BoilingPreference
+import com.roy.science.preferences.DegreePreference
+import com.roy.science.preferences.DensityPreference
+import com.roy.science.preferences.ElectronegativityPreference
+import com.roy.science.preferences.ElementSendAndLoad
+import com.roy.science.preferences.FavoriteBarPreferences
+import com.roy.science.preferences.FavoritePhase
+import com.roy.science.preferences.FusionHeatPreference
+import com.roy.science.preferences.MeltingPreference
+import com.roy.science.preferences.SpecificHeatPreference
+import com.roy.science.preferences.VaporizationHeatPreference
+import com.roy.science.preferences.offlinePreference
+import com.roy.science.preferences.sendIso
 import com.roy.science.utils.Pasteur
 import com.roy.science.utils.ToastUtil
 import com.roy.science.utils.Utils
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_element_info.*
-import kotlinx.android.synthetic.main.d_atomic.*
-import kotlinx.android.synthetic.main.d_electromagnetic.*
-import kotlinx.android.synthetic.main.d_nuclear.*
-import kotlinx.android.synthetic.main.d_overview.*
-import kotlinx.android.synthetic.main.d_properties.*
-import kotlinx.android.synthetic.main.d_temperatures.*
-import kotlinx.android.synthetic.main.d_thermodynamic.*
-import kotlinx.android.synthetic.main.detail_emission.*
-import kotlinx.android.synthetic.main.favorite_bar.*
-import kotlinx.android.synthetic.main.loading_view.*
-import kotlinx.android.synthetic.main.oxidiation_states.*
-import kotlinx.android.synthetic.main.shell_view.*
+import kotlinx.android.synthetic.main.activity_element_info.elementTitle
+import kotlinx.android.synthetic.main.activity_element_info.element_image
+import kotlinx.android.synthetic.main.activity_element_info.frame
+import kotlinx.android.synthetic.main.activity_element_info.nextBtn
+import kotlinx.android.synthetic.main.activity_element_info.offline_div
+import kotlinx.android.synthetic.main.activity_element_info.previousBtn
+import kotlinx.android.synthetic.main.activity_element_info.wikipedia_btn
+import kotlinx.android.synthetic.main.d_atomic.atomic_radius_e_text
+import kotlinx.android.synthetic.main.d_atomic.atomic_radius_text
+import kotlinx.android.synthetic.main.d_atomic.covalent_radius_text
+import kotlinx.android.synthetic.main.d_atomic.electron_config_text
+import kotlinx.android.synthetic.main.d_atomic.ion_charge_text
+import kotlinx.android.synthetic.main.d_atomic.ionization_energies_text
+import kotlinx.android.synthetic.main.d_atomic.oxView
+import kotlinx.android.synthetic.main.d_atomic.van_der_waals_radius_text
+import kotlinx.android.synthetic.main.d_electromagnetic.element_electrical_type
+import kotlinx.android.synthetic.main.d_electromagnetic.element_magnetic_type
+import kotlinx.android.synthetic.main.d_electromagnetic.elementResistivity
+import kotlinx.android.synthetic.main.d_electromagnetic.element_superconducting_point
+import kotlinx.android.synthetic.main.d_nuclear.isotopes_frame
+import kotlinx.android.synthetic.main.d_nuclear.neutron_cross_sectional_text
+import kotlinx.android.synthetic.main.d_nuclear.radioactive_text
+import kotlinx.android.synthetic.main.d_overview.descriptionName
+import kotlinx.android.synthetic.main.d_overview.dscBtn
+import kotlinx.android.synthetic.main.d_overview.electronsEl
+import kotlinx.android.synthetic.main.d_overview.element_appearance
+import kotlinx.android.synthetic.main.d_overview.element_discovered_by
+import kotlinx.android.synthetic.main.d_overview.element_electrons
+import kotlinx.android.synthetic.main.d_overview.element_group
+import kotlinx.android.synthetic.main.d_overview.elementName
+import kotlinx.android.synthetic.main.d_overview.element_neutrons_common
+import kotlinx.android.synthetic.main.d_overview.element_protons
+import kotlinx.android.synthetic.main.d_overview.element_year
+import kotlinx.android.synthetic.main.d_properties.element_atomic_number
+import kotlinx.android.synthetic.main.d_properties.element_atomic_weight
+import kotlinx.android.synthetic.main.d_properties.element_block
+import kotlinx.android.synthetic.main.d_properties.element_density
+import kotlinx.android.synthetic.main.d_properties.element_electronegativty
+import kotlinx.android.synthetic.main.d_properties.element_shells_electrons
+import kotlinx.android.synthetic.main.d_properties.model_view
+import kotlinx.android.synthetic.main.d_properties.spImg
+import kotlinx.android.synthetic.main.d_properties.spOffline
+import kotlinx.android.synthetic.main.d_temperatures.element_boiling_celsius
+import kotlinx.android.synthetic.main.d_temperatures.element_boiling_fahrenheit
+import kotlinx.android.synthetic.main.d_temperatures.element_boiling_kelvin
+import kotlinx.android.synthetic.main.d_temperatures.element_melting_celsius
+import kotlinx.android.synthetic.main.d_temperatures.element_melting_fahrenheit
+import kotlinx.android.synthetic.main.d_temperatures.element_melting_kelvin
+import kotlinx.android.synthetic.main.d_thermodynamic.fusion_heat_text
+import kotlinx.android.synthetic.main.d_thermodynamic.phase_icon
+import kotlinx.android.synthetic.main.d_thermodynamic.phase_text
+import kotlinx.android.synthetic.main.d_thermodynamic.specific_heat_text
+import kotlinx.android.synthetic.main.d_thermodynamic.vaporization_heat_text
+import kotlinx.android.synthetic.main.detail_emission.sp_img_detail
+import kotlinx.android.synthetic.main.favorite_bar.a_calculated_f
+import kotlinx.android.synthetic.main.favorite_bar.a_calculated_lay
+import kotlinx.android.synthetic.main.favorite_bar.a_empirical_f
+import kotlinx.android.synthetic.main.favorite_bar.a_empirical_lay
+import kotlinx.android.synthetic.main.favorite_bar.boiling_f
+import kotlinx.android.synthetic.main.favorite_bar.boiling_lay
+import kotlinx.android.synthetic.main.favorite_bar.covalent_f
+import kotlinx.android.synthetic.main.favorite_bar.covalent_lay
+import kotlinx.android.synthetic.main.favorite_bar.density_f
+import kotlinx.android.synthetic.main.favorite_bar.density_lay
+import kotlinx.android.synthetic.main.favorite_bar.electronegativity_f
+import kotlinx.android.synthetic.main.favorite_bar.electronegativity_lay
+import kotlinx.android.synthetic.main.favorite_bar.fusion_heat_f
+import kotlinx.android.synthetic.main.favorite_bar.fusion_heat_lay
+import kotlinx.android.synthetic.main.favorite_bar.melting_f
+import kotlinx.android.synthetic.main.favorite_bar.melting_lay
+import kotlinx.android.synthetic.main.favorite_bar.molar_mass_f
+import kotlinx.android.synthetic.main.favorite_bar.molar_mass_lay
+import kotlinx.android.synthetic.main.favorite_bar.phase_f
+import kotlinx.android.synthetic.main.favorite_bar.phase_lay
+import kotlinx.android.synthetic.main.favorite_bar.specific_heat_f
+import kotlinx.android.synthetic.main.favorite_bar.specific_heat_lay
+import kotlinx.android.synthetic.main.favorite_bar.van_f
+import kotlinx.android.synthetic.main.favorite_bar.van_lay
+import kotlinx.android.synthetic.main.favorite_bar.vaporization_heat_f
+import kotlinx.android.synthetic.main.favorite_bar.vaporization_heat_lay
+import kotlinx.android.synthetic.main.loading_view.no_img
+import kotlinx.android.synthetic.main.loading_view.pro_bar
+import kotlinx.android.synthetic.main.oxidiation_states.m1ox
+import kotlinx.android.synthetic.main.oxidiation_states.m2ox
+import kotlinx.android.synthetic.main.oxidiation_states.m3ox
+import kotlinx.android.synthetic.main.oxidiation_states.m4ox
+import kotlinx.android.synthetic.main.oxidiation_states.m5ox
+import kotlinx.android.synthetic.main.oxidiation_states.ox0
+import kotlinx.android.synthetic.main.oxidiation_states.p1ox
+import kotlinx.android.synthetic.main.oxidiation_states.p2ox
+import kotlinx.android.synthetic.main.oxidiation_states.p3ox
+import kotlinx.android.synthetic.main.oxidiation_states.p4ox
+import kotlinx.android.synthetic.main.oxidiation_states.p5ox
+import kotlinx.android.synthetic.main.oxidiation_states.p6ox
+import kotlinx.android.synthetic.main.oxidiation_states.p7ox
+import kotlinx.android.synthetic.main.oxidiation_states.p8ox
+import kotlinx.android.synthetic.main.oxidiation_states.p9ox
+import kotlinx.android.synthetic.main.shell_view.card_model_view
+import kotlinx.android.synthetic.main.shell_view.config_data
+import kotlinx.android.synthetic.main.shell_view.e_config_data
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
 import java.net.ConnectException
+import java.util.Locale
 import kotlin.math.pow
-
 
 abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsListener {
     companion object {
@@ -44,10 +147,6 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
     }
 
     private var systemUiConfigured = false
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onStart() {
         super.onStart()
@@ -59,42 +158,51 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
     }
 
-    open fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) = Unit
+    open fun onApplySystemInsets(
+        top: Int,
+        bottom: Int,
+        left: Int,
+        right: Int
+    ) = Unit
 
     override fun onApplyWindowInsets(v: View, insets: WindowInsets): WindowInsets {
         Pasteur.info(TAG, "height: ${insets.systemWindowInsetBottom}")
-        onApplySystemInsets(insets.systemWindowInsetTop, insets.systemWindowInsetBottom, insets.systemWindowInsetLeft, insets.systemWindowInsetRight)
+        onApplySystemInsets(
+            insets.systemWindowInsetTop,
+            insets.systemWindowInsetBottom,
+            insets.systemWindowInsetLeft,
+            insets.systemWindowInsetRight
+        )
         return insets.consumeSystemWindowInsets()
     }
+
+    @SuppressLint("SetTextI18n")
     fun readJson() {
-        var jsonstring : String? = null
-        ox_view.refreshDrawableState()
+        val jsonString: String?
+        oxView.refreshDrawableState()
 
         try {
             //Setup json reader
-            val ElementSendAndLoadPreference = ElementSendAndLoad(this)
-            val ElementSendAndLoadValue = ElementSendAndLoadPreference.getValue()
-            if (ElementSendAndLoadValue == "hydrogen") {
+            val elementSendAndLoadPreference = ElementSendAndLoad(this)
+            val elementSendAndLoadValue = elementSendAndLoadPreference.getValue()
+            if (elementSendAndLoadValue == "hydrogen") {
                 previousBtn.visibility = View.GONE
-            }
-            else {
+            } else {
                 previousBtn.visibility = View.VISIBLE
             }
-            if (ElementSendAndLoadValue == "oganesson") {
+            if (elementSendAndLoadValue == "oganesson") {
                 nextBtn.visibility = View.GONE
-            }
-            else {
+            } else {
                 nextBtn.visibility = View.VISIBLE
             }
-            val name = ElementSendAndLoadValue
             val ext = ".json"
-            val ElementJson: String? = "$name$ext"
+            val elementJson = "$elementSendAndLoadValue$ext"
 
             //Read json
-            val inputStream: InputStream = assets.open(ElementJson.toString())
-            jsonstring = inputStream.bufferedReader().use { it.readText() }
+            val inputStream: InputStream = assets.open(elementJson)
+            jsonString = inputStream.bufferedReader().use { it.readText() }
 
-            val jsonArray = JSONArray(jsonstring)
+            val jsonArray = JSONArray(jsonString)
             val jsonObject: JSONObject = jsonArray.getJSONObject(0)
 
             //optStrings from jsonObject or fallback
@@ -123,7 +231,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             val elementModelUrl = jsonObject.optString("element_model", "---")
             val elementAppearance = jsonObject.optString("element_appearance", "---")
             val elementBlock = jsonObject.optString("element_block", "---")
-            val elementCrystalStructure = jsonObject.optString("element_crystal_structure", "---")
+//            val elementCrystalStructure = jsonObject.optString("element_crystal_structure", "---")
             val fusionHeat = jsonObject.optString("element_fusion_heat", "---")
             val specificHeatCapacity = jsonObject.optString("element_specific_heat_capacity", "---")
             val vaporizationHeat = jsonObject.optString("element_vaporization_heat", "---")
@@ -152,37 +260,35 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             val neutronCrossSection = jsonObject.optString("neutron_cross_sectional", "---")
 
             if (rMultiplier == "---") {
-                element_resistivity.text = "---"
-            }
-            else {
+                elementResistivity.text = "---"
+            } else {
                 val input = resistivity.toFloat() * rMultiplier.toFloat()
                 val output = input.pow(-1).toString()
-                element_resistivity.text = output.replace("E", "*10^") + " (S/m)"
+                elementResistivity.text = output.replace("E", "*10^") + " (S/m)"
             }
 
-            description_name.setOnClickListener {
-                description_name.maxLines = 100
-                description_name.requestLayout()
-                dsc_btn.text = "collapse"
+            descriptionName.setOnClickListener {
+                descriptionName.maxLines = 100
+                descriptionName.requestLayout()
+                dscBtn.text = "collapse"
             }
-            dsc_btn.setOnClickListener {
-                if (dsc_btn.text == "..more") {
-                    description_name.maxLines = 100
-                    description_name.requestLayout()
-                    dsc_btn.text = "collapse"
-                }
-                else {
-                    description_name.maxLines = 4
-                    description_name.requestLayout()
-                    dsc_btn.text = "..more"
+            dscBtn.setOnClickListener {
+                if (dscBtn.text == "..more") {
+                    descriptionName.maxLines = 100
+                    descriptionName.requestLayout()
+                    dscBtn.text = "collapse"
+                } else {
+                    descriptionName.maxLines = 4
+                    descriptionName.requestLayout()
+                    dscBtn.text = "..more"
                 }
             }
 
             //set elements
             elementTitle.text = element
-            description_name.text = description
-            element_name.text = element
-            electrons_el.text = elementElectrons
+            descriptionName.text = description
+            elementName.text = element
+            electronsEl.text = elementElectrons
             element_year.text = elementYear
             element_shells_electrons.text = elementShellElectrons
             element_discovered_by.text = elementDiscoveredBy
@@ -208,7 +314,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             neutron_cross_sectional_text.text = neutronCrossSection
             isotopes_frame.setOnClickListener {
                 val isoPreference = ElementSendAndLoad(this)
-                isoPreference.setValue(element.toLowerCase()) //Send element number
+                isoPreference.setValue(element.lowercase(Locale.getDefault())) //Send element number
                 val isoSend = sendIso(this)
                 isoSend.setValue("true") //Set flag for sent
                 val intent = Intent(this, IsotopesActivityExperimental::class.java)
@@ -305,8 +411,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             if (url == "empty") {
                 Utils.fadeInAnim(no_img, 150)
                 pro_bar.visibility = View.GONE
-            }
-            else {
+            } else {
                 Utils.fadeInAnim(pro_bar, 150)
                 no_img.visibility = View.GONE
             }
@@ -327,8 +432,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
                 loadSp(short)
             }
             wikiListener(wikipedia)
-        }
-        catch (e: IOException) {
+        } catch (e: IOException) {
             elementTitle.text = "Not able to load json"
             val stringText = "Couldn't load element:"
             val ElementSendAndLoadPreference = ElementSendAndLoad(this)

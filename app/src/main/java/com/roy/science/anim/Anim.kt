@@ -1,6 +1,7 @@
-package com.roy.science.animations
+package com.roy.science.anim
 
 import android.os.Handler
+import android.os.Looper
 import android.view.View
 
 object Anim {
@@ -8,14 +9,14 @@ object Anim {
     fun fadeIn(view: View, time: Long) {
         view.visibility = View.VISIBLE
         view.alpha = 0.0f
-        view.animate().setDuration(time)
+        view.animate().duration = time
         view.animate().alpha(1.0f)
     }
 
     fun fadeOutAnim(view: View, time: Long) {
-        view.animate().setDuration(time)
+        view.animate().duration = time
         view.animate().alpha(0.0f)
-        val handler = Handler()
+        val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             view.visibility = View.GONE
         }, time+1)

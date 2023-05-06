@@ -81,7 +81,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/element_resistivity"
+            android:id="@+id/elementResistivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"

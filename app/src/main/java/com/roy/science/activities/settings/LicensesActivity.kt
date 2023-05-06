@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import com.roy.science.R
 import com.roy.science.activities.BaseActivity
-import com.roy.science.animations.Anim
+import com.roy.science.anim.Anim
 import com.roy.science.preferences.ThemePreference
 import kotlinx.android.synthetic.main.activity_dictionary.backBtnD
 import kotlinx.android.synthetic.main.activity_settings_licenses.commonTitleBackLic
