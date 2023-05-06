@@ -1,8 +1,10 @@
 package com.roy.science.activities.tables
 
+import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -12,25 +14,28 @@ import com.roy.science.activities.BaseActivity
 import com.roy.science.model.Indicator
 import com.roy.science.model.IndicatorModel
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_ph.acid_info
-import kotlinx.android.synthetic.main.activity_ph.alkaline_info
-import kotlinx.android.synthetic.main.activity_ph.back_btn_ph
+import kotlinx.android.synthetic.main.activity_ph.acidInfo
+import kotlinx.android.synthetic.main.activity_ph.alkalineInfo
+import kotlinx.android.synthetic.main.activity_ph.backBtnPh
 import kotlinx.android.synthetic.main.activity_ph.center
-import kotlinx.android.synthetic.main.activity_ph.common_title_back_ph
+import kotlinx.android.synthetic.main.activity_ph.commonTitleBackPh
 import kotlinx.android.synthetic.main.activity_ph.left
-import kotlinx.android.synthetic.main.activity_ph.neutral_info
-import kotlinx.android.synthetic.main.activity_ph.ph_scroll
+import kotlinx.android.synthetic.main.activity_ph.neutralInfo
+import kotlinx.android.synthetic.main.activity_ph.phScroll
 import kotlinx.android.synthetic.main.activity_ph.right
-import kotlinx.android.synthetic.main.activity_ph.view_ph
-import kotlinx.android.synthetic.main.bar_ph_chips.bromothymol_blue_btn
-import kotlinx.android.synthetic.main.bar_ph_chips.congo_red_btn
-import kotlinx.android.synthetic.main.bar_ph_chips.methyl_orange_btn
+import kotlinx.android.synthetic.main.activity_ph.viewPh
+import kotlinx.android.synthetic.main.bar_ph_chips.bromothymolBlueBtn
+import kotlinx.android.synthetic.main.bar_ph_chips.congoRedBtn
+import kotlinx.android.synthetic.main.bar_ph_chips.methylOrangeBtn
 import kotlinx.android.synthetic.main.bar_ph_chips.phenolphthalein_btn
 
-
-class phActivity : BaseActivity() {
+class PHActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupViews()
+    }
+
+    private fun setupViews() {
         val themePreference = ThemePreference(this)
         val themePrefValue = themePreference.getValue()
 
@@ -54,16 +59,16 @@ class phActivity : BaseActivity() {
         setContentView(R.layout.activity_ph) //REMEMBER: Never move any function calls above this
 
         indicatorListener()
-        view_ph.systemUiVisibility =
+        viewPh.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         //Title Controller
 
-
-        back_btn_ph.setOnClickListener {
+        backBtnPh.setOnClickListener {
             this.onBackPressed()
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun indicatorListener() {
         val indicatorList = ArrayList<Indicator>()
         IndicatorModel.getList(indicatorList)
@@ -72,41 +77,41 @@ class phActivity : BaseActivity() {
         val alkalineText = "[H+]<[OH-] pH>"
 
         val item = indicatorList[0]
-        acid_info.text = acidText + item.acid
-        neutral_info.text = neutralText + item.neutral
-        alkaline_info.text = alkalineText + item.alkali
+        acidInfo.text = acidText + item.acid
+        neutralInfo.text = neutralText + item.neutral
+        alkalineInfo.text = alkalineText + item.alkali
         updatePhColor(item)
         updateButtonColor("bromothymol_blue_btn")
 
-        bromothymol_blue_btn.setOnClickListener {
+        bromothymolBlueBtn.setOnClickListener {
             val item = indicatorList[0]
-            acid_info.text = acidText + item.acid
-            neutral_info.text = neutralText + item.neutral
-            alkaline_info.text = alkalineText + item.alkali
+            acidInfo.text = acidText + item.acid
+            neutralInfo.text = neutralText + item.neutral
+            alkalineInfo.text = alkalineText + item.alkali
             updatePhColor(item)
             updateButtonColor("bromothymol_blue_btn")
         }
-        methyl_orange_btn.setOnClickListener {
+        methylOrangeBtn.setOnClickListener {
             val item = indicatorList[1]
-            acid_info.text = acidText + item.acid
-            neutral_info.text = neutralText + item.neutral
-            alkaline_info.text = alkalineText + item.alkali
+            acidInfo.text = acidText + item.acid
+            neutralInfo.text = neutralText + item.neutral
+            alkalineInfo.text = alkalineText + item.alkali
             updatePhColor(item)
             updateButtonColor("methyl_orange_btn")
         }
-        congo_red_btn.setOnClickListener {
+        congoRedBtn.setOnClickListener {
             val item = indicatorList[2]
-            acid_info.text = acidText + item.acid
-            neutral_info.text = neutralText + item.neutral
-            alkaline_info.text = alkalineText + item.alkali
+            acidInfo.text = acidText + item.acid
+            neutralInfo.text = neutralText + item.neutral
+            alkalineInfo.text = alkalineText + item.alkali
             updatePhColor(item)
             updateButtonColor("congo_red_btn")
         }
         phenolphthalein_btn.setOnClickListener {
             val item = indicatorList[3]
-            acid_info.text = acidText + item.acid
-            neutral_info.text = neutralText + item.neutral
-            alkaline_info.text = alkalineText + item.alkali
+            acidInfo.text = acidText + item.acid
+            neutralInfo.text = neutralText + item.neutral
+            alkalineInfo.text = alkalineText + item.alkali
             updatePhColor(item)
             updateButtonColor("phenolphthalein_btn")
         }
@@ -132,12 +137,12 @@ class phActivity : BaseActivity() {
     }
 
     private fun updateButtonColor(btn: String) {
-        methyl_orange_btn.background = getDrawable(R.drawable.chip)
-        bromothymol_blue_btn.background = getDrawable(R.drawable.chip)
-        congo_red_btn.background = getDrawable(R.drawable.chip)
+        methylOrangeBtn.background = getDrawable(R.drawable.chip)
+        bromothymolBlueBtn.background = getDrawable(R.drawable.chip)
+        congoRedBtn.background = getDrawable(R.drawable.chip)
         phenolphthalein_btn.background = getDrawable(R.drawable.chip)
 
-        val delay = Handler()
+        val delay = Handler(Looper.getMainLooper())
         delay.postDelayed({
             val resIDB = resources.getIdentifier(btn, "id", packageName)
             val button = findViewById<Button>(resIDB)
@@ -145,16 +150,18 @@ class phActivity : BaseActivity() {
         }, 1)
     }
 
-    override fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) {
-        val paramsTitle = common_title_back_ph.layoutParams as ViewGroup.LayoutParams
+    override fun onApplySystemInsets(
+        top: Int,
+        bottom: Int,
+        left: Int,
+        right: Int
+    ) {
+        val paramsTitle = commonTitleBackPh.layoutParams as ViewGroup.LayoutParams
         paramsTitle.height = top + resources.getDimensionPixelSize(R.dimen.title_bar_ph)
-        common_title_back_ph.layoutParams = paramsTitle
+        commonTitleBackPh.layoutParams = paramsTitle
 
-        val pScroll = ph_scroll.layoutParams as ViewGroup.MarginLayoutParams
+        val pScroll = phScroll.layoutParams as ViewGroup.MarginLayoutParams
         pScroll.topMargin = top + resources.getDimensionPixelSize(R.dimen.title_bar_ph)
-        ph_scroll.layoutParams = pScroll
+        phScroll.layoutParams = pScroll
     }
 }
-
-
-

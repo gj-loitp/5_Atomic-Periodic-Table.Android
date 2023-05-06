@@ -115,11 +115,11 @@ class TableActivity : BaseActivity() {
             startActivity(intent)
         }
         ph_table.setOnClickListener {
-            val intent = Intent(this, phActivity::class.java)
+            val intent = Intent(this, PHActivity::class.java)
             startActivity(intent)
         }
         ph_button.setOnClickListener {
-            val intent = Intent(this, phActivity::class.java)
+            val intent = Intent(this, PHActivity::class.java)
             startActivity(intent)
         }
     }

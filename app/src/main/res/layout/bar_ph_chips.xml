@@ -15,7 +15,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/bromothymol_blue_btn"
+                android:id="@+id/bromothymolBlueBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -32,7 +32,7 @@
                 android:textColor="?attr/actionMenuTextColor" />
 
             <Button
-                android:id="@+id/methyl_orange_btn"
+                android:id="@+id/methylOrangeBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -49,7 +49,7 @@
                 android:textColor="?attr/actionMenuTextColor" />
 
             <Button
-                android:id="@+id/congo_red_btn"
+                android:id="@+id/congoRedBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

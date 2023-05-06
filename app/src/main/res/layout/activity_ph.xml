@@ -8,7 +8,7 @@
     android:alpha="1">
 
     <FrameLayout
-        android:id="@+id/view_ph"
+        android:id="@+id/viewPh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toStartOf="parent">
 
         <FrameLayout
-            android:id="@+id/common_title_back_ph"
+            android:id="@+id/commonTitleBackPh"
             android:layout_width="match_parent"
             android:layout_height="@dimen/title_bar_ph"
             android:background="?attr/colorSurface"
@@ -53,7 +53,7 @@
                     android:layout_height="@dimen/title_bar">
 
                     <ImageButton
-                        android:id="@+id/back_btn_ph"
+                        android:id="@+id/backBtnPh"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -82,7 +82,7 @@
         </FrameLayout>
 
         <ScrollView
-            android:id="@+id/ph_scroll"
+            android:id="@+id/phScroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -162,7 +162,7 @@
                             android:textSize="26sp" />
 
                         <TextView
-                            android:id="@+id/acid_info"
+                            android:id="@+id/acidInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -206,7 +206,7 @@
                             android:textSize="26sp" />
 
                         <TextView
-                            android:id="@+id/neutral_info"
+                            android:id="@+id/neutralInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -250,7 +250,7 @@
                             android:textSize="26sp" />
 
                         <TextView
-                            android:id="@+id/alkaline_info"
+                            android:id="@+id/alkalineInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"

@@ -210,7 +210,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.roy.science.activities.tables.phActivity"
+            android:name="com.roy.science.activities.tables.PHActivity"
             android:exported="true"
             android:label="PHACTIVITY"
             android:screenOrientation="portrait"

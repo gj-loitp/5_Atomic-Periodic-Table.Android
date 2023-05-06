@@ -10,6 +10,7 @@ import android.app.Application
 //TODO firebase
 //TODO ad
 //TODO keystore
+//TODO manifest ad id
 class LApp : Application() {
     override fun onCreate() {
         super.onCreate()
