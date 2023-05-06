@@ -10,7 +10,7 @@
     tools:context=".activities.MainActivity">
 
     <FrameLayout
-        android:id="@+id/common_title_back_main"
+        android:id="@+id/commonTitleBackMain"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:alpha="1"
@@ -32,7 +32,7 @@
                 android:layout_height="72dp">
 
                 <FrameLayout
-                    android:id="@+id/search_box"
+                    android:id="@+id/searchBox"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_gravity="center_vertical"
@@ -676,7 +676,7 @@
     </FrameLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/more_btn"
+        android:id="@+id/moreBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
@@ -689,12 +689,12 @@
         android:src="@drawable/ic_filter"
         android:tint="?attr/colorOnPrimary"
         app:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="@id/nav_bar_main"
+        app:layout_constraintBottom_toBottomOf="@id/navBarMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <FrameLayout
-        android:id="@+id/nav_bar_main"
+        android:id="@+id/navBarMain"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="?attr/colorSurface"
@@ -713,7 +713,7 @@
             android:background="?attr/colorPrimary"/>
 
         <FrameLayout
-            android:id="@+id/nav_content"
+            android:id="@+id/navContent"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="top"
@@ -721,7 +721,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/settings_btn"
+                android:id="@+id/settingsBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -734,7 +734,7 @@
                 app:elevation="0dp" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/menu_btn"
+                android:id="@+id/menuBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
@@ -750,7 +750,7 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/nav_background"
+        android:id="@+id/navBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.6"
@@ -759,7 +759,7 @@
         android:visibility="gone" />
 
     <TextView
-        android:id="@+id/hover_background"
+        android:id="@+id/hoverBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.6"
@@ -768,7 +768,7 @@
         android:visibility="gone" />
 
     <include
-        android:id="@+id/nav_menu_include"
+        android:id="@+id/navMenuInclude"
         layout="@layout/nav_menu_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -778,7 +778,7 @@
         app:layout_constraintStart_toEndOf="parent" />
 
     <include
-        android:id="@+id/hover_menu_include"
+        android:id="@+id/hoverMenuInclude"
         layout="@layout/hover_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -788,7 +788,7 @@
         app:layout_constraintStart_toEndOf="parent" />
 
     <include
-        android:id="@+id/search_menu_include"
+        android:id="@+id/searchMenuInclude"
         layout="@layout/search_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

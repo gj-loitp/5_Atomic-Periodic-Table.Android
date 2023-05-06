@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/empty_search_box"
+            android:id="@+id/emptySearchBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="56dp"
@@ -111,7 +111,7 @@
 
 
                         <EditText
-                            android:id="@+id/edit_element"
+                            android:id="@+id/editElement"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
@@ -129,7 +129,7 @@
                     </FrameLayout>
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/close_element_search"
+                        android:id="@+id/closeElementSearch"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical"
@@ -171,7 +171,7 @@
         android:focusable="true" />
 
     <include
-        android:id="@+id/filter_box"
+        android:id="@+id/filterBox"
         layout="@layout/filter_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -67,7 +67,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/h_name_btn"
+                        android:id="@+id/hNameBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -85,7 +85,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/h_group_btn"
+                        android:id="@+id/hGroupBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -103,7 +103,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/h_electronegativity_btn"
+                        android:id="@+id/hElectronegativityBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -121,7 +121,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/atomic_weight_btn"
+                        android:id="@+id/atomicWeightBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -139,7 +139,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/boiling_btn"
+                        android:id="@+id/boilingBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -157,7 +157,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/melting_point"
+                        android:id="@+id/meltingPoint"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -175,7 +175,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/h_phase_btn"
+                        android:id="@+id/hPhaseBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -193,7 +193,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/h_year_btn"
+                        android:id="@+id/hYearBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -211,7 +211,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/h_fusion_btn"
+                        android:id="@+id/hFusionBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -229,7 +229,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/h_specific_btn"
+                        android:id="@+id/hSpecificBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"
@@ -247,7 +247,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
-                        android:id="@+id/h_vaporizaton_btn"
+                        android:id="@+id/hVaporizatonBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:clickable="true"

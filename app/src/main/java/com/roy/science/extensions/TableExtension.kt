@@ -17,9 +17,7 @@ import com.roy.science.utils.Pasteur
 import com.roy.science.utils.ToastUtil
 import com.roy.science.utils.Utils
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.equations_info.*
 import kotlinx.android.synthetic.main.group_3.*
-import kotlinx.android.synthetic.main.search_layout.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -52,8 +50,8 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
     private var elementList = ArrayList<Element>()
 
     private fun closeHover() {
-        Utils.fadeOutAnim(hover_background, 200)
-        Utils.fadeOutAnim(hover_menu_include, 300)
+        Utils.fadeOutAnim(hoverBackground, 200)
+        Utils.fadeOutAnim(hoverMenuInclude, 300)
     }
 
     fun initName(list: ArrayList<Element>) {

@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <com.sothree.slidinguppanel.SlidingUpPanelLayout
-        android:id="@+id/sliding_layout"
+        android:id="@+id/slidingLayout"
         android:layout_width="match_parent"
         android:layout_height="312dp"
         android:elevation="101dp"
@@ -75,7 +75,7 @@
                 android:layout_height="54dp">
 
                 <TextView
-                    android:id="@+id/blog_btn"
+                    android:id="@+id/blogBtn"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
                     android:background="?attr/colorSurface"
@@ -111,7 +111,7 @@
                 android:layout_height="54dp">
 
                 <TextView
-                    android:id="@+id/solubility_btn"
+                    android:id="@+id/solubilityBtn"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
                     android:background="?attr/colorSurface"
@@ -184,7 +184,7 @@
                 android:layout_height="54dp">
 
                 <TextView
-                    android:id="@+id/isotopes_btn"
+                    android:id="@+id/isotopesBtn"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
                     android:background="?attr/colorSurface"
@@ -219,7 +219,7 @@
                 android:layout_height="54dp">
 
                 <TextView
-                    android:id="@+id/dictionary_btn"
+                    android:id="@+id/dictionaryBtn"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
                     android:background="?attr/colorSurface"
@@ -276,7 +276,7 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/twitter_button"
+                        android:id="@+id/twitterButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -292,7 +292,7 @@
                         sothree:elevation="0dp" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/instagram_button"
+                        android:id="@+id/instagramButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -308,7 +308,7 @@
                         sothree:elevation="0dp" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/facebook_button"
+                        android:id="@+id/facebookButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -324,7 +324,7 @@
                         sothree:elevation="0dp" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/homepage_button"
+                        android:id="@+id/homepageButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
