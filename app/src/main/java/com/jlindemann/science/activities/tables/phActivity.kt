@@ -5,23 +5,30 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver
 import android.widget.Button
-import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
-import androidx.core.view.marginTop
 import com.jlindemann.science.R
-import com.jlindemann.science.R2.id.bottom
 import com.jlindemann.science.activities.BaseActivity
-import com.jlindemann.science.model.*
+import com.jlindemann.science.model.Indicator
+import com.jlindemann.science.model.IndicatorModel
 import com.jlindemann.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_ph.*
-import kotlinx.android.synthetic.main.activity_submit.*
-import kotlinx.android.synthetic.main.bar_ph_chips.*
-import kotlin.collections.ArrayList
+import kotlinx.android.synthetic.main.activity_ph.acid_info
+import kotlinx.android.synthetic.main.activity_ph.alkaline_info
+import kotlinx.android.synthetic.main.activity_ph.back_btn_ph
+import kotlinx.android.synthetic.main.activity_ph.center
+import kotlinx.android.synthetic.main.activity_ph.common_title_back_ph
+import kotlinx.android.synthetic.main.activity_ph.left
+import kotlinx.android.synthetic.main.activity_ph.neutral_info
+import kotlinx.android.synthetic.main.activity_ph.ph_scroll
+import kotlinx.android.synthetic.main.activity_ph.right
+import kotlinx.android.synthetic.main.activity_ph.view_ph
+import kotlinx.android.synthetic.main.bar_ph_chips.bromothymol_blue_btn
+import kotlinx.android.synthetic.main.bar_ph_chips.congo_red_btn
+import kotlinx.android.synthetic.main.bar_ph_chips.methyl_orange_btn
+import kotlinx.android.synthetic.main.bar_ph_chips.phenolphthalein_btn
 
 
-class phActivity : BaseActivity()  {
+class phActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val themePreference = ThemePreference(this)
@@ -29,16 +36,26 @@ class phActivity : BaseActivity()  {
 
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_NO -> { setTheme(R.style.AppTheme) }
-                Configuration.UI_MODE_NIGHT_YES -> { setTheme(R.style.AppThemeDark) }
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    setTheme(R.style.AppTheme)
+                }
+
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    setTheme(R.style.AppThemeDark)
+                }
             }
         }
-        if (themePrefValue == 0) { setTheme(R.style.AppTheme) }
-        if (themePrefValue == 1) { setTheme(R.style.AppThemeDark) }
+        if (themePrefValue == 0) {
+            setTheme(R.style.AppTheme)
+        }
+        if (themePrefValue == 1) {
+            setTheme(R.style.AppThemeDark)
+        }
         setContentView(R.layout.activity_ph) //REMEMBER: Never move any function calls above this
 
         indicatorListener()
-        view_ph.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        view_ph.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         //Title Controller
 
 
@@ -100,9 +117,18 @@ class phActivity : BaseActivity()  {
         val centerColor = resources.getIdentifier(item.neutralColor, "color", packageName)
         val rightColor = resources.getIdentifier(item.alkaliColor, "color", packageName)
 
-        left.setColorFilter(ContextCompat.getColor(this, leftColor), android.graphics.PorterDuff.Mode.SRC_IN)
-        center.setColorFilter(ContextCompat.getColor(this, centerColor), android.graphics.PorterDuff.Mode.SRC_IN)
-        right.setColorFilter(ContextCompat.getColor(this, rightColor), android.graphics.PorterDuff.Mode.SRC_IN)
+        left.setColorFilter(
+            ContextCompat.getColor(this, leftColor),
+            android.graphics.PorterDuff.Mode.SRC_IN
+        )
+        center.setColorFilter(
+            ContextCompat.getColor(this, centerColor),
+            android.graphics.PorterDuff.Mode.SRC_IN
+        )
+        right.setColorFilter(
+            ContextCompat.getColor(this, rightColor),
+            android.graphics.PorterDuff.Mode.SRC_IN
+        )
     }
 
     private fun updateButtonColor(btn: String) {

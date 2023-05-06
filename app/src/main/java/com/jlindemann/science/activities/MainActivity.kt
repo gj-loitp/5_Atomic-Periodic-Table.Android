@@ -20,7 +20,6 @@ import androidx.core.view.doOnLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jlindemann.science.R
-import com.jlindemann.science.R2
 import com.jlindemann.science.activities.tables.DictionaryActivity
 import com.jlindemann.science.adapter.ElementAdapter
 import com.jlindemann.science.animations.Anim
@@ -59,12 +58,21 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         val themePrefValue = themePreference.getValue()
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_NO -> { setTheme(R.style.AppTheme) }
-                Configuration.UI_MODE_NIGHT_YES -> { setTheme(R.style.AppThemeDark) }
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    setTheme(R.style.AppTheme)
+                }
+
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    setTheme(R.style.AppThemeDark)
+                }
             }
         }
-        if (themePrefValue == 0) { setTheme(R.style.AppTheme) }
-        if (themePrefValue == 1) { setTheme(R.style.AppThemeDark) }
+        if (themePrefValue == 0) {
+            setTheme(R.style.AppTheme)
+        }
+        if (themePrefValue == 1) {
+            setTheme(R.style.AppThemeDark)
+        }
         setContentView(R.layout.activity_main)
 
         val recyclerView = findViewById<RecyclerView>(R.id.element_recyclerview)
@@ -76,7 +84,9 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         edit_element.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
-            override fun afterTextChanged(s: Editable) { filter(s.toString(), elements, recyclerView) }
+            override fun afterTextChanged(s: Editable) {
+                filter(s.toString(), elements, recyclerView)
+            }
         })
 
         setOnCLickListenerSetups(elements)
@@ -92,7 +102,8 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         more_btn.setOnClickListener { openHover() }
         hover_background.setOnClickListener { closeHover() }
         random_btn.setOnClickListener { getRandomItem() }
-        view_main.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        view_main.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         val handler = android.os.Handler()
         handler.postDelayed({
@@ -100,41 +111,43 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         }, 250)
 
         gestureDetector = GestureDetector(this, GestureListener())
-        mScaleDetector = ScaleGestureDetector(this, object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
-            override fun onScale(detector: ScaleGestureDetector): Boolean {
-                val scale = 1 - detector.scaleFactor
-                val pScale = mScale
-                mScale += scale
-                mScale += scale
-                if (mScale < 1f)
-                    mScale = 1f
-                if (mScale > 12.5f)
-                    mScale = 12.5f
-                val scaleAnimation = ScaleAnimation(
-                    1f / pScale,
-                    1f / mScale,
-                    1f / pScale,
-                    1f / mScale,
-                    detector.focusX,
-                    detector.focusY
-                )
-                if (mScale > 1f) {
-                    topBar.visibility = View.GONE
-                    leftBar.visibility = View.GONE
-                    corner.visibility = View.GONE
+        mScaleDetector = ScaleGestureDetector(
+            this,
+            object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
+                override fun onScale(detector: ScaleGestureDetector): Boolean {
+                    val scale = 1 - detector.scaleFactor
+                    val pScale = mScale
+                    mScale += scale
+                    mScale += scale
+                    if (mScale < 1f)
+                        mScale = 1f
+                    if (mScale > 12.5f)
+                        mScale = 12.5f
+                    val scaleAnimation = ScaleAnimation(
+                        1f / pScale,
+                        1f / mScale,
+                        1f / pScale,
+                        1f / mScale,
+                        detector.focusX,
+                        detector.focusY
+                    )
+                    if (mScale > 1f) {
+                        topBar.visibility = View.GONE
+                        leftBar.visibility = View.GONE
+                        corner.visibility = View.GONE
+                    }
+                    if (mScale == 1f) {
+                        topBar.visibility = View.VISIBLE
+                        leftBar.visibility = View.VISIBLE
+                        corner.visibility = View.VISIBLE
+                    }
+                    scaleAnimation.duration = 0
+                    scaleAnimation.fillAfter = true
+                    val layout = scrollLin as LinearLayout
+                    layout.startAnimation(scaleAnimation)
+                    return true
                 }
-                if (mScale == 1f) {
-                    topBar.visibility = View.VISIBLE
-                    leftBar.visibility = View.VISIBLE
-                    corner.visibility = View.VISIBLE
-                }
-                scaleAnimation.duration = 0
-                scaleAnimation.fillAfter = true
-                val layout = scrollLin as LinearLayout
-                layout.startAnimation(scaleAnimation)
-                return true
-            }
-        })
+            })
 
         scrollView.getViewTreeObserver()
             .addOnScrollChangedListener(object : OnScrollChangedListener {
@@ -153,7 +166,11 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
 
         sliding_layout.addPanelSlideListener(object : SlidingUpPanelLayout.PanelSlideListener {
             override fun onPanelSlide(panel: View?, slideOffset: Float) {}
-            override fun onPanelStateChanged(panel: View?, previousState: PanelState, newState: PanelState) {
+            override fun onPanelStateChanged(
+                panel: View?,
+                previousState: PanelState,
+                newState: PanelState
+            ) {
                 if (sliding_layout.panelState === PanelState.COLLAPSED) {
                     nav_menu_include.visibility = View.GONE
                     Utils.fadeOutAnim(nav_background, 100)
@@ -162,7 +179,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         })
     }
 
-    override fun dispatchTouchEvent(event: MotionEvent?): Boolean {
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         super.dispatchTouchEvent(event)
         mScaleDetector.onTouchEvent(event)
         gestureDetector.onTouchEvent(event)
@@ -170,8 +187,13 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
     }
 
     private class GestureListener : SimpleOnGestureListener() {
-        override fun onDown(e: MotionEvent): Boolean { return true }
-        override fun onDoubleTap(e: MotionEvent): Boolean { return true }
+        override fun onDown(e: MotionEvent): Boolean {
+            return true
+        }
+
+        override fun onDoubleTap(e: MotionEvent): Boolean {
+            return true
+        }
     }
 
     private fun scrollAdapter() {
@@ -224,8 +246,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         handler.postDelayed({
             if (recyclerView.adapter!!.itemCount == 0) {
                 Anim.fadeIn(empty_search_box, 300)
-            }
-            else {
+            } else {
                 empty_search_box.visibility = View.GONE
             }
         }, 10)
@@ -279,7 +300,8 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
                 window.insetsController?.show(WindowInsets.Type.ime())
             }
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
-                val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                val imm: InputMethodManager =
+                    getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.showSoftInput(edit_element, InputMethodManager.SHOW_IMPLICIT)
             }
             Utils.fadeOutAnim(filter_box, 150)
@@ -350,7 +372,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             val intent = Intent(this, DictionaryActivity::class.java)
             startActivity(intent)
         }
-        blog_btn.setOnClickListener{
+        blog_btn.setOnClickListener {
             val packageManager = packageManager
             val blogURL = "https://www.jlindemann.se/homepage/blog"
             TabUtil.openCustomTab(blogURL, packageManager, this)
@@ -386,7 +408,8 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             val resIDB = resources.getIdentifier(eViewBtn, "id", packageName)
 
             val btn = findViewById<TextView>(resIDB)
-            btn.foreground = ContextCompat.getDrawable(this,
+            btn.foreground = ContextCompat.getDrawable(
+                this,
                 R.drawable.t_ripple
             );
             btn.isClickable = true
@@ -399,6 +422,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             }
         }
     }
+
     private fun searchFilter(list: ArrayList<Element>, recyclerView: RecyclerView) {
         filter_box.visibility = View.GONE
         background.visibility = View.GONE
@@ -470,7 +494,10 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         nav_bar_main.layoutParams = params2
 
         val params3 = more_btn.layoutParams as ViewGroup.MarginLayoutParams
-        params3.bottomMargin = bottom + (resources.getDimensionPixelSize(R.dimen.nav_bar))/2 + (resources.getDimensionPixelSize(R.dimen.title_bar_elevation))
+        params3.bottomMargin =
+            bottom + (resources.getDimensionPixelSize(R.dimen.nav_bar)) / 2 + (resources.getDimensionPixelSize(
+                R.dimen.title_bar_elevation
+            ))
         more_btn.layoutParams = params3
 
         val params4 = common_title_back_search.layoutParams as ViewGroup.LayoutParams
@@ -481,7 +508,8 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             0,
             resources.getDimensionPixelSize(R.dimen.title_bar) + resources.getDimensionPixelSize(R.dimen.margin_space) + top,
             0,
-            resources.getDimensionPixelSize(R.dimen.title_bar))
+            resources.getDimensionPixelSize(R.dimen.title_bar)
+        )
 
         val navSide = nav_content.layoutParams as ViewGroup.MarginLayoutParams
         navSide.rightMargin = right
@@ -494,7 +522,10 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         search_box.layoutParams = barSide
 
         val leftScrollBar = leftBar.layoutParams as ViewGroup.MarginLayoutParams
-        leftScrollBar.topMargin = top + resources.getDimensionPixelSize(R.dimen.title_bar_main) + resources.getDimensionPixelSize(R.dimen.left_bar)
+        leftScrollBar.topMargin =
+            top + resources.getDimensionPixelSize(R.dimen.title_bar_main) + resources.getDimensionPixelSize(
+                R.dimen.left_bar
+            )
         leftBar.layoutParams = leftScrollBar
 
         val topScrollBar = topBar.layoutParams as ViewGroup.MarginLayoutParams
