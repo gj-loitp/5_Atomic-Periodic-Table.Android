@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/view_ion"
+        android:id="@+id/viewIon"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toStartOf="parent">
 
         <LinearLayout
-            android:id="@+id/empty_search_box_ion"
+            android:id="@+id/emptySearchBoxIon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="56dp"
@@ -57,7 +57,7 @@
         </LinearLayout>
 
         <FrameLayout
-            android:id="@+id/common_title_back_ion"
+            android:id="@+id/commonTitleBackIon"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="?attr/colorSurface"
@@ -94,7 +94,7 @@
                         android:src="@drawable/ic_arrow_back_whit" />
 
                     <ImageButton
-                        android:id="@+id/search_btn_ion"
+                        android:id="@+id/searchBtnIon"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -126,7 +126,7 @@
                     android:visibility="gone">
 
                     <ImageButton
-                        android:id="@+id/close_ele_search_ion"
+                        android:id="@+id/closeEleSearchIon"
                         android:layout_width="56dp"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_height="56dp"
@@ -146,7 +146,7 @@
                         android:elevation="0dp">
 
                         <EditText
-                            android:id="@+id/edit_ion"
+                            android:id="@+id/editIon"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
@@ -166,7 +166,7 @@
         </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/ion_view"
+            android:id="@+id/ionView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
@@ -178,7 +178,7 @@
     </FrameLayout>
 
     <include
-        android:id="@+id/ion_detail"
+        android:id="@+id/ionDetail"
         layout="@layout/ion_details"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

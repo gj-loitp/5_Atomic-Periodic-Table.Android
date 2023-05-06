@@ -1,9 +1,11 @@
 package com.roy.science.activities.tables
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
@@ -21,48 +23,78 @@ import com.roy.science.model.IonModel
 import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
 import kotlinx.android.synthetic.main.activity_dictionary.titleBox
-import kotlinx.android.synthetic.main.activity_ion.*
-import kotlinx.android.synthetic.main.ion_details.*
+import kotlinx.android.synthetic.main.activity_ion.back_btn_ion
+import kotlinx.android.synthetic.main.activity_ion.closeEleSearchIon
+import kotlinx.android.synthetic.main.activity_ion.commonTitleBackIon
+import kotlinx.android.synthetic.main.activity_ion.editIon
+import kotlinx.android.synthetic.main.activity_ion.emptySearchBoxIon
+import kotlinx.android.synthetic.main.activity_ion.ionDetail
+import kotlinx.android.synthetic.main.activity_ion.ionView
+import kotlinx.android.synthetic.main.activity_ion.search_bar_ion
+import kotlinx.android.synthetic.main.activity_ion.searchBtnIon
+import kotlinx.android.synthetic.main.activity_ion.viewIon
+import kotlinx.android.synthetic.main.ion_details.detail_background_ion
+import kotlinx.android.synthetic.main.ion_details.ionDetailTitle
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStream
-import java.util.*
-import kotlin.collections.ArrayList
+import java.util.Locale
 
 class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
     private var ionList = ArrayList<Ion>()
-    var mAdapter = IonAdapter(ionList, this, this)
+    private var mAdapter = IonAdapter(list = ionList, clickListener = this, context = this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupViews()
+    }
+
+    private fun setupViews() {
         val themePreference = ThemePreference(this)
         val themePrefValue = themePreference.getValue()
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_NO -> { setTheme(R.style.AppTheme) }
-                Configuration.UI_MODE_NIGHT_YES -> { setTheme(R.style.AppThemeDark) }
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    setTheme(R.style.AppTheme)
+                }
+
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    setTheme(R.style.AppThemeDark)
+                }
             }
         }
-        if (themePrefValue == 0) { setTheme(R.style.AppTheme) }
-        if (themePrefValue == 1) { setTheme(R.style.AppThemeDark) }
+        if (themePrefValue == 0) {
+            setTheme(R.style.AppTheme)
+        }
+        if (themePrefValue == 1) {
+            setTheme(R.style.AppThemeDark)
+        }
         setContentView(R.layout.activity_ion) //REMEMBER: Never move any function calls above this
 
         recyclerView()
         clickSearch()
-        view_ion.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-        detail_background_ion.setOnClickListener { Utils.fadeOutAnim(ion_detail, 300) }
+        viewIon.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        detail_background_ion.setOnClickListener {
+            Utils.fadeOutAnim(ionDetail, 300)
+        }
         back_btn_ion.setOnClickListener { this.onBackPressed() }
     }
 
+    @SuppressLint("SetTextI18n")
     override fun ionClickListener(item: Ion, position: Int) {
         if (item.count > 1) {
-            Utils.fadeInAnim(ion_detail, 300)
-            ion_detail_title.text = ((item.name).capitalize() + " " + "ionization")
-            var jsonString : String? = null
+            Utils.fadeInAnim(ionDetail, 300)
+            ionDetailTitle.text = ((item.name).replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(
+                    Locale.getDefault()
+                ) else it.toString()
+            } + " " + "ionization")
+            var jsonString: String? = null
             val ext = ".json"
             val element = item.name
-            val ElementJson: String? = "$element$ext"
-            val inputStream: InputStream = assets.open(ElementJson.toString())
+            val elementJson: String = "$element$ext"
+            val inputStream: InputStream = assets.open(elementJson.toString())
             jsonString = inputStream.bufferedReader().use { it.readText() }
 
             val jsonArray = JSONArray(jsonString)
@@ -75,77 +107,100 @@ class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
                 val extText = i.toString()
                 val name = "ion_text_"
                 val eView = "$name$extText"
-                val iText = findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
-                val dot ="."
+                val iText =
+                    findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
+                val dot = "."
                 val space = " "
                 iText.text = "$i$dot$space$ionization"
                 iText.visibility = View.VISIBLE
             }
-            for (i in (item.count+1)..30) {
+            for (i in (item.count + 1)..30) {
                 val extText = i.toString()
                 val name = ("ion_text_")
                 val eView = "$name$extText"
-                val iText = findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
+                val iText =
+                    findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
                 iText.visibility = View.GONE
             }
         }
     }
 
-    override fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) {
-        ion_view.setPadding(0, resources.getDimensionPixelSize(R.dimen.title_bar) + resources.getDimensionPixelSize(R.dimen.margin_space) + top, 0, resources.getDimensionPixelSize(R.dimen.title_bar))
-        val params2 = common_title_back_ion.layoutParams as ViewGroup.LayoutParams
+    override fun onApplySystemInsets(
+        top: Int,
+        bottom: Int,
+        left: Int,
+        right: Int
+    ) {
+        ionView.setPadding(
+            /* left = */ 0,
+            /* top = */
+            resources.getDimensionPixelSize(R.dimen.title_bar) + resources.getDimensionPixelSize(R.dimen.margin_space) + top,
+            /* right = */
+            0,
+            /* bottom = */
+            resources.getDimensionPixelSize(R.dimen.title_bar)
+        )
+        val params2 = commonTitleBackIon.layoutParams as ViewGroup.LayoutParams
         params2.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
-        common_title_back_ion.layoutParams = params2
+        commonTitleBackIon.layoutParams = params2
 
-        val searchEmptyImgPrm = empty_search_box_ion.layoutParams as ViewGroup.MarginLayoutParams
+        val searchEmptyImgPrm = emptySearchBoxIon.layoutParams as ViewGroup.MarginLayoutParams
         searchEmptyImgPrm.topMargin = top + (resources.getDimensionPixelSize(R.dimen.title_bar))
-        empty_search_box_ion.layoutParams = searchEmptyImgPrm
+        emptySearchBoxIon.layoutParams = searchEmptyImgPrm
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun recyclerView() {
-        val recyclerView = findViewById<RecyclerView>(R.id.ion_view)
+        val ionView = findViewById<RecyclerView>(R.id.ionView)
         val ionList = ArrayList<Ion>()
         IonModel.getList(ionList)
-        recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        ionView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         val adapter = IonAdapter(ionList, this, this)
-        recyclerView.adapter = adapter
+        ionView.adapter = adapter
         adapter.notifyDataSetChanged()
 
-        edit_ion.addTextChangedListener(object : TextWatcher {
+        editIon.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int){}
-            override fun afterTextChanged(s: Editable) { filter(s.toString(), ionList, recyclerView) }
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable) {
+                filter(s.toString(), ionList, ionView)
+            }
         })
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun filter(text: String, list: ArrayList<Ion>, recyclerView: RecyclerView) {
         val filteredList: ArrayList<Ion> = ArrayList()
-        for (item in list) { if (item.name.toLowerCase(Locale.ROOT).contains(text.toLowerCase(Locale.ROOT))) { filteredList.add(item) } }
-        val handler = android.os.Handler()
+        for (item in list) {
+            if (item.name.lowercase(Locale.ROOT).contains(text.lowercase(Locale.ROOT))) {
+                filteredList.add(item)
+            }
+        }
+        val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             if (recyclerView.adapter!!.itemCount == 0) {
-                Anim.fadeIn(empty_search_box_ion, 300)
-            }
-            else {
-                empty_search_box_ion.visibility = View.GONE
+                Anim.fadeIn(emptySearchBoxIon, 300)
+            } else {
+                emptySearchBoxIon.visibility = View.GONE
             }
         }, 10)
         mAdapter.filterList(filteredList)
         mAdapter.notifyDataSetChanged()
-        recyclerView.adapter = IonAdapter(filteredList, this, this)
+        recyclerView.adapter = IonAdapter(list = filteredList, clickListener = this, context = this)
     }
 
     private fun clickSearch() {
-        search_btn_ion.setOnClickListener {
+        searchBtnIon.setOnClickListener {
             Utils.fadeInAnim(search_bar_ion, 150)
             Utils.fadeOutAnim(titleBox, 1)
-            edit_ion.requestFocus()
-            val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.showSoftInput(edit_ion, InputMethodManager.SHOW_IMPLICIT)
+            editIon.requestFocus()
+            val imm: InputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.showSoftInput(editIon, InputMethodManager.SHOW_IMPLICIT)
         }
-        close_ele_search_ion.setOnClickListener {
+        closeEleSearchIon.setOnClickListener {
             Utils.fadeOutAnim(search_bar_ion, 1)
-            val delayClose = Handler()
+            val delayClose = Handler(Looper.getMainLooper())
             delayClose.postDelayed({
                 Utils.fadeInAnim(titleBox, 150)
             }, 151)
@@ -159,13 +214,12 @@ class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
     }
 
     override fun onBackPressed() {
-        if (ion_detail.visibility == View.VISIBLE) {
-            Utils.fadeOutAnim(ion_detail, 300)
+        if (ionDetail.visibility == View.VISIBLE) {
+            Utils.fadeOutAnim(ionDetail, 300)
             return
-        } else { super.onBackPressed() }
+        } else {
+            super.onBackPressed()
+        }
     }
 
 }
-
-
-
