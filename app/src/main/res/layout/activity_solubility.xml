@@ -10,7 +10,7 @@
         android:layout_height="match_parent">
 
     <include
-        android:id="@+id/info_panel"
+        android:id="@+id/infoPanel"
         layout="@layout/panel_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +18,7 @@
         android:visibility="gone" />
 
         <FrameLayout
-            android:id="@+id/common_title_back_sul"
+            android:id="@+id/commonTitleBackSul"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="?attr/colorSurface"
@@ -70,7 +70,7 @@
                         android:textStyle="bold" />
 
                     <ImageButton
-                        android:id="@+id/info_btn"
+                        android:id="@+id/infoBtn"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"

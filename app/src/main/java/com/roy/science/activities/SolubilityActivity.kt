@@ -9,19 +9,23 @@ import com.roy.science.animations.Anim
 import com.roy.science.preferences.ThemePreference
 import kotlinx.android.synthetic.main.activity_solubility.backBtn
 import kotlinx.android.synthetic.main.activity_solubility.boxm
-import kotlinx.android.synthetic.main.activity_solubility.common_title_back_sul
-import kotlinx.android.synthetic.main.activity_solubility.info_btn
-import kotlinx.android.synthetic.main.activity_solubility.info_panel
+import kotlinx.android.synthetic.main.activity_solubility.commonTitleBackSul
+import kotlinx.android.synthetic.main.activity_solubility.infoBtn
+import kotlinx.android.synthetic.main.activity_solubility.infoPanel
 import kotlinx.android.synthetic.main.activity_solubility.viewSub
-import kotlinx.android.synthetic.main.panel_info.info_back_btn
-import kotlinx.android.synthetic.main.panel_info.info_background
+import kotlinx.android.synthetic.main.panel_info.infoBackBtn
+import kotlinx.android.synthetic.main.panel_info.infoBackground
+import kotlinx.android.synthetic.main.panel_info.infoTitle
 import kotlinx.android.synthetic.main.panel_info.info_text
-import kotlinx.android.synthetic.main.panel_info.info_title
 
 class SolubilityActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupViews()
+    }
+
+    private fun setupViews() {
         val themePreference = ThemePreference(this)
         val themePrefValue = themePreference.getValue()
 
@@ -53,31 +57,33 @@ class SolubilityActivity : BaseActivity() {
         }
     }
 
-    override fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) {
+    override fun onApplySystemInsets(
+        top: Int,
+        bottom: Int,
+        left: Int,
+        right: Int
+    ) {
         val paramsO = boxm.layoutParams as ViewGroup.MarginLayoutParams
         paramsO.topMargin = top + resources.getDimensionPixelSize(R.dimen.title_bar)
         boxm.layoutParams = paramsO
 
-        val params2 = common_title_back_sul.layoutParams as ViewGroup.LayoutParams
+        val params2 = commonTitleBackSul.layoutParams as ViewGroup.LayoutParams
         params2.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
-        common_title_back_sul.layoutParams = params2
+        commonTitleBackSul.layoutParams = params2
 
     }
 
     private fun infoPanel() {
-        info_btn.setOnClickListener {
-            Anim.fadeIn(info_panel, 300)
-            info_title.text = resources.getString(R.string.solubility_info_t)
+        infoBtn.setOnClickListener {
+            Anim.fadeIn(infoPanel, 300)
+            infoTitle.text = resources.getString(R.string.solubility_info_t)
             info_text.text = resources.getString(R.string.solubility_info_c)
         }
-        info_back_btn.setOnClickListener {
-            Anim.fadeOutAnim(info_panel, 300)
+        infoBackBtn.setOnClickListener {
+            Anim.fadeOutAnim(infoPanel, 300)
         }
-        info_background.setOnClickListener {
-            Anim.fadeOutAnim(info_panel, 300)
+        infoBackground.setOnClickListener {
+            Anim.fadeOutAnim(infoPanel, 300)
         }
     }
 }
-
-
-

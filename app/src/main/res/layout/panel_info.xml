@@ -7,7 +7,7 @@
     android:elevation="28dp">
 
     <TextView
-        android:id="@+id/info_background"
+        android:id="@+id/infoBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.6"
@@ -44,7 +44,7 @@
 
 
                 <TextView
-                    android:id="@+id/info_title"
+                    android:id="@+id/infoTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
@@ -57,7 +57,7 @@
                     android:textSize="18sp" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/info_back_btn"
+                    android:id="@+id/infoBackBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
