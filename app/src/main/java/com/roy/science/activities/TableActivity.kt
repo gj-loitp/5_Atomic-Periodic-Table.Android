@@ -9,8 +9,7 @@ import android.view.ViewTreeObserver
 import com.roy.science.R
 import com.roy.science.activities.tables.*
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_settings.*
-import kotlinx.android.synthetic.main.activity_solubility.back_btn
+import kotlinx.android.synthetic.main.activity_solubility.backBtn
 import kotlinx.android.synthetic.main.activity_submit.view_sub
 import kotlinx.android.synthetic.main.activity_tables.*
 
@@ -58,7 +57,7 @@ class TableActivity : BaseActivity() {
 
         tableListeners()
 
-        back_btn.setOnClickListener {
+        backBtn.setOnClickListener {
             this.onBackPressed()
         }
     }

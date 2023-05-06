@@ -11,10 +11,7 @@ import com.roy.science.R
 import com.roy.science.activities.BaseActivity
 import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.*
-import kotlinx.android.synthetic.main.activity_ph.*
-import kotlinx.android.synthetic.main.activity_settings.*
-import kotlinx.android.synthetic.main.activity_solubility.back_btn
+import kotlinx.android.synthetic.main.activity_solubility.backBtn
 import kotlinx.android.synthetic.main.activity_submit.*
 import kotlinx.android.synthetic.main.activity_submit.submit_title
 import kotlinx.android.synthetic.main.activity_submit.view_sub
@@ -64,7 +61,7 @@ class SubmitActivity : BaseActivity() {
                 }
             })
 
-        back_btn.setOnClickListener {
+        backBtn.setOnClickListener {
             this.onBackPressed()
         }
     }

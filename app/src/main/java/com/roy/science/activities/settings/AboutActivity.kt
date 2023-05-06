@@ -1,71 +1,81 @@
 package com.roy.science.activities.settings
 
-import android.content.Intent
+import android.annotation.SuppressLint
 import android.content.res.Configuration
-import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
+import com.roy.science.BuildConfig
 import com.roy.science.R
 import com.roy.science.activities.BaseActivity
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_info.*
-import kotlinx.android.synthetic.main.activity_solubility.back_btn
-
+import kotlinx.android.synthetic.main.activity_info.commonTitleBackInfo
+import kotlinx.android.synthetic.main.activity_info.imageView3
+import kotlinx.android.synthetic.main.activity_info.titleBoxInfo
+import kotlinx.android.synthetic.main.activity_info.versionNumber
+import kotlinx.android.synthetic.main.activity_info.viewInfo
+import kotlinx.android.synthetic.main.activity_solubility.backBtn
 
 class AboutActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setupViews()
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun setupViews() {
         val themePreference = ThemePreference(this)
         val themePrefValue = themePreference.getValue()
 
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_NO -> { setTheme(R.style.AppTheme) }
-                Configuration.UI_MODE_NIGHT_YES -> { setTheme(R.style.AppThemeDark) }
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    setTheme(R.style.AppTheme)
+                }
+
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    setTheme(R.style.AppThemeDark)
+                }
             }
         }
-        if (themePrefValue == 0) { setTheme(R.style.AppTheme) }
-        if (themePrefValue == 1) { setTheme(R.style.AppThemeDark) }
+        if (themePrefValue == 0) {
+            setTheme(R.style.AppTheme)
+        }
+        if (themePrefValue == 1) {
+            setTheme(R.style.AppThemeDark)
+        }
         setContentView(R.layout.activity_info)
 
-        view_info.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewInfo.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
-        setupLinks()
+        versionNumber.text = "Version ${BuildConfig.VERSION_NAME}"
 
-        back_btn.setOnClickListener {
+        backBtn.setOnClickListener {
             this.onBackPressed()
         }
     }
 
-    override fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) {
-            val params = common_title_back_info.layoutParams as ViewGroup.LayoutParams
-            params.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
-            common_title_back_info.layoutParams = params
+    override fun onApplySystemInsets(
+        top: Int,
+        bottom: Int,
+        left: Int,
+        right: Int
+    ) {
+        val params = commonTitleBackInfo.layoutParams as ViewGroup.LayoutParams
+        params.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
+        commonTitleBackInfo.layoutParams = params
 
-            val params2 = imageView3.layoutParams as ViewGroup.MarginLayoutParams
-            params2.topMargin += top
-            imageView3.layoutParams = params2
+        val params2 = imageView3.layoutParams as ViewGroup.MarginLayoutParams
+        params2.topMargin += top
+        imageView3.layoutParams = params2
 
-            val titleParam = title_box_info.layoutParams as ViewGroup.MarginLayoutParams
-            titleParam.rightMargin = right
-            titleParam.leftMargin = left
-            title_box_info.layoutParams = titleParam
+        val titleParam = titleBoxInfo.layoutParams as ViewGroup.MarginLayoutParams
+        titleParam.rightMargin = right
+        titleParam.leftMargin = left
+        titleBoxInfo.layoutParams = titleParam
 
-    }
-
-    private fun setupLinks() {
-        pro.setOnClickListener {
-            val marketUri: Uri = Uri.parse("market://details?id=com.jlindemannpro.papersplash")
-            startActivity(Intent(Intent.ACTION_VIEW, marketUri))
-        }
-        sta.setOnClickListener {
-            val marketUri: Uri = Uri.parse("market://details?id=com.jlindemann.papersplash")
-            startActivity(Intent(Intent.ACTION_VIEW, marketUri))
-        }
     }
 }
-
-
-

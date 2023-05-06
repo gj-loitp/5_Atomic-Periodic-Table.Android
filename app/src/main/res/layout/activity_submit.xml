@@ -190,7 +190,7 @@
                     android:layout_height="56dp">
 
                     <ImageButton
-                        android:id="@+id/back_btn"
+                        android:id="@+id/backBtn"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"

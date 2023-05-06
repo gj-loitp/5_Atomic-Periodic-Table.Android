@@ -15,14 +15,8 @@ import com.roy.science.model.ElementModel
 import com.roy.science.preferences.*
 import com.roy.science.utils.Utils
 import kotlinx.android.synthetic.main.activity_element_info.*
-import kotlinx.android.synthetic.main.activity_element_info.back_btn
-import kotlinx.android.synthetic.main.d_atomic.*
-import kotlinx.android.synthetic.main.d_electromagnetic.*
-import kotlinx.android.synthetic.main.d_nuclear.*
-import kotlinx.android.synthetic.main.d_overview.*
+import kotlinx.android.synthetic.main.activity_element_info.backBtn
 import kotlinx.android.synthetic.main.d_properties.*
-import kotlinx.android.synthetic.main.d_temperatures.*
-import kotlinx.android.synthetic.main.d_thermodynamic.*
 import kotlinx.android.synthetic.main.detail_emission.*
 import kotlinx.android.synthetic.main.favorite_bar.*
 import kotlinx.android.synthetic.main.shell_view.*
@@ -30,8 +24,6 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
-import kotlinx.android.synthetic.main.loading_view.*
-import kotlinx.android.synthetic.main.oxidiation_states.*
 
 class ElementInfoActivity : InfoExtension() {
 
@@ -62,7 +54,7 @@ class ElementInfoActivity : InfoExtension() {
         elementAnim(overview_inc, properties_inc)
         view.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
-        back_btn.setOnClickListener { super.onBackPressed() }
+        backBtn.setOnClickListener { super.onBackPressed() }
         edit_fav_btn.setOnClickListener {
             val intent = Intent(this, FavoritePageActivity::class.java)
             startActivity(intent)

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.roy.science.R
 import com.roy.science.animations.Anim
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_solubility.back_btn
+import kotlinx.android.synthetic.main.activity_solubility.backBtn
 import kotlinx.android.synthetic.main.activity_solubility.boxm
 import kotlinx.android.synthetic.main.activity_solubility.common_title_back_sul
 import kotlinx.android.synthetic.main.activity_solubility.info_btn
@@ -48,7 +48,7 @@ class SolubilityActivity : BaseActivity() {
 
         infoPanel()
 
-        back_btn.setOnClickListener {
+        backBtn.setOnClickListener {
             this.onBackPressed()
         }
     }

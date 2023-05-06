@@ -27,7 +27,7 @@ class CalculatorActivity : AppCompatActivity() {
         }
         setContentView(R.layout.activity_calculator) //Don't move down (Needs to be before we call our functions)
 
-        back_btn.setOnClickListener {
+        backBtn.setOnClickListener {
             this.onBackPressed()
         }
 

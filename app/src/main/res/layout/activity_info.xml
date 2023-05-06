@@ -7,7 +7,7 @@
     android:background="?attr/colorSurface">
 
     <FrameLayout
-        android:id="@+id/view_info"
+        android:id="@+id/viewInfo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -35,12 +35,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="38dp"
                     android:layout_marginTop="0dp"
-                    android:text="J.LINDEMANN"
+                    android:text="Roy93Group"
                     android:textAlignment="center"
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="@id/common_title_back_info" />
+                    app:layout_constraintTop_toTopOf="@id/commonTitleBackInfo" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -51,100 +51,24 @@
                     android:textAlignment="center"
                     android:textColor="?attr/colorOnPrimaryContainer"
                     android:textSize="20sp"
-                    app:layout_constraintTop_toTopOf="@id/common_title_back_info" />
+                    app:layout_constraintTop_toTopOf="@id/commonTitleBackInfo" />
 
                 <TextView
-                    android:id="@+id/version_number"
+                    android:id="@+id/versionNumber"
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
                     android:layout_marginTop="0dp"
-                    android:text="@string/app_version"
                     android:textAlignment="center"
                     android:textColor="?attr/colorTertiary"
                     android:textSize="12sp"
-                    app:layout_constraintTop_toTopOf="@id/common_title_back_info" />
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="match_parent"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="42dp"
-                    android:text="More apps made by us"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorOnSurface"
-                    android:textSize="20sp"
-                    app:layout_constraintTop_toTopOf="@id/common_title_back_info" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal">
-
-                    <FrameLayout
-                        android:id="@+id/pro"
-                        android:layout_width="118dp"
-                        android:layout_height="118dp"
-                        android:layout_margin="18dp"
-                        android:alpha="1"
-                        android:background="@drawable/toast"
-                        android:backgroundTint="?attr/colorSurfaceVariant">
-
-                        <ImageView
-                            android:id="@+id/imageView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="32dp"
-                            android:elevation="2dp"
-                            app:srcCompat="@drawable/papersplash_icon_round" />
-
-                        <TextView
-                            android:id="@+id/textView14"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_margin="9dp"
-                            android:text="PaperSplash PRO"
-                            android:textAlignment="center"
-                            android:textColor="?attr/colorOnSurfaceVariant"
-                            android:textSize="11sp" />
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:id="@+id/sta"
-                        android:layout_width="118dp"
-                        android:layout_height="118dp"
-                        android:layout_margin="18dp"
-                        android:alpha="1"
-                        android:background="@drawable/toast"
-                        android:backgroundTint="?attr/colorSurfaceVariant">
-
-                        <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="32dp"
-                            android:elevation="2dp"
-                            app:srcCompat="@drawable/paplo" />
-
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_margin="9dp"
-                            android:text="PaperSplash"
-                            android:textAlignment="center"
-                            android:textColor="?attr/colorOnSurfaceVariant"
-                            android:textSize="11sp" />
-                    </FrameLayout>
-                </LinearLayout>
+                    app:layout_constraintTop_toTopOf="@id/commonTitleBackInfo"
+                    tools:text="Version 2023.05.06" />
 
             </LinearLayout>
         </ScrollView>
 
         <FrameLayout
-            android:id="@+id/common_title_back_info"
+            android:id="@+id/commonTitleBackInfo"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:alpha="0.975"
@@ -160,30 +84,30 @@
                 android:orientation="vertical">
 
                 <FrameLayout
-                    android:id="@+id/title_box_info"
+                    android:id="@+id/titleBoxInfo"
                     android:layout_width="match_parent"
                     android:layout_height="56dp">
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/back_btn"
+                        android:id="@+id/backBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:elevation="0dp"
-                        android:src="@drawable/ic_arrow_back_whit"
                         android:rotation="180"
+                        android:src="@drawable/ic_arrow_back_whit"
                         app:backgroundTint="@color/transparent"
                         app:borderWidth="0dp"
                         app:elevation="0dp"
-                        app:pressedTranslationZ="0dp"
-                        app:fabSize="normal" />
+                        app:fabSize="normal"
+                        app:pressedTranslationZ="0dp" />
 
                     <TextView
                         android:id="@+id/element_title"
                         android:layout_width="wrap_content"
+                        android:layout_height="56dp"
                         android:layout_marginStart="70dp"
                         android:alpha="0.9"
-                        android:layout_height="56dp"
                         android:gravity="center"
                         android:paddingStart="0dp"
                         android:paddingEnd="0dp"
