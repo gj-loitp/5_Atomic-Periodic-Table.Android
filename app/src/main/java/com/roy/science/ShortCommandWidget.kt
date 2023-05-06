@@ -7,6 +7,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
+import com.jlindemann.science.R
 import com.roy.science.activities.MainActivity
 
 /**
@@ -16,18 +17,22 @@ class ShortCommandWidget : AppWidgetProvider() {
     override fun onUpdate(
         context: Context,
         appWidgetManager: AppWidgetManager,
-        appWidgetIds: IntArray) {
+        appWidgetIds: IntArray
+    ) {
 
         // There may be multiple widgets active, so update all of them
-        val widgetIds = appWidgetManager.getAppWidgetIds( ComponentName(context, ShortCommandWidget::class.java))
+        val widgetIds =
+            appWidgetManager.getAppWidgetIds(ComponentName(context, ShortCommandWidget::class.java))
         for (appWidgetId in widgetIds) {
 
             // Construct the RemoteViews object
             val remoteViews = RemoteViews(context.packageName, R.layout.short_command_widget)
 
             //Open App on Widget Click
-            remoteViews.setOnClickPendingIntent(R.id.widget_search_bar,
-                PendingIntent.getActivity(context, 0, Intent(context, MainActivity::class.java), 0))
+            remoteViews.setOnClickPendingIntent(
+                R.id.widget_search_bar,
+                PendingIntent.getActivity(context, 0, Intent(context, MainActivity::class.java), 0)
+            )
 
             //Update Widget
             appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
@@ -46,13 +51,11 @@ class ShortCommandWidget : AppWidgetProvider() {
 internal fun updateAppWidget(
     context: Context,
     appWidgetManager: AppWidgetManager,
-    appWidgetId: Int) {
+    appWidgetId: Int
+) {
 
     val widgetIds = appWidgetManager.getAppWidgetIds((ComponentName(context, Short::class.java)))
     for (appWidgetId in widgetIds) {
-
         val views = RemoteViews(context.packageName, R.layout.short_command_widget)
-
-
     }
 }
