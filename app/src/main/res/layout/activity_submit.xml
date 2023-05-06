@@ -82,7 +82,7 @@
                             android:drawableTint="?attr/colorOnSurfaceVariant"
                             android:elevation="1dp"
                             android:focusable="true"
-                            android:foreground="@drawable/c_ripple"
+                            android:foreground="@drawable/ripple_bkg"
                             android:gravity="center_vertical"
                             android:text="@string/submit_data_i"
                             android:textColor="?attr/colorOnSurfaceVariant" />
@@ -152,7 +152,7 @@
                         android:paddingEnd="16dp"
                         android:drawablePadding="8dp"
                         android:paddingStart="24dp"
-                        android:foreground="@drawable/c_ripple"
+                        android:foreground="@drawable/ripple_bkg"
                         android:textStyle="normal"
                         android:text="@string/submit_send"
                         android:textSize="16sp"

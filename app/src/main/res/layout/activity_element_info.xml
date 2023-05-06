@@ -210,7 +210,7 @@
                 android:clickable="true"
                 android:elevation="2dp"
                 android:focusable="true"
-                android:foreground="@drawable/c_ripple"
+                android:foreground="@drawable/ripple_bkg"
                 android:text="Submit Data Issue"
                 android:textColor="?attr/colorOnPrimary" />
 

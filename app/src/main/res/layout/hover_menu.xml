@@ -288,7 +288,7 @@
                 android:clickable="true"
                 android:elevation="1dp"
                 android:focusable="true"
-                android:foreground="@drawable/c_ripple"
+                android:foreground="@drawable/ripple_bkg"
                 android:foregroundTintMode="src_in"
                 android:hapticFeedbackEnabled="true"
                 android:onClick="onClick"
