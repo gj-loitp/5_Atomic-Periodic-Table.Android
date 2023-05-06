@@ -4,6 +4,7 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
@@ -21,14 +22,14 @@ import com.roy.science.activities.BaseActivity
 import com.roy.science.model.Element
 import com.roy.science.model.ElementModel
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_nuclide.common_title_back_nuc
-import kotlinx.android.synthetic.main.activity_nuclide.ldn_place
-import kotlinx.android.synthetic.main.activity_nuclide.nuc_back_btn
+import kotlinx.android.synthetic.main.activity_nuclide.commonTitleBackNuc
+import kotlinx.android.synthetic.main.activity_nuclide.ldnPlace
+import kotlinx.android.synthetic.main.activity_nuclide.nucBackBtn
 import kotlinx.android.synthetic.main.activity_nuclide.scrollNuc
 import kotlinx.android.synthetic.main.activity_nuclide.scrollViewNuc
 import kotlinx.android.synthetic.main.activity_nuclide.seekBarNuc
 import kotlinx.android.synthetic.main.activity_nuclide.viewStub
-import kotlinx.android.synthetic.main.activity_nuclide.view_nuc
+import kotlinx.android.synthetic.main.activity_nuclide.viewNuc
 import kotlinx.android.synthetic.main.stub_nuclide.nuc_view
 import org.json.JSONArray
 import org.json.JSONObject
@@ -43,6 +44,10 @@ class NuclideActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupViews()
+    }
+
+    private fun setupViews() {
         val themePreference = ThemePreference(this)
         val themePrefValue = themePreference.getValue()
         if (themePrefValue == 100) {
@@ -67,18 +72,18 @@ class NuclideActivity : BaseActivity() {
         viewStub.inflate()
 
         runOnUiThread {
-            ldn_place.visibility = View.VISIBLE
+            ldnPlace.visibility = View.VISIBLE
         }
 
-        val handler = Handler()
+        val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             addViews(elementLists)
         }, 100)
 
-        gestureDetector = GestureDetector(this, NuclideActivity.GestureListener())
+        gestureDetector = GestureDetector(this, GestureListener())
         mScaleDetector = ScaleGestureDetector(
-            this,
-            object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
+            /* context = */ this,
+            /* listener = */ object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
                 override fun onScale(detector: ScaleGestureDetector): Boolean {
                     val scale = 1 - detector.scaleFactor
                     val pScale = mScale
@@ -89,12 +94,12 @@ class NuclideActivity : BaseActivity() {
                     if (mScale > 1f)
                         mScale = 1f
                     val scaleAnimation = ScaleAnimation(
-                        1f / pScale,
-                        1f / mScale,
-                        1f / pScale,
-                        1f / mScale,
-                        detector.focusX,
-                        detector.focusY
+                        /* fromX = */ 1f / pScale,
+                        /* toX = */ 1f / mScale,
+                        /* fromY = */ 1f / pScale,
+                        /* toY = */ 1f / mScale,
+                        /* pivotX = */ detector.focusX,
+                        /* pivotY = */ detector.focusY
                     )
                     scaleAnimation.duration = 0
                     scaleAnimation.fillAfter = true
@@ -110,10 +115,10 @@ class NuclideActivity : BaseActivity() {
         seekBarNuc.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, currentValue: Int, p2: Boolean) {
                 val scaleAnimation = ScaleAnimation(
-                    1f / currentValue,
-                    1f / currentValue,
-                    1f / currentValue,
-                    1f / currentValue
+                    /* fromX = */ 1f / currentValue,
+                    /* toX = */ 1f / currentValue,
+                    /* fromY = */ 1f / currentValue,
+                    /* toY = */ 1f / currentValue
                 )
                 scaleAnimation.duration = 0
                 scaleAnimation.fillAfter = true
@@ -124,9 +129,9 @@ class NuclideActivity : BaseActivity() {
             override fun onStartTrackingTouch(p0: SeekBar?) {}
             override fun onStopTrackingTouch(p0: SeekBar?) {}
         })
-        view_nuc.systemUiVisibility =
+        viewNuc.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-        nuc_back_btn.setOnClickListener { this.onBackPressed() }
+        nucBackBtn.setOnClickListener { this.onBackPressed() }
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
@@ -146,14 +151,14 @@ class NuclideActivity : BaseActivity() {
         }
     }
 
-    fun addViews(list: ArrayList<Element>) {
+    private fun addViews(list: ArrayList<Element>) {
         ElementModel.getList(list)
         val dLayout = nuc_view
         val inflate = layoutInflater
         val mLayout: View = inflate.inflate(R.layout.item_nuclide, dLayout, false)
         val param = RelativeLayout.LayoutParams(
-            resources.getDimensionPixelSize(R.dimen.item_nuclide),
-            resources.getDimensionPixelSize(R.dimen.item_nuclide)
+            /* w = */ resources.getDimensionPixelSize(R.dimen.item_nuclide),
+            /* h = */ resources.getDimensionPixelSize(R.dimen.item_nuclide)
         )
         param.leftMargin = resources.getDimensionPixelSize(R.dimen.item_nuclide) * 0
         param.topMargin = resources.getDimensionPixelSize(R.dimen.item_nuclide) * 1
@@ -162,14 +167,14 @@ class NuclideActivity : BaseActivity() {
         s.text = "n"
         t.text = "1"
         dLayout.addView(mLayout, param)
-        ldn_place.visibility = View.GONE
+        ldnPlace.visibility = View.GONE
 
         for (item in list) {
-            var jsonString: String? = null
+            var jsonString: String?
             try {
                 val hyd = item.element
                 val ext = ".json"
-                val elementJson: String? = "$hyd$ext"
+                val elementJson: String = "$hyd$ext"
                 val inputStream: InputStream = assets.open(elementJson.toString())
                 jsonString = inputStream.bufferedReader().use { it.readText() }
                 val jsonArray = JSONArray(jsonString)
@@ -270,6 +275,7 @@ class NuclideActivity : BaseActivity() {
                     }
                 }
             } catch (e: IOException) {
+                e.printStackTrace()
             }
         }
 
@@ -277,18 +283,15 @@ class NuclideActivity : BaseActivity() {
 
     override fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) {
         scrollViewNuc.setPadding(
-            0,
-            resources.getDimensionPixelSize(R.dimen.title_bar) + top,
-            0,
-            resources.getDimensionPixelSize(R.dimen.title_bar)
+            /* left = */ 0,
+            /* top = */ resources.getDimensionPixelSize(R.dimen.title_bar) + top,
+            /* right = */ 0,
+            /* bottom = */ resources.getDimensionPixelSize(R.dimen.title_bar)
         )
 
-        val params2 = common_title_back_nuc.layoutParams as ViewGroup.LayoutParams
+        val params2 = commonTitleBackNuc.layoutParams as ViewGroup.LayoutParams
         params2.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
-        common_title_back_nuc.layoutParams = params2
+        commonTitleBackNuc.layoutParams = params2
     }
 
 }
-
-
-

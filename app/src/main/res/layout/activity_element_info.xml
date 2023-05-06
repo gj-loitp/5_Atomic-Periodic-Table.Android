@@ -102,7 +102,7 @@
                 android:layout_marginTop="56dp">
 
                 <include
-                    android:id="@+id/ldn_place"
+                    android:id="@+id/ldnPlace"
                     layout="@layout/loading_view"
                     android:layout_width="48dp"
                     android:layout_height="48dp"

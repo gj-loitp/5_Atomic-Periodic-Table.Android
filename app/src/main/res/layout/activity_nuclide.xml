@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/view_nuc"
+        android:id="@+id/viewNuc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,14 +16,14 @@
         app:layout_constraintEnd_toStartOf="parent">
 
         <include
-            android:id="@+id/ldn_place"
+            android:id="@+id/ldnPlace"
             layout="@layout/loading_view"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal|center_vertical" />
 
         <FrameLayout
-            android:id="@+id/common_title_back_nuc"
+            android:id="@+id/commonTitleBackNuc"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="?attr/colorSurface"
@@ -50,7 +50,7 @@
                     android:layout_height="56dp">
 
                     <ImageButton
-                        android:id="@+id/nuc_back_btn"
+                        android:id="@+id/nucBackBtn"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
