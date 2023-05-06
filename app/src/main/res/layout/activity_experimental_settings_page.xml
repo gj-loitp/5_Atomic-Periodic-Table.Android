@@ -9,7 +9,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/common_title_back_exp"
+        android:id="@+id/commonTitleBackExp"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:alpha="0.975"
@@ -31,7 +31,7 @@
                 android:layout_height="80dp">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/back_btn_exp"
+                    android:id="@+id/backBtnExp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -72,7 +72,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/general_header_exp"
+                android:id="@+id/generalHeaderExp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
