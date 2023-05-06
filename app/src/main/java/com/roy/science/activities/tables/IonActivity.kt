@@ -20,14 +20,9 @@ import com.roy.science.model.Ion
 import com.roy.science.model.IonModel
 import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
-import kotlinx.android.synthetic.main.activity_dictionary.*
-import kotlinx.android.synthetic.main.activity_dictionary.title_box
-import kotlinx.android.synthetic.main.activity_electrode.*
-import kotlinx.android.synthetic.main.activity_equations.*
+import kotlinx.android.synthetic.main.activity_dictionary.titleBox
 import kotlinx.android.synthetic.main.activity_ion.*
-import kotlinx.android.synthetic.main.electrode_list_item.*
 import kotlinx.android.synthetic.main.ion_details.*
-import kotlinx.android.synthetic.main.row_ions_list.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStream
@@ -143,7 +138,7 @@ class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
     private fun clickSearch() {
         search_btn_ion.setOnClickListener {
             Utils.fadeInAnim(search_bar_ion, 150)
-            Utils.fadeOutAnim(title_box, 1)
+            Utils.fadeOutAnim(titleBox, 1)
             edit_ion.requestFocus()
             val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.showSoftInput(edit_ion, InputMethodManager.SHOW_IMPLICIT)
@@ -152,7 +147,7 @@ class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
             Utils.fadeOutAnim(search_bar_ion, 1)
             val delayClose = Handler()
             delayClose.postDelayed({
-                Utils.fadeInAnim(title_box, 150)
+                Utils.fadeInAnim(titleBox, 150)
             }, 151)
 
             val view = this.currentFocus

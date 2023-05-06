@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/view_ele"
+        android:id="@+id/viewEle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toStartOf="parent">
 
         <LinearLayout
-            android:id="@+id/empty_search_box_ele"
+            android:id="@+id/emptySearchBoxEle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="56dp"
@@ -56,7 +56,7 @@
         </LinearLayout>
 
         <FrameLayout
-            android:id="@+id/common_title_back_elo"
+            android:id="@+id/commonTitleBackElo"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="?attr/colorSurface"
@@ -79,7 +79,7 @@
                 android:orientation="vertical">
 
                 <FrameLayout
-                    android:id="@+id/title_box"
+                    android:id="@+id/titleBox"
                     android:layout_width="match_parent"
                     android:layout_height="56dp">
 
@@ -120,13 +120,13 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:id="@+id/search_bar_ele"
+                    android:id="@+id/searchBarEle"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:visibility="gone">
 
                     <ImageButton
-                        android:id="@+id/close_ele_search"
+                        android:id="@+id/closeEleSearch"
                         android:layout_width="56dp"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_height="56dp"
@@ -146,7 +146,7 @@
                         android:elevation="0dp">
 
                         <EditText
-                            android:id="@+id/edit_ele"
+                            android:id="@+id/editEle"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
@@ -166,7 +166,7 @@
         </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/e_view"
+            android:id="@+id/eView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"

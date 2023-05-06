@@ -22,7 +22,7 @@ import com.roy.science.utils.ToastUtil
 import com.roy.science.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kotlinx.android.synthetic.main.activity_isotopes_experimental.*
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.title_box
+import kotlinx.android.synthetic.main.activity_isotopes_experimental.titleBox
 import kotlinx.android.synthetic.main.filter_view_iso.*
 import kotlinx.android.synthetic.main.isotope_panel.*
 import org.json.JSONArray
@@ -138,7 +138,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
     private fun clickSearch() {
         searchBtn.setOnClickListener {
             Utils.fadeInAnim(search_bar_iso, 300)
-            Utils.fadeOutAnim(title_box, 300)
+            Utils.fadeOutAnim(titleBox, 300)
 
             editIso.requestFocus()
             val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -146,7 +146,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
         }
         closeIsoSearch.setOnClickListener {
             Utils.fadeOutAnim(search_bar_iso, 300)
-            Utils.fadeInAnim(title_box, 300)
+            Utils.fadeInAnim(titleBox, 300)
 
             val view = this.currentFocus
             if (view != null) {

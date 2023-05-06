@@ -42,7 +42,7 @@ import kotlinx.android.synthetic.main.activity_dictionary.rcView
 import kotlinx.android.synthetic.main.activity_dictionary.reactionsBtn
 import kotlinx.android.synthetic.main.activity_dictionary.search_bar_iso
 import kotlinx.android.synthetic.main.activity_dictionary.searchBtn
-import kotlinx.android.synthetic.main.activity_dictionary.title_box
+import kotlinx.android.synthetic.main.activity_dictionary.titleBox
 import kotlinx.android.synthetic.main.activity_dictionary.viewDic
 import java.util.Locale
 
@@ -238,7 +238,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
     private fun clickSearch() {
         searchBtn.setOnClickListener {
             Utils.fadeInAnim(search_bar_iso, 150)
-            Utils.fadeOutAnim(title_box, 1)
+            Utils.fadeOutAnim(titleBox, 1)
 
             editIso.requestFocus()
             val imm: InputMethodManager =
@@ -250,7 +250,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
 
             val delayClose = Handler()
             delayClose.postDelayed({
-                Utils.fadeInAnim(title_box, 150)
+                Utils.fadeInAnim(titleBox, 150)
             }, 151)
 
             val view = this.currentFocus

@@ -1,9 +1,11 @@
 package com.roy.science.activities.tables
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
@@ -20,97 +22,138 @@ import com.roy.science.model.SeriesModel
 import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
 import kotlinx.android.synthetic.main.activity_dictionary.searchBtn
-import kotlinx.android.synthetic.main.activity_dictionary.title_box
-import kotlinx.android.synthetic.main.activity_electrode.*
-import java.util.*
-import kotlin.collections.ArrayList
-
+import kotlinx.android.synthetic.main.activity_dictionary.titleBox
+import kotlinx.android.synthetic.main.activity_electrode.backBtn
+import kotlinx.android.synthetic.main.activity_electrode.closeEleSearch
+import kotlinx.android.synthetic.main.activity_electrode.commonTitleBackElo
+import kotlinx.android.synthetic.main.activity_electrode.eView
+import kotlinx.android.synthetic.main.activity_electrode.editEle
+import kotlinx.android.synthetic.main.activity_electrode.emptySearchBoxEle
+import kotlinx.android.synthetic.main.activity_electrode.searchBarEle
+import kotlinx.android.synthetic.main.activity_electrode.viewEle
+import java.util.Locale
 
 class ElectrodeActivity : BaseActivity() {
     private var seriesList = ArrayList<Series>()
-    var mAdapter = ElectrodeAdapter(seriesList, this, this)
+    private var mAdapter = ElectrodeAdapter(list = seriesList, clickListener = this, context = this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupViews()
+    }
+
+    private fun setupViews() {
         val themePreference = ThemePreference(this)
         val themePrefValue = themePreference.getValue()
 
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_NO -> { setTheme(R.style.AppTheme) }
-                Configuration.UI_MODE_NIGHT_YES -> { setTheme(R.style.AppThemeDark) }
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    setTheme(R.style.AppTheme)
+                }
+
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    setTheme(R.style.AppThemeDark)
+                }
             }
         }
-        if (themePrefValue == 0) { setTheme(R.style.AppTheme) }
-        if (themePrefValue == 1) { setTheme(R.style.AppThemeDark) }
+        if (themePrefValue == 0) {
+            setTheme(R.style.AppTheme)
+        }
+        if (themePrefValue == 1) {
+            setTheme(R.style.AppThemeDark)
+        }
         setContentView(R.layout.activity_electrode) //REMEMBER: Never move any function calls above this
 
         recyclerView()
         clickSearch()
 
-        view_ele.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewEle.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         backBtn.setOnClickListener {
             this.onBackPressed()
         }
     }
 
-    override fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) {
-        e_view.setPadding(0, resources.getDimensionPixelSize(R.dimen.title_bar) + resources.getDimensionPixelSize(R.dimen.margin_space) + top, 0, resources.getDimensionPixelSize(R.dimen.title_bar))
+    override fun onApplySystemInsets(
+        top: Int,
+        bottom: Int,
+        left: Int,
+        right: Int
+    ) {
+        eView.setPadding(
+            0,
+            resources.getDimensionPixelSize(R.dimen.title_bar) + resources.getDimensionPixelSize(R.dimen.margin_space) + top,
+            0,
+            resources.getDimensionPixelSize(R.dimen.title_bar)
+        )
 
-        val params2 = common_title_back_elo.layoutParams as ViewGroup.LayoutParams
+        val params2 = commonTitleBackElo.layoutParams as ViewGroup.LayoutParams
         params2.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
-        common_title_back_elo.layoutParams = params2
+        commonTitleBackElo.layoutParams = params2
 
-        val searchEmptyImgPrm = empty_search_box_ele.layoutParams as ViewGroup.MarginLayoutParams
+        val searchEmptyImgPrm = emptySearchBoxEle.layoutParams as ViewGroup.MarginLayoutParams
         searchEmptyImgPrm.topMargin = top + (resources.getDimensionPixelSize(R.dimen.title_bar))
-        empty_search_box_ele.layoutParams = searchEmptyImgPrm
+        emptySearchBoxEle.layoutParams = searchEmptyImgPrm
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun recyclerView() {
-        val recyclerView = findViewById<RecyclerView>(R.id.e_view)
+        val recyclerView = findViewById<RecyclerView>(R.id.eView)
         val series = ArrayList<Series>()
 
         SeriesModel.getList(series)
-        recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        val adapter = ElectrodeAdapter(series, this, this)
+        recyclerView.layoutManager = LinearLayoutManager(
+            /* context = */ this,
+            /* orientation = */ RecyclerView.VERTICAL,
+            /* reverseLayout = */ false
+        )
+        val adapter = ElectrodeAdapter(list = series, clickListener = this, context = this)
         recyclerView.adapter = adapter
 
         adapter.notifyDataSetChanged()
 
-        edit_ele.addTextChangedListener(object : TextWatcher {
+        editEle.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(
                 s: CharSequence,
                 start: Int,
                 count: Int,
                 after: Int
-            ) {}
+            ) {
+            }
+
             override fun onTextChanged(
                 s: CharSequence,
                 start: Int,
                 before: Int,
                 count: Int
-            ){}
+            ) {
+            }
 
             override fun afterTextChanged(s: Editable) {
-                filter(s.toString(), series, recyclerView)
+                filter(text = s.toString(), list = series, recyclerView = recyclerView)
             }
         })
     }
 
-    private fun filter(text: String, list: ArrayList<Series>, recyclerView: RecyclerView) {
+    @SuppressLint("NotifyDataSetChanged")
+    private fun filter(
+        text: String,
+        list: ArrayList<Series>,
+        recyclerView: RecyclerView
+    ) {
         val filteredList: ArrayList<Series> = ArrayList()
         for (item in list) {
-            if (item.name.toLowerCase(Locale.ROOT).contains(text.toLowerCase(Locale.ROOT))) {
+            if (item.name.lowercase(Locale.ROOT).contains(text.lowercase(Locale.ROOT))) {
                 filteredList.add(item)
             }
         }
-        val handler = android.os.Handler()
+        val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
-            if (recyclerView.adapter!!.itemCount == 0) {
-                Anim.fadeIn(empty_search_box_ele, 300)
-            }
-            else {
-                empty_search_box_ele.visibility = View.GONE
+            if (recyclerView.adapter?.itemCount == 0) {
+                Anim.fadeIn(emptySearchBoxEle, 300)
+            } else {
+                emptySearchBoxEle.visibility = View.GONE
             }
         }, 10)
         mAdapter.filterList(filteredList)
@@ -120,19 +163,20 @@ class ElectrodeActivity : BaseActivity() {
 
     private fun clickSearch() {
         searchBtn.setOnClickListener {
-            Utils.fadeInAnim(search_bar_ele, 150)
-            Utils.fadeOutAnim(title_box, 1)
+            Utils.fadeInAnim(searchBarEle, 150)
+            Utils.fadeOutAnim(titleBox, 1)
 
-            edit_ele.requestFocus()
-            val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.showSoftInput(edit_ele, InputMethodManager.SHOW_IMPLICIT)
+            editEle.requestFocus()
+            val imm: InputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.showSoftInput(editEle, InputMethodManager.SHOW_IMPLICIT)
         }
-        close_ele_search.setOnClickListener {
-            Utils.fadeOutAnim(search_bar_ele, 1)
+        closeEleSearch.setOnClickListener {
+            Utils.fadeOutAnim(searchBarEle, 1)
 
-            val delayClose = Handler()
+            val delayClose = Handler(Looper.getMainLooper())
             delayClose.postDelayed({
-                Utils.fadeInAnim(title_box, 150)
+                Utils.fadeInAnim(titleBox, 150)
             }, 151)
 
             val view = this.currentFocus
@@ -145,6 +189,3 @@ class ElectrodeActivity : BaseActivity() {
 
 
 }
-
-
-
