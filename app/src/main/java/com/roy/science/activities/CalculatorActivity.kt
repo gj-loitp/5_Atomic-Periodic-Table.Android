@@ -6,9 +6,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.roy.science.R
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_calculator.backBtn
-import kotlinx.android.synthetic.main.activity_calculator.editElement1
-import kotlinx.android.synthetic.main.activity_calculator.edit_number_1
+import kotlinx.android.synthetic.main.a_calculator.backBtn
+import kotlinx.android.synthetic.main.a_calculator.editElement1
+import kotlinx.android.synthetic.main.a_calculator.editNumber1
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStream
@@ -29,7 +29,7 @@ class CalculatorActivity : AppCompatActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_calculator) //Don't move down (Needs to be before we call our functions)
+        setContentView(R.layout.a_calculator) //Don't move down (Needs to be before we call our functions)
 
         backBtn.setOnClickListener {
             this.onBackPressed()
@@ -67,7 +67,7 @@ class CalculatorActivity : AppCompatActivity() {
                     val elementAtomicWeight1 = jsonObject.optString("element_atomicmass", "---")
 
                     val final =
-                        elementAtomicWeight1.toInt() * (edit_number_1.text.toString().toInt())
+                        elementAtomicWeight1.toInt() * (editNumber1.text.toString().toInt())
 
                     Toast.makeText(this, final, Toast.LENGTH_SHORT).show()
                 }

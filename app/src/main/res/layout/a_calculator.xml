@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,29 +12,29 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:elevation="100dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:visibility="visible" />
 
-    <LinearLayout
-        android:id="@+id/commom_title_back"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/commonTitleBack"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:background="?attr/colorPrimary"
         android:elevation="8dp"
         android:fitsSystemWindows="true"
         android:gravity="center|center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="horizontal">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/status_place"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/statusPlace"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:orientation="vertical"/>
+                android:orientation="vertical" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -47,30 +47,31 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="12dp"
                     android:backgroundTint="?attr/colorPrimary"
-                    app:borderWidth="0dp"
+                    android:contentDescription="@string/app_name"
                     android:elevation="0dp"
-                    android:src="@drawable/ic_arrow_back_whit"
                     android:rotation="180"
+                    android:src="@drawable/ic_arrow_back_whit"
+                    app:borderWidth="0dp"
                     app:elevation="0dp"
                     app:fabSize="normal" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/elementTitle"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:gravity="center"
                     android:paddingStart="0dp"
                     android:paddingEnd="0dp"
-                    android:text="Calculator"
+                    android:text="@string/calculator"
                     android:textAlignment="center"
                     android:textColor="?attr/actionMenuTextColor"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </FrameLayout>
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -78,7 +79,7 @@
         android:layout_marginTop="110dp"
         android:elevation="8dp">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="18dp"
@@ -102,14 +103,15 @@
                     android:background="@android:color/transparent"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:hint="Element"
+                    android:hint="@string/element"
                     android:imeOptions="actionSearch"
                     android:inputType="text"
                     android:maxLines="1"
                     android:paddingStart="0dp"
                     android:textColor="?attr/actionMenuTextColor"
                     android:textColorHint="?attr/actionMenuTextColor"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:ignore="RtlSymmetry" />
             </FrameLayout>
 
             <FrameLayout
@@ -121,7 +123,7 @@
                 android:elevation="2dp">
 
                 <EditText
-                    android:id="@+id/edit_number_1"
+                    android:id="@+id/editNumber1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:autoText="true"
@@ -133,12 +135,13 @@
                     android:inputType="text"
                     android:maxLines="1"
                     android:paddingStart="0dp"
-                    android:text="1"
+                    android:text="@string/_1"
                     android:textColor="?attr/actionMenuTextColor"
                     android:textColorHint="?attr/actionMenuTextColor"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:ignore="RtlSymmetry" />
             </FrameLayout>
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 
 </FrameLayout>
