@@ -39,7 +39,7 @@ import kotlinx.android.synthetic.main.activity_settings.scrollSettings
 import kotlinx.android.synthetic.main.activity_settings.submitSettings
 import kotlinx.android.synthetic.main.activity_settings.themePanel
 import kotlinx.android.synthetic.main.activity_settings.themesSettings
-import kotlinx.android.synthetic.main.activity_settings.title_box_settings
+import kotlinx.android.synthetic.main.activity_settings.titleBoxSettings
 import kotlinx.android.synthetic.main.activity_settings.unitSettings
 import kotlinx.android.synthetic.main.activity_settings.view
 import kotlinx.android.synthetic.main.theme_panel.cancelBtn
@@ -193,10 +193,10 @@ class SettingsActivity : BaseActivity() {
         params.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
         commonTitleBackSet.layoutParams = params
 
-        val titleParam = title_box_settings.layoutParams as ViewGroup.MarginLayoutParams
+        val titleParam = titleBoxSettings.layoutParams as ViewGroup.MarginLayoutParams
         titleParam.rightMargin = right
         titleParam.leftMargin = left
-        title_box_settings.layoutParams = titleParam
+        titleBoxSettings.layoutParams = titleParam
 
         val params2 = elementTitleDownstate.layoutParams as ViewGroup.MarginLayoutParams
         params2.topMargin =
@@ -261,7 +261,7 @@ class SettingsActivity : BaseActivity() {
         var size: Long = 0
         size += getDirSize(this.cacheDir)
         size += getDirSize(this.externalCacheDir)
-        (findViewById<View>(R.id.clear_cache_content) as TextView).text = readableFileSize(size)
+        (findViewById<View>(R.id.clearCacheContent) as TextView).text = readableFileSize(size)
     }
 
     private fun getDirSize(dir: File?): Long {
