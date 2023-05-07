@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:elevation="18dp">
+    android:elevation="18dp"
+    tools:ignore="PrivateResource,HardcodedText">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,7 +17,8 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.2">
+            android:layout_weight="0.2"
+            tools:ignore="UselessLeaf">
 
         </FrameLayout>
 
@@ -38,11 +40,11 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:alpha="0.11"
                 android:background="@drawable/shape_toast"
-                android:backgroundTint="?attr/colorPrimary"
-                android:alpha="0.11"/>
+                android:backgroundTint="?attr/colorPrimary" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,7 +52,7 @@
                 android:layout_marginTop="18dp"
                 android:layout_marginBottom="18dp"
                 android:alpha="0.8"
-                android:text="Display Mode"
+                android:text="@string/display_mode"
                 android:textAlignment="viewStart"
                 android:textColor="?attr/colorOnSecondaryContainer"
                 android:textSize="18sp"
@@ -61,12 +63,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="54dp">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/hNameBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -81,10 +83,10 @@
                         android:paddingTop="9dp"
                         android:paddingEnd="9dp"
                         android:paddingBottom="9dp"
-                        android:text="Element Name (Default)"
+                        android:text="@string/element_name_default"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/hGroupBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -99,10 +101,10 @@
                         android:paddingTop="9dp"
                         android:paddingEnd="9dp"
                         android:paddingBottom="9dp"
-                        android:text="Element Groups"
+                        android:text="@string/element_groups"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/hElectronegativityBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -120,7 +122,7 @@
                         android:text="Electronegativity"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/atomicWeightBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -135,10 +137,10 @@
                         android:paddingTop="9dp"
                         android:paddingEnd="9dp"
                         android:paddingBottom="9dp"
-                        android:text="Atomic Weight"
+                        android:text="@string/atomic_weight"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/boilingBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -153,10 +155,10 @@
                         android:paddingTop="9dp"
                         android:paddingEnd="9dp"
                         android:paddingBottom="9dp"
-                        android:text="Boiling Point"
+                        android:text="@string/boiling_point"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/meltingPoint"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -171,10 +173,10 @@
                         android:paddingTop="9dp"
                         android:paddingEnd="9dp"
                         android:paddingBottom="9dp"
-                        android:text="Melting Point"
+                        android:text="@string/melting_point"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/hPhaseBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -192,7 +194,7 @@
                         android:text="Phase (STP)"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/hYearBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -210,7 +212,7 @@
                         android:text="Year Discovered"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/hFusionBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -228,7 +230,7 @@
                         android:text="Fusion Heat"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/hSpecificBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -246,7 +248,7 @@
                         android:text="Specific Heat Capacity"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/hVaporizatonBtn"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
@@ -264,7 +266,7 @@
                         android:text="Vaporization Heat"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
             </ScrollView>
         </FrameLayout>
 
@@ -274,14 +276,13 @@
             android:layout_weight="0.3">
 
             <Button
-                android:id="@+id/random_btn"
+                android:id="@+id/btRandomBtn"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="9dp"
                 android:layout_marginEnd="36dp"
-                android:layout_weight="0.1"
                 android:background="@drawable/shape_toast"
                 android:backgroundTint="?attr/colorPrimary"
                 android:backgroundTintMode="src_in"
@@ -292,14 +293,13 @@
                 android:foregroundTintMode="src_in"
                 android:hapticFeedbackEnabled="true"
                 android:onClick="onClick"
-                android:text="Random Element"
+                android:text="@string/random_element"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="?attr/colorOnPrimary"
                 android:textStyle="normal|bold" />
         </FrameLayout>
 
-    </LinearLayout>
-
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

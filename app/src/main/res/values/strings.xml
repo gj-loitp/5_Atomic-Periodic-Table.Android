@@ -254,5 +254,12 @@
     <string name="element_number">Element Number</string>
     <string name="grid_parameters">Grid Parameters</string>
     <string name="crystal_structure">Crystal Structure:</string>
+    <string name="display_mode">Display Mode</string>
+    <string name="element_name_default">Element Name (Default)</string>
+    <string name="element_groups">Element Groups</string>
+    <string name="atomic_weight">Atomic Weight</string>
+    <string name="boiling_point">Boiling Point</string>
+    <string name="melting_point">Melting Point</string>
+    <string name="random_element">Random Element</string>
 
 </resources>

@@ -42,22 +42,21 @@ import com.roy.science.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState
 import kotlinx.android.synthetic.main.a_main.*
-import kotlinx.android.synthetic.main.hover_menu.*
 import kotlinx.android.synthetic.main.nav_menu_view.*
 import kotlinx.android.synthetic.main.search_layout.*
-import kotlinx.android.synthetic.main.v_filter_view.alphabetBtn
-import kotlinx.android.synthetic.main.v_filter_view.electroBtn
-import kotlinx.android.synthetic.main.v_filter_view.elmtNumbBtn2
+import kotlinx.android.synthetic.main.v_filter_view.*
+import kotlinx.android.synthetic.main.v_hover_menu.*
 import org.deejdev.twowaynestedscrollview.TwoWayNestedScrollView
 import java.util.Locale
 
 class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
     private var elementList = ArrayList<Element>()
-    var mAdapter = ElementAdapter(elementList = elementList, clickListener = this, con = this)
+    private var mAdapter =
+        ElementAdapter(elementList = elementList, clickListener = this, con = this)
 
-    var mScale = 1f
-    lateinit var mScaleDetector: ScaleGestureDetector
-    lateinit var gestureDetector: GestureDetector
+    private var mScale = 1f
+    private lateinit var mScaleDetector: ScaleGestureDetector
+    private lateinit var gestureDetector: GestureDetector
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -116,7 +115,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         initName(elements)
         moreBtn.setOnClickListener { openHover() }
         hoverBackground.setOnClickListener { closeHover() }
-        random_btn.setOnClickListener { getRandomItem() }
+        btRandomBtn.setOnClickListener { getRandomItem() }
         view_main.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 

@@ -779,7 +779,7 @@
 
     <include
         android:id="@+id/hoverMenuInclude"
-        layout="@layout/hover_menu"
+        layout="@layout/v_hover_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="36dp"
