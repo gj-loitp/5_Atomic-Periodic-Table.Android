@@ -13,10 +13,10 @@ import kotlinx.android.synthetic.main.activity_solubility.commonTitleBackSul
 import kotlinx.android.synthetic.main.activity_solubility.infoBtn
 import kotlinx.android.synthetic.main.activity_solubility.infoPanel
 import kotlinx.android.synthetic.main.activity_solubility.viewSub
-import kotlinx.android.synthetic.main.panel_info.infoBackBtn
-import kotlinx.android.synthetic.main.panel_info.infoBackground
-import kotlinx.android.synthetic.main.panel_info.infoTitle
-import kotlinx.android.synthetic.main.panel_info.info_text
+import kotlinx.android.synthetic.main.v_panel_info.infoBackBtn
+import kotlinx.android.synthetic.main.v_panel_info.infoBackground
+import kotlinx.android.synthetic.main.v_panel_info.infoTitle
+import kotlinx.android.synthetic.main.v_panel_info.tvInfoText
 
 class SolubilityActivity : BaseActivity() {
 
@@ -77,7 +77,7 @@ class SolubilityActivity : BaseActivity() {
         infoBtn.setOnClickListener {
             Anim.fadeIn(infoPanel, 300)
             infoTitle.text = resources.getString(R.string.solubility_info_t)
-            info_text.text = resources.getString(R.string.solubility_info_c)
+            tvInfoText.text = resources.getString(R.string.solubility_info_c)
         }
         infoBackBtn.setOnClickListener {
             Anim.fadeOutAnim(infoPanel, 300)

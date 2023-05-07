@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -16,7 +15,8 @@
         android:background="@drawable/shape_toast_card"
         android:backgroundTint="?attr/colorSurfaceVariant"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        tools:ignore="PrivateResource">
 
         <FrameLayout
             android:id="@+id/ionCount"
@@ -27,8 +27,8 @@
             android:background="@drawable/shape_toast"
             android:backgroundTint="?attr/colorPrimary">
 
-            <TextView
-                android:id="@+id/tv_short_d"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShortD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -36,32 +36,31 @@
                 android:textColor="?attr/colorOnPrimary" />
         </FrameLayout>
 
-
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_name_d"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNameD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="72dp"
                 android:textColor="?attr/colorOnSurfaceVariant"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_ionization"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvIonization"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="72dp"
                 android:textColor="?attr/colorOnSurfaceVariant" />
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <TextView
-            android:id="@+id/tv_end"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEnd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|end"
@@ -72,7 +71,8 @@
             android:drawableTint="?attr/colorTertiary"
             android:elegantTextHeight="true"
             android:textAlignment="center"
-            android:textColor="?attr/colorTertiary" />
+            android:textColor="?attr/colorTertiary"
+            tools:ignore="RtlCompat" />
 
     </FrameLayout>
 

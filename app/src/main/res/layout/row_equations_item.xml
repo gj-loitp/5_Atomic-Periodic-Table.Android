@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/equCard"
     android:layout_width="match_parent"
     android:layout_height="72dp"
@@ -12,7 +11,8 @@
     android:background="@drawable/shape_toast_card"
     android:backgroundTint="?attr/colorSurfaceVariant"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    tools:ignore="PrivateResource">
 
     <FrameLayout
         android:layout_width="36dp"
@@ -22,8 +22,8 @@
         android:background="@drawable/shape_toast"
         android:backgroundTint="?attr/colorPrimary">
 
-        <TextView
-            android:id="@+id/ic_equ"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIcEqu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -32,32 +32,32 @@
             android:textSize="12sp" />
     </FrameLayout>
 
-    <LinearLayout
-        android:layout_marginStart="54dp"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="54dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_equ"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEqu"
             android:layout_width="0dp"
-            android:layout_weight="0.66"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="18dp"
+            android:layout_weight="0.66"
             android:textColor="?attr/colorOnSurfaceVariant" />
 
-
-        <ImageView
-            android:id="@+id/ic_eq_view"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIcEqView"
             android:layout_width="0dp"
-            android:layout_weight="0.33"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="18dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="18dp"
-            android:adjustViewBounds="true" />
-    </LinearLayout>
+            android:layout_weight="0.33"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </FrameLayout>

@@ -320,12 +320,12 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
                         val isoHalf = jsonObject.optString("$half$i", "---")
                         val isoMass = jsonObject.optString("$mass$i", "---")
 
-                        val iName = myLayout.findViewById(R.id.i_name) as TextView
-                        val iZ = myLayout.findViewById(R.id.i_z) as TextView
-                        val iN = myLayout.findViewById(R.id.i_n) as TextView
-                        val iA = myLayout.findViewById(R.id.i_a) as TextView
-                        val iHalf = myLayout.findViewById(R.id.i_half) as TextView
-                        val iMass = myLayout.findViewById(R.id.i_mass) as TextView
+                        val iName = myLayout.findViewById(R.id.tvIName) as TextView
+                        val iZ = myLayout.findViewById(R.id.tviIZ) as TextView
+                        val iN = myLayout.findViewById(R.id.tvIN) as TextView
+                        val iA = myLayout.findViewById(R.id.tvIA) as TextView
+                        val iHalf = myLayout.findViewById(R.id.tvIHalf) as TextView
+                        val iMass = myLayout.findViewById(R.id.tvIMass) as TextView
 
                         iName.text = isoName
                         iZ.text = isoZ

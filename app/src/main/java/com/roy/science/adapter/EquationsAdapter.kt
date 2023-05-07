@@ -43,9 +43,9 @@ class EquationsAdapter(
 
     @SuppressLint("SetTextI18n")
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val equTitle = itemView.findViewById(R.id.tv_equ) as TextView
-        private val equCategory = itemView.findViewById(R.id.ic_equ) as TextView
-        private val equImg = itemView.findViewById(R.id.ic_eq_view) as ImageView
+        private val equTitle = itemView.findViewById(R.id.tvEqu) as TextView
+        private val equCategory = itemView.findViewById(R.id.tvIcEqu) as TextView
+        private val equImg = itemView.findViewById(R.id.ivIcEqView) as ImageView
 
         fun initialize(item: Equation, action: OnEquationClickListener, context: Context) {
             equTitle.text = item.equationTitle

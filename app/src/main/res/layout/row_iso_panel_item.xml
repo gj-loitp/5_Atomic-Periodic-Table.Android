@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:ignore="PrivateResource,HardcodedText">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/shape_toast_card"
-        android:layout_marginTop="@dimen/margin_space_card"
         android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_space_card"
         android:layout_marginEnd="@dimen/margin"
         android:layout_marginBottom="@dimen/margin_space_card"
-        android:backgroundTint="?attr/colorSecondaryContainer"/>
+        android:background="@drawable/shape_toast_card"
+        android:backgroundTint="?attr/colorSecondaryContainer" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:alpha="0.0"
         android:background="@drawable/shape_toast_card"
-        android:backgroundTint="?attr/colorSecondary"
-        android:alpha="0.0"/>
+        android:backgroundTint="?attr/colorSecondary" />
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/iBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,104 +31,104 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/i_name"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvIName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 android:layout_marginBottom="3dp"
                 android:gravity="center"
-                android:textIsSelectable="true"
                 android:text="iso_name_1"
                 android:textAlignment="center"
                 android:textColor="?attr/colorOnPrimaryContainer"
+                android:textIsSelectable="true"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/i_half"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvIHalf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="6dp"
-                android:textIsSelectable="true"
                 android:gravity="center"
                 android:text="iso_half_2"
                 android:textAlignment="center"
                 android:textColor="?attr/colorOnSecondaryContainer"
+                android:textIsSelectable="true"
                 android:textSize="14sp"
                 android:textStyle="normal" />
 
-            <TextView
-                android:id="@+id/i_mass"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvIMass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="6dp"
-                android:textIsSelectable="true"
                 android:gravity="center"
                 android:text="iso_half_1"
                 android:textAlignment="center"
                 android:textColor="?attr/colorOnSecondaryContainer"
+                android:textIsSelectable="true"
                 android:textSize="14sp"
                 android:textStyle="normal" />
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Protons:"
-                        android:textIsSelectable="true"
                         android:textAlignment="center"
-                        android:textColor="?attr/colorOnSecondaryContainer" />
+                        android:textColor="?attr/colorOnSecondaryContainer"
+                        android:textIsSelectable="true" />
 
-                    <TextView
-                        android:id="@+id/i_z"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tviIZ"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textIsSelectable="true"
                         android:layout_marginBottom="18dp"
                         android:gravity="center"
                         android:text="iso_z_2"
                         android:textAlignment="center"
                         android:textColor="?attr/colorOnSecondaryContainer"
+                        android:textIsSelectable="true"
                         android:textSize="24sp" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textIsSelectable="true"
                         android:text="Neutrons:"
                         android:textAlignment="center"
-                        android:textColor="?attr/colorOnSecondaryContainer" />
+                        android:textColor="?attr/colorOnSecondaryContainer"
+                        android:textIsSelectable="true" />
 
-                    <TextView
-                        android:id="@+id/i_n"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvIN"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -136,26 +138,26 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textSize="24sp" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:textIsSelectable="true"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:textIsSelectable="true">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Nucleons:"
                         android:textAlignment="center"
-                        android:textIsSelectable="true"
-                        android:textColor="?attr/colorOnSecondaryContainer" />
+                        android:textColor="?attr/colorOnSecondaryContainer"
+                        android:textIsSelectable="true" />
 
-                    <TextView
-                        android:id="@+id/i_a"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvIA"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -164,11 +166,10 @@
                         android:textAlignment="center"
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textSize="24sp" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </LinearLayout>
-        </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

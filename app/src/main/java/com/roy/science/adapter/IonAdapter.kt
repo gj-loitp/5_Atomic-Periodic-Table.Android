@@ -45,10 +45,10 @@ class IonAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val cardView = itemView.findViewById(R.id.ionCard) as FrameLayout
-        private val textViewName = itemView.findViewById(R.id.tv_name_d) as TextView
-        private val textViewShort = itemView.findViewById(R.id.tv_short_d) as TextView
-        private val textViewCharge = itemView.findViewById(R.id.tv_end) as TextView
-        private val textViewVoltage = itemView.findViewById(R.id.tv_ionization) as TextView
+        private val textViewName = itemView.findViewById(R.id.tvNameD) as TextView
+        private val textViewShort = itemView.findViewById(R.id.tvShortD) as TextView
+        private val textViewCharge = itemView.findViewById(R.id.tvEnd) as TextView
+        private val textViewVoltage = itemView.findViewById(R.id.tvIonization) as TextView
 
         @SuppressLint("SetTextI18n")
         fun initialize(

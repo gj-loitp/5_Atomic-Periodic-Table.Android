@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/infoPanel"
-        layout="@layout/panel_info"
+        layout="@layout/v_panel_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
