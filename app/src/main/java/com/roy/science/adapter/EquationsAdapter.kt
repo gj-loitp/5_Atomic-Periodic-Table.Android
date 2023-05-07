@@ -89,7 +89,7 @@ class EquationsAdapter(
                     }
                 }
             }
-            itemView.foreground = ContextCompat.getDrawable(context, R.drawable.toast_card_ripple)
+            itemView.foreground = ContextCompat.getDrawable(context, R.drawable.shape_toast_card_ripple)
             itemView.isClickable = true
             itemView.isFocusable = true
             itemView.setOnClickListener {

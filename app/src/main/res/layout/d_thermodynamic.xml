@@ -49,7 +49,7 @@
                 android:layout_weight="0"
                 android:padding="18dp"
                 app:tint="?attr/colorTertiary"
-                app:srcCompat="@drawable/solid" />
+                app:srcCompat="@drawable/vector_solid" />
 
             <LinearLayout
                 android:layout_width="match_parent"

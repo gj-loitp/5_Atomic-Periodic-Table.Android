@@ -104,7 +104,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
                     app:tint="#E91E63"
-                    app:srcCompat="@drawable/ph_edge" />
+                    app:srcCompat="@drawable/shape_ph_edge" />
 
                 <ImageView
                     android:id="@+id/center"
@@ -114,7 +114,7 @@
                     android:alpha="0.5"
                     android:elevation="2dp"
                     app:tint="#FF5722"
-                    app:srcCompat="@drawable/ph_center" />
+                    app:srcCompat="@drawable/shape_ph_center" />
 
                 <ImageView
                     android:id="@+id/right"
@@ -123,7 +123,7 @@
                     android:layout_gravity="end"
                     android:rotation="180"
                     app:tint="@color/alkaline"
-                    app:srcCompat="@drawable/ph_edge" />
+                    app:srcCompat="@drawable/shape_ph_edge" />
             </FrameLayout>
 
             <LinearLayout

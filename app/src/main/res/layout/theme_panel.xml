@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/toast"
+                android:background="@drawable/shape_toast"
                 android:backgroundTint="?attr/colorSurface"
                 android:clickable="true"
                 android:elevation="8dp"

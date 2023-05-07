@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/toast"
+                android:background="@drawable/shape_toast"
                 android:clickable="true"
                 android:elevation="8dp"
                 android:focusable="true"
@@ -45,7 +45,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorPrimary"
                     android:layout_gravity="center"
                     android:elevation="1dp"

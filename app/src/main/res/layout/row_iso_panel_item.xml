@@ -6,7 +6,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/toast_card"
+        android:background="@drawable/shape_toast_card"
         android:layout_marginTop="@dimen/margin_space_card"
         android:layout_marginStart="@dimen/margin"
         android:layout_marginEnd="@dimen/margin"
@@ -16,7 +16,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/toast_card"
+        android:background="@drawable/shape_toast_card"
         android:backgroundTint="?attr/colorSecondary"
         android:alpha="0.0"/>
 

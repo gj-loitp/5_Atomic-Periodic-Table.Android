@@ -14,7 +14,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="82dp"
-        android:background="@drawable/toast_widget"
+        android:background="@drawable/shape_toast_widget"
         android:backgroundTint="@android:color/system_accent1_50">
 
         <FrameLayout
@@ -25,7 +25,7 @@
             android:layout_marginStart="16dp"
             android:elevation="1dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/toast_widget"
+            android:background="@drawable/shape_toast_widget"
             android:backgroundTint="@android:color/system_accent1_200">
 
             <LinearLayout
@@ -57,7 +57,7 @@
         <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/toast_widget"
+        android:background="@drawable/shape_toast_widget"
         android:backgroundTint="@android:color/system_accent1_200">
 
             <LinearLayout
@@ -77,7 +77,7 @@
                     android:layout_weight="0.33"
                     android:layout_gravity="center"
                     android:layout_marginEnd="2dp"
-                    android:background="@drawable/toast_widget_card"
+                    android:background="@drawable/shape_toast_widget_card"
                     android:backgroundTint="@android:color/system_accent1_50"/>
 
                 <FrameLayout
@@ -87,7 +87,7 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
-                    android:background="@drawable/toast_widget_card"
+                    android:background="@drawable/shape_toast_widget_card"
                     android:backgroundTint="@android:color/system_accent1_50"/>
 
                 <FrameLayout
@@ -96,7 +96,7 @@
                     android:layout_weight="0.33"
                     android:layout_gravity="center"
                     android:layout_marginStart="2dp"
-                    android:background="@drawable/toast_widget_card"
+                    android:background="@drawable/shape_toast_widget_card"
                     android:backgroundTint="@android:color/system_accent1_50"/>
 
             </LinearLayout>

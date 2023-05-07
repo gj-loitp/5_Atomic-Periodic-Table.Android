@@ -8,9 +8,9 @@
     android:layout_marginTop="9dp"
     android:layout_marginEnd="18dp"
     android:layout_marginBottom="9dp"
-    android:background="@drawable/toast_card"
+    android:background="@drawable/shape_toast_card"
     android:backgroundTint="?attr/colorSurfaceVariant"
-    android:foreground="@drawable/toast_card_outline_ripple"
+    android:foreground="@drawable/shape_toast_card_outline_ripple"
     android:clickable="true"
     android:elevation="0dp"
     android:focusable="true">
@@ -21,7 +21,7 @@
         android:layout_height="36dp"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="18dp"
-        android:background="@drawable/toast"
+        android:background="@drawable/shape_toast"
         android:backgroundTint="?attr/colorPrimary">
 
         <TextView

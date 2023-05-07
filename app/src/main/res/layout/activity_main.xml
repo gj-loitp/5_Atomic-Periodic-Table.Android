@@ -38,7 +38,7 @@
                     android:layout_gravity="center_vertical"
                     android:clickable="true"
                     android:elevation="0dp"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorSurface"
                     android:focusable="true"
                     android:foreground="@drawable/ripple_bkg">
@@ -46,7 +46,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/toast"
+                        android:background="@drawable/shape_toast"
                         android:backgroundTint="?attr/colorPrimary"
                         android:alpha="0.11"/>
 

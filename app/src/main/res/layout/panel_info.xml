@@ -16,7 +16,7 @@
     <FrameLayout
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/toast"
+        android:background="@drawable/shape_toast"
         android:backgroundTint="?attr/colorSurface"
         android:elevation="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +27,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/toast"
+            android:background="@drawable/shape_toast"
             android:backgroundTint="?attr/colorPrimary"
             android:alpha="0.11"/>
 

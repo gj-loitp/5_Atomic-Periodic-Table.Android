@@ -8,7 +8,7 @@
     android:layout_marginTop="9dp"
     android:layout_marginEnd="18dp"
     android:layout_marginBottom="9dp"
-    android:background="@drawable/toast_card"
+    android:background="@drawable/shape_toast_card"
     android:backgroundTint="?attr/colorSurfaceVariant"
     android:clickable="true"
     android:focusable="true">
@@ -48,7 +48,7 @@
         android:drawableStart="@drawable/ic_open"
         android:drawablePadding="8dp"
         android:drawableTint="?attr/colorOnPrimary"
-        android:background="@drawable/toast"
+        android:background="@drawable/shape_toast"
         android:backgroundTint="?attr/colorPrimary"
         android:gravity="center"
         android:paddingStart="16dp"

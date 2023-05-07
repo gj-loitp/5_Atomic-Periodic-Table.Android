@@ -58,7 +58,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="16dp"
                     android:alpha="0.85"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorOnSecondaryContainer"
                     android:elevation="4dp"
                     android:gravity="center_horizontal" />

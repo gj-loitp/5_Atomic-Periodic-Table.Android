@@ -52,7 +52,7 @@
                     android:layout_height="8dp"
                     android:layout_margin="18dp"
                     android:alpha="0.85"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorOnSecondaryContainer"
                     android:elevation="4dp"
                     android:textAlignment="center"

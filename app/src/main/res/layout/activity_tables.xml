@@ -95,12 +95,12 @@
             android:layout_marginTop="@dimen/margin_space_card"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin_space_card"
-            android:background="@drawable/toast_card"
+            android:background="@drawable/shape_toast_card"
             android:backgroundTint="?attr/colorSurfaceVariant"
             android:clickable="true"
             android:elevation="0dp"
             android:focusable="true"
-            android:foreground="@drawable/toast_card_ripple">
+            android:foreground="@drawable/shape_toast_card_ripple">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -146,9 +146,9 @@
                     android:text="@string/open_table_button"
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorPrimary"
-                    android:foreground="@drawable/toast_card_ripple"
+                    android:foreground="@drawable/shape_toast_card_ripple"
                     android:clickable="true"
                     android:focusable="true"/>
             </LinearLayout>
@@ -162,12 +162,12 @@
             android:layout_marginTop="@dimen/margin_space_card"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin_space_card"
-            android:background="@drawable/toast_card"
+            android:background="@drawable/shape_toast_card"
             android:backgroundTint="?attr/colorSurfaceVariant"
             android:clickable="true"
             android:elevation="0dp"
             android:focusable="true"
-            android:foreground="@drawable/toast_card_ripple">
+            android:foreground="@drawable/shape_toast_card_ripple">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -213,9 +213,9 @@
                     android:text="@string/open_table_button"
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorPrimary"
-                    android:foreground="@drawable/toast_card_ripple"
+                    android:foreground="@drawable/shape_toast_card_ripple"
                     android:clickable="true"
                     android:focusable="true"/>
             </LinearLayout>
@@ -229,12 +229,12 @@
             android:layout_marginTop="@dimen/margin_space_card"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin_space_card"
-            android:background="@drawable/toast_card"
+            android:background="@drawable/shape_toast_card"
             android:backgroundTint="?attr/colorSurfaceVariant"
             android:clickable="true"
             android:elevation="0dp"
             android:focusable="true"
-            android:foreground="@drawable/toast_card_ripple">
+            android:foreground="@drawable/shape_toast_card_ripple">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -280,9 +280,9 @@
                     android:text="@string/open_table_button"
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorPrimary"
-                    android:foreground="@drawable/toast_card_ripple"
+                    android:foreground="@drawable/shape_toast_card_ripple"
                     android:clickable="true"
                     android:focusable="true"/>
             </LinearLayout>
@@ -296,12 +296,12 @@
             android:layout_marginTop="@dimen/margin_space_card"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin_space_card"
-            android:background="@drawable/toast_card"
+            android:background="@drawable/shape_toast_card"
             android:backgroundTint="?attr/colorSurfaceVariant"
             android:clickable="true"
             android:elevation="0dp"
             android:focusable="true"
-            android:foreground="@drawable/toast_card_ripple">
+            android:foreground="@drawable/shape_toast_card_ripple">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -347,9 +347,9 @@
                     android:text="@string/open_table_button"
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorPrimary"
-                    android:foreground="@drawable/toast_card_ripple"
+                    android:foreground="@drawable/shape_toast_card_ripple"
                     android:clickable="true"
                     android:focusable="true"/>
             </LinearLayout>
@@ -363,12 +363,12 @@
             android:layout_marginTop="@dimen/margin_space_card"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin_space_card"
-            android:background="@drawable/toast_card"
+            android:background="@drawable/shape_toast_card"
             android:backgroundTint="?attr/colorSurfaceVariant"
             android:clickable="true"
             android:elevation="0dp"
             android:focusable="true"
-            android:foreground="@drawable/toast_card_ripple">
+            android:foreground="@drawable/shape_toast_card_ripple">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -403,7 +403,7 @@
                     android:alpha="0.8"
                     android:textColor="?attr/colorOnTertiary"
                     android:textSize="13sp"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorTertiary"/>
 
                 <TextView
@@ -433,9 +433,9 @@
                     android:text="@string/open_table_button"
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorPrimary"
-                    android:foreground="@drawable/toast_card_ripple"
+                    android:foreground="@drawable/shape_toast_card_ripple"
                     android:clickable="true"
                     android:focusable="true"/>
             </LinearLayout>
@@ -449,12 +449,12 @@
             android:layout_marginTop="@dimen/margin_space_card"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="@dimen/margin_space_card"
-            android:background="@drawable/toast_card"
+            android:background="@drawable/shape_toast_card"
             android:backgroundTint="?attr/colorSurfaceVariant"
             android:clickable="true"
             android:elevation="0dp"
             android:focusable="true"
-            android:foreground="@drawable/toast_card_ripple">
+            android:foreground="@drawable/shape_toast_card_ripple">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -500,9 +500,9 @@
                     android:text="@string/open_table_button"
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="14sp"
-                    android:background="@drawable/toast"
+                    android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorPrimary"
-                    android:foreground="@drawable/toast_card_ripple"
+                    android:foreground="@drawable/shape_toast_card_ripple"
                     android:clickable="true"
                     android:focusable="true"/>
             </LinearLayout>

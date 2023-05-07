@@ -84,7 +84,7 @@ class IonAdapter(
             textViewShort.text = item.short
             textViewCharge.text = "View all" + " " + item.count.toString()
 
-            cardView.foreground = ContextCompat.getDrawable(context, R.drawable.toast_card_ripple)
+            cardView.foreground = ContextCompat.getDrawable(context, R.drawable.shape_toast_card_ripple)
             cardView.isClickable = true
             cardView.isFocusable = true
             cardView.setOnClickListener {

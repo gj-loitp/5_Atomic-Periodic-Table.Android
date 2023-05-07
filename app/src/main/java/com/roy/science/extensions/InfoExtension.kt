@@ -344,7 +344,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             elementSuperconductingPoint.text = "$superconductingPoint (K)"
 
             if (phaseText.toString() == "Solid") {
-                phaseIcon.setImageDrawable(getDrawable(R.drawable.solid))
+                phaseIcon.setImageDrawable(getDrawable(R.drawable.vector_solid))
             }
             if (phaseText.toString() == "Gas") {
                 phaseIcon.setImageDrawable(getDrawable(R.drawable.vector_gas))

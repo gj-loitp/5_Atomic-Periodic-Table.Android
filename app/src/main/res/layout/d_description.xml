@@ -37,7 +37,7 @@
         android:textSize="14sp"
         style="@style/TextAppearance.AppCompat.Widget.Button"
         android:background="@color/transparent"
-        android:foreground="@drawable/text_ripple"
+        android:foreground="@drawable/ripple_text_ripple"
         android:clickable="true"
         android:focusable="true"
         android:textColor="?attr/colorAccent"

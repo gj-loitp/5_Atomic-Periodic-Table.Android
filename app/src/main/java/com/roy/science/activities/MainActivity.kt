@@ -504,7 +504,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             val btn = findViewById<TextView>(resIDB)
             btn.foreground = ContextCompat.getDrawable(
                 /* context = */ this,
-                /* id = */ R.drawable.t_ripple
+                /* id = */ R.drawable.ripple_t_ripple
             )
             btn.isClickable = true
             btn.isFocusable = true

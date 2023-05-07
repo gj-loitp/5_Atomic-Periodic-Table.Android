@@ -60,7 +60,7 @@ class ElementAdapter(
             textViewShort.text = item.short
 
             itemView.foreground =
-                ContextCompat.getDrawable(con, R.drawable.toast_card_outline_ripple)
+                ContextCompat.getDrawable(con, R.drawable.shape_toast_card_outline_ripple)
             itemView.isClickable = true
             itemView.isFocusable = true
 

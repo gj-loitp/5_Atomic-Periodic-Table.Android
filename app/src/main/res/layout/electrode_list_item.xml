@@ -8,7 +8,7 @@
     android:layout_marginTop="@dimen/margin_space_card"
     android:layout_marginEnd="@dimen/margin"
     android:layout_marginBottom="@dimen/margin_space_card"
-    android:background="@drawable/toast_card"
+    android:background="@drawable/shape_toast_card"
     android:backgroundTint="?attr/colorSurfaceVariant"
     android:clickable="true"
     android:focusable="true">
@@ -19,7 +19,7 @@
         android:layout_height="36dp"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="@dimen/margin"
-        android:background="@drawable/toast"
+        android:background="@drawable/shape_toast"
         android:backgroundTint="?attr/colorPrimary">
 
         <TextView
