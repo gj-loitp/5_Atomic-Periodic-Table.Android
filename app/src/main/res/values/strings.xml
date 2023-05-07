@@ -3,7 +3,6 @@
     <string name="personalization_settings">Personalization</string>
     <string name="open_table_button">Open table</string>
     <!-- Activity Element Info-->
-    <string name="element_description_title">Description</string>
     <!-- Activity Favorite Settings -->
     <string name="favorite_settings_title">Favorite Bar</string>
     <string name="favorite_settings_general">General</string>
@@ -11,12 +10,10 @@
     <string name="favorite_settings_atomic_properties">Atomic properties</string>
     <string name="favorite_settings_thermodynamics">Thermodynamics</string>
     <!-- Activity Unit Settings -->
-    <string name="unit_settings_title">Table Units</string>
     <string name="unit_temperature">Temperatures</string>
     <!-- Activity Isotopes -->
     <string name="isotopes_title">Isotopes</string>
     <!-- Activity pH -->
-    <string name="ph_title">pH-Indicators</string>
     <!-- Activity Settings-->
     <string name="other_settings">Advanced</string>
     <string name="experimental_title">Experimental Settings</string>
@@ -25,8 +22,6 @@
     <string name="clear_cache_text">cache_size</string>
     <string name="submit_activity_title">Submit issue</string>
     <string name="submit_data_i">Data Issue</string>
-    <string name="submit_bug">Bug</string>
-    <string name="submit_question">Question</string>
     <string name="submit_issue">Issue</string>
     <string name="description">Description</string>
     <string name="submit_send">Submit issue</string>
@@ -76,7 +71,6 @@
     <string name="solubility_info_c">"S: Soluble\nSs: Slightly Soluble\nI: Insoluble"</string>
     <string name="electrochemical_series">Electrochemical Series</string>
     <string name="electrochemical_series_search">Search for Element</string>
-    <string name="short_voltage"> (Volt)</string>
     <string name="data_issue">Data Issue</string>
     <string name="bug">Bug</string>
     <string name="question">Question</string>
@@ -94,7 +88,6 @@
     <string name="sothree_license_text">Copyright 2015 Anton Lopyrev\n\nLicensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License at
     \n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions andlimitations under the License.</string>
     <string name="appwidget_text">EXAMPLE</string>
-    <string name="add_widget">Add widget</string>
     <string name="calculator">Calculator</string>
     <string name="element">Element</string>
     <string name="_1">1</string>
@@ -162,8 +155,6 @@
     <string name="covalent_radius_text">covalent_radius_text</string>
     <string name="van_der_waals_radius">Van Der Waals Radius:</string>
     <string name="van_der_waals_radius_text">van_der_waals_radius_text</string>
-    <string name="element_description">Element Description</string>
-    <string name="read_more">Read More</string>
     <string name="electromagnetic_properties">Electromagnetic Properties</string>
     <string name="electrical_type">Electrical Type:</string>
     <string name="element_name">element_name</string>
@@ -221,16 +212,10 @@
     <string name="_500_nm">500 (nm)</string>
     <string name="_600_nm">600 (nm)</string>
     <string name="_700_nm">700 (nm)</string>
-    <string name="pro_version_required_to_view">PRO Version required to view</string>
-    <string name="electromagnetic_parameters">Electromagnetic Parameters</string>
-    <string name="electrical_conductivity">Electrical Conductivity:</string>
-    <string name="electrical_conductivity_text">electrical_conductivity_text</string>
     <string name="e_text">e_text</string>
     <string name="atomic_mass">Atomic Mass:</string>
     <string name="alphabetical">Alphabetical</string>
     <string name="element_number">Element Number</string>
-    <string name="grid_parameters">Grid Parameters</string>
-    <string name="crystal_structure">Crystal Structure:</string>
     <string name="display_mode">Display Mode</string>
     <string name="element_name_default">Element Name (Default)</string>
     <string name="element_groups">Element Groups</string>
