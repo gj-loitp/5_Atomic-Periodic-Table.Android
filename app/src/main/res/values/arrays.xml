@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="element_list">
+    <string-array name="listElement">
         <item name="hydrogen">Hydrogen</item>
         <item name="helium">Helium</item>
         <item name="lithium">Lithium</item>
@@ -34,5 +34,5 @@
         <item>fourth</item>
         <item>fifth</item>
     </array>
-    
+
 </resources>
