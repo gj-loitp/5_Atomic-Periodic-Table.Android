@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="PrivateResource">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
@@ -12,7 +14,7 @@
         android:elevation="2dp"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -22,32 +24,32 @@
             android:drawableStart="@drawable/ic_temperature"
             android:drawablePadding="9dp"
             android:drawableTint="?attr/colorPrimary"
-            android:text="Temperatures"
+            android:text="@string/temperatures"
             android:textColor="?attr/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:alpha="0.75"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_boiling_kelvin_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementBoilingKelvinTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Boiling Point (Kelvin):"
+            android:text="@string/boiling_point_kelvin"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_boiling_kelvin"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementBoilingKelvin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -55,11 +57,11 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="element_name"
-            android:textIsSelectable="true"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textVisew"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -68,21 +70,21 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_boiling_celsius_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementBoilingCelsiusTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Boiling Point (°C):"
+            android:text="@string/boiling_point_c"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_boiling_celsius"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementBoilingCelsius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -90,11 +92,11 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="element_name"
-            android:textIsSelectable="true"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/space"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -103,21 +105,21 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_boiling_fahrenheit_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementBoilingFahrenheitTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Boiling Point (°F):"
+            android:text="@string/boiling_point_f"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_boiling_fahrenheit"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementBoilingFahrenheit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -125,11 +127,11 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="element_name"
-            android:textIsSelectable="true"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/space3"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -138,21 +140,21 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_melting_kelvin_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementMeltingKelvinTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Melting Point (Kelvin):"
+            android:text="@string/melting_point_kelvin"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_melting_kelvin"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementMeltingKelvin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -160,11 +162,11 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="element_name"
-            android:textIsSelectable="true"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/space4"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -173,21 +175,21 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_melting_celsius_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementMeltingCelsiusTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Melting Point (°C):"
+            android:text="@string/melting_point_c"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_melting_celsius"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementMeltingCelsius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -195,11 +197,11 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="element_name"
-            android:textIsSelectable="true"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/space5"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -208,21 +210,21 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_melting_fahrenheit_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementMeltingFahrenheitTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Melting Point (°F):"
+            android:text="@string/melting_point_f"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_melting_fahrenheit"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementMeltingFahrenheit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -230,8 +232,8 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="element_name"
-            android:textIsSelectable="true"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
-    </LinearLayout>
-</LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

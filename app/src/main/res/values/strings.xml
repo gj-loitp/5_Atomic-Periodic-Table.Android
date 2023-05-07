@@ -225,5 +225,12 @@
     <string name="electron_shell">Electron Shell:</string>
     <string name="emission_spectrum">Emission Spectrum:</string>
     <string name="go_online_for_emission_lines">Go online for emission lines</string>
+    <string name="temperatures">Temperatures</string>
+    <string name="boiling_point_kelvin">Boiling Point (Kelvin):</string>
+    <string name="boiling_point_c">Boiling Point (°C):</string>
+    <string name="boiling_point_f">Boiling Point (°F):</string>
+    <string name="melting_point_kelvin">Melting Point (Kelvin):</string>
+    <string name="melting_point_c">Melting Point (°C):</string>
+    <string name="melting_point_f">Melting Point (°F):</string>
 
 </resources>

@@ -75,12 +75,12 @@ import kotlinx.android.synthetic.main.d_properties.elementShellsElectrons
 import kotlinx.android.synthetic.main.d_properties.modelView
 import kotlinx.android.synthetic.main.d_properties.spImg
 import kotlinx.android.synthetic.main.d_properties.spOffline
-import kotlinx.android.synthetic.main.d_temperatures.element_boiling_celsius
-import kotlinx.android.synthetic.main.d_temperatures.element_boiling_fahrenheit
-import kotlinx.android.synthetic.main.d_temperatures.element_boiling_kelvin
-import kotlinx.android.synthetic.main.d_temperatures.element_melting_celsius
-import kotlinx.android.synthetic.main.d_temperatures.element_melting_fahrenheit
-import kotlinx.android.synthetic.main.d_temperatures.element_melting_kelvin
+import kotlinx.android.synthetic.main.d_temperatures.elementBoilingCelsius
+import kotlinx.android.synthetic.main.d_temperatures.elementBoilingFahrenheit
+import kotlinx.android.synthetic.main.d_temperatures.elementBoilingKelvin
+import kotlinx.android.synthetic.main.d_temperatures.elementMeltingCelsius
+import kotlinx.android.synthetic.main.d_temperatures.elementMeltingFahrenheit
+import kotlinx.android.synthetic.main.d_temperatures.elementMeltingKelvin
 import kotlinx.android.synthetic.main.d_thermodynamic.fusion_heat_text
 import kotlinx.android.synthetic.main.d_thermodynamic.phaseIcon
 import kotlinx.android.synthetic.main.d_thermodynamic.phase_text
@@ -219,12 +219,12 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             val sElementGroup = jsonObject.optString("element_group", "---")
             val elementElectronegativity = jsonObject.optString("element_electronegativty", "---")
             val wikipedia = jsonObject.optString("wikilink", "---")
-            val elementBoilingKelvin = jsonObject.optString("element_boiling_kelvin", "---")
-            val elementBoilingCelsius = jsonObject.optString("element_boiling_celsius", "---")
-            val elementBoilingFahrenheit = jsonObject.optString("element_boiling_fahrenheit", "---")
-            val elementMeltingKelvin = jsonObject.optString("element_melting_kelvin", "---")
-            val elementMeltingCelsius = jsonObject.optString("element_melting_celsius", "---")
-            val elementMeltingFahrenheit = jsonObject.optString("element_melting_fahrenheit", "---")
+            val sElementBoilingKelvin = jsonObject.optString("element_boiling_kelvin", "---")
+            val sElementBoilingCelsius = jsonObject.optString("element_boiling_celsius", "---")
+            val sElementBoilingFahrenheit = jsonObject.optString("element_boiling_fahrenheit", "---")
+            val sElementMeltingKelvin = jsonObject.optString("element_melting_kelvin", "---")
+            val sElementMeltingCelsius = jsonObject.optString("element_melting_celsius", "---")
+            val sElementMeltingFahrenheit = jsonObject.optString("element_melting_fahrenheit", "---")
             val sElementAtomicNumber = jsonObject.optString("element_atomic_number", "---")
             val sElementAtomicWeight = jsonObject.optString("element_atomicmass", "---")
             val sElementDensity = jsonObject.optString("element_density", "---")
@@ -296,13 +296,13 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             elementProtons.text = sElementProtons
             elementNeutronsCommon.text = sElementNeutronsCommon
             elementGroup.text = sElementGroup
-            element_boiling_kelvin.text = elementBoilingKelvin
-            element_boiling_celsius.text = elementBoilingCelsius
-            element_boiling_fahrenheit.text = elementBoilingFahrenheit
+            elementBoilingKelvin.text = sElementBoilingKelvin
+            elementBoilingCelsius.text = sElementBoilingCelsius
+            elementBoilingFahrenheit.text = sElementBoilingFahrenheit
             elementElectronegativty.text = elementElectronegativity
-            element_melting_kelvin.text = elementMeltingKelvin
-            element_melting_celsius.text = elementMeltingCelsius
-            element_melting_fahrenheit.text = elementMeltingFahrenheit
+            elementMeltingKelvin.text = sElementMeltingKelvin
+            elementMeltingCelsius.text = sElementMeltingCelsius
+            elementMeltingFahrenheit.text = sElementMeltingFahrenheit
             elementAtomicNumber.text = sElementAtomicNumber
             elementAtomicWeight.text = sElementAtomicWeight
             elementDensity.text = sElementDensity
@@ -425,16 +425,16 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             val degreePrefValue = degreePreference.getValue()
 
             if (degreePrefValue == 0) {
-                boilingF.text = elementBoilingKelvin
-                meltingF.text = elementMeltingKelvin
+                boilingF.text = sElementBoilingKelvin
+                meltingF.text = sElementMeltingKelvin
             }
             if (degreePrefValue == 1) {
-                boilingF.text = elementBoilingCelsius
-                meltingF.text = elementMeltingCelsius
+                boilingF.text = sElementBoilingCelsius
+                meltingF.text = sElementMeltingCelsius
             }
             if (degreePrefValue == 2) {
-                boilingF.text = elementBoilingFahrenheit
-                meltingF.text = elementMeltingFahrenheit
+                boilingF.text = sElementBoilingFahrenheit
+                meltingF.text = sElementMeltingFahrenheit
             }
 
             if (url == "empty") {
