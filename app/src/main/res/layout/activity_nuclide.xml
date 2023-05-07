@@ -116,7 +116,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout="@layout/stub_nuclide" />
+                        android:layout="@layout/v_stub_nuclide" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </FrameLayout>

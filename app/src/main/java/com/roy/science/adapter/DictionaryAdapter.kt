@@ -30,7 +30,7 @@ class DictionaryAdapter(
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.text_list_item, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.v_text_list_item, parent, false)
         return ViewHolder(v)
     }
 
@@ -39,9 +39,9 @@ class DictionaryAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val heading = itemView.findViewById(R.id.tv_title) as TextView
-        private val text = itemView.findViewById(R.id.tv_text) as TextView
-        private val wikiBtn = itemView.findViewById(R.id.wiki_btn) as TextView
+        private val heading = itemView.findViewById(R.id.tvTitle) as TextView
+        private val text = itemView.findViewById(R.id.tvText) as TextView
+        private val wikiBtn = itemView.findViewById(R.id.tvWikiBtn) as TextView
         private val frame = itemView.findViewById(R.id.rCard) as FrameLayout
 
         fun initialize(

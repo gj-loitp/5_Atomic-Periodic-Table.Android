@@ -7,7 +7,7 @@
 
     <include
         android:id="@+id/themePanel"
-        layout="@layout/theme_panel"
+        layout="@layout/v_theme_panel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"

@@ -30,7 +30,7 @@ import kotlinx.android.synthetic.main.activity_nuclide.scrollViewNuc
 import kotlinx.android.synthetic.main.activity_nuclide.seekBarNuc
 import kotlinx.android.synthetic.main.activity_nuclide.viewStub
 import kotlinx.android.synthetic.main.activity_nuclide.viewNuc
-import kotlinx.android.synthetic.main.stub_nuclide.nuc_view
+import kotlinx.android.synthetic.main.v_stub_nuclide.nuc_view
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -197,7 +197,8 @@ class NuclideActivity : BaseActivity() {
                     val decayTypeResult = jsonObject.optString(decayTypeString, "default")
                     val mainLayout = nuc_view
                     val inflater = layoutInflater
-                    val myLayout: View = inflater.inflate(R.layout.v_item_nuclide, mainLayout, false)
+                    val myLayout: View =
+                        inflater.inflate(R.layout.v_item_nuclide, mainLayout, false)
                     val params = RelativeLayout.LayoutParams(
                         resources.getDimensionPixelSize(R.dimen.item_nuclide),
                         resources.getDimensionPixelSize(R.dimen.item_nuclide)

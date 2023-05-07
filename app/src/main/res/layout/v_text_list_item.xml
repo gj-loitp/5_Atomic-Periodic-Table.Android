@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -11,11 +11,11 @@
     android:background="@drawable/shape_toast_card"
     android:backgroundTint="?attr/colorSurfaceVariant"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    tools:ignore="PrivateResource,HardcodedText">
 
-
-    <TextView
-        android:id="@+id/tv_title"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="18dp"
@@ -24,8 +24,8 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tv_text"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -37,19 +37,19 @@
         android:textColor="?attr/colorOnSurfaceVariant"
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/wiki_btn"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWikiBtn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_gravity="bottom|end"
         android:layout_marginTop="@dimen/margin"
-        android:layout_marginBottom="@dimen/margin"
         android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:background="@drawable/shape_toast"
+        android:backgroundTint="?attr/colorPrimary"
         android:drawableStart="@drawable/ic_open"
         android:drawablePadding="8dp"
         android:drawableTint="?attr/colorOnPrimary"
-        android:background="@drawable/shape_toast"
-        android:backgroundTint="?attr/colorPrimary"
         android:gravity="center"
         android:paddingStart="16dp"
         android:paddingEnd="24dp"

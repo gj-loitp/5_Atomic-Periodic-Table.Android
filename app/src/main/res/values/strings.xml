@@ -270,5 +270,9 @@
     <string name="search_for_elements">Search For Elements</string>
     <string name="electron_shell_configuration">Electron Shell Configuration</string>
     <string name="search_for_element">Search for element</string>
+    <string name="system_default">System Default</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="cancel">Cancel</string>
 
 </resources>

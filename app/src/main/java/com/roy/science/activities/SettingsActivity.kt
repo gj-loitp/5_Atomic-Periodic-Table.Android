@@ -42,11 +42,11 @@ import kotlinx.android.synthetic.main.activity_settings.themesSettings
 import kotlinx.android.synthetic.main.activity_settings.titleBoxSettings
 import kotlinx.android.synthetic.main.activity_settings.unitSettings
 import kotlinx.android.synthetic.main.activity_settings.view
-import kotlinx.android.synthetic.main.theme_panel.cancelBtn
-import kotlinx.android.synthetic.main.theme_panel.darkBtn
-import kotlinx.android.synthetic.main.theme_panel.lightBtn
-import kotlinx.android.synthetic.main.theme_panel.systemDefaultBtn
-import kotlinx.android.synthetic.main.theme_panel.themeBackground
+import kotlinx.android.synthetic.main.v_theme_panel.cancelBtn
+import kotlinx.android.synthetic.main.v_theme_panel.darkBtn
+import kotlinx.android.synthetic.main.v_theme_panel.lightBtn
+import kotlinx.android.synthetic.main.v_theme_panel.systemDefaultBtn
+import kotlinx.android.synthetic.main.v_theme_panel.themeBackground
 import java.io.File
 import java.text.DecimalFormat
 import kotlin.math.log10
