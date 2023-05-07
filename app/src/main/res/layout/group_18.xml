@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
 
     <FrameLayout
         android:id="@+id/helium_frame"
@@ -12,16 +15,15 @@
         android:layout_marginEnd="8dp"
         android:elevation="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/helium_btn"
             android:layout_width="78dp"
             android:layout_height="78dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_element_nodetail"
-
             android:elevation="1dp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/helium_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -35,7 +37,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/helium_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -45,7 +47,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/helium_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -63,21 +65,19 @@
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/neon_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_element_nodetail"
-
             android:elevation="1dp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/neon_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -91,7 +91,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/neon_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -101,7 +101,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/neon_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -119,21 +119,19 @@
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/argon_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_element_nodetail"
-
             android:elevation="1dp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/argon_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -147,7 +145,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/argon_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -157,7 +155,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/argon_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -175,21 +173,19 @@
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/krypton_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_element_nodetail"
-
             android:elevation="1dp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/krypton_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -203,7 +199,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/krypton_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -213,7 +209,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/krypton_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -231,21 +227,19 @@
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/xenon_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_element_nodetail"
-
             android:elevation="1dp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/xenon_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -259,7 +253,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/xenon_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -269,7 +263,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/xenon_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -287,21 +281,19 @@
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/radon_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_element_nodetail"
-
             android:elevation="1dp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/radon_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -315,7 +307,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/radon_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -325,7 +317,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/radon_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -343,21 +335,19 @@
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/oganesson_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_element_nodetail"
-
             android:elevation="1dp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/oganesson_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -371,7 +361,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/oganesson_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -381,7 +371,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/oganesson_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -404,16 +394,15 @@
         android:layout_marginRight="2dp"
         android:elevation="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lutetium_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_element_nodetail"
-
             android:elevation="1dp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lutetium_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -427,7 +416,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lutetium_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -437,7 +426,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lutetium_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -455,21 +444,19 @@
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lawrencium_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_element_nodetail"
-
             android:elevation="1dp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lawrencium_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -483,7 +470,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lawrencium_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -493,7 +480,7 @@
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lawrencium_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -506,4 +493,4 @@
             android:textSize="10sp" />
     </FrameLayout>
 
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
