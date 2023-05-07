@@ -109,24 +109,29 @@ class PHActivity : BaseActivity() {
     }
 
     private fun updatePhColor(item: Indicator) {
-        val leftColor = resources.getIdentifier(item.acidColor, "color", packageName)
-        val centerColor = resources.getIdentifier(item.neutralColor, "color", packageName)
-        val rightColor = resources.getIdentifier(item.alkaliColor, "color", packageName)
+        try {
+            val leftColor = resources.getIdentifier(item.acidColor, "color", packageName)
+            val centerColor = resources.getIdentifier(item.neutralColor, "color", packageName)
+            val rightColor = resources.getIdentifier(item.alkaliColor, "color", packageName)
 
-        left.setColorFilter(
-            ContextCompat.getColor(this, leftColor),
-            android.graphics.PorterDuff.Mode.SRC_IN
-        )
-        center.setColorFilter(
-            ContextCompat.getColor(this, centerColor),
-            android.graphics.PorterDuff.Mode.SRC_IN
-        )
-        right.setColorFilter(
-            ContextCompat.getColor(this, rightColor),
-            android.graphics.PorterDuff.Mode.SRC_IN
-        )
+            left.setColorFilter(
+                ContextCompat.getColor(this, leftColor),
+                android.graphics.PorterDuff.Mode.SRC_IN
+            )
+            center.setColorFilter(
+                ContextCompat.getColor(this, centerColor),
+                android.graphics.PorterDuff.Mode.SRC_IN
+            )
+            right.setColorFilter(
+                ContextCompat.getColor(this, rightColor),
+                android.graphics.PorterDuff.Mode.SRC_IN
+            )
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private fun updateButtonColor(btn: String) {
         methylOrangeBtn.background = getDrawable(R.drawable.shape_chip)
         bromothymolBlueBtn.background = getDrawable(R.drawable.shape_chip)
@@ -137,7 +142,7 @@ class PHActivity : BaseActivity() {
         delay.postDelayed({
             val resIDB = resources.getIdentifier(btn, "id", packageName)
             val button = findViewById<Button>(resIDB)
-            button.background = getDrawable(R.drawable.shape_chip_active)
+            button?.background = getDrawable(R.drawable.shape_chip_active)
         }, 1)
     }
 
