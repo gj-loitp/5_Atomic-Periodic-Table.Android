@@ -25,16 +25,16 @@ import com.roy.science.preferences.FavoriteBarPreferences
 import com.roy.science.preferences.FavoritePhase
 import com.roy.science.preferences.FusionHeatPreference
 import com.roy.science.preferences.MeltingPreference
+import com.roy.science.preferences.OfflinePreference
 import com.roy.science.preferences.SpecificHeatPreference
 import com.roy.science.preferences.VaporizationHeatPreference
-import com.roy.science.preferences.OfflinePreference
 import com.roy.science.preferences.sendIso
 import com.roy.science.utils.Pasteur
 import com.roy.science.utils.ToastUtil
 import com.roy.science.utils.Utils
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_element_info.elementTitle
 import kotlinx.android.synthetic.main.activity_element_info.elementImage
+import kotlinx.android.synthetic.main.activity_element_info.elementTitle
 import kotlinx.android.synthetic.main.activity_element_info.frame
 import kotlinx.android.synthetic.main.activity_element_info.nextBtn
 import kotlinx.android.synthetic.main.activity_element_info.offlineDiv
@@ -58,14 +58,14 @@ import kotlinx.android.synthetic.main.d_nuclear.radioactiveText
 import kotlinx.android.synthetic.main.d_overview.descriptionName
 import kotlinx.android.synthetic.main.d_overview.dscBtn
 import kotlinx.android.synthetic.main.d_overview.electronsEl
+import kotlinx.android.synthetic.main.d_overview.elementAppearance
+import kotlinx.android.synthetic.main.d_overview.elementDiscoveredBy
+import kotlinx.android.synthetic.main.d_overview.elementElectrons
+import kotlinx.android.synthetic.main.d_overview.elementGroup
 import kotlinx.android.synthetic.main.d_overview.elementName
-import kotlinx.android.synthetic.main.d_overview.element_appearance
-import kotlinx.android.synthetic.main.d_overview.element_discovered_by
-import kotlinx.android.synthetic.main.d_overview.element_electrons
-import kotlinx.android.synthetic.main.d_overview.element_group
-import kotlinx.android.synthetic.main.d_overview.element_neutrons_common
-import kotlinx.android.synthetic.main.d_overview.element_protons
-import kotlinx.android.synthetic.main.d_overview.element_year
+import kotlinx.android.synthetic.main.d_overview.elementNeutronsCommon
+import kotlinx.android.synthetic.main.d_overview.elementProtons
+import kotlinx.android.synthetic.main.d_overview.elementYear
 import kotlinx.android.synthetic.main.d_properties.elementShellsElectrons
 import kotlinx.android.synthetic.main.d_properties.element_atomic_number
 import kotlinx.android.synthetic.main.d_properties.element_atomic_weight
@@ -206,17 +206,17 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             val jsonObject: JSONObject = jsonArray.getJSONObject(0)
 
             //optStrings from jsonObject or fallback
-            val element= jsonObject.optString("element", "---")
+            val element = jsonObject.optString("element", "---")
             val description = jsonObject.optString("description", "---")
             val url = jsonObject.optString("link", "---")
             val short = jsonObject.optString("short", "---")
-            val elementElectrons = jsonObject.optString("element_electrons", "---")
+            val sElementElectrons = jsonObject.optString("element_electrons", "---")
             val elementShellElectrons = jsonObject.optString("element_shells_electrons", "---")
-            val elementYear = jsonObject.optString("element_year", "---")
-            val elementDiscoveredBy = jsonObject.optString("element_discovered_name", "---")
-            val elementProtons = jsonObject.optString("element_protons", "---")
-            val elementNeutronsCommon = jsonObject.optString("element_neutron_common", "---")
-            val elementGroup = jsonObject.optString("element_group", "---")
+            val sElementYear = jsonObject.optString("element_year", "---")
+            val sElementDiscoveredBy = jsonObject.optString("element_discovered_name", "---")
+            val sElementProtons = jsonObject.optString("element_protons", "---")
+            val sElementNeutronsCommon = jsonObject.optString("element_neutron_common", "---")
+            val sElementGroup = jsonObject.optString("element_group", "---")
             val elementElectronegativity = jsonObject.optString("element_electronegativty", "---")
             val wikipedia = jsonObject.optString("wikilink", "---")
             val elementBoilingKelvin = jsonObject.optString("element_boiling_kelvin", "---")
@@ -229,7 +229,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             val elementAtomicWeight = jsonObject.optString("element_atomicmass", "---")
             val elementDensity = jsonObject.optString("element_density", "---")
             val elementModelUrl = jsonObject.optString("element_model", "---")
-            val elementAppearance = jsonObject.optString("element_appearance", "---")
+            val sElementAppearance = jsonObject.optString("element_appearance", "---")
             val elementBlock = jsonObject.optString("element_block", "---")
 //            val elementCrystalStructure = jsonObject.optString("element_crystal_structure", "---")
             val fusionHeat = jsonObject.optString("element_fusion_heat", "---")
@@ -288,14 +288,14 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             elementTitle.text = element
             descriptionName.text = description
             elementName.text = element
-            electronsEl.text = elementElectrons
-            element_year.text = elementYear
+            electronsEl.text = sElementElectrons
+            elementYear.text = sElementYear
             elementShellsElectrons.text = elementShellElectrons
-            element_discovered_by.text = elementDiscoveredBy
-            element_electrons.text = elementElectrons
-            element_protons.text = elementProtons
-            element_neutrons_common.text = elementNeutronsCommon
-            element_group.text = elementGroup
+            elementDiscoveredBy.text = sElementDiscoveredBy
+            elementElectrons.text = sElementElectrons
+            elementProtons.text = sElementProtons
+            elementNeutronsCommon.text = sElementNeutronsCommon
+            elementGroup.text = sElementGroup
             element_boiling_kelvin.text = elementBoilingKelvin
             element_boiling_celsius.text = elementBoilingCelsius
             element_boiling_fahrenheit.text = elementBoilingFahrenheit
@@ -307,7 +307,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             element_atomic_weight.text = elementAtomicWeight
             element_density.text = elementDensity
             element_block.text = elementBlock
-            element_appearance.text = elementAppearance
+            elementAppearance.text = sElementAppearance
 
             //Nuclear Properties
             radioactiveText.text = isRadioactive
@@ -353,18 +353,30 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
                 phaseIcon.setImageDrawable(getDrawable(R.drawable.liquid))
             }
 
-            if (oxidationNeg1.contains(0.toString())) { ox0.text = "0"
-                ox0.background.setTint(getColor(R.color.non_metals)) }
-            if (oxidationNeg1.contains(1.toString())) { m1ox.text = "-1"
-                m1ox.background.setTint(getColor(R.color.noble_gas)) }
-            if (oxidationNeg1.contains(2.toString())) { m2ox.text = "-2"
-                m2ox.background.setTint(getColor(R.color.noble_gas)) }
-            if (oxidationNeg1.contains(3.toString())) { m3ox.text = "-3"
-                m3ox.background.setTint(getColor(R.color.noble_gas)) }
-            if (oxidationNeg1.contains(4.toString())) { m4ox.text = "-4"
-                m4ox.background.setTint(getColor(R.color.noble_gas)) }
-            if (oxidationNeg1.contains(5.toString())) { m5ox.text = "-5"
-                m5ox.background.setTint(getColor(R.color.noble_gas)) }
+            if (oxidationNeg1.contains(0.toString())) {
+                ox0.text = "0"
+                ox0.background.setTint(getColor(R.color.non_metals))
+            }
+            if (oxidationNeg1.contains(1.toString())) {
+                m1ox.text = "-1"
+                m1ox.background.setTint(getColor(R.color.noble_gas))
+            }
+            if (oxidationNeg1.contains(2.toString())) {
+                m2ox.text = "-2"
+                m2ox.background.setTint(getColor(R.color.noble_gas))
+            }
+            if (oxidationNeg1.contains(3.toString())) {
+                m3ox.text = "-3"
+                m3ox.background.setTint(getColor(R.color.noble_gas))
+            }
+            if (oxidationNeg1.contains(4.toString())) {
+                m4ox.text = "-4"
+                m4ox.background.setTint(getColor(R.color.noble_gas))
+            }
+            if (oxidationNeg1.contains(5.toString())) {
+                m5ox.text = "-5"
+                m5ox.background.setTint(getColor(R.color.noble_gas))
+            }
 
             if (oxidationPos1.contains(1.toString())) {
                 p1ox.text = "+1"
@@ -460,8 +472,9 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
     }
 
     private fun loadImage(url: String?) {
-        try { Picasso.get().load(url.toString()).into(elementImage) }
-        catch(e: ConnectException) {
+        try {
+            Picasso.get().load(url.toString()).into(elementImage)
+        } catch (e: ConnectException) {
             offlineDiv.visibility = View.VISIBLE
             frame.visibility = View.GONE
         }

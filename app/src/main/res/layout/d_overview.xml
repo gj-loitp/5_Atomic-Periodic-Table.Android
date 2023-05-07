@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    tools:ignore="PrivateResource">
 
-    <LinearLayout
-        android:id="@+id/overview_box"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/overviewBox"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/margin_space_card"
         android:layout_marginBottom="@dimen/margin_space_card"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -21,12 +22,12 @@
             android:layout_marginBottom="9dp"
             android:drawableStart="@drawable/overview_icon"
             android:drawablePadding="9dp"
-            android:text="Overview"
+            android:text="@string/overview"
             android:textColor="?attr/colorAccent"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:alpha="0.75"
@@ -37,8 +38,8 @@
             android:layout_height="24dp"
             android:layout_marginTop="4dp">
 
-            <TextView
-                android:id="@+id/description_title"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -49,8 +50,8 @@
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/wikipedia_description"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/wikipediaDescription"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_gravity="center_vertical|end"
@@ -58,32 +59,32 @@
                 android:src="@drawable/ic_wikipedia_logo" />
         </FrameLayout>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/descriptionName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
-            android:textIsSelectable="true"
             android:layout_marginBottom="0dp"
             android:maxLines="4"
-            android:text="description_name"
+            android:text="@string/description_name"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/dscBtn"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"
             android:alpha="0.66"
-            android:text="..more"
+            android:text="@string/more"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -92,7 +93,7 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/english_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,12 +101,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="English Name:"
+            android:text="@string/english_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/elementName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -114,11 +115,11 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="element_name"
-            android:textIsSelectable="true"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -127,33 +128,33 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/year_discovered"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/yearDiscovered"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Year Discovered:"
+            android:text="@string/year_discovered"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_year"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementYear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="element_year"
-            android:textIsSelectable="true"
+            android:text="@string/element_year"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -162,33 +163,33 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/discovered_by"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/discoveredBy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Discovered By:"
+            android:text="@string/discovered_by"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_discovered_by"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementDiscoveredBy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="element_discovered_by"
-            android:textIsSelectable="true"
+            android:text="@string/element_discovered_by"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView33"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -197,7 +198,7 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -205,13 +206,13 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Group:"
+            android:text="@string/group"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_group"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -219,11 +220,11 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="element_discovered_by"
-            android:textIsSelectable="true"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView323"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -232,33 +233,33 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/appearence_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appearenceTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Appearance:"
+            android:text="@string/appearance"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/element_appearance"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementAppearance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
-            android:textIsSelectable="true"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="element_discovered_by"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -267,7 +268,7 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/electrons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -275,12 +276,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Electrons:"
+            android:text="@string/electrons"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/electronsEl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -288,130 +289,131 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="element_electrons"
-            android:textIsSelectable="true"
+            android:text="@string/element_electrons"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:backgroundTint="?attr/colorSurfaceVariant"
-            android:background="@drawable/shape_toast"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_height="wrap_content">
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_toast"
+            android:backgroundTint="?attr/colorSurfaceVariant"
+            android:orientation="vertical">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="4dp"
-                android:text="Most Common Isotope"
+                android:text="@string/most_common_isotope"
                 android:textAlignment="center"
                 android:textColor="?attr/colorOnSecondaryContainer"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:orientation="horizontal"
-            android:weightSum="3">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
 
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="9dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/electrons_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Electrons"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/element_electrons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="18dp"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/electronsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Electrons"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSecondaryContainer" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/elementElectrons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:gravity="center"
+                        android:text="Electrons"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSecondaryContainer"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Electrons"
-                    android:textIsSelectable="true"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_marginTop="9dp"
-                android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/elementProtonsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/protons"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSecondaryContainer" />
 
-                <TextView
-                    android:id="@+id/element_protons_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/elementProtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:gravity="center"
+                        android:text="Protons"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSecondaryContainer"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Protons"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
-                <TextView
-                    android:id="@+id/element_protons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="18dp"
-                    android:gravity="center"
-                    android:text="Protons"
-                    android:textIsSelectable="true"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textSize="24sp" />
+                    android:orientation="vertical">
 
-            </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/elementTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Neutrons"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSecondaryContainer" />
 
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_marginTop="9dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/elementNeutronsCommon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:gravity="center"
+                        android:text="@string/neutrons"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSecondaryContainer"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <TextView
-                    android:id="@+id/element_title2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Neutrons"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
-
-                <TextView
-                    android:id="@+id/element_neutrons_common"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="18dp"
-                    android:gravity="center"
-                    android:text="Neutrons"
-                    android:textIsSelectable="true"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textSize="24sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

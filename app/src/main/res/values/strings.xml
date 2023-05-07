@@ -200,5 +200,20 @@
     <string name="view_all_isotopes">View all Isotopes</string>
     <string name="neutron_cross_sectional">Neutron Cross Sectional:</string>
     <string name="neutron_cross_sectional_text">neutron_cross_sectional_text</string>
+    <string name="overview">Overview</string>
+    <string name="description_name">description_name</string>
+    <string name="more">..more</string>
+    <string name="english_name">English Name:</string>
+    <string name="year_discovered">Year Discovered:</string>
+    <string name="element_year">element_year</string>
+    <string name="discovered_by">Discovered By:</string>
+    <string name="element_discovered_by">element_discovered_by</string>
+    <string name="group">Group:</string>
+    <string name="appearance">Appearance:</string>
+    <string name="electrons">Electrons:</string>
+    <string name="element_electrons">element_electrons</string>
+    <string name="most_common_isotope">Most Common Isotope</string>
+    <string name="protons">Protons</string>
+    <string name="neutrons">Neutrons</string>
 
 </resources>
