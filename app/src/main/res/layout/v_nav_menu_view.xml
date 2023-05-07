@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.androidx.com/tools"
     xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.androidx.com/tools"
     android:elevation="100dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="PrivateResource">
 
     <com.sothree.slidinguppanel.SlidingUpPanelLayout
         android:id="@+id/slidingLayout"
@@ -18,14 +20,13 @@
         sothree:umanoPanelHeight="0dp"
         sothree:umanoShadowHeight="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:textSize="16sp" />
 
-
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/navLin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,25 +43,25 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="?attr/colorPrimary"
+                    android:alpha="0.11"
                     android:background="@drawable/shape_half_toast"
-                    android:alpha="0.11"/>
+                    android:backgroundTint="?attr/colorPrimary" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvDragIcon"
                     android:layout_width="36dp"
                     android:layout_height="8dp"
+                    android:layout_gravity="center"
                     android:layout_margin="18dp"
                     android:alpha="0.85"
                     android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorOnSecondaryContainer"
                     android:elevation="4dp"
-                    android:textAlignment="center"
                     android:gravity="center_horizontal"
-                    android:layout_gravity="center"/>
+                    android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/drag_icon2"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDragIcon2"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="42dp"
@@ -74,8 +75,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/blogBtn"
+                    style="@style/TextAppearance.AppCompat.Button"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
                     android:background="?attr/colorSurface"
@@ -89,8 +91,7 @@
                     android:foreground="@drawable/ripple_d_ripple"
                     android:gravity="center_vertical"
                     android:padding="18dp"
-                    android:text="Blog"
-                    style="@style/TextAppearance.AppCompat.Button"
+                    android:text="@string/blog"
                     android:textAllCaps="false"
                     android:textColor="?attr/colorOnSecondaryContainer"
                     android:textColorHighlight="?attr/colorOnSecondaryContainer"
@@ -100,9 +101,9 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
-                    android:elevation="0dp"
+                    android:alpha="0.11"
                     android:background="?attr/colorPrimary"
-                    android:alpha="0.11"/>
+                    android:elevation="0dp" />
 
             </FrameLayout>
 
@@ -110,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/solubilityBtn"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
@@ -125,7 +126,7 @@
                     android:foreground="@drawable/ripple_d_ripple"
                     android:gravity="center_vertical"
                     android:padding="18dp"
-                    android:text="Tables"
+                    android:text="@string/tables"
                     android:textAllCaps="false"
                     android:textColor="?attr/colorOnSecondaryContainer"
                     android:textColorHighlight="?attr/colorOnSecondaryContainer"
@@ -135,18 +136,19 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
-                    android:elevation="0dp"
+                    android:alpha="0.11"
                     android:background="?attr/colorPrimary"
-                    android:alpha="0.11"/>
+                    android:elevation="0dp" />
 
             </FrameLayout>
 
             <FrameLayout
                 android:layout_width="match_parent"
+                android:layout_height="54dp"
                 android:visibility="gone"
-                android:layout_height="54dp">
+                tools:visibility="visible">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/electronegativity_btn"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
@@ -162,7 +164,7 @@
                     android:gravity="center_vertical"
                     android:padding="18dp"
                     android:shadowColor="?attr/colorAccent"
-                    android:text="Electronegativity Table"
+                    android:text="@string/electronegativity_table"
                     android:textAllCaps="false"
                     android:textColor="?attr/colorOnSecondaryContainer"
                     android:textColorHighlight="?attr/colorOnSecondaryContainer"
@@ -173,9 +175,9 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
-                    android:elevation="0dp"
+                    android:alpha="0.11"
                     android:background="?attr/colorPrimary"
-                    android:alpha="0.11"/>
+                    android:elevation="0dp" />
 
             </FrameLayout>
 
@@ -183,7 +185,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/isotopesBtn"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
@@ -208,9 +210,9 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
-                    android:elevation="0dp"
+                    android:alpha="0.11"
                     android:background="?attr/colorPrimary"
-                    android:alpha="0.11"/>
+                    android:elevation="0dp" />
 
             </FrameLayout>
 
@@ -218,7 +220,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/dictionaryBtn"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
@@ -243,13 +245,13 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
-                    android:elevation="0dp"
+                    android:alpha="0.11"
                     android:background="?attr/colorPrimary"
-                    android:alpha="0.11"/>
+                    android:elevation="0dp" />
 
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/space5"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -263,16 +265,16 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:alpha="0.11"
                     android:background="?attr/colorPrimary"
-                    android:elevation="1dp"
-                    android:alpha="0.11"/>
+                    android:elevation="1dp" />
 
                 <LinearLayout
-                    android:id="@+id/socialmedia_layout"
+                    android:id="@+id/llSocialmediaLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:elevation="0dp"
                     android:layout_gravity="center"
+                    android:elevation="0dp"
                     android:orientation="horizontal">
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -281,6 +283,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:clickable="true"
+                        android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
                         android:src="@drawable/ic_twitter_outline"
@@ -297,6 +300,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:clickable="true"
+                        android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
                         android:src="@drawable/ic_instagram_outline"
@@ -313,6 +317,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:clickable="true"
+                        android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
                         android:src="@drawable/ic_facebook_outline"
@@ -329,6 +334,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:clickable="true"
+                        android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
                         android:src="@drawable/ic_web_outline"
@@ -343,7 +349,7 @@
 
             </FrameLayout>
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 

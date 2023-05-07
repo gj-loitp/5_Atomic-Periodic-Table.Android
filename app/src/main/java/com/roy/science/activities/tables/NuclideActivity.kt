@@ -155,15 +155,15 @@ class NuclideActivity : BaseActivity() {
         ElementModel.getList(list)
         val dLayout = nuc_view
         val inflate = layoutInflater
-        val mLayout: View = inflate.inflate(R.layout.item_nuclide, dLayout, false)
+        val mLayout: View = inflate.inflate(R.layout.v_item_nuclide, dLayout, false)
         val param = RelativeLayout.LayoutParams(
             /* w = */ resources.getDimensionPixelSize(R.dimen.item_nuclide),
             /* h = */ resources.getDimensionPixelSize(R.dimen.item_nuclide)
         )
         param.leftMargin = resources.getDimensionPixelSize(R.dimen.item_nuclide) * 0
         param.topMargin = resources.getDimensionPixelSize(R.dimen.item_nuclide) * 1
-        val s = mLayout.findViewById(R.id.nuclide_element) as TextView
-        val t = mLayout.findViewById(R.id.nuclide_number) as TextView
+        val s = mLayout.findViewById(R.id.tvnNuclideElement) as TextView
+        val t = mLayout.findViewById(R.id.tvNuclideNumber) as TextView
         s.text = "n"
         t.text = "1"
         dLayout.addView(mLayout, param)
@@ -197,7 +197,7 @@ class NuclideActivity : BaseActivity() {
                     val decayTypeResult = jsonObject.optString(decayTypeString, "default")
                     val mainLayout = nuc_view
                     val inflater = layoutInflater
-                    val myLayout: View = inflater.inflate(R.layout.item_nuclide, mainLayout, false)
+                    val myLayout: View = inflater.inflate(R.layout.v_item_nuclide, mainLayout, false)
                     val params = RelativeLayout.LayoutParams(
                         resources.getDimensionPixelSize(R.dimen.item_nuclide),
                         resources.getDimensionPixelSize(R.dimen.item_nuclide)
@@ -208,10 +208,10 @@ class NuclideActivity : BaseActivity() {
                             resources.getDimensionPixelSize(R.dimen.item_nuclide) * (z.toInt())
                         params.topMargin =
                             resources.getDimensionPixelSize(R.dimen.item_nuclide) * (n.toInt())
-                        val short = myLayout.findViewById(R.id.nuclide_element) as TextView
-                        val top = myLayout.findViewById(R.id.nuclide_number) as TextView
+                        val short = myLayout.findViewById(R.id.tvnNuclideElement) as TextView
+                        val top = myLayout.findViewById(R.id.tvNuclideNumber) as TextView
                         val frame = myLayout.findViewById(R.id.item_nuclide_frame) as FrameLayout
-                        val decay = myLayout.findViewById(R.id.nuclide_decay) as TextView
+                        val decay = myLayout.findViewById(R.id.tvNuclideDecay) as TextView
 
                         short.text = item.short
                         top.text = (z.toInt() + n.toInt()).toString()

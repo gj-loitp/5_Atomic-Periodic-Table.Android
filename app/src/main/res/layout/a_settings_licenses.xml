@@ -45,7 +45,7 @@
                     android:layout_height="56dp">
 
                     <ImageButton
-                        android:id="@+id/backBtnD"
+                        android:id="@+id/backBtn"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
@@ -158,7 +158,7 @@
 
         <include
             android:id="@+id/lInc"
-            layout="@layout/license_info"
+            layout="@layout/v_license_info"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone" />

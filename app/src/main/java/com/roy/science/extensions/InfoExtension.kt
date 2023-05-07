@@ -33,21 +33,8 @@ import com.roy.science.utils.Pasteur
 import com.roy.science.utils.ToastUtil
 import com.roy.science.utils.Utils
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_element_info.elementImage
-import kotlinx.android.synthetic.main.activity_element_info.elementTitle
-import kotlinx.android.synthetic.main.activity_element_info.frame
-import kotlinx.android.synthetic.main.activity_element_info.nextBtn
-import kotlinx.android.synthetic.main.activity_element_info.offlineDiv
-import kotlinx.android.synthetic.main.activity_element_info.previousBtn
-import kotlinx.android.synthetic.main.activity_element_info.wikipediaBtn
-import kotlinx.android.synthetic.main.d_atomic.atomicRadiusEText
-import kotlinx.android.synthetic.main.d_atomic.atomicRadiusText
-import kotlinx.android.synthetic.main.d_atomic.covalentRadiusText
-import kotlinx.android.synthetic.main.d_atomic.electronConfigText
-import kotlinx.android.synthetic.main.d_atomic.ionChargeText
-import kotlinx.android.synthetic.main.d_atomic.ionizationEnergiesText
-import kotlinx.android.synthetic.main.d_atomic.oxView
-import kotlinx.android.synthetic.main.d_atomic.vanDerWaalsRadiusText
+import kotlinx.android.synthetic.main.activity_element_info.*
+import kotlinx.android.synthetic.main.d_atomic.*
 import kotlinx.android.synthetic.main.d_electromagnetic.elementElectricalType
 import kotlinx.android.synthetic.main.d_electromagnetic.elementMagneticType
 import kotlinx.android.synthetic.main.d_electromagnetic.elementResistivity
@@ -66,34 +53,17 @@ import kotlinx.android.synthetic.main.d_overview.elementName
 import kotlinx.android.synthetic.main.d_overview.elementNeutronsCommon
 import kotlinx.android.synthetic.main.d_overview.elementProtons
 import kotlinx.android.synthetic.main.d_overview.elementYear
-import kotlinx.android.synthetic.main.d_properties.elementAtomicNumber
-import kotlinx.android.synthetic.main.d_properties.elementAtomicWeight
-import kotlinx.android.synthetic.main.d_properties.elementBlock
-import kotlinx.android.synthetic.main.d_properties.elementDensity
-import kotlinx.android.synthetic.main.d_properties.elementElectronegativty
-import kotlinx.android.synthetic.main.d_properties.elementShellsElectrons
-import kotlinx.android.synthetic.main.d_properties.modelView
-import kotlinx.android.synthetic.main.d_properties.spImg
-import kotlinx.android.synthetic.main.d_properties.spOffline
-import kotlinx.android.synthetic.main.d_temperatures.elementBoilingCelsius
-import kotlinx.android.synthetic.main.d_temperatures.elementBoilingFahrenheit
-import kotlinx.android.synthetic.main.d_temperatures.elementBoilingKelvin
-import kotlinx.android.synthetic.main.d_temperatures.elementMeltingCelsius
-import kotlinx.android.synthetic.main.d_temperatures.elementMeltingFahrenheit
-import kotlinx.android.synthetic.main.d_temperatures.elementMeltingKelvin
-import kotlinx.android.synthetic.main.d_thermodynamic.tvFusionHeatText
-import kotlinx.android.synthetic.main.d_thermodynamic.phaseIcon
-import kotlinx.android.synthetic.main.d_thermodynamic.tvPhaseText
-import kotlinx.android.synthetic.main.d_thermodynamic.tvSpecificHeatText
-import kotlinx.android.synthetic.main.d_thermodynamic.tvVaporizationHeatText
-import kotlinx.android.synthetic.main.loading_view.noImg
-import kotlinx.android.synthetic.main.loading_view.proBar
-import kotlinx.android.synthetic.main.oxidiation_states.*
+import kotlinx.android.synthetic.main.d_properties.*
+import kotlinx.android.synthetic.main.d_temperatures.*
+import kotlinx.android.synthetic.main.d_thermodynamic.*
 import kotlinx.android.synthetic.main.shell_view.cardModelView
 import kotlinx.android.synthetic.main.shell_view.configData
 import kotlinx.android.synthetic.main.shell_view.eConfigData
 import kotlinx.android.synthetic.main.v_detail_emission.ivSpImgFetail
 import kotlinx.android.synthetic.main.v_favorite_bar.*
+import kotlinx.android.synthetic.main.v_loading_view.noImg
+import kotlinx.android.synthetic.main.v_loading_view.progressBar
+import kotlinx.android.synthetic.main.v_oxidiation_states.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -402,9 +372,9 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
 
             if (url == "empty") {
                 Utils.fadeInAnim(noImg, 150)
-                proBar.visibility = View.GONE
+                progressBar.visibility = View.GONE
             } else {
-                Utils.fadeInAnim(proBar, 150)
+                Utils.fadeInAnim(progressBar, 150)
                 noImg.visibility = View.GONE
             }
 

@@ -42,10 +42,19 @@ import com.roy.science.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState
 import kotlinx.android.synthetic.main.a_main.*
-import kotlinx.android.synthetic.main.nav_menu_view.*
 import kotlinx.android.synthetic.main.search_layout.*
 import kotlinx.android.synthetic.main.v_filter_view.*
 import kotlinx.android.synthetic.main.v_hover_menu.*
+import kotlinx.android.synthetic.main.v_nav_menu_view.blogBtn
+import kotlinx.android.synthetic.main.v_nav_menu_view.dictionaryBtn
+import kotlinx.android.synthetic.main.v_nav_menu_view.facebookButton
+import kotlinx.android.synthetic.main.v_nav_menu_view.homepageButton
+import kotlinx.android.synthetic.main.v_nav_menu_view.instagramButton
+import kotlinx.android.synthetic.main.v_nav_menu_view.isotopesBtn
+import kotlinx.android.synthetic.main.v_nav_menu_view.navLin
+import kotlinx.android.synthetic.main.v_nav_menu_view.slidingLayout
+import kotlinx.android.synthetic.main.v_nav_menu_view.solubilityBtn
+import kotlinx.android.synthetic.main.v_nav_menu_view.twitterButton
 import org.deejdev.twowaynestedscrollview.TwoWayNestedScrollView
 import java.util.Locale
 

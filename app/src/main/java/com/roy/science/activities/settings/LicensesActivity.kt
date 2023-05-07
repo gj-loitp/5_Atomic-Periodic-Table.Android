@@ -9,20 +9,8 @@ import com.roy.science.R
 import com.roy.science.activities.BaseActivity
 import com.roy.science.anim.Anim
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.a_dictionary.*
-import kotlinx.android.synthetic.main.a_settings_licenses.commonTitleBackLic
-import kotlinx.android.synthetic.main.a_settings_licenses.commonTitleBackLicColor
-import kotlinx.android.synthetic.main.a_settings_licenses.lInc
-import kotlinx.android.synthetic.main.a_settings_licenses.lSothreeBtn
-import kotlinx.android.synthetic.main.a_settings_licenses.lWikiBtn
-import kotlinx.android.synthetic.main.a_settings_licenses.licenseScroll
-import kotlinx.android.synthetic.main.a_settings_licenses.licenseTitle
-import kotlinx.android.synthetic.main.a_settings_licenses.licenseTitleDownstate
-import kotlinx.android.synthetic.main.a_settings_licenses.viewLic
-import kotlinx.android.synthetic.main.license_info.lBackBtn
-import kotlinx.android.synthetic.main.license_info.lBackground3
-import kotlinx.android.synthetic.main.license_info.lText
-import kotlinx.android.synthetic.main.license_info.lTitle
+import kotlinx.android.synthetic.main.a_settings_licenses.*
+import kotlinx.android.synthetic.main.v_license_info.*
 
 class LicensesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,7 +70,7 @@ class LicensesActivity : BaseActivity() {
             })
 
         listeners()
-        backBtnD.setOnClickListener {
+        backBtn.setOnClickListener {
             this.onBackPressed()
         }
     }

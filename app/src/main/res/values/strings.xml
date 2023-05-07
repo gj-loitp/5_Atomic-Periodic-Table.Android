@@ -262,5 +262,9 @@
     <string name="melting_point">Melting Point</string>
     <string name="random_element">Random Element</string>
     <string name="element_ionization">Element Ionization</string>
+    <string name="no_image">No Image</string>
+    <string name="blog">Blog</string>
+    <string name="tables">Tables</string>
+    <string name="electronegativity_table">Electronegativity Table</string>
 
 </resources>
