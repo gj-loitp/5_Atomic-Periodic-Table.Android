@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:alpha="0.11"
-            android:background="?attr/colorPrimary" />
+            tools:ignore="UselessLeaf" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lTitle"
