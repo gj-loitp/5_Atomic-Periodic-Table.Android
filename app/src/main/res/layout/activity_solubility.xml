@@ -97,7 +97,7 @@
             android:orientation="horizontal">
 
             <include
-                layout="@layout/solubility_left"
+                layout="@layout/v_solubility_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -126,37 +126,37 @@
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/solubility_group_3"
+                            layout="@layout/v_solubility_group_3"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/solubility_group_4"
+                            layout="@layout/v_solubility_group_4"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/solubility_group_5"
+                            layout="@layout/v_solubility_group_5"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/solubility_group_6"
+                            layout="@layout/v_solubility_group_6"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/solubility_group_7"
+                            layout="@layout/v_solubility_group_7"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/solubility_group_8"
+                            layout="@layout/v_solubility_group_8"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/solubility_group_9"
+                            layout="@layout/v_solubility_group_9"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
