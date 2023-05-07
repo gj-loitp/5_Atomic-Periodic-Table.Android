@@ -453,8 +453,8 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             btn.isFocusable = true
             btn.setOnClickListener {
                 val intent = Intent(this, ElementInfoActivity::class.java)
-                val ElementSend = ElementSendAndLoad(this)
-                ElementSend.setValue(item.element)
+                val elementSend = ElementSendAndLoad(this)
+                elementSend.setValue(item.element)
                 startActivity(intent)
             }
         }
@@ -474,6 +474,8 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             Utils.fadeOutAnim(background, 150)
         }
         elmtNumbBtn2.setOnClickListener {
+            editElement.setText("")
+
             val searchPreference = SearchPreferences(this)
             searchPreference.setValue(0)
 
@@ -492,6 +494,8 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             )
         }
         electroBtn.setOnClickListener {
+            editElement.setText("")
+
             val searchPreference = SearchPreferences(this)
             searchPreference.setValue(1)
 
@@ -510,6 +514,8 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             )
         }
         alphabetBtn.setOnClickListener {
+            editElement.setText("")
+
             val searchPreference = SearchPreferences(this)
             searchPreference.setValue(2)
 
