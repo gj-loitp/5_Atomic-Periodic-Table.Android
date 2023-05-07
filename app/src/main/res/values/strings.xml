@@ -193,5 +193,12 @@
     <string name="resistivity">Resistivity:</string>
     <string name="magnetic_type">Magnetic Type:</string>
     <string name="superconducting_point">Superconducting Point:</string>
+    <string name="nuclear_properties">Nuclear Properties</string>
+    <string name="radioactive">Radioactive:</string>
+    <string name="radioactive_text">radioactive_text</string>
+    <string name="isotopes">Isotopes:</string>
+    <string name="view_all_isotopes">View all Isotopes</string>
+    <string name="neutron_cross_sectional">Neutron Cross Sectional:</string>
+    <string name="neutron_cross_sectional_text">neutron_cross_sectional_text</string>
 
 </resources>

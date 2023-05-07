@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="PrivateResource">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/physicsProperties"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +16,7 @@
         android:elevation="2dp"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -25,31 +26,31 @@
             android:drawableStart="@drawable/ic_nucleari"
             android:drawablePadding="9dp"
             android:drawableTint="?attr/colorPrimary"
-            android:text="Nuclear Properties"
+            android:text="@string/nuclear_properties"
             android:textColor="?attr/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:alpha="0.75"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/radioactive_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/radioactiveTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Radioactive:"
+            android:text="@string/radioactive"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/radioactiveText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,12 +58,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="radioactive_text"
-            android:textIsSelectable="true"
+            android:text="@string/radioactive_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -77,50 +78,50 @@
             android:clickable="true"
             android:focusable="true">
 
-            <ImageView
-                android:id="@+id/isotopes_icon"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/isotopesIcon"
                 android:layout_width="64dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
                 android:padding="18dp"
                 android:rotation="270"
-                app:tint="?attr/colorTertiary"
-                app:srcCompat="@drawable/ic_arrow" />
+                app:srcCompat="@drawable/ic_arrow"
+                app:tint="?attr/colorTertiary" />
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="64dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/isotopes_title"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/isotopesTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="18dp"
                     android:layout_marginBottom="2dp"
-                    android:text="Isotopes:"
+                    android:text="@string/isotopes"
                     android:textColor="?attr/colorOnSecondaryContainer"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/isotopes_text"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/isotopesText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="18dp"
                     android:layout_marginBottom="8dp"
-                    android:text="View all Isotopes"
+                    android:text="@string/view_all_isotopes"
                     android:textColor="?attr/colorOnSecondaryContainer"
                     android:textSize="14sp" />
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </FrameLayout>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -128,20 +129,20 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/neutron_cross_sectional_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/neutronCrossSectionalTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Neutron Cross Sectional:"
+            android:text="@string/neutron_cross_sectional"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/neutronCrossSectionalText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -149,9 +150,9 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="neutron_cross_sectional_text"
-            android:textIsSelectable="true"
+            android:text="@string/neutron_cross_sectional_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
-    </LinearLayout>
-</LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
