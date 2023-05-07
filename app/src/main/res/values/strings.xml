@@ -261,5 +261,6 @@
     <string name="boiling_point">Boiling Point</string>
     <string name="melting_point">Melting Point</string>
     <string name="random_element">Random Element</string>
+    <string name="element_ionization">Element Ionization</string>
 
 </resources>
