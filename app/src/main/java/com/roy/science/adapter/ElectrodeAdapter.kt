@@ -30,7 +30,7 @@ class ElectrodeAdapter(
         viewType: Int
     ): ViewHolder {
         val v =
-            LayoutInflater.from(parent.context).inflate(R.layout.electrode_list_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.v_electrode_list_item, parent, false)
         return ViewHolder(v)
     }
 

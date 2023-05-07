@@ -24,9 +24,9 @@ import kotlinx.android.synthetic.main.activity_submit.submitScroll
 import kotlinx.android.synthetic.main.activity_submit.submitTitle
 import kotlinx.android.synthetic.main.activity_submit.submitTitleDownstate
 import kotlinx.android.synthetic.main.activity_submit.viewSub
-import kotlinx.android.synthetic.main.drop_issue.bug
-import kotlinx.android.synthetic.main.drop_issue.dataIssue
-import kotlinx.android.synthetic.main.drop_issue.question
+import kotlinx.android.synthetic.main.v_drop_issue.bug
+import kotlinx.android.synthetic.main.v_drop_issue.dataIssue
+import kotlinx.android.synthetic.main.v_drop_issue.question
 
 class SubmitActivity : BaseActivity() {
 

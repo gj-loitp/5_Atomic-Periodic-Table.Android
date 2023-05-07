@@ -86,7 +86,6 @@ import kotlinx.android.synthetic.main.d_thermodynamic.phaseIcon
 import kotlinx.android.synthetic.main.d_thermodynamic.tvPhaseText
 import kotlinx.android.synthetic.main.d_thermodynamic.tvSpecificHeatText
 import kotlinx.android.synthetic.main.d_thermodynamic.tvVaporizationHeatText
-import kotlinx.android.synthetic.main.detail_emission.ivSpImgFetail
 import kotlinx.android.synthetic.main.favorite_bar.aCalculatedF
 import kotlinx.android.synthetic.main.favorite_bar.aCalculatedLay
 import kotlinx.android.synthetic.main.favorite_bar.aEmpiricalF
@@ -133,6 +132,7 @@ import kotlinx.android.synthetic.main.oxidiation_states.p9ox
 import kotlinx.android.synthetic.main.shell_view.cardModelView
 import kotlinx.android.synthetic.main.shell_view.configData
 import kotlinx.android.synthetic.main.shell_view.eConfigData
+import kotlinx.android.synthetic.main.v_detail_emission.ivSpImgFetail
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
