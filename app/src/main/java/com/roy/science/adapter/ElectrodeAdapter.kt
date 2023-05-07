@@ -39,10 +39,10 @@ class ElectrodeAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val textViewName = itemView.findViewById(R.id.tv_name) as TextView
-        private val textViewShort = itemView.findViewById(R.id.tv_short) as TextView
-        private val textViewCharge = itemView.findViewById(R.id.tv_charge) as TextView
-        private val textViewVoltage = itemView.findViewById(R.id.tv_voltage) as TextView
+        private val textViewName = itemView.findViewById(R.id.tvName) as TextView
+        private val textViewShort = itemView.findViewById(R.id.tvShort) as TextView
+        private val textViewCharge = itemView.findViewById(R.id.tvCharge) as TextView
+        private val textViewVoltage = itemView.findViewById(R.id.tvVoltage) as TextView
 
         fun initialize(
             item: Series,

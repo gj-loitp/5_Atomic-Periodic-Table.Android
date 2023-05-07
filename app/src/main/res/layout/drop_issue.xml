@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/shape_toast"
     android:backgroundTint="?attr/colorSurface"
-    android:elevation="8dp">
+    android:elevation="8dp"
+    tools:ignore="PrivateResource">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -19,11 +21,11 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:alpha="0.11"
                 android:background="@drawable/shape_half_up_toast"
-                android:backgroundTint="?attr/colorPrimary"
-                android:alpha="0.11"/>
+                android:backgroundTint="?attr/colorPrimary" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/dataIssue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -37,32 +39,35 @@
                 android:padding="9dp"
                 android:paddingEnd="36dp"
                 android:text="Data Issue"
-                android:textColor="?attr/colorOnPrimaryContainer" />
+                android:textColor="?attr/colorOnPrimaryContainer"
+                tools:ignore="RtlSymmetry" />
         </FrameLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="?attr/colorPrimary"
-            android:alpha="0.11"/>
-        <TextView
-            android:id="@+id/bug"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:drawablePadding="9dp"
-            android:drawableTint="?attr/colorOnPrimaryContainer"
-            android:focusable="true"
-            android:foreground="@drawable/ripple_d_ripple"
-            android:gravity="center_vertical"
-            android:padding="9dp"
-            android:paddingEnd="36dp"
-            android:text="Bug"
-            android:textColor="?attr/colorOnPrimaryContainer" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.11"
+                android:background="?attr/colorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawablePadding="9dp"
+                android:drawableTint="?attr/colorOnPrimaryContainer"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_d_ripple"
+                android:gravity="center_vertical"
+                android:padding="9dp"
+                android:paddingEnd="36dp"
+                android:text="Bug"
+                android:textColor="?attr/colorOnPrimaryContainer"
+                tools:ignore="RtlSymmetry" />
 
         </FrameLayout>
 
@@ -70,30 +75,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/shape_half_down_toast"
-            android:backgroundTint="?attr/colorPrimary"
-            android:alpha="0.11"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.11"
+                android:background="@drawable/shape_half_down_toast"
+                android:backgroundTint="?attr/colorPrimary" />
 
-        <TextView
-            android:id="@+id/question"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:clickable="true"
-            android:drawablePadding="9dp"
-            android:drawableTint="?attr/colorOnPrimaryContainer"
-            android:focusable="true"
-            android:foreground="@drawable/ripple_d_ripple"
-            android:gravity="center_vertical"
-            android:padding="9dp"
-            android:paddingEnd="36dp"
-            android:text="Question"
-            android:textColor="?attr/colorOnPrimaryContainer" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:clickable="true"
+                android:drawablePadding="9dp"
+                android:drawableTint="?attr/colorOnPrimaryContainer"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_d_ripple"
+                android:gravity="center_vertical"
+                android:padding="9dp"
+                android:paddingEnd="36dp"
+                android:text="Question"
+                android:textColor="?attr/colorOnPrimaryContainer"
+                tools:ignore="RtlSymmetry" />
 
         </FrameLayout>
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>
