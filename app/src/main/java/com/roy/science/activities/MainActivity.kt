@@ -41,24 +41,8 @@ import com.roy.science.utils.TabUtil
 import com.roy.science.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState
-import kotlinx.android.synthetic.main.activity_main.commonTitleBackMain
-import kotlinx.android.synthetic.main.activity_main.corner
-import kotlinx.android.synthetic.main.activity_main.hoverBackground
-import kotlinx.android.synthetic.main.activity_main.hoverMenuInclude
-import kotlinx.android.synthetic.main.activity_main.leftBar
-import kotlinx.android.synthetic.main.activity_main.menuBtn
-import kotlinx.android.synthetic.main.activity_main.moreBtn
-import kotlinx.android.synthetic.main.activity_main.navBackground
-import kotlinx.android.synthetic.main.activity_main.navBarMain
-import kotlinx.android.synthetic.main.activity_main.navContent
-import kotlinx.android.synthetic.main.activity_main.navMenuInclude
-import kotlinx.android.synthetic.main.activity_main.scrollLin
-import kotlinx.android.synthetic.main.activity_main.scrollView
-import kotlinx.android.synthetic.main.activity_main.searchBox
-import kotlinx.android.synthetic.main.activity_main.searchMenuInclude
-import kotlinx.android.synthetic.main.activity_main.settingsBtn
-import kotlinx.android.synthetic.main.activity_main.topBar
-import kotlinx.android.synthetic.main.activity_main.view_main
+import kotlinx.android.synthetic.main.a_main.moreBtn
+import kotlinx.android.synthetic.main.a_main.*
 import kotlinx.android.synthetic.main.filter_view.alphabetBtn
 import kotlinx.android.synthetic.main.filter_view.electro_btn
 import kotlinx.android.synthetic.main.filter_view.elmtNumbBtn2
@@ -128,7 +112,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.a_main)
 
         val recyclerView = findViewById<RecyclerView>(R.id.element_recyclerview)
         recyclerView.layoutManager = LinearLayoutManager(
