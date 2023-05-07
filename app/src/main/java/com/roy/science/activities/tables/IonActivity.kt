@@ -23,14 +23,14 @@ import com.roy.science.model.IonModel
 import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
 import kotlinx.android.synthetic.main.a_dictionary.titleBox
-import kotlinx.android.synthetic.main.activity_ion.back_btn_ion
+import kotlinx.android.synthetic.main.activity_ion.backBtnIon
 import kotlinx.android.synthetic.main.activity_ion.closeEleSearchIon
 import kotlinx.android.synthetic.main.activity_ion.commonTitleBackIon
 import kotlinx.android.synthetic.main.activity_ion.editIon
 import kotlinx.android.synthetic.main.activity_ion.emptySearchBoxIon
 import kotlinx.android.synthetic.main.activity_ion.ionDetail
 import kotlinx.android.synthetic.main.activity_ion.ionView
-import kotlinx.android.synthetic.main.activity_ion.search_bar_ion
+import kotlinx.android.synthetic.main.activity_ion.searchBarIon
 import kotlinx.android.synthetic.main.activity_ion.searchBtnIon
 import kotlinx.android.synthetic.main.activity_ion.viewIon
 import kotlinx.android.synthetic.main.ion_details.detail_background_ion
@@ -78,7 +78,7 @@ class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
         detail_background_ion.setOnClickListener {
             Utils.fadeOutAnim(ionDetail, 300)
         }
-        back_btn_ion.setOnClickListener { this.onBackPressed() }
+        backBtnIon.setOnClickListener { this.onBackPressed() }
     }
 
     @SuppressLint("SetTextI18n")
@@ -191,7 +191,7 @@ class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
 
     private fun clickSearch() {
         searchBtnIon.setOnClickListener {
-            Utils.fadeInAnim(search_bar_ion, 150)
+            Utils.fadeInAnim(searchBarIon, 150)
             Utils.fadeOutAnim(titleBox, 1)
             editIon.requestFocus()
             val imm: InputMethodManager =
@@ -199,7 +199,7 @@ class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
             imm.showSoftInput(editIon, InputMethodManager.SHOW_IMPLICIT)
         }
         closeEleSearchIon.setOnClickListener {
-            Utils.fadeOutAnim(search_bar_ion, 1)
+            Utils.fadeOutAnim(searchBarIon, 1)
             val delayClose = Handler(Looper.getMainLooper())
             delayClose.postDelayed({
                 Utils.fadeInAnim(titleBox, 150)
