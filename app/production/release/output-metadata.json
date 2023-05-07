@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.roy93group.science",
+  "variantName": "productionRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 20230506,
+      "versionName": "2023.05.06",
+      "outputFile": "com.roy93group.sciencerelease_2023.05.06_20230506.apk"
+    }
+  ],
+  "elementType": "File"
+}
