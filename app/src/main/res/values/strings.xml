@@ -244,5 +244,9 @@
     <string name="_500_nm">500 (nm)</string>
     <string name="_600_nm">600 (nm)</string>
     <string name="_700_nm">700 (nm)</string>
+    <string name="pro_version_required_to_view">PRO Version required to view</string>
+    <string name="electromagnetic_parameters">Electromagnetic Parameters</string>
+    <string name="electrical_conductivity">Electrical Conductivity:</string>
+    <string name="electrical_conductivity_text">electrical_conductivity_text</string>
 
 </resources>

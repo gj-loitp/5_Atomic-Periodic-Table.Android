@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <FrameLayout
-        android:id="@+id/hydrogen_frame"
+        android:id="@+id/flHydrogenFrame"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
