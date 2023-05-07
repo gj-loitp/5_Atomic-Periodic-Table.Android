@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/viewf"
-    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="?attr/backgroundColor"
-    android:layout_height="match_parent">
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/commonTitleBackFav"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:elevation="1dp"
         android:background="?attr/colorSurface"
+        android:elevation="1dp"
         android:gravity="center|center_vertical"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,13 +23,13 @@
             android:id="@+id/commonTitleBackFavColor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="?attr/colorPrimary"
-            android:alpha="0.11"/>
+            android:alpha="0.11"
+            android:background="?attr/colorPrimary" />
 
-        <LinearLayout
-            android:gravity="bottom"
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="bottom"
             android:orientation="vertical">
 
             <FrameLayout
@@ -43,17 +43,19 @@
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:layout_gravity="center_vertical"
-                    android:rotation="180"
+                    android:contentDescription="@string/app_name"
                     android:elevation="2dp"
+                    android:rotation="180"
+                    android:src="@drawable/ic_arrow_back_whit"
                     app:tint="?attr/colorOnSecondaryContainer"
-                    android:src="@drawable/ic_arrow_back_whit" />
+                    tools:ignore="PrivateResource" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/favoriteSetTitle"
                     android:layout_width="wrap_content"
+                    android:layout_height="56dp"
                     android:layout_marginStart="70dp"
                     android:alpha="0.9"
-                    android:layout_height="56dp"
                     android:gravity="center"
                     android:paddingStart="0dp"
                     android:paddingEnd="0dp"
@@ -61,9 +63,10 @@
                     android:textAlignment="center"
                     android:textColor="?attr/colorOnSecondaryContainer"
                     android:textSize="20sp"
-                    android:textStyle="normal" />
+                    android:textStyle="normal"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </FrameLayout>
 
     <ScrollView
@@ -72,12 +75,12 @@
         android:layout_height="match_parent"
         android:elevation="0dp">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/favoriteSetTitleDownstate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,7 +93,7 @@
                 android:textSize="32sp"
                 android:textStyle="normal" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/general_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -103,7 +106,8 @@
                 android:paddingBottom="9dp"
                 android:text="@string/favorite_settings_general"
                 android:textColor="?attr/colorPrimary"
-                android:textStyle="normal|normal" />
+                android:textStyle="normal|normal"
+                tools:ignore="RtlSymmetry" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -124,12 +128,13 @@
                     android:drawableEnd="@drawable/ic_weight_outline"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Molar Mass"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_molar_mass"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
 
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView20"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -154,11 +159,12 @@
                     android:drawableEnd="@drawable/vector_fav_gas"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show STP Phase"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_stp_phase"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView21"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -168,13 +174,12 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
-                    android:id="@+id/electronegativity_check"
+                    android:id="@+id/electronegativityCheck"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
@@ -184,8 +189,9 @@
                     android:drawableEnd="@drawable/vector_fav_electronegativity"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Electronegativity"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_electronegativity"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
             <TextView
@@ -198,7 +204,6 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -214,11 +219,12 @@
                     android:drawableEnd="@drawable/ic_weight_outline"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Density"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_density"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/general_header2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -231,7 +237,8 @@
                 android:paddingBottom="9dp"
                 android:text="@string/favorite_settings_temperatures"
                 android:textColor="?attr/colorAccent"
-                android:textStyle="normal|normal" />
+                android:textStyle="normal|normal"
+                tools:ignore="RtlSymmetry" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -254,10 +261,11 @@
                     android:elevation="2dp"
                     android:focusable="true"
                     android:foreground="@drawable/riple_chip_ripple"
-                    android:text="Kelvin"
+                    android:text="@string/kelvin"
                     android:textAllCaps="false"
                     android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:ignore="PrivateResource" />
 
                 <Button
                     android:id="@+id/celsiusBtn"
@@ -271,10 +279,11 @@
                     android:elevation="2dp"
                     android:focusable="true"
                     android:foreground="@drawable/shape_chip_outline"
-                    android:text="Celsius"
+                    android:text="@string/celsius"
                     android:textAllCaps="false"
                     android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:ignore="PrivateResource" />
 
                 <Button
                     android:id="@+id/fahrenheitbtn"
@@ -291,13 +300,14 @@
                     android:elevation="2dp"
                     android:focusable="true"
                     android:foreground="@drawable/riple_chip_ripple"
-                    android:text="Fahrenheit"
+                    android:text="@string/fahrenheit"
                     android:textAllCaps="false"
                     android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:ignore="PrivateResource" />
             </LinearLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView29"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -308,7 +318,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -319,17 +328,18 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
                     android:layout_marginEnd="@dimen/margin"
+                    android:buttonTint="?attr/colorPrimary"
                     android:checked="false"
                     android:drawableEnd="@drawable/ic_temperature"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Boiling Point"
+                    android:text="@string/show_boiling_point"
                     android:textColor="?attr/colorOnSecondaryContainer"
-                    android:buttonTint="?attr/colorPrimary" />
+                    tools:ignore="PrivateResource" />
 
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView23"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -340,7 +350,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -356,30 +365,30 @@
                     android:drawableEnd="@drawable/ic_temperature"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Melting Point"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_melting_point"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="9dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="0dp"
-                
                 android:paddingStart="@dimen/margin"
                 android:paddingTop="9dp"
                 android:paddingBottom="9dp"
                 android:text="@string/favorite_settings_atomic_properties"
                 android:textColor="?attr/colorAccent"
-                android:textStyle="normal|normal" />
+                android:textStyle="normal|normal"
+                tools:ignore="RtlSymmetry" />
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -395,11 +404,12 @@
                     android:drawableEnd="@drawable/ic_radius"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Atomic Radius (Empirical)"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_atomic_radius_empirical"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView24"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -410,7 +420,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -426,11 +435,12 @@
                     android:drawableEnd="@drawable/ic_radius"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Atomic Radius (Calculated)"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_atomic_radius_calculated"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView25"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -441,7 +451,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -457,11 +466,12 @@
                     android:drawableEnd="@drawable/ic_radius"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Covalent Radius"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_covalent_radius"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView26"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -472,7 +482,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -488,11 +497,12 @@
                     android:drawableEnd="@drawable/ic_radius"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Van Der Waals Radius"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_van_der_waals_radius"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/general_header3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -505,13 +515,13 @@
                 android:paddingBottom="9dp"
                 android:text="@string/favorite_settings_thermodynamics"
                 android:textColor="?attr/colorAccent"
-                android:textStyle="normal|normal" />
+                android:textStyle="normal|normal"
+                tools:ignore="RtlSymmetry" />
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -527,11 +537,12 @@
                     android:drawableEnd="@drawable/ic_heat"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Fusion Heat"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_fusion_heat"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView27"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -542,7 +553,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -558,11 +568,12 @@
                     android:drawableEnd="@drawable/ic_heat"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Specific Heat Capacity"
-                    android:textColor="?attr/colorOnSecondaryContainer" />
+                    android:text="@string/show_specific_heat_capacity"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView28"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -573,7 +584,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/ripple_d_ripple">
@@ -584,19 +594,20 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/margin"
                     android:layout_marginEnd="@dimen/margin"
+                    android:buttonTint="?attr/colorPrimary"
                     android:checked="false"
                     android:drawableEnd="@drawable/ic_vaporization"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
-                    android:text="Show Vaporization Heat"
+                    android:text="@string/show_vaporization_heat"
                     android:textColor="?attr/colorOnSecondaryContainer"
-                    android:buttonTint="?attr/colorPrimary" />
+                    tools:ignore="PrivateResource" />
             </FrameLayout>
 
             <androidx.legacy.widget.Space
                 android:layout_width="match_parent"
                 android:layout_height="60dp" />
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

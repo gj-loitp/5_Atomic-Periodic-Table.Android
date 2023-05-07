@@ -33,7 +33,7 @@ import kotlinx.android.synthetic.main.activity_favorite_settings_page.commonTitl
 import kotlinx.android.synthetic.main.activity_favorite_settings_page.commonTitleBackFavColor
 import kotlinx.android.synthetic.main.activity_favorite_settings_page.covalentRadiusCheck
 import kotlinx.android.synthetic.main.activity_favorite_settings_page.densityCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.electronegativity_check
+import kotlinx.android.synthetic.main.activity_favorite_settings_page.electronegativityCheck
 import kotlinx.android.synthetic.main.activity_favorite_settings_page.fahrenheitbtn
 import kotlinx.android.synthetic.main.activity_favorite_settings_page.favSetScroll
 import kotlinx.android.synthetic.main.activity_favorite_settings_page.favoriteSetTitle
@@ -99,10 +99,10 @@ class FavoritePageActivity : BaseActivity() {
         val electronegativityPreferences = ElectronegativityPreference(this)
         val electronegativityPrefValue = electronegativityPreferences.getValue()
         if (electronegativityPrefValue == 1) {
-            electronegativity_check.isChecked = true
+            electronegativityCheck.isChecked = true
         }
         if (electronegativityPrefValue == 0) {
-            electronegativity_check.isChecked = false
+            electronegativityCheck.isChecked = false
         }
 
         //Density
@@ -326,7 +326,7 @@ class FavoritePageActivity : BaseActivity() {
         //Electronegativity
         val electronegativityPreference = ElectronegativityPreference(this)
         var electronegativityPrefValue = electronegativityPreference.getValue()
-        val electronegativityCheckBox: CheckBox = electronegativity_check
+        val electronegativityCheckBox: CheckBox = electronegativityCheck
         electronegativityCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 electronegativityPreference.setValue(1)

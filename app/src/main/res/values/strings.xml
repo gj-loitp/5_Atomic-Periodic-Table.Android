@@ -128,5 +128,25 @@
     <string name="clear_filter">Clear Filter</string>
     <string name="periodic_table">Periodic Table</string>
     <string name="submit_data_issue">Submit Data Issue</string>
+    <string name="search_for_formulas">Search For Formulas</string>
+    <string name="experimental">Experimental</string>
+    <string name="warning_these_settings_are_either_early_in_development_or_very_unstable_enable_at_your_own_risk">WARNING: These settings are either early in development or very unstable. Enable at your own risk!</string>
+    <string name="enable_zoom_in_tables">Enable Zoom in tables</string>
+    <string name="show_molar_mass">Show Molar Mass</string>
+    <string name="show_stp_phase">Show STP Phase</string>
+    <string name="show_electronegativity">Show Electronegativity</string>
+    <string name="show_density">Show Density</string>
+    <string name="kelvin">Kelvin</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="show_boiling_point">Show Boiling Point</string>
+    <string name="show_melting_point">Show Melting Point</string>
+    <string name="show_atomic_radius_empirical">Show Atomic Radius (Empirical)</string>
+    <string name="show_atomic_radius_calculated">Show Atomic Radius (Calculated)</string>
+    <string name="show_covalent_radius">Show Covalent Radius</string>
+    <string name="show_van_der_waals_radius">Show Van Der Waals Radius</string>
+    <string name="show_fusion_heat">Show Fusion Heat</string>
+    <string name="show_specific_heat_capacity">Show Specific Heat Capacity</string>
+    <string name="show_vaporization_heat">Show Vaporization Heat</string>
 
 </resources>
