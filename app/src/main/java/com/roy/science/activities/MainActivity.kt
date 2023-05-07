@@ -31,6 +31,10 @@ import com.roy.science.activities.tables.DictionaryActivity
 import com.roy.science.adapter.ElementAdapter
 import com.roy.science.anim.Anim
 import com.roy.science.extensions.TableExtension
+import com.roy.science.extensions.moreApp
+import com.roy.science.extensions.openBrowserPolicy
+import com.roy.science.extensions.rateApp
+import com.roy.science.extensions.shareApp
 import com.roy.science.model.Element
 import com.roy.science.model.ElementModel
 import com.roy.science.preferences.ElementSendAndLoad
@@ -360,16 +364,16 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
 
     private fun mediaListeners() {
         btRate.setOnClickListener {
-
+            rateApp(packageName)
         }
         btMore.setOnClickListener {
-
+            moreApp()
         }
         btShare.setOnClickListener {
-
+            shareApp()
         }
         btPolicy.setOnClickListener {
-
+            openBrowserPolicy()
         }
     }
 
