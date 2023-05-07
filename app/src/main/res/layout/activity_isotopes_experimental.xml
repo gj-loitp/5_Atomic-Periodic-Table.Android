@@ -65,7 +65,7 @@
 
         <include
             android:id="@+id/isoFilterBox"
-            layout="@layout/filter_view_iso"
+            layout="@layout/v_filter_view_iso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"

@@ -41,41 +41,13 @@ import com.roy.science.utils.TabUtil
 import com.roy.science.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState
-import kotlinx.android.synthetic.main.a_main.moreBtn
 import kotlinx.android.synthetic.main.a_main.*
-import kotlinx.android.synthetic.main.filter_view.alphabetBtn
-import kotlinx.android.synthetic.main.filter_view.electro_btn
-import kotlinx.android.synthetic.main.filter_view.elmtNumbBtn2
-import kotlinx.android.synthetic.main.hover_menu.atomicWeightBtn
-import kotlinx.android.synthetic.main.hover_menu.boilingBtn
-import kotlinx.android.synthetic.main.hover_menu.hElectronegativityBtn
-import kotlinx.android.synthetic.main.hover_menu.hFusionBtn
-import kotlinx.android.synthetic.main.hover_menu.hGroupBtn
-import kotlinx.android.synthetic.main.hover_menu.hNameBtn
-import kotlinx.android.synthetic.main.hover_menu.hPhaseBtn
-import kotlinx.android.synthetic.main.hover_menu.hSpecificBtn
-import kotlinx.android.synthetic.main.hover_menu.hVaporizatonBtn
-import kotlinx.android.synthetic.main.hover_menu.hYearBtn
-import kotlinx.android.synthetic.main.hover_menu.meltingPoint
-import kotlinx.android.synthetic.main.hover_menu.random_btn
-import kotlinx.android.synthetic.main.nav_menu_view.blogBtn
-import kotlinx.android.synthetic.main.nav_menu_view.dictionaryBtn
-import kotlinx.android.synthetic.main.nav_menu_view.facebookButton
-import kotlinx.android.synthetic.main.nav_menu_view.homepageButton
-import kotlinx.android.synthetic.main.nav_menu_view.instagramButton
-import kotlinx.android.synthetic.main.nav_menu_view.isotopesBtn
-import kotlinx.android.synthetic.main.nav_menu_view.navLin
-import kotlinx.android.synthetic.main.nav_menu_view.slidingLayout
-import kotlinx.android.synthetic.main.nav_menu_view.solubilityBtn
-import kotlinx.android.synthetic.main.nav_menu_view.twitterButton
-import kotlinx.android.synthetic.main.search_layout.background
-import kotlinx.android.synthetic.main.search_layout.closeElementSearch
-import kotlinx.android.synthetic.main.search_layout.common_title_back_search
-import kotlinx.android.synthetic.main.search_layout.editElement
-import kotlinx.android.synthetic.main.search_layout.element_recyclerview
-import kotlinx.android.synthetic.main.search_layout.emptySearchBox
-import kotlinx.android.synthetic.main.search_layout.filterBox
-import kotlinx.android.synthetic.main.search_layout.filter_btn
+import kotlinx.android.synthetic.main.hover_menu.*
+import kotlinx.android.synthetic.main.nav_menu_view.*
+import kotlinx.android.synthetic.main.search_layout.*
+import kotlinx.android.synthetic.main.v_filter_view.alphabetBtn
+import kotlinx.android.synthetic.main.v_filter_view.electroBtn
+import kotlinx.android.synthetic.main.v_filter_view.elmtNumbBtn2
 import org.deejdev.twowaynestedscrollview.TwoWayNestedScrollView
 import java.util.Locale
 
@@ -532,7 +504,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
                 con = this
             )
         }
-        electro_btn.setOnClickListener {
+        electroBtn.setOnClickListener {
             val searchPreference = SearchPreferences(this)
             searchPreference.setValue(1)
 

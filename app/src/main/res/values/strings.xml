@@ -250,5 +250,7 @@
     <string name="electrical_conductivity_text">electrical_conductivity_text</string>
     <string name="e_text">e_text</string>
     <string name="atomic_mass">Atomic Mass:</string>
+    <string name="alphabetical">Alphabetical</string>
+    <string name="element_number">Element Number</string>
 
 </resources>

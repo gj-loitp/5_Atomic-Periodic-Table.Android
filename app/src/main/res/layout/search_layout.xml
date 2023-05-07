@@ -172,7 +172,7 @@
 
     <include
         android:id="@+id/filterBox"
-        layout="@layout/filter_view"
+        layout="@layout/v_filter_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"

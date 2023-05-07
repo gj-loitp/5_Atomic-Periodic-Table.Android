@@ -26,26 +26,11 @@ import com.roy.science.preferences.sendIso
 import com.roy.science.utils.ToastUtil
 import com.roy.science.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.backBtn
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.backgroundI2
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.closeIsoSearch
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.commonTitleBackIso
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.editIso
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.emptySearchBoxIso
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.filterBackground
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.filterBtn2
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.isoFilterBox
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.panelInfo
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.rView
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.searchBarIso
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.searchBtn
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.slidPanel
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.titleBox
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.view1
-import kotlinx.android.synthetic.main.filter_view_iso.isoAlphabetBtn
-import kotlinx.android.synthetic.main.filter_view_iso.isoElementNumbBtn
+import kotlinx.android.synthetic.main.activity_isotopes_experimental.*
 import kotlinx.android.synthetic.main.isotope_panel.frameIso
 import kotlinx.android.synthetic.main.isotope_panel.slidingLayoutI
+import kotlinx.android.synthetic.main.v_filter_view_iso.isoAlphabetBtn
+import kotlinx.android.synthetic.main.v_filter_view_iso.isoElementNumbBtn
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -191,7 +176,8 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
             Utils.fadeOutAnim(titleBox, 300)
 
             editIso.requestFocus()
-            val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            val imm: InputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.showSoftInput(editIso, InputMethodManager.SHOW_IMPLICIT)
         }
         closeIsoSearch.setOnClickListener {
@@ -351,7 +337,9 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
                         mainLayout.addView(myLayout)
                     }
                 }
-            } catch (e: IOException) { ToastUtil.showToast(this, "Couldn't load Data") }
+            } catch (e: IOException) {
+                ToastUtil.showToast(this, "Couldn't load Data")
+            }
         }
     }
 
