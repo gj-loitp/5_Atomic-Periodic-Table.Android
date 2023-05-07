@@ -66,12 +66,12 @@ import kotlinx.android.synthetic.main.d_overview.elementName
 import kotlinx.android.synthetic.main.d_overview.elementNeutronsCommon
 import kotlinx.android.synthetic.main.d_overview.elementProtons
 import kotlinx.android.synthetic.main.d_overview.elementYear
+import kotlinx.android.synthetic.main.d_properties.elementAtomicNumber
+import kotlinx.android.synthetic.main.d_properties.elementAtomicWeight
+import kotlinx.android.synthetic.main.d_properties.elementBlock
+import kotlinx.android.synthetic.main.d_properties.elementDensity
+import kotlinx.android.synthetic.main.d_properties.elementElectronegativty
 import kotlinx.android.synthetic.main.d_properties.elementShellsElectrons
-import kotlinx.android.synthetic.main.d_properties.element_atomic_number
-import kotlinx.android.synthetic.main.d_properties.element_atomic_weight
-import kotlinx.android.synthetic.main.d_properties.element_block
-import kotlinx.android.synthetic.main.d_properties.element_density
-import kotlinx.android.synthetic.main.d_properties.element_electronegativty
 import kotlinx.android.synthetic.main.d_properties.modelView
 import kotlinx.android.synthetic.main.d_properties.spImg
 import kotlinx.android.synthetic.main.d_properties.spOffline
@@ -225,12 +225,12 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             val elementMeltingKelvin = jsonObject.optString("element_melting_kelvin", "---")
             val elementMeltingCelsius = jsonObject.optString("element_melting_celsius", "---")
             val elementMeltingFahrenheit = jsonObject.optString("element_melting_fahrenheit", "---")
-            val elementAtomicNumber = jsonObject.optString("element_atomic_number", "---")
-            val elementAtomicWeight = jsonObject.optString("element_atomicmass", "---")
-            val elementDensity = jsonObject.optString("element_density", "---")
+            val sElementAtomicNumber = jsonObject.optString("element_atomic_number", "---")
+            val sElementAtomicWeight = jsonObject.optString("element_atomicmass", "---")
+            val sElementDensity = jsonObject.optString("element_density", "---")
             val elementModelUrl = jsonObject.optString("element_model", "---")
             val sElementAppearance = jsonObject.optString("element_appearance", "---")
-            val elementBlock = jsonObject.optString("element_block", "---")
+            val sElementBlock = jsonObject.optString("element_block", "---")
 //            val elementCrystalStructure = jsonObject.optString("element_crystal_structure", "---")
             val fusionHeat = jsonObject.optString("element_fusion_heat", "---")
             val specificHeatCapacity = jsonObject.optString("element_specific_heat_capacity", "---")
@@ -299,14 +299,14 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             element_boiling_kelvin.text = elementBoilingKelvin
             element_boiling_celsius.text = elementBoilingCelsius
             element_boiling_fahrenheit.text = elementBoilingFahrenheit
-            element_electronegativty.text = elementElectronegativity
+            elementElectronegativty.text = elementElectronegativity
             element_melting_kelvin.text = elementMeltingKelvin
             element_melting_celsius.text = elementMeltingCelsius
             element_melting_fahrenheit.text = elementMeltingFahrenheit
-            element_atomic_number.text = elementAtomicNumber
-            element_atomic_weight.text = elementAtomicWeight
-            element_density.text = elementDensity
-            element_block.text = elementBlock
+            elementAtomicNumber.text = sElementAtomicNumber
+            elementAtomicWeight.text = sElementAtomicWeight
+            elementDensity.text = sElementDensity
+            elementBlock.text = sElementBlock
             elementAppearance.text = sElementAppearance
 
             //Nuclear Properties
@@ -416,10 +416,10 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             }
 
             //set element data for favorite bar
-            molarMassF.text = elementAtomicWeight
+            molarMassF.text = sElementAtomicWeight
             phaseF.text = phaseText
             electronegativityF.text = elementElectronegativity
-            densityF.text = elementDensity
+            densityF.text = sElementDensity
 
             val degreePreference = DegreePreference(this)
             val degreePrefValue = degreePreference.getValue()

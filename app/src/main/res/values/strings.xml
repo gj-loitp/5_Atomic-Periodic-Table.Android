@@ -215,5 +215,15 @@
     <string name="most_common_isotope">Most Common Isotope</string>
     <string name="protons">Protons</string>
     <string name="neutrons">Neutrons</string>
+    <string name="properties">Properties</string>
+    <string name="atomic_number">Atomic Number:</string>
+    <string name="atomic_weight_relative_atomic_mass">Atomic Weight (Relative Atomic Mass):</string>
+    <string name="density">Density:</string>
+    <string name="electronegativity">Electronegativity:</string>
+    <string name="block">Block:</string>
+    <string name="element_block">element_block</string>
+    <string name="electron_shell">Electron Shell:</string>
+    <string name="emission_spectrum">Emission Spectrum:</string>
+    <string name="go_online_for_emission_lines">Go online for emission lines</string>
 
 </resources>
