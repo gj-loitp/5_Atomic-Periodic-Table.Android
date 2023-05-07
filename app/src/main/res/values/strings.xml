@@ -152,5 +152,7 @@
     <string name="atomic_periodic_table">Atomic - Periodic Table</string>
     <string name="about">About</string>
     <string name="search_for_isotopes">Search For Isotopes</string>
+    <string name="nuclide_table">Nuclide Table</string>
+    <string name="card_order">Card Order</string>
 
 </resources>
