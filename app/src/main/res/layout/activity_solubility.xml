@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        android:id="@+id/viewSub"
-        android:background="?attr/backgroundColor"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools2="http://schemas.android.com/tools"
+    android:id="@+id/viewSub"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor">
 
     <include
         android:id="@+id/infoPanel"
@@ -17,69 +15,73 @@
         android:layout_gravity="center"
         android:visibility="gone" />
 
+    <FrameLayout
+        android:id="@+id/commonTitleBackSul"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorSurface"
+        android:elevation="2dp"
+        android:gravity="center|center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
         <FrameLayout
-            android:id="@+id/commonTitleBackSul"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="?attr/colorSurface"
-            android:elevation="2dp"
-            android:gravity="center|center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent"
+            android:alpha="0.11"
+            android:background="?attr/colorPrimary" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
 
             <FrameLayout
+                android:id="@+id/titleBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?attr/colorPrimary"
-                android:alpha="0.11"/>
+                android:layout_height="56dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="bottom"
-                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/backBtn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:rotation="180"
+                    android:src="@drawable/ic_arrow_back_whit"
+                    app:tint="?attr/colorOnSecondaryContainer"
+                    tools2:ignore="PrivateResource" />
 
-                <FrameLayout
-                    android:id="@+id/titleBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/elementTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="70dp"
+                    android:alpha="0.9"
+                    android:gravity="center"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/solubility_table"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools2:ignore="PrivateResource" />
 
-                    <ImageButton
-                        android:id="@+id/backBtn"
-                        style="?android:attr/borderlessButtonStyle"
-                        android:layout_width="56dp"
-                        android:layout_height="56dp"
-                        android:layout_gravity="center_vertical"
-                        android:rotation="180"
-                        app:tint="?attr/colorOnSecondaryContainer"
-                        android:src="@drawable/ic_arrow_back_whit" />
-
-                    <TextView
-                        android:id="@+id/elementTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_marginStart="70dp"
-                        android:alpha="0.9"
-                        android:layout_height="56dp"
-                        android:gravity="center"
-                        android:paddingStart="0dp"
-                        android:paddingEnd="0dp"
-                        android:text="Solubility Table"
-                        android:textAlignment="center"
-                        android:textColor="?attr/colorOnSecondaryContainer"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <ImageButton
-                        android:id="@+id/infoBtn"
-                        style="?android:attr/borderlessButtonStyle"
-                        android:layout_width="56dp"
-                        android:layout_height="56dp"
-                        android:layout_gravity="center_vertical|end"
-                        app:tint="?attr/colorOnSecondaryContainer"
-                        android:src="@drawable/ic_info" />
-                </FrameLayout>
-            </LinearLayout>
-        </FrameLayout>
+                <ImageButton
+                    android:id="@+id/infoBtn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_info"
+                    app:tint="?attr/colorOnSecondaryContainer"
+                    tools2:ignore="PrivateResource" />
+            </FrameLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
 
     <FrameLayout
         android:id="@+id/boxm"
@@ -89,7 +91,7 @@
         android:background="?attr/backgroundColor"
         android:elevation="1dp">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -105,10 +107,10 @@
                 android:scrollbars="none">
 
                 <ScrollView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
-                    <LinearLayout
+                    <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
@@ -178,12 +180,12 @@
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
-                    </LinearLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
                 </ScrollView>
 
             </HorizontalScrollView>
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </FrameLayout>
 

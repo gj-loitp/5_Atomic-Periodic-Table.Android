@@ -2,17 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="?attr/backgroundColor"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
     <FrameLayout
-        android:id="@+id/view_lic"
+        android:id="@+id/viewLic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/backgroundColor"
-        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent">
 
@@ -30,11 +29,11 @@
                 android:id="@+id/commonTitleBackLicColor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:alpha="0.11"
                 android:background="?attr/colorPrimary"
-                android:elevation="1dp"
-                android:alpha="0.11"/>
+                android:elevation="1dp" />
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="bottom"
@@ -51,17 +50,19 @@
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical"
-                        android:rotation="180"
+                        android:contentDescription="@string/app_name"
                         android:elevation="8dp"
+                        android:rotation="180"
+                        android:src="@drawable/ic_arrow_back_whit"
                         app:tint="?attr/colorOnPrimaryContainer"
-                        android:src="@drawable/ic_arrow_back_whit" />
+                        tools:ignore="PrivateResource" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/licenseTitle"
                         android:layout_width="wrap_content"
+                        android:layout_height="56dp"
                         android:layout_marginStart="70dp"
                         android:alpha="0.9"
-                        android:layout_height="56dp"
                         android:gravity="center"
                         android:paddingStart="0dp"
                         android:paddingEnd="0dp"
@@ -69,11 +70,12 @@
                         android:textAlignment="center"
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="PrivateResource" />
 
                 </FrameLayout>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </FrameLayout>
 
         <ScrollView
@@ -81,77 +83,78 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/licenses_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/licenseTitleDownstate"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/licenses_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:elevation="0dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="28dp"
-                android:text="@string/license_title"
-                android:textColor="?attr/colorOnSurface"
-                android:textSize="32sp"
-                android:textStyle="normal" />
+                android:orientation="vertical">
 
-            <FrameLayout
-                android:id="@+id/lWikiBtn"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:layout_marginStart="@dimen/margin"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="@dimen/margin"
-                android:layout_marginBottom="@dimen/margin_space_card"
-                android:background="@drawable/shape_toast"
-                android:backgroundTint="?attr/colorSurfaceVariant"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:focusable="true">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/licenseTitleDownstate"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:elevation="0dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="28dp"
+                    android:text="@string/license_title"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="32sp"
+                    android:textStyle="normal" />
+
+                <FrameLayout
+                    android:id="@+id/lWikiBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
                     android:layout_marginStart="@dimen/margin"
+                    android:layout_marginTop="0dp"
                     android:layout_marginEnd="@dimen/margin"
-                    android:text="Wikipedia Commons"
-                    android:textColor="?attr/colorOnSurfaceVariant" />
+                    android:layout_marginBottom="@dimen/margin_space_card"
+                    android:background="@drawable/shape_toast"
+                    android:backgroundTint="?attr/colorSurfaceVariant"
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    tools:ignore="PrivateResource">
 
-            </FrameLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/margin"
+                        android:layout_marginEnd="@dimen/margin"
+                        android:text="@string/wikipedia_commons"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
 
-            <FrameLayout
-                android:id="@+id/lSothreeBtn"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:layout_marginStart="@dimen/margin"
-                android:layout_marginTop="@dimen/margin_space_card"
-                android:layout_marginEnd="@dimen/margin"
-                android:layout_marginBottom="@dimen/margin_space_card"
-                android:background="@drawable/shape_toast"
-                android:backgroundTint="?attr/colorSurfaceVariant"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:focusable="true">
+                </FrameLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                <FrameLayout
+                    android:id="@+id/lSothreeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
                     android:layout_marginStart="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin_space_card"
                     android:layout_marginEnd="@dimen/margin"
-                    android:text="Sothree Android Sliding Up Panel"
-                    android:textColor="?attr/colorOnSurfaceVariant" />
+                    android:layout_marginBottom="@dimen/margin_space_card"
+                    android:background="@drawable/shape_toast"
+                    android:backgroundTint="?attr/colorSurfaceVariant"
+                    android:clickable="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    tools:ignore="PrivateResource">
 
-            </FrameLayout>
-        </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/margin"
+                        android:layout_marginEnd="@dimen/margin"
+                        android:text="@string/sothree_android_sliding_up_panel"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
+
+                </FrameLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </ScrollView>
-
 
         <include
             android:id="@+id/lInc"

@@ -165,5 +165,8 @@
     <string name="customize_the_units_in_the_main_table">Customize the units in the main table</string>
     <string name="offline_mode">Offline Mode</string>
     <string name="disables_loading_of_images">Disables loading of images</string>
+    <string name="wikipedia_commons">Wikipedia Commons</string>
+    <string name="sothree_android_sliding_up_panel">Sothree Android Sliding Up Panel</string>
+    <string name="solubility_table">Solubility Table</string>
 
 </resources>
