@@ -121,5 +121,10 @@
     <string name="calculator">Calculator</string>
     <string name="element">Element</string>
     <string name="_1">1</string>
+    <string name="no_results">No results</string>
+    <string name="try_searching_for_another_word_or_check_your_spelling">Try searching for another word or check your spelling.</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="search_for_dictionary_item">Search For Dictionary Item</string>
+    <string name="clear_filter">Clear Filter</string>
 
 </resources>

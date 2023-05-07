@@ -22,7 +22,7 @@ import com.roy.science.model.Ion
 import com.roy.science.model.IonModel
 import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
-import kotlinx.android.synthetic.main.activity_dictionary.titleBox
+import kotlinx.android.synthetic.main.a_dictionary.titleBox
 import kotlinx.android.synthetic.main.activity_ion.back_btn_ion
 import kotlinx.android.synthetic.main.activity_ion.closeEleSearchIon
 import kotlinx.android.synthetic.main.activity_ion.commonTitleBackIon

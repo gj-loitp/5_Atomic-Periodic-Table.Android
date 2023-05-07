@@ -21,8 +21,8 @@ import com.roy.science.model.Series
 import com.roy.science.model.SeriesModel
 import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
-import kotlinx.android.synthetic.main.activity_dictionary.searchBtn
-import kotlinx.android.synthetic.main.activity_dictionary.titleBox
+import kotlinx.android.synthetic.main.a_dictionary.searchBtn
+import kotlinx.android.synthetic.main.a_dictionary.titleBox
 import kotlinx.android.synthetic.main.activity_electrode.backBtn
 import kotlinx.android.synthetic.main.activity_electrode.closeEleSearch
 import kotlinx.android.synthetic.main.activity_electrode.commonTitleBackElo

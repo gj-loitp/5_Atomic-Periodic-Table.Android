@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/viewDic"
@@ -15,45 +15,45 @@
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/emptySearchBoxDic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="56dp"
-            android:visibility="gone"
             android:elevation="1dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
-            <ImageView
-                android:id="@+id/empty_dic_search_image"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/emptyDicSearchImage"
                 android:layout_width="164dp"
-                android:layout_marginTop="80dp"
                 android:layout_height="164dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="80dp"
                 app:srcCompat="@drawable/graphic_light_search" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginStart="42dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginEnd="42dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/no_results"
                 android:textColor="?attr/colorOnBackground"
-                android:textSize="24sp"
-                android:text="No results"/>
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textColor="?attr/colorOnBackground"
                 android:layout_marginStart="42dp"
                 android:layout_marginEnd="42dp"
-                android:textSize="16sp"
-                android:text="Try searching for another word or check your spelling."/>
-        </LinearLayout>
+                android:gravity="center_horizontal"
+                android:text="@string/try_searching_for_another_word_or_check_your_spelling"
+                android:textColor="?attr/colorOnBackground"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <FrameLayout
             android:id="@+id/commonTitleBackDic"
@@ -66,13 +66,13 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <FrameLayout
-                android:id="@+id/common_title_dictionary_color"
+                android:id="@+id/commonTitleDictionaryColor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="?attr/colorPrimary"
-                android:alpha="0.11"/>
+                android:alpha="0.11"
+                android:background="?attr/colorPrimary" />
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="bottom"
@@ -90,9 +90,11 @@
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical"
                         android:alpha="0.9"
+                        android:contentDescription="@string/app_name"
                         android:rotation="180"
+                        android:src="@drawable/ic_arrow_back_whit"
                         app:tint="?attr/colorOnSecondaryContainer"
-                        android:src="@drawable/ic_arrow_back_whit" />
+                        tools:ignore="PrivateResource" />
 
                     <ImageButton
                         android:id="@+id/searchBtn"
@@ -101,10 +103,12 @@
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical|end"
                         android:alpha="0.9"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_search"
                         app:tint="?attr/colorOnSecondaryContainer"
-                        android:src="@drawable/ic_search" />
+                        tools:ignore="PrivateResource" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/elementTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="56dp"
@@ -113,11 +117,12 @@
                         android:gravity="center"
                         android:paddingStart="0dp"
                         android:paddingEnd="0dp"
-                        android:text="Dictionary"
+                        android:text="@string/dictionary"
                         android:textAlignment="center"
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="PrivateResource" />
 
                 </FrameLayout>
 
@@ -127,7 +132,7 @@
                     android:layout_height="56dp"
                     android:visibility="gone">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
                         android:layout_gravity="bottom"
@@ -140,9 +145,11 @@
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical"
                         android:alpha="0.9"
+                        android:contentDescription="@string/app_name"
                         android:rotation="180"
+                        android:src="@drawable/ic_arrow_back_whit"
                         app:tint="?attr/colorOnSecondaryContainer"
-                        android:src="@drawable/ic_arrow_back_whit" />
+                        tools:ignore="PrivateResource" />
 
                     <FrameLayout
                         android:layout_width="match_parent"
@@ -160,14 +167,15 @@
                             android:background="@android:color/transparent"
                             android:focusable="true"
                             android:focusableInTouchMode="true"
-                            android:hint="Search For Dictionary Item"
+                            android:hint="@string/search_for_dictionary_item"
                             android:imeOptions="actionSearch"
                             android:inputType="text"
                             android:maxLines="1"
                             android:paddingStart="0dp"
                             android:textColor="?attr/colorOnSecondaryContainer"
                             android:textColorHint="?attr/colorOnSecondaryContainer"
-                            android:textSize="14sp" />
+                            android:textSize="14sp"
+                            tools:ignore="PrivateResource,RtlSymmetry" />
                     </FrameLayout>
                 </FrameLayout>
 
@@ -176,7 +184,7 @@
                     android:layout_height="44dp"
                     android:layout_gravity="bottom">
 
-                    <LinearLayout
+                    <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -195,10 +203,11 @@
                             android:foreground="@drawable/riple_chip_ripple"
                             android:paddingStart="16dp"
                             android:paddingEnd="16dp"
-                            android:text="Clear Filter"
-                            android:visibility="visible"
+                            android:text="@string/clear_filter"
                             android:textAllCaps="false"
-                            android:textColor="?attr/colorOnSecondaryContainer" />
+                            android:textColor="?attr/colorOnSecondaryContainer"
+                            android:visibility="visible"
+                            tools:ignore="PrivateResource" />
 
                         <Button
                             android:id="@+id/chemistryBtn"
@@ -215,7 +224,8 @@
                             android:paddingEnd="16dp"
                             android:text="@string/chip_chemistry"
                             android:textAllCaps="false"
-                            android:textColor="?attr/colorOnSecondaryContainer" />
+                            android:textColor="?attr/colorOnSecondaryContainer"
+                            tools:ignore="PrivateResource" />
 
                         <Button
                             android:id="@+id/physicsBtn"
@@ -232,7 +242,8 @@
                             android:paddingEnd="16dp"
                             android:text="@string/chip_physics"
                             android:textAllCaps="false"
-                            android:textColor="?attr/colorOnSecondaryContainer" />
+                            android:textColor="?attr/colorOnSecondaryContainer"
+                            tools:ignore="PrivateResource" />
 
                         <Button
                             android:id="@+id/mathBtn"
@@ -250,7 +261,8 @@
                             android:paddingEnd="16dp"
                             android:text="@string/chip_math"
                             android:textAllCaps="false"
-                            android:textColor="?attr/colorOnSecondaryContainer" />
+                            android:textColor="?attr/colorOnSecondaryContainer"
+                            tools:ignore="PrivateResource" />
 
                         <Button
                             android:id="@+id/reactionsBtn"
@@ -268,13 +280,14 @@
                             android:paddingEnd="16dp"
                             android:text="@string/chip_reactions"
                             android:textAllCaps="false"
-                            android:textColor="?attr/colorOnSecondaryContainer" />
+                            android:textColor="?attr/colorOnSecondaryContainer"
+                            tools:ignore="PrivateResource" />
 
-                    </LinearLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </HorizontalScrollView>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView

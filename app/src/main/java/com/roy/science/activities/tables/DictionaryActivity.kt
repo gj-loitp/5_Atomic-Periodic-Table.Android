@@ -29,21 +29,7 @@ import com.roy.science.model.DictionaryModel
 import com.roy.science.preferences.DictionaryPreferences
 import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
-import kotlinx.android.synthetic.main.activity_dictionary.backBtnD
-import kotlinx.android.synthetic.main.activity_dictionary.chemistryBtn
-import kotlinx.android.synthetic.main.activity_dictionary.clearBtn
-import kotlinx.android.synthetic.main.activity_dictionary.closeIsoSearch
-import kotlinx.android.synthetic.main.activity_dictionary.commonTitleBackDic
-import kotlinx.android.synthetic.main.activity_dictionary.editIso
-import kotlinx.android.synthetic.main.activity_dictionary.emptySearchBoxDic
-import kotlinx.android.synthetic.main.activity_dictionary.mathBtn
-import kotlinx.android.synthetic.main.activity_dictionary.physicsBtn
-import kotlinx.android.synthetic.main.activity_dictionary.rcView
-import kotlinx.android.synthetic.main.activity_dictionary.reactionsBtn
-import kotlinx.android.synthetic.main.activity_dictionary.searchBarIso
-import kotlinx.android.synthetic.main.activity_dictionary.searchBtn
-import kotlinx.android.synthetic.main.activity_dictionary.titleBox
-import kotlinx.android.synthetic.main.activity_dictionary.viewDic
+import kotlinx.android.synthetic.main.a_dictionary.*
 import java.util.Locale
 
 class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickListener {
@@ -80,7 +66,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_dictionary) //REMEMBER: Never move any function calls above this
+        setContentView(R.layout.a_dictionary) //REMEMBER: Never move any function calls above this
 
         val recyclerView = findViewById<RecyclerView>(R.id.rcView)
         recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)

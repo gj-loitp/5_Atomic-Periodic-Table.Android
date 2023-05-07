@@ -9,7 +9,7 @@ import com.roy.science.R
 import com.roy.science.activities.BaseActivity
 import com.roy.science.anim.Anim
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_dictionary.backBtnD
+import kotlinx.android.synthetic.main.a_dictionary.*
 import kotlinx.android.synthetic.main.activity_settings_licenses.commonTitleBackLic
 import kotlinx.android.synthetic.main.activity_settings_licenses.commonTitleBackLicColor
 import kotlinx.android.synthetic.main.activity_settings_licenses.lInc
