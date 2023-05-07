@@ -151,5 +151,6 @@
     <string name="roy93group">Roy93Group</string>
     <string name="atomic_periodic_table">Atomic - Periodic Table</string>
     <string name="about">About</string>
+    <string name="search_for_isotopes">Search For Isotopes</string>
 
 </resources>

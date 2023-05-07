@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,54 +13,54 @@
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/emptySearchBoxIso"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="56dp"
-            android:visibility="gone"
             android:elevation="1dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
-            <ImageView
-                android:id="@+id/empty_iso_search_image"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/emptyIsoSearchImage"
                 android:layout_width="164dp"
-                android:layout_marginTop="44dp"
                 android:layout_height="164dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="44dp"
                 app:srcCompat="@drawable/graphic_light_search" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
+                android:layout_marginStart="42dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="42dp"
                 android:layout_marginEnd="42dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/no_results"
                 android:textColor="?attr/colorOnSurface"
-                android:textSize="24sp"
-                android:text="No results"/>
+                android:textSize="24sp" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textColor="?attr/colorOnSurface"
                 android:layout_marginStart="42dp"
                 android:layout_marginEnd="42dp"
-                android:textSize="16sp"
-                android:text="Try searching for another word or check your spelling."/>
+                android:gravity="center_horizontal"
+                android:text="@string/try_searching_for_another_word_or_check_your_spelling"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="16sp" />
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/filterBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="true"
-            android:focusable="true"
             android:elevation="10dp"
+            android:focusable="true"
             android:visibility="gone" />
 
         <include
@@ -78,7 +77,7 @@
             android:visibility="gone" />
 
         <FrameLayout
-            android:id="@+id/common_title_back_iso"
+            android:id="@+id/commonTitleBackIso"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="?attr/colorSurface"
@@ -88,13 +87,13 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <FrameLayout
-                android:id="@+id/common_title_isotope_color"
+                android:id="@+id/commonTitleIsotopeColor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="?attr/colorPrimary"
-                android:alpha="0.11"/>
+                android:alpha="0.11"
+                android:background="?attr/colorPrimary" />
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="bottom"
@@ -112,9 +111,11 @@
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
                         android:rotation="180"
+                        android:src="@drawable/ic_arrow_back_whit"
                         app:tint="?attr/colorOnSecondaryContainer"
-                        android:src="@drawable/ic_arrow_back_whit" />
+                        tools:ignore="PrivateResource" />
 
                     <ImageButton
                         android:id="@+id/searchBtn"
@@ -122,10 +123,12 @@
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical|end"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_search"
                         app:tint="?attr/colorOnSecondaryContainer"
-                        android:src="@drawable/ic_search" />
+                        tools:ignore="PrivateResource" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/elementTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="56dp"
@@ -138,7 +141,8 @@
                         android:textAlignment="center"
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="PrivateResource" />
 
                 </FrameLayout>
 
@@ -154,6 +158,7 @@
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical|end"
                         android:clickable="true"
+                        android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
                         android:src="@drawable/ic_sort"
@@ -169,9 +174,11 @@
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical"
                         android:alpha="0.9"
+                        android:contentDescription="@string/app_name"
                         android:rotation="180"
+                        android:src="@drawable/ic_arrow_back_whit"
                         app:tint="?attr/colorOnSecondaryContainer"
-                        android:src="@drawable/ic_arrow_back_whit" />
+                        tools:ignore="PrivateResource" />
 
                     <FrameLayout
                         android:layout_width="match_parent"
@@ -189,17 +196,18 @@
                             android:background="@android:color/transparent"
                             android:focusable="true"
                             android:focusableInTouchMode="true"
-                            android:hint="Search For Isotopes"
+                            android:hint="@string/search_for_isotopes"
                             android:imeOptions="actionSearch"
                             android:inputType="text"
                             android:maxLines="1"
                             android:paddingStart="0dp"
                             android:textColor="?attr/colorOnSecondaryContainer"
                             android:textColorHint="?attr/colorOnSecondaryContainer"
-                            android:textSize="14sp" />
+                            android:textSize="14sp"
+                            tools:ignore="Autofill,PrivateResource,RtlSymmetry" />
                     </FrameLayout>
                 </FrameLayout>
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -217,7 +225,7 @@
         </androidx.recyclerview.widget.RecyclerView>
     </FrameLayout>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/backgroundI2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -233,14 +241,16 @@
         android:elevation="24dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="parent"
+        tools:visibility="visible" />
 
     <include
-        layout="@layout/isotope_panel"
         android:id="@+id/slidPanel"
+        layout="@layout/isotope_panel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="24dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

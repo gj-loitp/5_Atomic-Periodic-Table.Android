@@ -29,7 +29,7 @@ import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kotlinx.android.synthetic.main.activity_isotopes_experimental.backBtn
 import kotlinx.android.synthetic.main.activity_isotopes_experimental.backgroundI2
 import kotlinx.android.synthetic.main.activity_isotopes_experimental.closeIsoSearch
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.common_title_back_iso
+import kotlinx.android.synthetic.main.activity_isotopes_experimental.commonTitleBackIso
 import kotlinx.android.synthetic.main.activity_isotopes_experimental.editIso
 import kotlinx.android.synthetic.main.activity_isotopes_experimental.emptySearchBoxIso
 import kotlinx.android.synthetic.main.activity_isotopes_experimental.filterBackground
@@ -362,9 +362,9 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
             0,
             resources.getDimensionPixelSize(R.dimen.title_bar)
         )
-        val params2 = common_title_back_iso.layoutParams as ViewGroup.LayoutParams
+        val params2 = commonTitleBackIso.layoutParams as ViewGroup.LayoutParams
         params2.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
-        common_title_back_iso.layoutParams = params2
+        commonTitleBackIso.layoutParams = params2
 
         val params3 = slidingLayoutI.layoutParams as ViewGroup.MarginLayoutParams
         params3.topMargin = top + resources.getDimensionPixelSize(R.dimen.panel_margin)
