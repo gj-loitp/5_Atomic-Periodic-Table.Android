@@ -132,7 +132,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
         delay.postDelayed({
             val resIDB = resources.getIdentifier(btn, "id", packageName)
             val button = findViewById<Button>(resIDB)
-            button.background = getDrawable(R.drawable.shape_chip_active)
+            button?.background = getDrawable(R.drawable.shape_chip_active)
         }, 200)
 
         clearBtn.visibility = View.VISIBLE
@@ -140,7 +140,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
             val resIDB = resources.getIdentifier(btn, "id", packageName)
             val button = findViewById<Button>(resIDB)
             val dictionaryPreference = DictionaryPreferences(this)
-            button.background = getDrawable(R.drawable.shape_chip)
+            button?.background = getDrawable(R.drawable.shape_chip)
             dictionaryPreference.setValue("")
             editIso.setText("test1")
             editIso.setText("")
