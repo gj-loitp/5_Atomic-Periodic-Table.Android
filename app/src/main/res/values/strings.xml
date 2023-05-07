@@ -185,5 +185,13 @@
     <string name="covalent_radius_text">covalent_radius_text</string>
     <string name="van_der_waals_radius">Van Der Waals Radius:</string>
     <string name="van_der_waals_radius_text">van_der_waals_radius_text</string>
+    <string name="element_description">Element Description</string>
+    <string name="read_more">Read More</string>
+    <string name="electromagnetic_properties">Electromagnetic Properties</string>
+    <string name="electrical_type">Electrical Type:</string>
+    <string name="element_name">element_name</string>
+    <string name="resistivity">Resistivity:</string>
+    <string name="magnetic_type">Magnetic Type:</string>
+    <string name="superconducting_point">Superconducting Point:</string>
 
 </resources>

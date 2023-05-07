@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="PrivateResource">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
@@ -12,7 +15,7 @@
         android:elevation="2dp"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -22,31 +25,31 @@
             android:drawableStart="@drawable/vector_fav_electronegativity"
             android:drawablePadding="9dp"
             android:drawableTint="?attr/colorPrimary"
-            android:text="Electromagnetic Properties"
+            android:text="@string/electromagnetic_properties"
             android:textColor="?attr/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:alpha="0.75"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_electrical_type_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementElectricalTypeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Electrical Type:"
+            android:text="@string/electrical_type"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/elementElectricalType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,12 +57,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="element_name"
-            android:textIsSelectable="true"
+            android:text="@string/element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -67,20 +70,20 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_resistivity_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementResistivityTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Resistivity:"
+            android:text="@string/resistivity"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/elementResistivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -88,12 +91,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="element_name"
-            android:textIsSelectable="true"
+            android:text="@string/element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -101,20 +104,20 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_magnetic_type_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementMagneticTypeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Magnetic Type:"
+            android:text="@string/magnetic_type"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/elementMagneticType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -122,12 +125,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="element_name"
-            android:textIsSelectable="true"
+            android:text="@string/element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -135,20 +138,20 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/element_superconducting_point_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementSuperconductingPointTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Superconducting Point:"
+            android:text="@string/superconducting_point"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/elementSuperconductingPoint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -156,9 +159,9 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="element_name"
-            android:textIsSelectable="true"
+            android:text="@string/element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
-    </LinearLayout>
-</LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
