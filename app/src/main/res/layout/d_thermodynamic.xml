@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="PrivateResource">
 
-
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/physicsProperties"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,7 +16,7 @@
         android:elevation="2dp"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -26,12 +26,12 @@
             android:drawableStart="@drawable/ic_heat"
             android:drawablePadding="9dp"
             android:drawableTint="?attr/colorPrimary"
-            android:text="Thermodynamic Properties"
+            android:text="@string/thermodynamic_properties"
             android:textColor="?attr/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:alpha="0.75"
@@ -41,58 +41,57 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/phaseIcon"
                 android:layout_width="64dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:layout_weight="0"
                 android:padding="18dp"
-                app:tint="?attr/colorTertiary"
-                app:srcCompat="@drawable/vector_solid" />
+                app:srcCompat="@drawable/vector_solid"
+                app:tint="?attr/colorTertiary" />
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="64dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/phase_title"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPhaseTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="18dp"
                     android:layout_marginBottom="2dp"
-                    android:text="Phase (STP):"
+                    android:text="@string/phase_stp"
                     android:textColor="?attr/colorOnSecondaryContainer"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/phase_text"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPhaseText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="2dp"
                     android:layout_marginEnd="18dp"
                     android:layout_marginBottom="8dp"
-                    android:text="phase_text"
-                    android:textIsSelectable="true"
+                    android:text="@string/phase_text"
                     android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textIsSelectable="true"
                     android:textSize="14sp" />
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </FrameLayout>
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -101,33 +100,33 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/fusion_heat_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFusionHeatTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Fusion heat:"
+            android:text="@string/fusion_heat"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/fusion_heat_text"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFusionHeatText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="fusion_heat_text"
-            android:textIsSelectable="true"
+            android:text="@string/fusion_heat_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -136,21 +135,21 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/specific_heat_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSpecificHeatTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Specific Heat Capacity:"
+            android:text="@string/specific_heat_capacity"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/specific_heat_text"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSpecificHeatText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -158,11 +157,11 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
             android:text="specific_heat_text"
-            android:textIsSelectable="true"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -171,31 +170,31 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/vaporization_heat_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVaporizationHeatTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Vaporization Heat:"
+            android:text="@string/vaporization_heat"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/vaporization_heat_text"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVaporizationHeatText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="vaporization_heat_text"
-            android:textIsSelectable="true"
+            android:text="@string/vaporization_heat_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-    </LinearLayout>
-</LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

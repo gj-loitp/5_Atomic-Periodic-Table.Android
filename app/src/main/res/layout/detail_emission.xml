@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -13,7 +12,6 @@
     app:cardCornerRadius="18dp"
     app:cardElevation="100dp">
 
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,8 +19,8 @@
         <com.github.mmin18.widget.RealtimeBlurView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:realtimeBlurRadius="1dp"
             android:alpha="0.95"
+            app:realtimeBlurRadius="1dp"
             app:realtimeOverlayColor="@color/colorDarkPrimary" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -31,37 +29,38 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start|top"
             android:layout_margin="18dp"
+            android:contentDescription="@string/app_name"
             android:rotation="180"
             android:src="@drawable/ic_close"
             app:backgroundTint="?attr/colorPrimary"
             app:fabSize="mini" />
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/sp_img_detail"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSpImgFetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="82dp"
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/ic_launcher_background" />
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textView30"
                         android:layout_width="2dp"
                         android:layout_height="36dp"
@@ -71,23 +70,23 @@
                         android:alpha="0.66"
                         android:background="@color/colorLightPrimary" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/nm4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="400 (nm)"
+                        android:text="@string/_400_nm"
                         android:textAlignment="center"
                         android:textColor="@color/colorLightPrimary" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textView31"
                         android:layout_width="2dp"
                         android:layout_height="36dp"
@@ -97,23 +96,23 @@
                         android:alpha="0.66"
                         android:background="@color/colorLightPrimary" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/nm5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="500 (nm)"
+                        android:text="@string/_500_nm"
                         android:textAlignment="center"
                         android:textColor="@color/colorLightPrimary" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textView34"
                         android:layout_width="2dp"
                         android:layout_height="36dp"
@@ -123,23 +122,23 @@
                         android:alpha="0.66"
                         android:background="@color/colorLightPrimary" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/nm6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="600 (nm)"
+                        android:text="@string/_600_nm"
                         android:textAlignment="center"
                         android:textColor="@color/colorLightPrimary" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textView35"
                         android:layout_width="2dp"
                         android:layout_height="36dp"
@@ -149,18 +148,18 @@
                         android:alpha="0.66"
                         android:background="@color/colorLightPrimary" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/nm7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="700 (nm)"
+                        android:text="@string/_700_nm"
                         android:textAlignment="center"
                         android:textColor="@color/colorLightPrimary" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </LinearLayout>
-        </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </FrameLayout>
 

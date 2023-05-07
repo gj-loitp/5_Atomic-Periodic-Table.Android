@@ -232,5 +232,17 @@
     <string name="melting_point_kelvin">Melting Point (Kelvin):</string>
     <string name="melting_point_c">Melting Point (°C):</string>
     <string name="melting_point_f">Melting Point (°F):</string>
+    <string name="thermodynamic_properties">Thermodynamic Properties</string>
+    <string name="phase_stp">Phase (STP):</string>
+    <string name="phase_text">phase_text</string>
+    <string name="fusion_heat">Fusion heat:</string>
+    <string name="fusion_heat_text">fusion_heat_text</string>
+    <string name="specific_heat_capacity">Specific Heat Capacity:</string>
+    <string name="vaporization_heat">Vaporization Heat:</string>
+    <string name="vaporization_heat_text">vaporization_heat_text</string>
+    <string name="_400_nm">400 (nm)</string>
+    <string name="_500_nm">500 (nm)</string>
+    <string name="_600_nm">600 (nm)</string>
+    <string name="_700_nm">700 (nm)</string>
 
 </resources>

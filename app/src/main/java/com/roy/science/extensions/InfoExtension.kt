@@ -81,12 +81,12 @@ import kotlinx.android.synthetic.main.d_temperatures.elementBoilingKelvin
 import kotlinx.android.synthetic.main.d_temperatures.elementMeltingCelsius
 import kotlinx.android.synthetic.main.d_temperatures.elementMeltingFahrenheit
 import kotlinx.android.synthetic.main.d_temperatures.elementMeltingKelvin
-import kotlinx.android.synthetic.main.d_thermodynamic.fusion_heat_text
+import kotlinx.android.synthetic.main.d_thermodynamic.tvFusionHeatText
 import kotlinx.android.synthetic.main.d_thermodynamic.phaseIcon
-import kotlinx.android.synthetic.main.d_thermodynamic.phase_text
-import kotlinx.android.synthetic.main.d_thermodynamic.specific_heat_text
-import kotlinx.android.synthetic.main.d_thermodynamic.vaporization_heat_text
-import kotlinx.android.synthetic.main.detail_emission.sp_img_detail
+import kotlinx.android.synthetic.main.d_thermodynamic.tvPhaseText
+import kotlinx.android.synthetic.main.d_thermodynamic.tvSpecificHeatText
+import kotlinx.android.synthetic.main.d_thermodynamic.tvVaporizationHeatText
+import kotlinx.android.synthetic.main.detail_emission.ivSpImgFetail
 import kotlinx.android.synthetic.main.favorite_bar.aCalculatedF
 import kotlinx.android.synthetic.main.favorite_bar.aCalculatedLay
 import kotlinx.android.synthetic.main.favorite_bar.aEmpiricalF
@@ -321,10 +321,10 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
                 startActivity(intent) //Send intent
             }
 
-            phase_text.text = phaseText
-            fusion_heat_text.text = fusionHeat
-            specific_heat_text.text = specificHeatCapacity
-            vaporization_heat_text.text = vaporizationHeat
+            tvPhaseText.text = phaseText
+            tvFusionHeatText.text = fusionHeat
+            tvSpecificHeatText.text = specificHeatCapacity
+            tvVaporizationHeatText.text = vaporizationHeat
 
             electronConfigText.text = electronConfig
             ionChargeText.text = ionCharge
@@ -487,7 +487,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         val fURL = hUrl + url + ext
         try {
             Picasso.get().load(fURL).into(spImg)
-            Picasso.get().load(fURL).into(sp_img_detail)
+            Picasso.get().load(fURL).into(ivSpImgFetail)
         } catch (e: ConnectException) {
             spImg.visibility = View.GONE
             spOffline.text = "No Data"
