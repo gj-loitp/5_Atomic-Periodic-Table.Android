@@ -6,7 +6,6 @@ import android.app.Application
 //TODO ad
 
 //TODO keystore
-//TODO leak canary
 
 //done
 //ic launcher
@@ -15,6 +14,7 @@ import android.app.Application
 //share app
 //policy
 //manifest ad id
+//leak canary
 class LApp : Application() {
     override fun onCreate() {
         super.onCreate()
