@@ -40,7 +40,6 @@ import com.roy.science.model.ElementModel
 import com.roy.science.preferences.ElementSendAndLoad
 import com.roy.science.preferences.SearchPreferences
 import com.roy.science.preferences.ThemePreference
-import com.roy.science.utils.TabUtil
 import com.roy.science.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState
@@ -48,16 +47,7 @@ import kotlinx.android.synthetic.main.a_main.*
 import kotlinx.android.synthetic.main.search_layout.*
 import kotlinx.android.synthetic.main.v_filter_view.*
 import kotlinx.android.synthetic.main.v_hover_menu.*
-import kotlinx.android.synthetic.main.v_nav_menu_view.blogBtn
-import kotlinx.android.synthetic.main.v_nav_menu_view.btMore
-import kotlinx.android.synthetic.main.v_nav_menu_view.btPolicy
-import kotlinx.android.synthetic.main.v_nav_menu_view.btRate
-import kotlinx.android.synthetic.main.v_nav_menu_view.btShare
-import kotlinx.android.synthetic.main.v_nav_menu_view.dictionaryBtn
-import kotlinx.android.synthetic.main.v_nav_menu_view.isotopesBtn
-import kotlinx.android.synthetic.main.v_nav_menu_view.navLin
-import kotlinx.android.synthetic.main.v_nav_menu_view.slidingLayout
-import kotlinx.android.synthetic.main.v_nav_menu_view.solubilityBtn
+import kotlinx.android.synthetic.main.v_nav_menu_view.*
 import org.deejdev.twowaynestedscrollview.TwoWayNestedScrollView
 import java.util.Locale
 
@@ -401,11 +391,6 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         dictionaryBtn.setOnClickListener {
             val intent = Intent(this, DictionaryActivity::class.java)
             startActivity(intent)
-        }
-        blogBtn.setOnClickListener {
-            val packageManager = packageManager
-            val blogURL = "https://www.jlindemann.se/homepage/blog"
-            TabUtil.openCustomTab(blogURL, packageManager, this)
         }
     }
 
