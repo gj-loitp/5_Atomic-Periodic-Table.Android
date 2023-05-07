@@ -37,7 +37,6 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="actionMenuTextColor">@color/colorLightText</item>>
-        <item name="android:fontFamily">@font/manropefamily</item>
         <item name="rippleColor">@color/colorLightRipple</item>
         <item name="itemRippleColor">@color/colorLightRippleItem</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>

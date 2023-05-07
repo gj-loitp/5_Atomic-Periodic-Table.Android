@@ -37,7 +37,6 @@
         <item name="android:navigationBarColor">@color/colorLightPrimary</item>
         <item name="android:statusBarColor">@color/colorLightPrimary</item>
         <item name="actionMenuTextColor">@color/colorLightText</item>>
-        <item name="android:fontFamily">@font/manropefamily</item>
         <item name="rippleColor">@color/colorLightRipple</item>
         <item name="itemRippleColor">@color/colorLightRippleItem</item>
     </style>
