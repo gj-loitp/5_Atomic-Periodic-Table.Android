@@ -34,7 +34,7 @@ import com.roy.science.utils.ToastUtil
 import com.roy.science.utils.Utils
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_element_info.elementTitle
-import kotlinx.android.synthetic.main.activity_element_info.element_image
+import kotlinx.android.synthetic.main.activity_element_info.elementImage
 import kotlinx.android.synthetic.main.activity_element_info.frame
 import kotlinx.android.synthetic.main.activity_element_info.nextBtn
 import kotlinx.android.synthetic.main.activity_element_info.offlineDiv
@@ -460,7 +460,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
     }
 
     private fun loadImage(url: String?) {
-        try { Picasso.get().load(url.toString()).into(element_image) }
+        try { Picasso.get().load(url.toString()).into(elementImage) }
         catch(e: ConnectException) {
             offlineDiv.visibility = View.VISIBLE
             frame.visibility = View.GONE

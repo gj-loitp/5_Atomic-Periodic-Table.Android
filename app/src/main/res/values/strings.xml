@@ -126,5 +126,7 @@
     <string name="dictionary">Dictionary</string>
     <string name="search_for_dictionary_item">Search For Dictionary Item</string>
     <string name="clear_filter">Clear Filter</string>
+    <string name="periodic_table">Periodic Table</string>
+    <string name="submit_data_issue">Submit Data Issue</string>
 
 </resources>

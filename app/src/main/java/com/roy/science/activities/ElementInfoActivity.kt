@@ -29,7 +29,7 @@ import kotlinx.android.synthetic.main.activity_element_info.offlineSpace
 import kotlinx.android.synthetic.main.activity_element_info.overviewInc
 import kotlinx.android.synthetic.main.activity_element_info.previousBtn
 import kotlinx.android.synthetic.main.activity_element_info.propertiesInc
-import kotlinx.android.synthetic.main.activity_element_info.scr_view
+import kotlinx.android.synthetic.main.activity_element_info.scrView
 import kotlinx.android.synthetic.main.activity_element_info.shell
 import kotlinx.android.synthetic.main.activity_element_info.shellBackground
 import kotlinx.android.synthetic.main.activity_element_info.view
@@ -76,7 +76,7 @@ class ElementInfoActivity : InfoExtension() {
         val elementSendAndLoadPreference = ElementSendAndLoad(this)
         var elementSendAndLoadValue = elementSendAndLoadPreference.getValue()
         setContentView(R.layout.activity_element_info)
-        Utils.fadeInAnim(scr_view, 300)
+        Utils.fadeInAnim(scrView, 300)
         readJson()
         shell.visibility = View.GONE
         detailEmission.visibility = View.GONE

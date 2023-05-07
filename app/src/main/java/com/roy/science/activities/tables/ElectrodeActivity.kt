@@ -23,14 +23,7 @@ import com.roy.science.preferences.ThemePreference
 import com.roy.science.utils.Utils
 import kotlinx.android.synthetic.main.a_dictionary.searchBtn
 import kotlinx.android.synthetic.main.a_dictionary.titleBox
-import kotlinx.android.synthetic.main.activity_electrode.backBtn
-import kotlinx.android.synthetic.main.activity_electrode.closeEleSearch
-import kotlinx.android.synthetic.main.activity_electrode.commonTitleBackElo
-import kotlinx.android.synthetic.main.activity_electrode.eView
-import kotlinx.android.synthetic.main.activity_electrode.editEle
-import kotlinx.android.synthetic.main.activity_electrode.emptySearchBoxEle
-import kotlinx.android.synthetic.main.activity_electrode.searchBarEle
-import kotlinx.android.synthetic.main.activity_electrode.viewEle
+import kotlinx.android.synthetic.main.a_electrode.*
 import java.util.Locale
 
 class ElectrodeActivity : BaseActivity() {
@@ -63,7 +56,7 @@ class ElectrodeActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_electrode) //REMEMBER: Never move any function calls above this
+        setContentView(R.layout.a_electrode) //REMEMBER: Never move any function calls above this
 
         recyclerView()
         clickSearch()
