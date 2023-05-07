@@ -119,19 +119,19 @@ class FavoritePageActivity : BaseActivity() {
         val degreePreference = DegreePreference(this)
         val degreePrefValue = degreePreference.getValue()
         if (degreePrefValue == 0) {
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         if (degreePrefValue == 1) {
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         if (degreePrefValue == 2) {
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
         }
 
         //Boiling Point
@@ -288,27 +288,27 @@ class FavoritePageActivity : BaseActivity() {
             var degreePrefValue = degreePreference.getValue()
 
             degreePreference.setValue(0)
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         celsiusBtn.setOnClickListener {
             val degreePreference = DegreePreference(this)
             var degreePrefValue = degreePreference.getValue()
 
             degreePreference.setValue(1)
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         fahrenheitbtn.setOnClickListener {
             val degreePreference = DegreePreference(this)
             var degreePrefValue = degreePreference.getValue()
 
             degreePreference.setValue(2)
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
         }
 
         //STP Phase

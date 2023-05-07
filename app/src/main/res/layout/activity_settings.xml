@@ -131,7 +131,7 @@
                     android:clickable="true"
                     android:elevation="0dp"
                     android:focusable="true"
-                    android:foreground="@drawable/d_ripple">
+                    android:foreground="@drawable/ripple_d_ripple">
 
                     <LinearLayout
                         android:id="@+id/quick_download_layout"
@@ -200,7 +200,7 @@
                     android:clickable="true"
                     android:elevation="0dp"
                     android:focusable="true"
-                    android:foreground="@drawable/d_ripple">
+                    android:foreground="@drawable/ripple_d_ripple">
 
                     <LinearLayout
                         android:id="@+id/favorite_setting_layout"
@@ -269,7 +269,7 @@
                     android:clickable="true"
                     android:elevation="0dp"
                     android:focusable="true"
-                    android:foreground="@drawable/d_ripple"
+                    android:foreground="@drawable/ripple_d_ripple"
                     android:visibility="gone">
 
                     <LinearLayout
@@ -338,7 +338,7 @@
                     android:clickable="true"
                     android:elevation="0dp"
                     android:focusable="true"
-                    android:foreground="@drawable/d_ripple">
+                    android:foreground="@drawable/ripple_d_ripple">
 
                     <LinearLayout
                         android:id="@+id/unit_setting_layout"
@@ -406,7 +406,7 @@
                     android:clickable="true"
                     android:elevation="0dp"
                     android:focusable="true"
-                    android:foreground="@drawable/d_ripple">
+                    android:foreground="@drawable/ripple_d_ripple">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -516,14 +516,14 @@
                     android:clickable="true"
                     android:elevation="0dp"
                     android:focusable="true"
-                    android:foreground="@drawable/d_ripple">
+                    android:foreground="@drawable/ripple_d_ripple">
 
                     <LinearLayout
                         android:id="@+id/cacheLay"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="?attr/backgroundColor"
-                        android:foreground="@drawable/d_ripple"
+                        android:foreground="@drawable/ripple_d_ripple"
                         android:theme="@style/ThemeOverlay.AppCompat.Light">
 
                         <ImageView
@@ -585,7 +585,7 @@
                     android:clickable="true"
                     android:elevation="0dp"
                     android:focusable="true"
-                    android:foreground="@drawable/d_ripple">
+                    android:foreground="@drawable/ripple_d_ripple">
 
                     <LinearLayout
                         android:id="@+id/submit_lay"
@@ -653,7 +653,7 @@
                     android:clickable="true"
                     android:elevation="0dp"
                     android:focusable="true"
-                    android:foreground="@drawable/d_ripple">
+                    android:foreground="@drawable/ripple_d_ripple">
 
                     <LinearLayout
                         android:id="@+id/licenses_lay"
@@ -722,7 +722,7 @@
                     android:clickable="true"
                     android:elevation="0dp"
                     android:focusable="true"
-                    android:foreground="@drawable/d_ripple">
+                    android:foreground="@drawable/ripple_d_ripple">
 
                     <LinearLayout
                         android:id="@+id/about_lay"

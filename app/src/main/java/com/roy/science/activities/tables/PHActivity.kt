@@ -137,16 +137,16 @@ class PHActivity : BaseActivity() {
     }
 
     private fun updateButtonColor(btn: String) {
-        methylOrangeBtn.background = getDrawable(R.drawable.chip)
-        bromothymolBlueBtn.background = getDrawable(R.drawable.chip)
-        congoRedBtn.background = getDrawable(R.drawable.chip)
-        phenolphthalein_btn.background = getDrawable(R.drawable.chip)
+        methylOrangeBtn.background = getDrawable(R.drawable.shape_chip)
+        bromothymolBlueBtn.background = getDrawable(R.drawable.shape_chip)
+        congoRedBtn.background = getDrawable(R.drawable.shape_chip)
+        phenolphthalein_btn.background = getDrawable(R.drawable.shape_chip)
 
         val delay = Handler(Looper.getMainLooper())
         delay.postDelayed({
             val resIDB = resources.getIdentifier(btn, "id", packageName)
             val button = findViewById<Button>(resIDB)
-            button.background = getDrawable(R.drawable.chip_active)
+            button.background = getDrawable(R.drawable.shape_chip_active)
         }, 1)
     }
 

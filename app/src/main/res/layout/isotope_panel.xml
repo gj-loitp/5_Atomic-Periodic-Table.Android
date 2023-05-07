@@ -28,7 +28,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/half_toast"
+            android:background="@drawable/shape_half_toast"
             android:backgroundTint="?attr/colorSurface"
             android:clickable="true"
             android:focusable="true"
@@ -39,7 +39,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/half_toast"
+                android:background="@drawable/shape_half_toast"
                 android:backgroundTint="?attr/colorPrimary"
                 android:alpha="0.11"/>
 

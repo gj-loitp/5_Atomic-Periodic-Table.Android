@@ -110,7 +110,7 @@
                 android:layout_height="60dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/molarMassCheck"
@@ -141,7 +141,7 @@
                 android:layout_height="60dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/phaseCheck"
@@ -151,7 +151,7 @@
                     android:layout_marginEnd="@dimen/margin"
                     android:buttonTint="?attr/colorPrimary"
                     android:checked="true"
-                    android:drawableEnd="@drawable/fav_gas"
+                    android:drawableEnd="@drawable/vector_fav_gas"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
                     android:text="Show STP Phase"
@@ -171,7 +171,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/electronegativity_check"
@@ -181,7 +181,7 @@
                     android:layout_marginEnd="@dimen/margin"
                     android:buttonTint="?attr/colorPrimary"
                     android:checked="true"
-                    android:drawableEnd="@drawable/fav_electronegativity"
+                    android:drawableEnd="@drawable/vector_fav_electronegativity"
                     android:drawablePadding="9dp"
                     android:layoutDirection="rtl"
                     android:text="Show Electronegativity"
@@ -201,7 +201,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/densityCheck"
@@ -249,11 +249,11 @@
                     android:layout_marginEnd="9dp"
                     android:layout_marginBottom="9dp"
                     android:layout_weight="1"
-                    android:background="@drawable/chip_outline"
+                    android:background="@drawable/shape_chip_outline"
                     android:clickable="true"
                     android:elevation="2dp"
                     android:focusable="true"
-                    android:foreground="@drawable/chip_ripple"
+                    android:foreground="@drawable/riple_chip_ripple"
                     android:text="Kelvin"
                     android:textAllCaps="false"
                     android:textColor="?attr/colorOnSecondaryContainer"
@@ -270,7 +270,7 @@
                     android:clickable="true"
                     android:elevation="2dp"
                     android:focusable="true"
-                    android:foreground="@drawable/chip_outline"
+                    android:foreground="@drawable/shape_chip_outline"
                     android:text="Celsius"
                     android:textAllCaps="false"
                     android:textColor="?attr/colorOnSecondaryContainer"
@@ -286,11 +286,11 @@
                     android:layout_marginEnd="36dp"
                     android:layout_marginBottom="9dp"
                     android:layout_weight="1"
-                    android:background="@drawable/chip_outline"
+                    android:background="@drawable/shape_chip_outline"
                     android:clickable="true"
                     android:elevation="2dp"
                     android:focusable="true"
-                    android:foreground="@drawable/chip_ripple"
+                    android:foreground="@drawable/riple_chip_ripple"
                     android:text="Fahrenheit"
                     android:textAllCaps="false"
                     android:textColor="?attr/colorOnSecondaryContainer"
@@ -311,7 +311,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/boilingCheck"
@@ -343,7 +343,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/meltingCheck"
@@ -382,7 +382,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/atomicRadiusEmpiricalCheck"
@@ -413,7 +413,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/atomicRadiusCalculatedCheck"
@@ -444,7 +444,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/covalentRadiusCheck"
@@ -475,7 +475,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/vanDerWaalsRadiusCheck"
@@ -514,7 +514,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/fusionHeatCheck"
@@ -545,7 +545,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/specificHeatCheck"
@@ -576,7 +576,7 @@
                 
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple">
+                android:foreground="@drawable/ripple_d_ripple">
 
                 <CheckBox
                     android:id="@+id/vaporizationHeatCheck"

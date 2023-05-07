@@ -88,37 +88,37 @@ class UnitActivity : BaseActivity() {
         val tempPreference = TemperatureUnits(this)
         val tempPrefValue = tempPreference.getValue()
         if (tempPrefValue == "kelvin") {
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         if (tempPrefValue == "celsius") {
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         if (tempPrefValue == "fahrenheit") {
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
         }
         kelvinBtn.setOnClickListener {
             tempPreference.setValue("kelvin")
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         celsiusBtn.setOnClickListener {
             tempPreference.setValue("celsius")
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         fahrenheitbtn.setOnClickListener {
             tempPreference.setValue("fahrenheit")
-            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.chip_outline)
-            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.chip_active)
+            kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
+            fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
         }
     }
 

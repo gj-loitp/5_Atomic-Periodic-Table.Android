@@ -18,7 +18,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/half_up_toast"
+                android:background="@drawable/shape_half_up_toast"
                 android:backgroundTint="?attr/colorPrimary"
                 android:alpha="0.11"/>
 
@@ -32,7 +32,7 @@
                 android:drawablePadding="9dp"
                 android:drawableTint="?attr/colorOnSecondaryContainer"
                 android:focusable="true"
-                android:foreground="@drawable/d_ripple"
+                android:foreground="@drawable/ripple_d_ripple"
                 android:gravity="center_vertical"
                 android:padding="9dp"
                 android:paddingEnd="36dp"
@@ -60,7 +60,7 @@
             android:drawablePadding="9dp"
             android:drawableTint="?attr/colorOnSecondaryContainer"
             android:focusable="true"
-            android:foreground="@drawable/d_ripple"
+            android:foreground="@drawable/ripple_d_ripple"
             android:gravity="center_vertical"
             android:padding="9dp"
             android:paddingEnd="36dp"
@@ -76,7 +76,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/half_down_toast"
+            android:background="@drawable/shape_half_down_toast"
             android:backgroundTint="?attr/colorPrimary"
             android:alpha="0.11"/>
 
@@ -86,11 +86,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="18dp"
             android:clickable="true"
-            android:drawableStart="@drawable/fav_electronegativity"
+            android:drawableStart="@drawable/vector_fav_electronegativity"
             android:drawablePadding="9dp"
             android:drawableTint="?attr/colorOnSecondaryContainer"
             android:focusable="true"
-            android:foreground="@drawable/d_ripple"
+            android:foreground="@drawable/ripple_d_ripple"
             android:gravity="center_vertical"
             android:padding="9dp"
             android:paddingEnd="36dp"

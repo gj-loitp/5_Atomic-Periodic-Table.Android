@@ -347,7 +347,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
                 phaseIcon.setImageDrawable(getDrawable(R.drawable.solid))
             }
             if (phaseText.toString() == "Gas") {
-                phaseIcon.setImageDrawable(getDrawable(R.drawable.gas))
+                phaseIcon.setImageDrawable(getDrawable(R.drawable.vector_gas))
             }
             if (phaseText.toString() == "Liquid") {
                 phaseIcon.setImageDrawable(getDrawable(R.drawable.liquid))

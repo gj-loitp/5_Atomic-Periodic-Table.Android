@@ -48,7 +48,7 @@
                     <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/half_up_toast"
+                    android:background="@drawable/shape_half_up_toast"
                     android:backgroundTint="?attr/colorPrimary"
                     android:alpha="0.11"/>
 
@@ -96,7 +96,7 @@
                             android:drawableStart="@drawable/ic_radio_checked"
                             android:drawablePadding="20dp"
                             android:focusable="true"
-                            android:foreground="@drawable/d_ripple"
+                            android:foreground="@drawable/ripple_d_ripple"
                             android:gravity="center_vertical"
                             android:paddingStart="20dp"
                             android:paddingTop="8dp"
@@ -126,7 +126,7 @@
                             android:drawableStart="@drawable/ic_radio_unchecked"
                             android:drawablePadding="20dp"
                             android:focusable="true"
-                            android:foreground="@drawable/d_ripple"
+                            android:foreground="@drawable/ripple_d_ripple"
                             android:gravity="center_vertical"
                             android:paddingStart="20dp"
                             android:paddingTop="8dp"
@@ -156,7 +156,7 @@
                             android:drawableStart="@drawable/ic_radio_unchecked"
                             android:drawablePadding="20dp"
                             android:focusable="true"
-                            android:foreground="@drawable/d_ripple"
+                            android:foreground="@drawable/ripple_d_ripple"
                             android:gravity="center_vertical"
                             android:paddingStart="20dp"
                             android:paddingTop="8dp"
@@ -178,7 +178,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:background="@drawable/half_down_toast"
+                    android:background="@drawable/shape_half_down_toast"
                     android:backgroundTint="?attr/colorPrimary"
                     android:alpha="0.11"/>
 
