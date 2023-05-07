@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Looper
@@ -46,15 +45,15 @@ import kotlinx.android.synthetic.main.search_layout.*
 import kotlinx.android.synthetic.main.v_filter_view.*
 import kotlinx.android.synthetic.main.v_hover_menu.*
 import kotlinx.android.synthetic.main.v_nav_menu_view.blogBtn
+import kotlinx.android.synthetic.main.v_nav_menu_view.btMore
+import kotlinx.android.synthetic.main.v_nav_menu_view.btPolicy
+import kotlinx.android.synthetic.main.v_nav_menu_view.btRate
+import kotlinx.android.synthetic.main.v_nav_menu_view.btShare
 import kotlinx.android.synthetic.main.v_nav_menu_view.dictionaryBtn
-import kotlinx.android.synthetic.main.v_nav_menu_view.facebookButton
-import kotlinx.android.synthetic.main.v_nav_menu_view.homepageButton
-import kotlinx.android.synthetic.main.v_nav_menu_view.instagramButton
 import kotlinx.android.synthetic.main.v_nav_menu_view.isotopesBtn
 import kotlinx.android.synthetic.main.v_nav_menu_view.navLin
 import kotlinx.android.synthetic.main.v_nav_menu_view.slidingLayout
 import kotlinx.android.synthetic.main.v_nav_menu_view.solubilityBtn
-import kotlinx.android.synthetic.main.v_nav_menu_view.twitterButton
 import org.deejdev.twowaynestedscrollview.TwoWayNestedScrollView
 import java.util.Locale
 
@@ -360,26 +359,17 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
     }
 
     private fun mediaListeners() {
-        //TODO loitp
-        twitterButton.setOnClickListener {
-            val uri = Uri.parse(getString(R.string.twitter))
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
+        btRate.setOnClickListener {
+
         }
-        facebookButton.setOnClickListener {
-            val uri = Uri.parse(getString(R.string.facebook))
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
+        btMore.setOnClickListener {
+
         }
-        instagramButton.setOnClickListener {
-            val uri = Uri.parse(getString(R.string.instagram))
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
+        btShare.setOnClickListener {
+
         }
-        homepageButton.setOnClickListener {
-            val uri = Uri.parse(getString(R.string.homepage))
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
+        btPolicy.setOnClickListener {
+
         }
     }
 

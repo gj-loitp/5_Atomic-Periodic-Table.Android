@@ -278,7 +278,7 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/twitterButton"
+                        android:id="@+id/btRate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -286,7 +286,7 @@
                         android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
-                        android:src="@drawable/ic_twitter_outline"
+                        android:src="@drawable/baseline_rate_review_24"
                         android:tint="?attr/colorOnSecondaryContainer"
                         app:borderWidth="0dp"
                         app:elevation="0dp"
@@ -295,7 +295,7 @@
                         sothree:elevation="0dp" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/instagramButton"
+                        android:id="@+id/btShare"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -303,7 +303,7 @@
                         android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
-                        android:src="@drawable/ic_instagram_outline"
+                        android:src="@drawable/baseline_ios_share_24"
                         android:tint="?attr/colorOnSecondaryContainer"
                         app:borderWidth="0dp"
                         app:elevation="0dp"
@@ -312,7 +312,7 @@
                         sothree:elevation="0dp" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/facebookButton"
+                        android:id="@+id/btMore"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -320,7 +320,7 @@
                         android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
-                        android:src="@drawable/ic_facebook_outline"
+                        android:src="@drawable/baseline_favorite_border_24"
                         android:tint="?attr/colorOnSecondaryContainer"
                         app:borderWidth="0dp"
                         app:elevation="0dp"
@@ -329,7 +329,7 @@
                         sothree:elevation="0dp" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/homepageButton"
+                        android:id="@+id/btPolicy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -337,7 +337,7 @@
                         android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
-                        android:src="@drawable/ic_web_outline"
+                        android:src="@drawable/baseline_policy_24"
                         android:tint="?attr/colorOnSecondaryContainer"
                         android:visibility="visible"
                         app:borderWidth="0dp"
