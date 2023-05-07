@@ -18,9 +18,9 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:alpha="0.11"
                 android:background="@drawable/shape_half_up_toast"
-                android:backgroundTint="?attr/colorPrimary"
-                android:alpha="0.11"/>
+                android:backgroundTint="?attr/colorPrimary" />
 
             <TextView
                 android:id="@+id/alphabetBtn"
@@ -45,27 +45,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="?attr/colorPrimary"
-            android:alpha="0.11"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.11"
+                android:background="?attr/colorPrimary" />
 
-        <TextView
-            android:id="@+id/elmtNumbBtn2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:drawableStart="@drawable/overview_icon"
-            android:drawablePadding="9dp"
-            android:drawableTint="?attr/colorOnSecondaryContainer"
-            android:focusable="true"
-            android:foreground="@drawable/ripple_d_ripple"
-            android:gravity="center_vertical"
-            android:padding="9dp"
-            android:paddingEnd="36dp"
-            android:text="Element Number"
-            android:textColor="?attr/colorOnSecondaryContainer" />
+            <TextView
+                android:id="@+id/elmtNumbBtn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawableStart="@drawable/overview_icon"
+                android:drawablePadding="9dp"
+                android:drawableTint="?attr/colorOnSecondaryContainer"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_d_ripple"
+                android:gravity="center_vertical"
+                android:padding="9dp"
+                android:paddingEnd="36dp"
+                android:text="Element Number"
+                android:textColor="?attr/colorOnSecondaryContainer" />
 
         </FrameLayout>
 
@@ -73,29 +73,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/shape_half_down_toast"
-            android:backgroundTint="?attr/colorPrimary"
-            android:alpha="0.11"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.11"
+                android:background="@drawable/shape_half_down_toast"
+                android:backgroundTint="?attr/colorPrimary" />
 
-        <TextView
-            android:id="@+id/electro_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:clickable="true"
-            android:drawableStart="@drawable/vector_fav_electronegativity"
-            android:drawablePadding="9dp"
-            android:drawableTint="?attr/colorOnSecondaryContainer"
-            android:focusable="true"
-            android:foreground="@drawable/ripple_d_ripple"
-            android:gravity="center_vertical"
-            android:padding="9dp"
-            android:paddingEnd="36dp"
-            android:text="Electronegativity"
-            android:textColor="?attr/colorOnSecondaryContainer" />
+            <TextView
+                android:id="@+id/electro_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:clickable="true"
+                android:drawableStart="@drawable/vector_fav_electronegativity"
+                android:drawablePadding="9dp"
+                android:drawableTint="?attr/colorOnSecondaryContainer"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_d_ripple"
+                android:gravity="center_vertical"
+                android:padding="9dp"
+                android:paddingEnd="36dp"
+                android:text="Electronegativity"
+                android:textColor="?attr/colorOnSecondaryContainer" />
 
         </FrameLayout>
 

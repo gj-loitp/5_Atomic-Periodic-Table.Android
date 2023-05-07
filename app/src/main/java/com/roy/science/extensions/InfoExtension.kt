@@ -86,53 +86,14 @@ import kotlinx.android.synthetic.main.d_thermodynamic.phaseIcon
 import kotlinx.android.synthetic.main.d_thermodynamic.tvPhaseText
 import kotlinx.android.synthetic.main.d_thermodynamic.tvSpecificHeatText
 import kotlinx.android.synthetic.main.d_thermodynamic.tvVaporizationHeatText
-import kotlinx.android.synthetic.main.favorite_bar.aCalculatedF
-import kotlinx.android.synthetic.main.favorite_bar.aCalculatedLay
-import kotlinx.android.synthetic.main.favorite_bar.aEmpiricalF
-import kotlinx.android.synthetic.main.favorite_bar.aEmpiricalLay
-import kotlinx.android.synthetic.main.favorite_bar.boilingF
-import kotlinx.android.synthetic.main.favorite_bar.boilingLay
-import kotlinx.android.synthetic.main.favorite_bar.covalentF
-import kotlinx.android.synthetic.main.favorite_bar.covalentLay
-import kotlinx.android.synthetic.main.favorite_bar.densityF
-import kotlinx.android.synthetic.main.favorite_bar.densityLay
-import kotlinx.android.synthetic.main.favorite_bar.electronegativityF
-import kotlinx.android.synthetic.main.favorite_bar.electronegativityLay
-import kotlinx.android.synthetic.main.favorite_bar.fusionHeatF
-import kotlinx.android.synthetic.main.favorite_bar.fusionHeatLay
-import kotlinx.android.synthetic.main.favorite_bar.meltingF
-import kotlinx.android.synthetic.main.favorite_bar.meltingLay
-import kotlinx.android.synthetic.main.favorite_bar.molarMassF
-import kotlinx.android.synthetic.main.favorite_bar.molarMassLay
-import kotlinx.android.synthetic.main.favorite_bar.phaseF
-import kotlinx.android.synthetic.main.favorite_bar.phaseLay
-import kotlinx.android.synthetic.main.favorite_bar.specificHeatF
-import kotlinx.android.synthetic.main.favorite_bar.specificHeatLay
-import kotlinx.android.synthetic.main.favorite_bar.vanF
-import kotlinx.android.synthetic.main.favorite_bar.vanLay
-import kotlinx.android.synthetic.main.favorite_bar.vaporizationHeatF
-import kotlinx.android.synthetic.main.favorite_bar.vaporizationHeatLay
 import kotlinx.android.synthetic.main.loading_view.noImg
 import kotlinx.android.synthetic.main.loading_view.proBar
-import kotlinx.android.synthetic.main.oxidiation_states.m1ox
-import kotlinx.android.synthetic.main.oxidiation_states.m2ox
-import kotlinx.android.synthetic.main.oxidiation_states.m3ox
-import kotlinx.android.synthetic.main.oxidiation_states.m4ox
-import kotlinx.android.synthetic.main.oxidiation_states.m5ox
-import kotlinx.android.synthetic.main.oxidiation_states.ox0
-import kotlinx.android.synthetic.main.oxidiation_states.p1ox
-import kotlinx.android.synthetic.main.oxidiation_states.p2ox
-import kotlinx.android.synthetic.main.oxidiation_states.p3ox
-import kotlinx.android.synthetic.main.oxidiation_states.p4ox
-import kotlinx.android.synthetic.main.oxidiation_states.p5ox
-import kotlinx.android.synthetic.main.oxidiation_states.p6ox
-import kotlinx.android.synthetic.main.oxidiation_states.p7ox
-import kotlinx.android.synthetic.main.oxidiation_states.p8ox
-import kotlinx.android.synthetic.main.oxidiation_states.p9ox
+import kotlinx.android.synthetic.main.oxidiation_states.*
 import kotlinx.android.synthetic.main.shell_view.cardModelView
 import kotlinx.android.synthetic.main.shell_view.configData
 import kotlinx.android.synthetic.main.shell_view.eConfigData
 import kotlinx.android.synthetic.main.v_detail_emission.ivSpImgFetail
+import kotlinx.android.synthetic.main.v_favorite_bar.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -221,10 +182,12 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             val wikipedia = jsonObject.optString("wikilink", "---")
             val sElementBoilingKelvin = jsonObject.optString("element_boiling_kelvin", "---")
             val sElementBoilingCelsius = jsonObject.optString("element_boiling_celsius", "---")
-            val sElementBoilingFahrenheit = jsonObject.optString("element_boiling_fahrenheit", "---")
+            val sElementBoilingFahrenheit =
+                jsonObject.optString("element_boiling_fahrenheit", "---")
             val sElementMeltingKelvin = jsonObject.optString("element_melting_kelvin", "---")
             val sElementMeltingCelsius = jsonObject.optString("element_melting_celsius", "---")
-            val sElementMeltingFahrenheit = jsonObject.optString("element_melting_fahrenheit", "---")
+            val sElementMeltingFahrenheit =
+                jsonObject.optString("element_melting_fahrenheit", "---")
             val sElementAtomicNumber = jsonObject.optString("element_atomic_number", "---")
             val sElementAtomicWeight = jsonObject.optString("element_atomicmass", "---")
             val sElementDensity = jsonObject.optString("element_density", "---")

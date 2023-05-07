@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="52dp"
-    android:background="?attr/colorSurface">
+    android:background="?attr/colorSurface"
+    tools:ignore="RtlSymmetry,PrivateResource,HardcodedText">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -11,7 +13,7 @@
         android:alpha="0.11"
         android:background="?attr/colorPrimary" />
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:elevation="2dp">
@@ -27,27 +29,27 @@
             android:paddingEnd="0dp"
             android:requiresFadingEdge="horizontal">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/molarMassLay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
-                        android:text="Atomic Mass:"
+                        android:text="@string/atomic_mass"
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/molarMassF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -58,16 +60,16 @@
                         android:text="molar_mass_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/phaseLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -75,7 +77,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/phaseF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -86,16 +88,16 @@
                         android:text="phase_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/densityLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -103,7 +105,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/densityF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -114,16 +116,16 @@
                         android:text="density_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/electronegativityLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -131,7 +133,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/electronegativityF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -142,16 +144,16 @@
                         android:text="electronegativity_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/boilingLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -159,7 +161,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/boilingF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -170,16 +172,16 @@
                         android:text="boiling_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/meltingLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -187,7 +189,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/meltingF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -197,16 +199,16 @@
                         android:paddingEnd="9dp"
                         android:text="melting_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/aEmpiricalLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -214,7 +216,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/aEmpiricalF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -224,16 +226,16 @@
                         android:paddingEnd="9dp"
                         android:text="a_empirical_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/aCalculatedLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -241,7 +243,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/aCalculatedF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -251,16 +253,16 @@
                         android:paddingEnd="9dp"
                         android:text="a_calculated_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/covalentLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -268,7 +270,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/covalentF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -278,16 +280,16 @@
                         android:paddingEnd="9dp"
                         android:text="covalent_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/vanLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -295,7 +297,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/vanF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -305,16 +307,16 @@
                         android:paddingEnd="9dp"
                         android:text="van_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/fusionHeatLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -322,7 +324,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/fusionHeatF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -333,16 +335,16 @@
                         android:text="fusion_heat_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/specificHeatLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -350,7 +352,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/specificHeatF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -361,16 +363,16 @@
                         android:text="specific_heat_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/vaporizationHeatLay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:paddingStart="9dp">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
                         android:gravity="center_vertical"
@@ -378,7 +380,7 @@
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/vaporizationHeatF"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
@@ -389,9 +391,9 @@
                         android:text="vaporization_heat_f"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </HorizontalScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -401,6 +403,7 @@
             android:layout_gravity="center"
             android:layout_marginEnd="9dp"
             android:alpha="0.85"
+            android:contentDescription="@string/app_name"
             android:elevation="0dp"
             android:foregroundGravity="center"
             android:src="@drawable/ic_edit"
@@ -409,5 +412,5 @@
             app:borderWidth="0dp"
             app:elevation="0dp"
             app:fabSize="mini" />
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>
