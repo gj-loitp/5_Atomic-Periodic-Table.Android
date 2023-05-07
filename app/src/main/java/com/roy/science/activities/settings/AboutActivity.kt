@@ -9,11 +9,11 @@ import com.roy.science.BuildConfig
 import com.roy.science.R
 import com.roy.science.activities.BaseActivity
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_info.commonTitleBackInfo
-import kotlinx.android.synthetic.main.activity_info.imageView3
-import kotlinx.android.synthetic.main.activity_info.titleBoxInfo
-import kotlinx.android.synthetic.main.activity_info.versionNumber
-import kotlinx.android.synthetic.main.activity_info.viewInfo
+import kotlinx.android.synthetic.main.a_info.commonTitleBackInfo
+import kotlinx.android.synthetic.main.a_info.imageView3
+import kotlinx.android.synthetic.main.a_info.titleBoxInfo
+import kotlinx.android.synthetic.main.a_info.versionNumber
+import kotlinx.android.synthetic.main.a_info.viewInfo
 import kotlinx.android.synthetic.main.activity_solubility.backBtn
 
 class AboutActivity : BaseActivity() {
@@ -46,7 +46,7 @@ class AboutActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_info)
+        setContentView(R.layout.a_info)
 
         viewInfo.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
