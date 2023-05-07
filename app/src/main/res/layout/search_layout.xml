@@ -6,55 +6,56 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
     android:elevation="12dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="PrivateResource">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/emptySearchBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="56dp"
-            android:visibility="gone"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
-            <ImageView
-                android:id="@+id/empty_ele_search_image"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEmptyEleSearchImage"
                 android:layout_width="164dp"
-                android:layout_marginTop="44dp"
                 android:layout_height="164dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="44dp"
                 app:srcCompat="@drawable/graphic_light_search" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
+                android:layout_marginStart="42dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="42dp"
                 android:layout_marginEnd="42dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/no_results"
                 android:textColor="?attr/actionMenuTextColor"
-                android:textSize="24sp"
-                android:text="No results"/>
+                android:textSize="24sp" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textColor="?attr/actionMenuTextColor"
                 android:layout_marginStart="42dp"
                 android:layout_marginEnd="42dp"
-                android:textSize="16sp"
-                android:text="Try searching for another word or check your spelling."/>
+                android:gravity="center_horizontal"
+                android:text="@string/try_searching_for_another_word_or_check_your_spelling"
+                android:textColor="?attr/actionMenuTextColor"
+                android:textSize="16sp" />
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <FrameLayout
-            android:id="@+id/common_title_back_search"
+            android:id="@+id/commonTitleBackSearch"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:alpha="0.975"
@@ -67,10 +68,10 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="?attr/colorPrimary"
-                android:alpha="0.12"/>
+                android:alpha="0.12"
+                android:background="?attr/colorPrimary" />
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="bottom"
@@ -82,11 +83,12 @@
                     android:layout_height="56dp">
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/filter_btn"
+                        android:id="@+id/btFilterBtn"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical|end"
                         android:clickable="true"
+                        android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
                         android:src="@drawable/ic_sort"
@@ -97,7 +99,7 @@
                         app:fabSize="auto" />
 
                     <FrameLayout
-                        android:id="@+id/search_bar_element"
+                        android:id="@+id/flSearchBarElement"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="56dp"
@@ -109,7 +111,6 @@
                         android:elevation="0dp"
                         android:visibility="visible">
 
-
                         <EditText
                             android:id="@+id/editElement"
                             android:layout_width="match_parent"
@@ -117,14 +118,16 @@
                             android:background="@android:color/transparent"
                             android:focusable="true"
                             android:focusableInTouchMode="true"
-                            android:hint="Search For Elements"
+                            android:hint="@string/search_for_elements"
                             android:imeOptions="actionSearch"
+                            android:importantForAutofill="no"
                             android:inputType="text"
                             android:maxLines="1"
                             android:paddingStart="18dp"
                             android:textColor="?attr/colorOnSurface"
                             android:textColorHint="?attr/colorOnSurface"
-                            android:textSize="14sp" />
+                            android:textSize="14sp"
+                            tools:ignore="RtlSymmetry" />
 
                     </FrameLayout>
 
@@ -134,6 +137,7 @@
                         android:layout_height="56dp"
                         android:layout_gravity="center_vertical"
                         android:clickable="true"
+                        android:contentDescription="@string/app_name"
                         android:elevation="0dp"
                         android:focusable="true"
                         android:src="@drawable/ic_close"
@@ -145,11 +149,11 @@
 
                 </FrameLayout>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/element_recyclerview"
+            android:id="@+id/rvElement"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
@@ -163,7 +167,7 @@
 
     </FrameLayout>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -287,7 +287,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
                     val fLayout: View =
                         inflater.inflate(R.layout.row_iso_panel_title_item, aLayout, false)
 
-                    val iTitle = fLayout.findViewById(R.id.iso_title) as TextView
+                    val iTitle = fLayout.findViewById(R.id.tvIsoTitle) as TextView
                     val iExt = " Isotopes"
                     iTitle.text = "${
                         nameVal.replaceFirstChar {

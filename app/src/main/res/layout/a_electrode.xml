@@ -24,7 +24,7 @@
             android:visibility="gone">
 
             <ImageView
-                android:id="@+id/empty_ele_search_image"
+                android:id="@+id/ivEmptyEleSearchImage"
                 android:layout_width="164dp"
                 android:layout_height="164dp"
                 android:layout_gravity="center"

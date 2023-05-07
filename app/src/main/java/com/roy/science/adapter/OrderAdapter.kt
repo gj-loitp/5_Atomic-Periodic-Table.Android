@@ -9,8 +9,8 @@ import com.roy.science.R
 class OrderAdapter(dataSet: List<String> = emptyList()) : DragDropSwipeAdapter<String, OrderAdapter.ViewHolder>(dataSet) {
 
     class ViewHolder(itemView: View) : DragDropSwipeAdapter.ViewHolder(itemView) {
-        val itemText: TextView = itemView.findViewById(R.id.title_order)
-        val dragIcon: ImageView = itemView.findViewById(R.id.handle_order)
+        val itemText: TextView = itemView.findViewById(R.id.tvTitleOrder)
+        val dragIcon: ImageView = itemView.findViewById(R.id.ivHandleOrder)
     }
 
     override fun getViewHolder(itemLayout: View) = ViewHolder(itemLayout)

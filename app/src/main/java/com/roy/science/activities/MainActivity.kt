@@ -94,7 +94,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         }
         setContentView(R.layout.a_main)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.element_recyclerview)
+        val recyclerView = findViewById<RecyclerView>(R.id.rvElement)
         recyclerView.layoutManager = LinearLayoutManager(
             /* context = */ this,
             /* orientation = */ RecyclerView.VERTICAL,
@@ -486,7 +486,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         filterBox.visibility = View.GONE
         background.visibility = View.GONE
 
-        filter_btn.setOnClickListener {
+        btFilterBtn.setOnClickListener {
             Utils.fadeInAnim(filterBox, 150)
             Utils.fadeInAnim(background, 150)
         }
@@ -576,11 +576,11 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             ))
         moreBtn.layoutParams = params3
 
-        val params4 = common_title_back_search.layoutParams as ViewGroup.LayoutParams
+        val params4 = commonTitleBackSearch.layoutParams as ViewGroup.LayoutParams
         params4.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
-        common_title_back_search.layoutParams = params4
+        commonTitleBackSearch.layoutParams = params4
 
-        element_recyclerview.setPadding(
+        rvElement.setPadding(
             /* left = */ 0,
             /* top = */
             resources.getDimensionPixelSize(R.dimen.title_bar) + resources.getDimensionPixelSize(R.dimen.margin_space) + top,
