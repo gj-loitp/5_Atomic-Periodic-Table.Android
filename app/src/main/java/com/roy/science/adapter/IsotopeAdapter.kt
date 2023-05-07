@@ -29,7 +29,7 @@ class IsotopeAdapter(
         viewType: Int
     ): ViewHolder {
         val v =
-            LayoutInflater.from(parent.context).inflate(R.layout.isotope_list_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.v_isotope_list_item, parent, false)
         return ViewHolder(v)
     }
 
@@ -38,9 +38,9 @@ class IsotopeAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val textViewElement = itemView.findViewById(R.id.tv_iso_type) as TextView
-        private val textViewShort = itemView.findViewById(R.id.ic_iso_type) as TextView
-        private val textViewNumb = itemView.findViewById(R.id.tv_iso_numb) as TextView
+        private val textViewElement = itemView.findViewById(R.id.tvIsoType) as TextView
+        private val textViewShort = itemView.findViewById(R.id.tvIcIsoType) as TextView
+        private val textViewNumb = itemView.findViewById(R.id.tvIsoNumb) as TextView
 
         fun initialize(
             item: Element,

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.androidx.com/tools"
     android:elevation="100dp"
-    android:orientation="vertical">
+    tools:ignore="PrivateResource">
 
     <com.sothree.slidinguppanel.SlidingUpPanelLayout
         android:id="@+id/slidingLayoutI"
@@ -16,10 +16,10 @@
         sothree:umanoFadeColor="@android:color/transparent"
         sothree:umanoInitialState="collapsed"
         sothree:umanoPanelHeight="0dp"
-        sothree:umanoScrollableView="@id/scroll_iso"
+        sothree:umanoScrollableView="@id/svScrollIso"
         sothree:umanoShadowHeight="0dp">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -39,20 +39,20 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:alpha="0.11"
                 android:background="@drawable/shape_half_toast"
-                android:backgroundTint="?attr/colorPrimary"
-                android:alpha="0.11"/>
+                android:backgroundTint="?attr/colorPrimary" />
 
             <FrameLayout
-                android:id="@+id/drag_frame"
+                android:id="@+id/flDragFrame"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true">
 
-                <TextView
-                    android:id="@+id/drag_icon"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDragIcon"
                     android:layout_width="48dp"
                     android:layout_height="2dp"
                     android:layout_gravity="center_horizontal"
@@ -65,21 +65,20 @@
             </FrameLayout>
 
             <ScrollView
-                android:id="@+id/scroll_iso"
+                android:id="@+id/svScrollIso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="36dp"
                 android:scrollbarStyle="insideOverlay"
                 android:scrollbars="vertical"
-                android:verticalScrollbarPosition="defaultPosition"
-                android:layout_width="match_parent"
-                android:layout_marginTop="36dp"
-                android:layout_height="match_parent">
+                android:verticalScrollbarPosition="defaultPosition">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/frameIso"
                     android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
             </ScrollView>
-
 
         </FrameLayout>
 

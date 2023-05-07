@@ -47,7 +47,7 @@
                     android:alpha="0.11"/>
 
                 <TextView
-                    android:id="@+id/drag_icon"
+                    android:id="@+id/tvDragIcon"
                     android:layout_width="36dp"
                     android:layout_height="8dp"
                     android:layout_margin="18dp"
