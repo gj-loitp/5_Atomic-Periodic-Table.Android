@@ -252,5 +252,7 @@
     <string name="atomic_mass">Atomic Mass:</string>
     <string name="alphabetical">Alphabetical</string>
     <string name="element_number">Element Number</string>
+    <string name="grid_parameters">Grid Parameters</string>
+    <string name="crystal_structure">Crystal Structure:</string>
 
 </resources>

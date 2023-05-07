@@ -32,7 +32,7 @@
 
             <include
                 android:id="@+id/phChipBar"
-                layout="@layout/bar_ph_chips"
+                layout="@layout/v_bar_ph_chips"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"

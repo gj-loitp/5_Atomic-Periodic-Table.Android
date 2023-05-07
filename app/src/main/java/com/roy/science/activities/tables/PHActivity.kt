@@ -14,20 +14,11 @@ import com.roy.science.activities.BaseActivity
 import com.roy.science.model.Indicator
 import com.roy.science.model.IndicatorModel
 import com.roy.science.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_ph.acidInfo
-import kotlinx.android.synthetic.main.activity_ph.alkalineInfo
-import kotlinx.android.synthetic.main.activity_ph.backBtnPh
-import kotlinx.android.synthetic.main.activity_ph.center
-import kotlinx.android.synthetic.main.activity_ph.commonTitleBackPh
-import kotlinx.android.synthetic.main.activity_ph.left
-import kotlinx.android.synthetic.main.activity_ph.neutralInfo
-import kotlinx.android.synthetic.main.activity_ph.phScroll
-import kotlinx.android.synthetic.main.activity_ph.right
-import kotlinx.android.synthetic.main.activity_ph.viewPh
-import kotlinx.android.synthetic.main.bar_ph_chips.bromothymolBlueBtn
-import kotlinx.android.synthetic.main.bar_ph_chips.congoRedBtn
-import kotlinx.android.synthetic.main.bar_ph_chips.methylOrangeBtn
-import kotlinx.android.synthetic.main.bar_ph_chips.phenolphthaleinBtn
+import kotlinx.android.synthetic.main.activity_ph.*
+import kotlinx.android.synthetic.main.v_bar_ph_chips.bromothymolBlueBtn
+import kotlinx.android.synthetic.main.v_bar_ph_chips.congoRedBtn
+import kotlinx.android.synthetic.main.v_bar_ph_chips.methylOrangeBtn
+import kotlinx.android.synthetic.main.v_bar_ph_chips.phenolphthaleinBtn
 
 class PHActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
