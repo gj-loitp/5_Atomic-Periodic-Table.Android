@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="PrivateResource">
 
-
-    <LinearLayout
-        android:id="@+id/physics_properties"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/physicsProperties"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
@@ -16,7 +15,7 @@
         android:elevation="2dp"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -24,20 +23,20 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="9dp"
             android:drawableStart="@drawable/overview_icon"
-            android:drawableTint="?attr/colorPrimary"
             android:drawablePadding="9dp"
-            android:text="Atomic Properties"
+            android:drawableTint="?attr/colorPrimary"
+            android:text="@string/atomic_properties"
             android:textColor="?attr/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:alpha="0.75"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/electron_Config_title2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,7 +44,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Oxidation States:"
+            android:text="@string/oxidation_states"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -56,20 +55,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/electron_Config_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/electronConfigTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Electron Configuration:"
+            android:text="@string/electron_configuration"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/electronConfigText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,12 +76,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="electron_config_text"
-            android:textIsSelectable="true"
+            android:text="@string/electron_config_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -91,20 +90,20 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/ion_charge_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ionChargeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Ion Charge:"
+            android:text="@string/ion_charge"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/ionChargeText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,12 +111,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="ion_charge_text"
-            android:textIsSelectable="true"
+            android:text="@string/ion_charge_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -126,7 +125,7 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/ionization_energies_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -134,12 +133,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Ionization Energies:"
+            android:text="@string/ionization_energies"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/ionizationEnergiesText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -147,12 +146,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="ionization_energies_text"
-            android:textIsSelectable="true"
+            android:text="@string/ionization_energies_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -161,20 +160,20 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/atomic_radius_e_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/atomicRadiusETitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Atomic Radius (Empirical):"
+            android:text="@string/atomic_radius_empirical"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/atomicRadiusEText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -182,12 +181,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="atomic_radius_e_text"
-            android:textIsSelectable="true"
+            android:text="@string/atomic_radius_e_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -196,20 +195,20 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/atomic_radius_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/atomicRadiusTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Atomic Radius (Calculated):"
+            android:text="@string/atomic_radius_calculated"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/atomicRadiusText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -217,12 +216,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:textIsSelectable="true"
-            android:text="atomic_radius_text"
+            android:text="@string/atomic_radius_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -230,20 +229,20 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/covalent_radius_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/covalentRadiusTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Covalent Radius:"
+            android:text="@string/covalent_radius"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/covalentRadiusText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -251,12 +250,12 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="covalent_radius_text"
-            android:textIsSelectable="true"
+            android:text="@string/covalent_radius_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -264,31 +263,31 @@
             android:alpha="0.25"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <TextView
-            android:id="@+id/van_der_waals_radius_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/vanDerWaalsRadiusTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="Van Der Waals Radius:"
+            android:text="@string/van_der_waals_radius"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/vanDerWaalsRadiusText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
-            android:textIsSelectable="true"
             android:layout_marginBottom="8dp"
-            android:text="van_der_waals_radius_text"
+            android:text="@string/van_der_waals_radius_text"
             android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
             android:textSize="14sp" />
 
-    </LinearLayout>
-</LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

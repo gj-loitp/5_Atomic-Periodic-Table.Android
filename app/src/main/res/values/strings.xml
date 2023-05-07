@@ -169,5 +169,21 @@
     <string name="sothree_android_sliding_up_panel">Sothree Android Sliding Up Panel</string>
     <string name="solubility_table">Solubility Table</string>
     <string name="beta">Beta</string>
+    <string name="atomic_properties">Atomic Properties</string>
+    <string name="oxidation_states">Oxidation States:</string>
+    <string name="electron_configuration">Electron Configuration:</string>
+    <string name="electron_config_text">electron_config_text</string>
+    <string name="ion_charge">Ion Charge:</string>
+    <string name="ion_charge_text">ion_charge_text</string>
+    <string name="ionization_energies">Ionization Energies:</string>
+    <string name="ionization_energies_text">ionization_energies_text</string>
+    <string name="atomic_radius_empirical">Atomic Radius (Empirical):</string>
+    <string name="atomic_radius_e_text">atomic_radius_e_text</string>
+    <string name="atomic_radius_calculated">Atomic Radius (Calculated):</string>
+    <string name="atomic_radius_text">atomic_radius_text</string>
+    <string name="covalent_radius">Covalent Radius:</string>
+    <string name="covalent_radius_text">covalent_radius_text</string>
+    <string name="van_der_waals_radius">Van Der Waals Radius:</string>
+    <string name="van_der_waals_radius_text">van_der_waals_radius_text</string>
 
 </resources>

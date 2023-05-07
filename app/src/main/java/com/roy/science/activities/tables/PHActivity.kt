@@ -27,7 +27,7 @@ import kotlinx.android.synthetic.main.activity_ph.viewPh
 import kotlinx.android.synthetic.main.bar_ph_chips.bromothymolBlueBtn
 import kotlinx.android.synthetic.main.bar_ph_chips.congoRedBtn
 import kotlinx.android.synthetic.main.bar_ph_chips.methylOrangeBtn
-import kotlinx.android.synthetic.main.bar_ph_chips.phenolphthalein_btn
+import kotlinx.android.synthetic.main.bar_ph_chips.phenolphthaleinBtn
 
 class PHActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,7 +107,7 @@ class PHActivity : BaseActivity() {
             updatePhColor(item)
             updateButtonColor("congo_red_btn")
         }
-        phenolphthalein_btn.setOnClickListener {
+        phenolphthaleinBtn.setOnClickListener {
             val item = indicatorList[3]
             acidInfo.text = acidText + item.acid
             neutralInfo.text = neutralText + item.neutral
@@ -140,7 +140,7 @@ class PHActivity : BaseActivity() {
         methylOrangeBtn.background = getDrawable(R.drawable.shape_chip)
         bromothymolBlueBtn.background = getDrawable(R.drawable.shape_chip)
         congoRedBtn.background = getDrawable(R.drawable.shape_chip)
-        phenolphthalein_btn.background = getDrawable(R.drawable.shape_chip)
+        phenolphthaleinBtn.background = getDrawable(R.drawable.shape_chip)
 
         val delay = Handler(Looper.getMainLooper())
         delay.postDelayed({
