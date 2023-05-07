@@ -5,8 +5,6 @@ import android.app.Application
 //TODO firebase
 //TODO ad
 
-//TODO keystore
-
 //done
 //ic launcher
 //rate app
@@ -15,6 +13,7 @@ import android.app.Application
 //policy
 //manifest ad id
 //leak canary
+//keystore
 class LApp : Application() {
     override fun onCreate() {
         super.onCreate()

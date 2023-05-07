@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Atomic Periodic Table</string>
     <string name="personalization_settings">Personalization</string>
     <string name="open_table_button">Open table</string>
     <!-- Activity Element Info-->
