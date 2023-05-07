@@ -2,7 +2,6 @@ package com.roy.science
 
 import android.app.Application
 
-//TODO ic launcher
 //TODO rate app
 //TODO more app
 //TODO share app
@@ -12,6 +11,9 @@ import android.app.Application
 //TODO keystore
 //TODO manifest ad id
 //TODO leak canary
+
+//done
+//ic launcher
 class LApp : Application() {
     override fun onCreate() {
         super.onCreate()
