@@ -262,7 +262,7 @@
 
     <include
         android:id="@+id/shell"
-        layout="@layout/shell_view"
+        layout="@layout/v_shell_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="30dp"

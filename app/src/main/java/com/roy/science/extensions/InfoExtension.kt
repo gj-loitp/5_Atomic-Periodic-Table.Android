@@ -56,14 +56,14 @@ import kotlinx.android.synthetic.main.d_overview.elementYear
 import kotlinx.android.synthetic.main.d_properties.*
 import kotlinx.android.synthetic.main.d_temperatures.*
 import kotlinx.android.synthetic.main.d_thermodynamic.*
-import kotlinx.android.synthetic.main.shell_view.cardModelView
-import kotlinx.android.synthetic.main.shell_view.configData
-import kotlinx.android.synthetic.main.shell_view.eConfigData
 import kotlinx.android.synthetic.main.v_detail_emission.ivSpImgFetail
 import kotlinx.android.synthetic.main.v_favorite_bar.*
 import kotlinx.android.synthetic.main.v_loading_view.noImg
 import kotlinx.android.synthetic.main.v_loading_view.progressBar
 import kotlinx.android.synthetic.main.v_oxidiation_states.*
+import kotlinx.android.synthetic.main.v_shell_view.cardModelView
+import kotlinx.android.synthetic.main.v_shell_view.configData
+import kotlinx.android.synthetic.main.v_shell_view.eConfigData
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException

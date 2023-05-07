@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -13,7 +12,6 @@
     app:cardCornerRadius="18dp"
     app:cardElevation="100dp">
 
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,8 +19,8 @@
         <com.github.mmin18.widget.RealtimeBlurView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:realtimeBlurRadius="1dp"
             android:alpha="0.95"
+            app:realtimeBlurRadius="1dp"
             app:realtimeOverlayColor="@color/colorDarkPrimary" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -31,29 +29,30 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start|top"
             android:layout_margin="18dp"
+            android:contentDescription="@string/app_name"
             android:rotation="180"
             android:src="@drawable/ic_close"
             app:backgroundTint="?attr/colorPrimary"
             app:fabSize="mini" />
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/cardModelView"
             android:layout_width="match_parent"
             android:layout_height="240dp"
             app:srcCompat="@drawable/ic_launcher_background" />
 
-        <TextView
-            android:id="@+id/config_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvConfigTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="258dp"
             android:gravity="center_horizontal"
-            android:text="Electron Shell Configuration"
+            android:text="@string/electron_shell_configuration"
             android:textColor="#FEFEFE"
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/configData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,8 +64,8 @@
             android:textSize="12sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/e_config_title"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEConfigTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="320dp"
@@ -76,14 +75,14 @@
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/eConfigData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="344dp"
             android:alpha="0.8"
             android:gravity="center_horizontal"
-            android:text="Electron Shell Configuration"
+            android:text="@string/electron_shell_configuration"
             android:textColor="#FEFEFE"
             android:textSize="12sp"
             android:textStyle="bold" />

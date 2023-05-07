@@ -6,10 +6,8 @@
     android:padding="@dimen/widget_margin"
     android:theme="@style/ThemeOverlay.Science.AppWidgetContainer">
 
-
-
-    <TextView
-        android:id="@+id/appwidget_text"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAppwidgetText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

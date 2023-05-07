@@ -268,5 +268,7 @@
     <string name="electronegativity_table">Electronegativity Table</string>
     <string name="isotope">Isotope</string>
     <string name="search_for_elements">Search For Elements</string>
+    <string name="electron_shell_configuration">Electron Shell Configuration</string>
+    <string name="search_for_element">Search for element</string>
 
 </resources>

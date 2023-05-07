@@ -30,7 +30,7 @@ class ShortCommandWidget : AppWidgetProvider() {
 
             //Open App on Widget Click
             remoteViews.setOnClickPendingIntent(
-                R.id.widget_search_bar,
+                R.id.flWidgetSearchBar,
                 PendingIntent.getActivity(
                     /* context = */ context,
                     /* requestCode = */ 0,
