@@ -21,7 +21,7 @@
         android:alpha="0.0"/>
 
     <LinearLayout
-        android:id="@+id/i_box"
+        android:id="@+id/iBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

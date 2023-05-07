@@ -18,8 +18,8 @@ import kotlinx.android.synthetic.main.activity_submit.commonTitleBackSubColor
 import kotlinx.android.synthetic.main.activity_submit.dropBtn
 import kotlinx.android.synthetic.main.activity_submit.dropIssue
 import kotlinx.android.synthetic.main.activity_submit.iBtn
-import kotlinx.android.synthetic.main.activity_submit.i_content
-import kotlinx.android.synthetic.main.activity_submit.i_title
+import kotlinx.android.synthetic.main.activity_submit.iContent
+import kotlinx.android.synthetic.main.activity_submit.iTitle
 import kotlinx.android.synthetic.main.activity_submit.submitScroll
 import kotlinx.android.synthetic.main.activity_submit.submitTitle
 import kotlinx.android.synthetic.main.activity_submit.submitTitleDownstate
@@ -157,8 +157,8 @@ class SubmitActivity : BaseActivity() {
 
     private fun buildForm(type: String) {
         iBtn.setOnClickListener {
-            val title = i_title.text.toString()
-            val content = i_content.text.toString()
+            val title = iTitle.text.toString()
+            val content = iContent.text.toString()
             val request = Intent(Intent.ACTION_VIEW)
             request.data = Uri.parse(
                 Uri.parse("mailto:roy93group@gmail.com?subject=$type $title&body=$content")

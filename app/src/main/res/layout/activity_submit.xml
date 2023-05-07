@@ -1,46 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <FrameLayout
-        android:id="@+id/viewSub"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewSub"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="?attr/backgroundColor">
+        android:clickable="true"
+        android:focusable="true" />
 
-        <TextView
-            android:id="@+id/background"
+    <ScrollView
+        android:id="@+id/submitScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:focusable="true" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ScrollView
-                android:id="@+id/submitScroll"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/submitTitleDownstate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="28dp"
+                android:text="@string/submit_activity_title"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="32sp"
+                android:textStyle="normal" />
+
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/submitTitleDownstate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:elevation="0dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"
-                        android:paddingBottom="28dp"
-                        android:text="@string/submit_activity_title"
-                        android:textColor="?attr/colorOnSurface"
-                        android:textSize="32sp"
-                        android:textStyle="normal" />
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
 
                 <include
                     android:id="@+id/dropIssue"
@@ -51,8 +50,8 @@
                     android:layout_marginTop="32dp"
                     android:visibility="gone" />
 
-                <LinearLayout
-                    android:id="@+id/i_box"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/iBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -62,15 +61,16 @@
                     android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorSurfaceVariant"
                     android:elevation="2dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="PrivateResource">
 
-                    <LinearLayout
+                    <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:layout_marginTop="@dimen/margin"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/dropBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -88,7 +88,7 @@
                             android:textColor="?attr/colorOnSurfaceVariant" />
 
                         <EditText
-                            android:id="@+id/i_title"
+                            android:id="@+id/iTitle"
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
                             android:layout_marginStart="@dimen/margin"
@@ -106,10 +106,10 @@
                             android:textColor="?attr/colorOnSurface"
                             android:textColorHint="?attr/colorOnSurface"
                             android:textSize="14sp" />
-                    </LinearLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <EditText
-                        android:id="@+id/i_content"
+                        android:id="@+id/iContent"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:layout_marginStart="@dimen/margin"
@@ -120,7 +120,7 @@
                         android:focusable="true"
                         android:focusableInTouchMode="true"
                         android:gravity="top"
-                        android:hint="Description"
+                        android:hint="@string/description"
                         android:imeOptions="actionSearch"
                         android:inputType="text"
                         android:maxLines="1"
@@ -132,10 +132,11 @@
                         android:textColorHint="?attr/colorOnSurface"
                         android:textSize="14sp" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/iBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
+                        android:layout_gravity="end"
                         android:layout_marginStart="@dimen/margin"
                         android:layout_marginTop="@dimen/margin"
                         android:layout_marginEnd="@dimen/margin"
@@ -143,77 +144,80 @@
                         android:background="@drawable/shape_toast"
                         android:backgroundTint="?attr/colorPrimary"
                         android:clickable="true"
+                        android:drawableEnd="@drawable/ic_send"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="?attr/colorOnPrimary"
                         android:elevation="2dp"
                         android:focusable="true"
-                        android:layout_gravity="end"
-                        android:gravity="center_vertical"
-                        android:drawableEnd="@drawable/ic_send"
-                        android:drawableTint="?attr/colorOnPrimary"
-                        android:paddingEnd="16dp"
-                        android:drawablePadding="8dp"
-                        android:paddingStart="24dp"
                         android:foreground="@drawable/ripple_bkg"
-                        android:textStyle="normal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="16dp"
                         android:text="@string/submit_send"
+                        android:textColor="?attr/colorOnPrimary"
                         android:textSize="16sp"
-                        android:textColor="?attr/colorOnPrimary" />
+                        android:textStyle="normal" />
 
-                </LinearLayout>
-                    </FrameLayout>
-                </LinearLayout>
-            </ScrollView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </FrameLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
     <FrameLayout
-            android:id="@+id/commonTitleBackSub"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:elevation="1dp"
-            android:background="?attr/colorSurface"
-            android:gravity="center|center_vertical"
-            android:orientation="horizontal">
+        android:id="@+id/commonTitleBackSub"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorSurface"
+        android:elevation="1dp"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal">
 
         <FrameLayout
             android:id="@+id/commonTitleBackSubColor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="?attr/colorPrimary"
-            android:alpha="0.11"/>
+            android:alpha="0.11"
+            android:background="?attr/colorPrimary" />
 
-            <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/titleBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="bottom"
-                android:orientation="vertical">
+                android:layout_height="56dp">
 
-                <FrameLayout
-                    android:id="@+id/titleBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp">
+                <ImageButton
+                    android:id="@+id/backBtn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/description"
+                    android:rotation="180"
+                    android:src="@drawable/ic_arrow_back_whit"
+                    app:tint="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
 
-                    <ImageButton
-                        android:id="@+id/backBtn"
-                        style="?android:attr/borderlessButtonStyle"
-                        android:layout_width="56dp"
-                        android:layout_height="56dp"
-                        android:layout_gravity="center_vertical"
-                        android:rotation="180"
-                        app:tint="?attr/colorOnSecondaryContainer"
-                        android:src="@drawable/ic_arrow_back_whit" />
-
-                    <TextView
-                        android:id="@+id/submitTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_marginStart="70dp"
-                        android:alpha="0.9"
-                        android:layout_height="56dp"
-                        android:gravity="center"
-                        android:paddingStart="0dp"
-                        android:paddingEnd="0dp"
-                        android:text="@string/submit_activity_title"
-                        android:textAlignment="center"
-                        android:textColor="?attr/colorOnSecondaryContainer"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-                </FrameLayout>
-            </LinearLayout>
-        </FrameLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/submitTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="70dp"
+                    android:alpha="0.9"
+                    android:gravity="center"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/submit_activity_title"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="PrivateResource" />
+            </FrameLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
 </FrameLayout>
