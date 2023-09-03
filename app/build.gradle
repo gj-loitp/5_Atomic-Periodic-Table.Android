@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-//apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdk 33
@@ -98,6 +97,7 @@ android {
         }
 
     }
+    namespace 'com.roy.science'
 }
 
 dependencies {
