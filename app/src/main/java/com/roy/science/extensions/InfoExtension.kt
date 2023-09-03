@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.view.WindowInsets
 import androidx.appcompat.app.AppCompatActivity
@@ -406,6 +407,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
 
     private fun loadImage(url: String?) {
         try {
+            Log.d(TAG, "roy93 loadImage url $url")
             Picasso.get().load(url.toString()).into(elementImage)
         } catch (e: ConnectException) {
             offlineDiv.visibility = View.VISIBLE
