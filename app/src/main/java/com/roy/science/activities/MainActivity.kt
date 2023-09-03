@@ -22,10 +22,12 @@ import android.view.animation.ScaleAnimation
 import android.view.inputmethod.InputMethodManager
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.roy.science.BuildConfig
 import com.roy.science.R
 import com.roy.science.activities.tables.DictionaryActivity
 import com.roy.science.adapter.ElementAdapter
@@ -33,6 +35,7 @@ import com.roy.science.anim.Anim
 import com.roy.science.extensions.TableExtension
 import com.roy.science.extensions.moreApp
 import com.roy.science.extensions.openBrowserPolicy
+import com.roy.science.extensions.openUrlInBrowser
 import com.roy.science.extensions.rateApp
 import com.roy.science.extensions.shareApp
 import com.roy.science.model.Element
@@ -185,7 +188,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
             override fun onPanelStateChanged(
                 panel: View?,
                 previousState: PanelState,
-                newState: PanelState
+                newState: PanelState,
             ) {
                 if (slidingLayout.panelState === PanelState.COLLAPSED) {
                     navMenuInclude.visibility = View.GONE
@@ -213,11 +216,13 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
     }
 
     private fun scrollAdapter() {
-        scrollView.setOnScrollChangeListener { _: TwoWayNestedScrollView?,
-                                               scrollX: Int,
-                                               scrollY: Int,
-                                               _: Int,
-                                               _: Int ->
+        scrollView.setOnScrollChangeListener {
+                _: TwoWayNestedScrollView?,
+                scrollX: Int,
+                scrollY: Int,
+                _: Int,
+                _: Int,
+            ->
             leftBar.scrollTo(/* x = */ 0, /* y = */ scrollY)
             topBar.scrollTo(/* x = */ scrollX, /* y = */ 0)
         }
@@ -364,6 +369,17 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         }
         btPolicy.setOnClickListener {
             openBrowserPolicy()
+        }
+        btGithub.setOnClickListener {
+            if (BuildConfig.DEBUG) {
+                openUrlInBrowser("https://github.com/tplloi/Atomic-Periodic-Table.Android/tree/dev")
+            } else {
+                Toast.makeText(
+                    /* context = */ this,
+                    /* text = */ "This feature is only available in Debug mode",
+                    /* duration = */ Toast.LENGTH_SHORT
+                ).show()
+            }
         }
     }
 
@@ -542,7 +558,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         navLin.setPadding(/* left = */ left, /* top = */ 0, /* right = */ right, /* bottom = */ 0)
 
