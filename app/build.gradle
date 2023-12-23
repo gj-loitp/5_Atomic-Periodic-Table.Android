@@ -9,8 +9,8 @@ android {
         applicationId "com.roy93group.science"
         minSdkVersion 23
         targetSdkVersion 34
-        versionCode 20231223
-        versionName "2023.12.23"
+        versionCode 20231224
+        versionName "2023.12.24"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
