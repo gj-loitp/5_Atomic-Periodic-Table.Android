@@ -108,7 +108,7 @@
 
                 <include
                     android:id="@+id/ldnPlace"
-                    layout="@layout/v_loading_view"
+                    layout="@layout/view_loading_view"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center_horizontal|center_vertical" />
@@ -262,7 +262,7 @@
 
     <include
         android:id="@+id/shell"
-        layout="@layout/v_shell_view"
+        layout="@layout/view_shell_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="30dp"

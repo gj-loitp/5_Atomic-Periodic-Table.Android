@@ -50,7 +50,7 @@ import kotlinx.android.synthetic.main.a_main.*
 import kotlinx.android.synthetic.main.search_layout.*
 import kotlinx.android.synthetic.main.v_filter_view.*
 import kotlinx.android.synthetic.main.v_hover_menu.*
-import kotlinx.android.synthetic.main.v_nav_menu_view.*
+import kotlinx.android.synthetic.main.view_nav_menu_view.*
 import org.deejdev.twowaynestedscrollview.TwoWayNestedScrollView
 import java.util.Locale
 

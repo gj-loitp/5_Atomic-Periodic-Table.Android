@@ -10,7 +10,7 @@ import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import kotlinx.android.synthetic.main.a_settings_licenses.*
-import kotlinx.android.synthetic.main.v_license_info.*
+import kotlinx.android.synthetic.main.view_license_info.*
 
 class LicensesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

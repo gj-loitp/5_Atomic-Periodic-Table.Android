@@ -158,7 +158,7 @@
 
         <include
             android:id="@+id/lInc"
-            layout="@layout/v_license_info"
+            layout="@layout/view_license_info"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"

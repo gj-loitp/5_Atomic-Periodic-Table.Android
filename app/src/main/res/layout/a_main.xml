@@ -769,7 +769,7 @@
 
     <include
         android:id="@+id/navMenuInclude"
-        layout="@layout/v_nav_menu_view"
+        layout="@layout/view_nav_menu_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="100dp"
