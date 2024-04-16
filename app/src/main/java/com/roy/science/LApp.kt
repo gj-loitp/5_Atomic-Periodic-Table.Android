@@ -4,17 +4,17 @@ import android.app.Application
 import android.widget.Toast
 
 //TODO firebase
-//TODO ad
+//TODO ad applovin
+//TODO ic launcher
+//TODO rate app
+//TODO more app
+//TODO share app
+//TODO policy
+//TODO manifest ad id
+//TODO leak canary
+//TODO keystore
 
 //done
-//ic launcher
-//rate app
-//more app
-//share app
-//policy
-//manifest ad id
-//leak canary
-//keystore
 class LApp : Application() {
     override fun onCreate() {
         super.onCreate()
