@@ -136,12 +136,12 @@
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/v_solubility_group_5"
+                            layout="@layout/view_solubility_group_5"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/v_solubility_group_6"
+                            layout="@layout/view_solubility_group_6"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 

@@ -21,14 +21,14 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/space_empty"
+            android:id="@+id/spaceEmpty"
             android:layout_width="match_parent"
             android:layout_height="1.5dp"
             android:background="?attr/colorSurface"
             android:elevation="4dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fluorine_minus"
+            android:id="@+id/fluorineMinus"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
             android:background="?attr/colorSurface"
@@ -40,7 +40,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/chlorine_minus"
+            android:id="@+id/chlorineMinus"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
             android:background="?attr/colorSurface"
@@ -52,7 +52,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/bromine_mins"
+            android:id="@+id/bromineMins"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
             android:background="?attr/colorSurface"
@@ -64,7 +64,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/iodine_mins"
+            android:id="@+id/iodineMins"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
             android:background="?attr/colorSurface"
@@ -124,7 +124,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/no3_mins"
+            android:id="@+id/no3Mins"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
             android:background="?attr/colorSurface"
@@ -136,7 +136,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/po4_mins"
+            android:id="@+id/po4Mins"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
             android:background="?attr/colorSurface"
