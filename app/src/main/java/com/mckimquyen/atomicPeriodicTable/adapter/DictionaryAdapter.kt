@@ -30,7 +30,7 @@ class DictionaryAdapter(
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.v_text_list_item, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.view_text_list_item, parent, false)
         return ViewHolder(v)
     }
 

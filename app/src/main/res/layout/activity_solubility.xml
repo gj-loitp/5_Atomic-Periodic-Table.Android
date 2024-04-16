@@ -97,7 +97,7 @@
             android:orientation="horizontal">
 
             <include
-                layout="@layout/v_solubility_left"
+                layout="@layout/view_solubility_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -146,17 +146,17 @@
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/v_solubility_group_7"
+                            layout="@layout/view_solubility_group_7"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/v_solubility_group_8"
+                            layout="@layout/view_solubility_group_8"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 
                         <include
-                            layout="@layout/v_solubility_group_9"
+                            layout="@layout/view_solubility_group_9"
                             android:layout_width="92dp"
                             android:layout_height="wrap_content" />
 

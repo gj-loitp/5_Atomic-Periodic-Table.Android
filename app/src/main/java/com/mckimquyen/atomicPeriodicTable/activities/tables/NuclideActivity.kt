@@ -30,7 +30,7 @@ import kotlinx.android.synthetic.main.activity_nuclide.scrollViewNuc
 import kotlinx.android.synthetic.main.activity_nuclide.seekBarNuc
 import kotlinx.android.synthetic.main.activity_nuclide.viewStub
 import kotlinx.android.synthetic.main.activity_nuclide.viewNuc
-import kotlinx.android.synthetic.main.v_stub_nuclide.nuc_view
+import kotlinx.android.synthetic.main.view_stub_nuclide.nuc_view
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException

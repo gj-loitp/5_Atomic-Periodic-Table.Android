@@ -13,8 +13,6 @@
     <color name="colorDarkRipple">#40E9EAEE</color>
     <color name="colorDarkRippleItem">#A81B94E4</color>
     <color name="wikipediaColor">#FFFFFF</color>
-    <!-- Period System colrs-->
-    <!-- Category Colors -->
     <color name="non_metals">#81c784</color>
     <color name="alkali_metals">#FF6666</color>
     <color name="alkaline">#FFC370</color>
