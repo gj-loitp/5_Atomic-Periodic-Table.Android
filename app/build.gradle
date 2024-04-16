@@ -95,7 +95,7 @@ android {
         }
 
     }
-    namespace 'com.roy.science'
+    namespace 'com.mckimquyen.atomicPeriodicTable'
 }
 
 dependencies {
