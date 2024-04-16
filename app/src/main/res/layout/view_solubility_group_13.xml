@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/pb_view"
+    android:id="@+id/pbView"
     android:layout_width="92dp"
     android:layout_height="wrap_content"
     android:clickable="true"
@@ -40,7 +40,7 @@
         android:textColor="@color/colorLightError" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sol_2"
+        android:id="@+id/sol2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
         android:alpha="1"
@@ -51,7 +51,7 @@
         android:textColor="?attr/colorAccent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sol_3"
+        android:id="@+id/sol3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
         android:alpha="0.5"
@@ -95,7 +95,7 @@
         android:textColor="@color/colorLightError" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sol_7"
+        android:id="@+id/sol7"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
         android:alpha="1"
@@ -106,7 +106,7 @@
         android:textColor="@color/colorLightError" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sol_8"
+        android:id="@+id/sol8"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
         android:alpha="1"

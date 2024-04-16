@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ag_view"
+    android:id="@+id/cuView"
     android:layout_width="92dp"
     android:layout_height="wrap_content"
     android:clickable="true"
@@ -16,7 +16,7 @@
         android:background="?attr/colorSurface"
         android:elevation="4dp"
         android:gravity="center"
-        android:text="Ag^+"
+        android:text="Cu^2+"
         android:textAlignment="center"
         android:textColor="?attr/colorOnSurface"
         android:textStyle="bold" />
@@ -40,37 +40,27 @@
         android:textColor="?attr/colorAccent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sol_2"
+        android:id="@+id/sol2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
         android:background="@drawable/shape_outline"
         android:gravity="center"
-        android:text="I"
+        android:text="S"
         android:textAlignment="center"
-        android:textColor="@color/colorLightError" />
+        android:textColor="?attr/colorAccent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sol_3"
+        android:id="@+id/sol3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
         android:background="@drawable/shape_outline"
         android:gravity="center"
-        android:text="I"
+        android:text="S"
         android:textAlignment="center"
-        android:textColor="@color/colorLightError" />
+        android:textColor="?attr/colorAccent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/sol4"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/row_height"
-        android:background="@drawable/shape_outline"
-        android:gravity="center"
-        android:text="I"
-        android:textAlignment="center"
-        android:textColor="@color/colorLightError" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sol5"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
         android:alpha="0.66"
@@ -79,6 +69,17 @@
         android:text="---"
         android:textAlignment="center"
         android:textColor="?attr/colorOnSurface" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sol5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_height"
+        android:alpha="1"
+        android:background="@drawable/shape_outline"
+        android:gravity="center"
+        android:text="I"
+        android:textAlignment="center"
+        android:textColor="@color/colorLightError" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/sol6"
@@ -92,26 +93,25 @@
         android:textColor="@color/colorLightError" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sol_7"
+        android:id="@+id/sol7"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
-        android:alpha="0.5"
         android:background="@drawable/shape_outline"
         android:gravity="center"
-        android:text="Ss"
+        android:text="S"
         android:textAlignment="center"
         android:textColor="?attr/colorAccent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/sol_8"
+        android:id="@+id/sol8"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
-        android:alpha="1"
+        android:alpha="0.66"
         android:background="@drawable/shape_outline"
         android:gravity="center"
-        android:text="I"
+        android:text="---"
         android:textAlignment="center"
-        android:textColor="@color/colorLightError" />
+        android:textColor="?attr/colorOnSurface" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/sol9"
