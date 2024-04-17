@@ -4,21 +4,21 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingTop="288dp"
+    android:paddingTop="96dp"
     tools:ignore="HardcodedText">
 
     <FrameLayout
-        android:id="@+id/zinc_frame"
+        android:id="@+id/oxygenFrame"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="2dp"
         android:elevation="0dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/zinc_btn"
+            android:id="@+id/oxygen_btn"
             android:layout_width="80dp"
             android:layout_height="78dp"
             android:layout_gravity="center"
@@ -26,7 +26,7 @@
             android:elevation="6dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/zinc_number"
+            android:id="@+id/oxygen_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="14dp"
@@ -34,47 +34,46 @@
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="top|end"
-            android:text="30"
+            android:text="8"
             android:textAlignment="gravity"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/zinc_element"
+            android:id="@+id/oxygen_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="24dp"
             android:gravity="center"
-            android:text="Zn"
+            android:text="O"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/zinc_text"
+            android:id="@+id/oxygen_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="bottom|center_horizontal"
-            android:text="Zinc"
+            android:text="Oxygen"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="10sp" />
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/cadmium_frame"
+        android:id="@+id/sulfur_frame"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
         android:layout_marginStart="4dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/cadmium_btn"
+            android:id="@+id/sulfur_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
@@ -82,7 +81,7 @@
             android:elevation="1dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/cadmium_number"
+            android:id="@+id/sulfur_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="14dp"
@@ -90,47 +89,46 @@
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="top|end"
-            android:text="48"
+            android:text="16"
             android:textAlignment="gravity"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/cadmium_element"
+            android:id="@+id/sulfur_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="24dp"
             android:gravity="center"
-            android:text="Cd"
+            android:text="S"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/cadmium_text"
+            android:id="@+id/sulfur_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="bottom|center_horizontal"
-            android:text="Cadmium"
+            android:text="Sulfur"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="10sp" />
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/mercury_frame"
+        android:id="@+id/selenium_frame"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
         android:layout_marginStart="4dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/mercury_btn"
+            android:id="@+id/selenium_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
@@ -138,7 +136,7 @@
             android:elevation="1dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/mercury_number"
+            android:id="@+id/selenium_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="14dp"
@@ -146,47 +144,46 @@
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="top|end"
-            android:text="80"
+            android:text="34"
             android:textAlignment="gravity"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/mercury_element"
+            android:id="@+id/selenium_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="24dp"
             android:gravity="center"
-            android:text="Hg"
+            android:text="Se"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/mercury_text"
+            android:id="@+id/selenium_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="bottom|center_horizontal"
-            android:text="Mercury"
+            android:text="Selenium"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="10sp" />
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/copernicium_frame"
+        android:id="@+id/tellurium_frame"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
         android:layout_marginStart="4dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/copernicium_btn"
+            android:id="@+id/tellurium_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
@@ -194,7 +191,7 @@
             android:elevation="1dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/copernicium_number"
+            android:id="@+id/tellurium_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="14dp"
@@ -202,46 +199,155 @@
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="top|end"
-            android:text="112"
+            android:text="52"
             android:textAlignment="gravity"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/copernicium_element"
+            android:id="@+id/tellurium_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="24dp"
             android:gravity="center"
-            android:text="Cn"
+            android:text="Te"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/copernicium_text"
+            android:id="@+id/tellurium_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="bottom|center_horizontal"
-            android:text="Copernicium"
+            android:text="Tellurium"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="10sp" />
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/terbium_frame"
+        android:id="@+id/polonium_frame"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_margin="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="6dp"
+        android:elevation="0dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/polonium_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_element_nodetail"
+            android:elevation="1dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/polonium_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="14dp"
+            android:alpha="0.9"
+            android:elevation="24dp"
+            android:gravity="top|end"
+            android:text="84"
+            android:textAlignment="gravity"
+            android:textColor="?attr/actionMenuTextColor"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/polonium_element"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="24dp"
+            android:gravity="center"
+            android:text="Po"
+            android:textColor="?attr/actionMenuTextColor"
+            android:textSize="24sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/polonium_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:alpha="0.9"
+            android:elevation="24dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Polonium"
+            android:textColor="?attr/actionMenuTextColor"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/livermorium_frame"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_margin="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="6dp"
+        android:elevation="0dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/livermorium_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_element_nodetail"
+            android:elevation="1dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/livermorium_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="14dp"
+            android:alpha="0.9"
+            android:elevation="24dp"
+            android:gravity="top|end"
+            android:text="116"
+            android:textAlignment="gravity"
+            android:textColor="?attr/actionMenuTextColor"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/livermorium_element"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="24dp"
+            android:gravity="center"
+            android:text="Lv"
+            android:textColor="?attr/actionMenuTextColor"
+            android:textSize="24sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/livermorium_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:alpha="0.9"
+            android:elevation="24dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Livermorium"
+            android:textColor="?attr/actionMenuTextColor"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/thulium_frame"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="2dp"
         android:elevation="0dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/terbium_btn"
+            android:id="@+id/thulium_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
@@ -249,7 +355,7 @@
             android:elevation="1dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/terbium_number"
+            android:id="@+id/thulium_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="14dp"
@@ -257,47 +363,46 @@
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="top|end"
-            android:text="65"
+            android:text="69"
             android:textAlignment="gravity"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/terbium_element"
+            android:id="@+id/thulium_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="24dp"
             android:gravity="center"
-            android:text="Tb"
+            android:text="Tm"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/terbium_text"
+            android:id="@+id/thulium_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="bottom|center_horizontal"
-            android:text="Terbium"
+            android:text="Thulium"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="10sp" />
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/berkelium_frame"
+        android:id="@+id/mendelevium_frame"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
         android:layout_marginStart="4dp"
-        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="6dp"
         android:elevation="0dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/berkelium_btn"
+            android:id="@+id/mendelevium_btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
@@ -305,7 +410,7 @@
             android:elevation="1dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/berkelium_number"
+            android:id="@+id/mendelevium_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="14dp"
@@ -313,30 +418,30 @@
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="top|end"
-            android:text="97"
+            android:text="101"
             android:textAlignment="gravity"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="12sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/berkelium_element"
+            android:id="@+id/mendelevium_element"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:elevation="24dp"
             android:gravity="center"
-            android:text="Bk"
+            android:text="Md"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="24sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/berkelium_text"
+            android:id="@+id/mendelevium_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
             android:alpha="0.9"
             android:elevation="24dp"
             android:gravity="bottom|center_horizontal"
-            android:text="Berkelium"
+            android:text="Mendelevium"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="10sp" />
     </FrameLayout>
