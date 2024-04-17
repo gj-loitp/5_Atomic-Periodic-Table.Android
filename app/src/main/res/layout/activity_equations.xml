@@ -186,7 +186,7 @@
 
     <include
         android:id="@+id/eInc"
-        layout="@layout/v_equations_info"
+        layout="@layout/view_equations_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone" />

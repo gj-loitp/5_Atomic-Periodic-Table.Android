@@ -27,10 +27,10 @@ import com.mckimquyen.atomicPeriodicTable.utils.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kotlinx.android.synthetic.main.activity_isotopes_experimental.*
-import kotlinx.android.synthetic.main.v_filter_view_iso.isoAlphabetBtn
-import kotlinx.android.synthetic.main.v_filter_view_iso.isoElementNumbBtn
-import kotlinx.android.synthetic.main.v_isotope_panel.frameIso
-import kotlinx.android.synthetic.main.v_isotope_panel.slidingLayoutI
+import kotlinx.android.synthetic.main.view_filter_view_iso.isoAlphabetBtn
+import kotlinx.android.synthetic.main.view_filter_view_iso.isoElementNumbBtn
+import kotlinx.android.synthetic.main.view_isotope_panel.frameIso
+import kotlinx.android.synthetic.main.view_isotope_panel.slidingLayoutI
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException

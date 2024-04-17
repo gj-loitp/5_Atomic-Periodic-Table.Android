@@ -81,7 +81,7 @@
                         android:paddingBottom="16dp">
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_1"
+                            android:id="@+id/ionText1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -171,7 +171,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_10"
+                            android:id="@+id/ionText10"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -191,7 +191,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_12"
+                            android:id="@+id/ionText12"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -211,7 +211,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_14"
+                            android:id="@+id/ionText14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -231,7 +231,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_16"
+                            android:id="@+id/ionText16"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -251,7 +251,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_18"
+                            android:id="@+id/ionText18"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -271,7 +271,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_20"
+                            android:id="@+id/ionText20"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -291,7 +291,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_22"
+                            android:id="@+id/ionText22"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -311,7 +311,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_24"
+                            android:id="@+id/ionText24"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -341,7 +341,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_27"
+                            android:id="@+id/ionText27"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -371,7 +371,7 @@
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/ion_text_30"
+                            android:id="@+id/ionText30"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"

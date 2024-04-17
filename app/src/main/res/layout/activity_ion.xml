@@ -186,7 +186,7 @@
 
     <include
         android:id="@+id/ionDetail"
-        layout="@layout/v_ion_details"
+        layout="@layout/view_ion_details"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"

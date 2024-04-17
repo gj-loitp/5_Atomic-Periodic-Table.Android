@@ -37,7 +37,7 @@ import kotlinx.android.synthetic.main.d_properties.electronView
 import kotlinx.android.synthetic.main.d_properties.spImg
 import kotlinx.android.synthetic.main.d_properties.spOffline
 import kotlinx.android.synthetic.main.v_detail_emission.closeEmissionBtn
-import kotlinx.android.synthetic.main.v_favorite_bar.editFavBtn
+import kotlinx.android.synthetic.main.view_favorite_bar.editFavBtn
 import kotlinx.android.synthetic.main.view_shell_view.closeShellBtn
 import org.json.JSONArray
 import org.json.JSONObject

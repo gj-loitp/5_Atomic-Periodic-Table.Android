@@ -32,7 +32,7 @@ class ElementAdapter(
         viewType: Int
     ): ViewHolder {
         val v =
-            LayoutInflater.from(parent.context).inflate(R.layout.v_isotope_list_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.view_isotope_list_item, parent, false)
         return ViewHolder(v)
     }
 

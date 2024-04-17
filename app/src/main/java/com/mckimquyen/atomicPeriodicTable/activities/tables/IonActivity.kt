@@ -33,8 +33,8 @@ import kotlinx.android.synthetic.main.activity_ion.ionView
 import kotlinx.android.synthetic.main.activity_ion.searchBarIon
 import kotlinx.android.synthetic.main.activity_ion.searchBtnIon
 import kotlinx.android.synthetic.main.activity_ion.viewIon
-import kotlinx.android.synthetic.main.v_ion_details.ionDetailTitle
-import kotlinx.android.synthetic.main.v_ion_details.tvDetailBackgroundIon
+import kotlinx.android.synthetic.main.view_ion_details.ionDetailTitle
+import kotlinx.android.synthetic.main.view_ion_details.tvDetailBackgroundIon
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStream

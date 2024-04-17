@@ -165,7 +165,7 @@
 
             <include
                 android:id="@+id/favoriteBar"
-                layout="@layout/v_favorite_bar"
+                layout="@layout/view_favorite_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

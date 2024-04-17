@@ -33,10 +33,10 @@ import kotlinx.android.synthetic.main.activity_equations.searchBarEqu
 import kotlinx.android.synthetic.main.activity_equations.searchBtnEqu
 import kotlinx.android.synthetic.main.activity_equations.titleBoxEqu
 import kotlinx.android.synthetic.main.activity_equations.viewEqu
-import kotlinx.android.synthetic.main.v_equations_info.eBackBtn
-import kotlinx.android.synthetic.main.v_equations_info.eText
-import kotlinx.android.synthetic.main.v_equations_info.eTitle
-import kotlinx.android.synthetic.main.v_equations_info.lBackgroundE
+import kotlinx.android.synthetic.main.view_equations_info.eBackBtn
+import kotlinx.android.synthetic.main.view_equations_info.eText
+import kotlinx.android.synthetic.main.view_equations_info.eTitle
+import kotlinx.android.synthetic.main.view_equations_info.lBackgroundE
 import java.util.Locale
 
 class EquationsActivity : BaseActivity(), EquationsAdapter.OnEquationClickListener {
