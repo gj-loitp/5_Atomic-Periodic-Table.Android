@@ -12,21 +12,21 @@ import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import java.util.Locale
 
-class IsotopeAdapter(
+class IsotopeAdt(
     var elementList: ArrayList<Element>,
     var clickListener: OnElementClickListener,
-    val context: Context
-) : RecyclerView.Adapter<IsotopeAdapter.ViewHolder>() {
+    val context: Context,
+) : RecyclerView.Adapter<IsotopeAdt.ViewHolder>() {
     override fun onBindViewHolder(
         holder: ViewHolder,
-        position: Int
+        position: Int,
     ) {
         holder.initialize(item = elementList[position], action = clickListener, context = context)
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): ViewHolder {
         val v =
             LayoutInflater.from(parent.context).inflate(R.layout.view_isotope_list_item, parent, false)
@@ -38,17 +38,19 @@ class IsotopeAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val textViewElement = itemView.findViewById(R.id.tvIsoType) as TextView
-        private val textViewShort = itemView.findViewById(R.id.tvIcIsoType) as TextView
-        private val textViewNumb = itemView.findViewById(R.id.tvIsoNumb) as TextView
+        private val textViewElement: TextView = itemView.findViewById(R.id.tvIsoType)
+        private val textViewShort: TextView = itemView.findViewById(R.id.tvIcIsoType)
+        private val textViewNumb: TextView = itemView.findViewById(R.id.tvIsoNumb)
 
         fun initialize(
             item: Element,
             action: OnElementClickListener,
-            context: Context
+            context: Context,
         ) {
             textViewElement.text = item.element
-            textViewElement.text = item.element.capitalize(Locale.getDefault())
+            textViewElement.text = item.element.replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString()
+            }
             textViewShort.text = item.short
             textViewNumb.text = item.number.toString()
 

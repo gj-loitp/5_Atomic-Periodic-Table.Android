@@ -6,15 +6,15 @@ import android.widget.TextView
 import com.ernestoyaquello.dragdropswiperecyclerview.DragDropSwipeAdapter
 import com.mckimquyen.atomicPeriodicTable.R
 
-class OrderAdapter(dataSet: List<String> = emptyList()) :
-    DragDropSwipeAdapter<String, OrderAdapter.ViewHolder>(dataSet) {
+class OrderAdt(dataSet: List<String> = emptyList()) :
+    DragDropSwipeAdapter<String, OrderAdt.ViewHolder>(dataSet) {
 
     class ViewHolder(itemView: View) : DragDropSwipeAdapter.ViewHolder(itemView) {
         val itemText: TextView = itemView.findViewById(R.id.tvTitleOrder)
         val dragIcon: ImageView = itemView.findViewById(R.id.ivHandleOrder)
     }
 
-    override fun getViewHolder(itemLayout: View) = ViewHolder(itemLayout)
+    override fun getViewHolder(itemView: View) = ViewHolder(itemView)
 
     override fun onBindViewHolder(
         item: String,

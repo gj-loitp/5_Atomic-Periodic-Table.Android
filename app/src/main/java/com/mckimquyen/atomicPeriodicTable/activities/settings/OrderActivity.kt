@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ernestoyaquello.dragdropswiperecyclerview.listener.OnItemDragListener
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
-import com.mckimquyen.atomicPeriodicTable.adt.OrderAdapter
+import com.mckimquyen.atomicPeriodicTable.adt.OrderAdt
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_order_settings_page.*
 
@@ -42,7 +42,7 @@ class OrderActivity : BaseActivity() {
         }
         setContentView(R.layout.a_order_settings_page) //REMEMBER: Never move any function calls above this
         val dataSet = listOf("Item 1", "Item 2", "Item 3", "Item 4", "Item 5")
-        val mAdapter = OrderAdapter(dataSet)
+        val mAdapter = OrderAdt(dataSet)
         val mList = ordRecycler
         mList.layoutManager = LinearLayoutManager(this)
         mList.adapter = mAdapter

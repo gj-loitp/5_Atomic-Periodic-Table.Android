@@ -15,7 +15,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.adt.IsotopeAdapter
+import com.mckimquyen.atomicPeriodicTable.adt.IsotopeAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
@@ -37,9 +37,9 @@ import java.io.IOException
 import java.io.InputStream
 import java.util.Locale
 
-class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementClickListener {
+class IsotopesActivityExperimental : BaseActivity(), IsotopeAdt.OnElementClickListener {
     private var elementList = ArrayList<Element>()
-    var mAdapter = IsotopeAdapter(elementList = elementList, clickListener = this, context = this)
+    var mAdapter = IsotopeAdt(elementList = elementList, clickListener = this, context = this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,7 +74,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
         recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         val elements = ArrayList<Element>()
         ElementModel.getList(elements)
-        val adapter = IsotopeAdapter(elementList = elements, clickListener = this, context = this)
+        val adapter = IsotopeAdt(elementList = elements, clickListener = this, context = this)
         recyclerView.adapter = adapter
 
         editIso.addTextChangedListener(object : TextWatcher {
@@ -144,7 +144,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
             }
             mAdapter.filterList(filtList)
             mAdapter.notifyDataSetChanged()
-            recyclerView.adapter = IsotopeAdapter(
+            recyclerView.adapter = IsotopeAdt(
                 elementList = filtList,
                 clickListener = this,
                 context = this
@@ -162,7 +162,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
             Utils.fadeOutAnim(filterBackground, 150)
             mAdapter.filterList(filtList)
             mAdapter.notifyDataSetChanged()
-            recyclerView.adapter = IsotopeAdapter(
+            recyclerView.adapter = IsotopeAdt(
                 elementList = filtList,
                 clickListener = this,
                 context = this
@@ -218,7 +218,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
         }, 10)
         mAdapter.filterList(filteredList)
         mAdapter.notifyDataSetChanged()
-        recyclerView.adapter = IsotopeAdapter(
+        recyclerView.adapter = IsotopeAdt(
             elementList = filteredList,
             clickListener = this,
             context = this
