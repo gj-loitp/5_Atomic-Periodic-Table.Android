@@ -15,7 +15,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.adapter.IsotopeAdapter
+import com.mckimquyen.atomicPeriodicTable.adt.IsotopeAdapter
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel

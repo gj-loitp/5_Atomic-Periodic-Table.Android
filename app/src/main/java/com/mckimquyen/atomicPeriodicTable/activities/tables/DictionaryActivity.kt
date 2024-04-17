@@ -22,7 +22,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
-import com.mckimquyen.atomicPeriodicTable.adapter.DictionaryAdapter
+import com.mckimquyen.atomicPeriodicTable.adt.DictionaryAdapter
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Dictionary
 import com.mckimquyen.atomicPeriodicTable.model.DictionaryModel

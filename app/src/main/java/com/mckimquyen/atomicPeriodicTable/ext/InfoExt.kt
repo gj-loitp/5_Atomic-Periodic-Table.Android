@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.view.WindowInsets
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
@@ -27,15 +28,28 @@ import com.mckimquyen.atomicPeriodicTable.pref.FavoritePhase
 import com.mckimquyen.atomicPeriodicTable.pref.FusionHeatPref
 import com.mckimquyen.atomicPeriodicTable.pref.MeltingPref
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
+import com.mckimquyen.atomicPeriodicTable.pref.SendIso
 import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPref
 import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPref
-import com.mckimquyen.atomicPeriodicTable.pref.SendIso
 import com.mckimquyen.atomicPeriodicTable.util.Pasteur
 import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.a_element_info.*
-import kotlinx.android.synthetic.main.v_d_atomic.*
+import kotlinx.android.synthetic.main.a_element_info.elementImage
+import kotlinx.android.synthetic.main.a_element_info.elementTitle
+import kotlinx.android.synthetic.main.a_element_info.frame
+import kotlinx.android.synthetic.main.a_element_info.nextBtn
+import kotlinx.android.synthetic.main.a_element_info.offlineDiv
+import kotlinx.android.synthetic.main.a_element_info.previousBtn
+import kotlinx.android.synthetic.main.a_element_info.wikipediaBtn
+import kotlinx.android.synthetic.main.v_d_atomic.atomicRadiusEText
+import kotlinx.android.synthetic.main.v_d_atomic.atomicRadiusText
+import kotlinx.android.synthetic.main.v_d_atomic.covalentRadiusText
+import kotlinx.android.synthetic.main.v_d_atomic.electronConfigText
+import kotlinx.android.synthetic.main.v_d_atomic.ionChargeText
+import kotlinx.android.synthetic.main.v_d_atomic.ionizationEnergiesText
+import kotlinx.android.synthetic.main.v_d_atomic.oxView
+import kotlinx.android.synthetic.main.v_d_atomic.vanDerWaalsRadiusText
 import kotlinx.android.synthetic.main.v_d_electromagnetic.elementElectricalType
 import kotlinx.android.synthetic.main.v_d_electromagnetic.elementMagneticType
 import kotlinx.android.synthetic.main.v_d_electromagnetic.elementResistivity
@@ -54,14 +68,70 @@ import kotlinx.android.synthetic.main.v_d_overview.elementName
 import kotlinx.android.synthetic.main.v_d_overview.elementNeutronsCommon
 import kotlinx.android.synthetic.main.v_d_overview.elementProtons
 import kotlinx.android.synthetic.main.v_d_overview.elementYear
-import kotlinx.android.synthetic.main.v_d_properties.*
-import kotlinx.android.synthetic.main.v_d_temperatures.*
-import kotlinx.android.synthetic.main.v_d_thermodynamic.*
+import kotlinx.android.synthetic.main.v_d_properties.elementAtomicNumber
+import kotlinx.android.synthetic.main.v_d_properties.elementAtomicWeight
+import kotlinx.android.synthetic.main.v_d_properties.elementBlock
+import kotlinx.android.synthetic.main.v_d_properties.elementDensity
+import kotlinx.android.synthetic.main.v_d_properties.elementElectronegativty
+import kotlinx.android.synthetic.main.v_d_properties.elementShellsElectrons
+import kotlinx.android.synthetic.main.v_d_properties.modelView
+import kotlinx.android.synthetic.main.v_d_properties.spImg
+import kotlinx.android.synthetic.main.v_d_properties.spOffline
+import kotlinx.android.synthetic.main.v_d_temperatures.elementBoilingCelsius
+import kotlinx.android.synthetic.main.v_d_temperatures.elementBoilingFahrenheit
+import kotlinx.android.synthetic.main.v_d_temperatures.elementBoilingKelvin
+import kotlinx.android.synthetic.main.v_d_temperatures.elementMeltingCelsius
+import kotlinx.android.synthetic.main.v_d_temperatures.elementMeltingFahrenheit
+import kotlinx.android.synthetic.main.v_d_temperatures.elementMeltingKelvin
+import kotlinx.android.synthetic.main.v_d_thermodynamic.phaseIcon
+import kotlinx.android.synthetic.main.v_d_thermodynamic.tvFusionHeatText
+import kotlinx.android.synthetic.main.v_d_thermodynamic.tvPhaseText
+import kotlinx.android.synthetic.main.v_d_thermodynamic.tvSpecificHeatText
+import kotlinx.android.synthetic.main.v_d_thermodynamic.tvVaporizationHeatText
 import kotlinx.android.synthetic.main.view_detail_emission.ivSpImgFetail
-import kotlinx.android.synthetic.main.view_favorite_bar.*
+import kotlinx.android.synthetic.main.view_favorite_bar.aCalculatedF
+import kotlinx.android.synthetic.main.view_favorite_bar.aCalculatedLay
+import kotlinx.android.synthetic.main.view_favorite_bar.aEmpiricalF
+import kotlinx.android.synthetic.main.view_favorite_bar.aEmpiricalLay
+import kotlinx.android.synthetic.main.view_favorite_bar.boilingF
+import kotlinx.android.synthetic.main.view_favorite_bar.boilingLay
+import kotlinx.android.synthetic.main.view_favorite_bar.covalentF
+import kotlinx.android.synthetic.main.view_favorite_bar.covalentLay
+import kotlinx.android.synthetic.main.view_favorite_bar.densityF
+import kotlinx.android.synthetic.main.view_favorite_bar.densityLay
+import kotlinx.android.synthetic.main.view_favorite_bar.electronegativityF
+import kotlinx.android.synthetic.main.view_favorite_bar.electronegativityLay
+import kotlinx.android.synthetic.main.view_favorite_bar.fusionHeatF
+import kotlinx.android.synthetic.main.view_favorite_bar.fusionHeatLay
+import kotlinx.android.synthetic.main.view_favorite_bar.meltingF
+import kotlinx.android.synthetic.main.view_favorite_bar.meltingLay
+import kotlinx.android.synthetic.main.view_favorite_bar.molarMassF
+import kotlinx.android.synthetic.main.view_favorite_bar.molarMassLay
+import kotlinx.android.synthetic.main.view_favorite_bar.phaseF
+import kotlinx.android.synthetic.main.view_favorite_bar.phaseLay
+import kotlinx.android.synthetic.main.view_favorite_bar.specificHeatF
+import kotlinx.android.synthetic.main.view_favorite_bar.specificHeatLay
+import kotlinx.android.synthetic.main.view_favorite_bar.vanF
+import kotlinx.android.synthetic.main.view_favorite_bar.vanLay
+import kotlinx.android.synthetic.main.view_favorite_bar.vaporizationHeatF
+import kotlinx.android.synthetic.main.view_favorite_bar.vaporizationHeatLay
 import kotlinx.android.synthetic.main.view_loading_view.noImg
 import kotlinx.android.synthetic.main.view_loading_view.progressBar
-import kotlinx.android.synthetic.main.view_oxidiation_states.*
+import kotlinx.android.synthetic.main.view_oxidiation_states.m1ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.m2ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.m3ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.m4ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.m5ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.ox0
+import kotlinx.android.synthetic.main.view_oxidiation_states.p1ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.p2ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.p3ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.p4ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.p5ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.p6ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.p7ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.p8ox
+import kotlinx.android.synthetic.main.view_oxidiation_states.p9ox
 import kotlinx.android.synthetic.main.view_shell_view.cardModelView
 import kotlinx.android.synthetic.main.view_shell_view.configData
 import kotlinx.android.synthetic.main.view_shell_view.eConfigData
@@ -73,7 +143,7 @@ import java.net.ConnectException
 import java.util.Locale
 import kotlin.math.pow
 
-abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsListener {
+abstract class InfoExt : AppCompatActivity(), View.OnApplyWindowInsetsListener {
     companion object {
         private const val TAG = "BaseActivity"
     }
@@ -94,7 +164,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) = Unit
 
     override fun onApplyWindowInsets(v: View, insets: WindowInsets): WindowInsets {
@@ -278,13 +348,13 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             elementSuperconductingPoint.text = "$superconductingPoint (K)"
 
             if (phaseText.toString() == "Solid") {
-                phaseIcon.setImageDrawable(getDrawable(R.drawable.ic_vector_solid))
+                phaseIcon.setImageDrawable(AppCompatResources.getDrawable(this, R.drawable.ic_vector_solid))
             }
             if (phaseText.toString() == "Gas") {
-                phaseIcon.setImageDrawable(getDrawable(R.drawable.ic_vector_gas))
+                phaseIcon.setImageDrawable(AppCompatResources.getDrawable(this, R.drawable.ic_vector_gas))
             }
             if (phaseText.toString() == "Liquid") {
-                phaseIcon.setImageDrawable(getDrawable(R.drawable.ic_liquid))
+                phaseIcon.setImageDrawable(AppCompatResources.getDrawable(this, R.drawable.ic_liquid))
             }
 
             if (oxidationNeg1.contains(0.toString())) {
@@ -435,6 +505,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         Picasso.get().load(url.toString()).into(cardModelView)
     }
 
+    @SuppressLint("QueryPermissionsNeeded")
     private fun wikiListener(url: String?) {
         wikipediaBtn.setOnClickListener {
             val pkgName = "com.android.chrome"

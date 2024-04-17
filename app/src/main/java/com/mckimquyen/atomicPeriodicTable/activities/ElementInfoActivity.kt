@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.settings.FavoritePageActivity
 import com.mckimquyen.atomicPeriodicTable.activities.settings.SubmitActivity
-import com.mckimquyen.atomicPeriodicTable.ext.InfoExtension
+import com.mckimquyen.atomicPeriodicTable.ext.InfoExt
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
@@ -30,7 +30,7 @@ import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
 
-class ElementInfoActivity : InfoExtension() {
+class ElementInfoActivity : InfoExt() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

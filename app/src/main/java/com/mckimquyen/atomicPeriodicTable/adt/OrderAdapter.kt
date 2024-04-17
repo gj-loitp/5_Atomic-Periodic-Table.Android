@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.adapter
+package com.mckimquyen.atomicPeriodicTable.adt
 
 import android.view.View
 import android.widget.ImageView
@@ -6,7 +6,8 @@ import android.widget.TextView
 import com.ernestoyaquello.dragdropswiperecyclerview.DragDropSwipeAdapter
 import com.mckimquyen.atomicPeriodicTable.R
 
-class OrderAdapter(dataSet: List<String> = emptyList()) : DragDropSwipeAdapter<String, OrderAdapter.ViewHolder>(dataSet) {
+class OrderAdapter(dataSet: List<String> = emptyList()) :
+    DragDropSwipeAdapter<String, OrderAdapter.ViewHolder>(dataSet) {
 
     class ViewHolder(itemView: View) : DragDropSwipeAdapter.ViewHolder(itemView) {
         val itemText: TextView = itemView.findViewById(R.id.tvTitleOrder)
@@ -18,7 +19,7 @@ class OrderAdapter(dataSet: List<String> = emptyList()) : DragDropSwipeAdapter<S
     override fun onBindViewHolder(
         item: String,
         viewHolder: ViewHolder,
-        position: Int
+        position: Int,
     ) {
         // Here we update the contents of the view holder's views to reflect the item's data
         viewHolder.itemText.text = item
@@ -27,7 +28,7 @@ class OrderAdapter(dataSet: List<String> = emptyList()) : DragDropSwipeAdapter<S
     override fun getViewToTouchToStartDraggingItem(
         item: String,
         viewHolder: ViewHolder,
-        position: Int
+        position: Int,
     ): View {
         // We return the view holder's view on which the user has to touch to drag the item
         return viewHolder.dragIcon

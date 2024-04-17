@@ -30,7 +30,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.BuildConfig
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.tables.DictionaryActivity
-import com.mckimquyen.atomicPeriodicTable.adapter.ElementAdapter
+import com.mckimquyen.atomicPeriodicTable.adt.ElementAdapter
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.ext.TableExt
 import com.mckimquyen.atomicPeriodicTable.ext.moreApp
