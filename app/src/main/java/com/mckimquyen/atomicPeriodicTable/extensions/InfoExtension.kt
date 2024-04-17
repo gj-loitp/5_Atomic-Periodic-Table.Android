@@ -13,22 +13,22 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.IsotopesActivityExperimental
-import com.mckimquyen.atomicPeriodicTable.pref.AtomicCovalentPreference
-import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusCalPreference
-import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusEmpPreference
-import com.mckimquyen.atomicPeriodicTable.pref.AtomicVanPreference
-import com.mckimquyen.atomicPeriodicTable.pref.BoilingPreference
-import com.mckimquyen.atomicPeriodicTable.pref.DegreePreference
-import com.mckimquyen.atomicPeriodicTable.pref.DensityPreference
-import com.mckimquyen.atomicPeriodicTable.pref.ElectronegativityPreference
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicCovalentPref
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusCalPref
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusEmpPref
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicVanPref
+import com.mckimquyen.atomicPeriodicTable.pref.BoilingPref
+import com.mckimquyen.atomicPeriodicTable.pref.DegreePref
+import com.mckimquyen.atomicPeriodicTable.pref.DensityPref
+import com.mckimquyen.atomicPeriodicTable.pref.ElectronegativityPref
 import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
-import com.mckimquyen.atomicPeriodicTable.pref.FavoriteBarPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.FavoriteBarPref
 import com.mckimquyen.atomicPeriodicTable.pref.FavoritePhase
-import com.mckimquyen.atomicPeriodicTable.pref.FusionHeatPreference
-import com.mckimquyen.atomicPeriodicTable.pref.MeltingPreference
+import com.mckimquyen.atomicPeriodicTable.pref.FusionHeatPref
+import com.mckimquyen.atomicPeriodicTable.pref.MeltingPref
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
-import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPreference
-import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPreference
+import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPref
+import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPref
 import com.mckimquyen.atomicPeriodicTable.pref.SendIso
 import com.mckimquyen.atomicPeriodicTable.util.Pasteur
 import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
@@ -355,8 +355,8 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             electronegativityF.text = elementElectronegativity
             densityF.text = sElementDensity
 
-            val degreePreference = DegreePreference(this)
-            val degreePrefValue = degreePreference.getValue()
+            val degreePref = DegreePref(this)
+            val degreePrefValue = degreePref.getValue()
 
             if (degreePrefValue == 0) {
                 boilingF.text = sElementBoilingKelvin
@@ -474,7 +474,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
 
     fun favoriteBarSetup() {
         //Favorite Molar
-        val molarPreference = FavoriteBarPreferences(this)
+        val molarPreference = FavoriteBarPref(this)
         val molarPrefValue = molarPreference.getValue()
         if (molarPrefValue == 1) {
             molarMassLay.visibility = View.VISIBLE
@@ -494,7 +494,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Electronegativity Phase
-        val electronegativityPreferences = ElectronegativityPreference(this)
+        val electronegativityPreferences = ElectronegativityPref(this)
         val electronegativityPrefValue = electronegativityPreferences.getValue()
         if (electronegativityPrefValue == 1) {
             electronegativityLay.visibility = View.VISIBLE
@@ -504,7 +504,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Density
-        val densityPreference = DensityPreference(this)
+        val densityPreference = DensityPref(this)
         val densityPrefValue = densityPreference.getValue()
         if (densityPrefValue == 1) {
             densityLay.visibility = View.VISIBLE
@@ -514,7 +514,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Boiling
-        val boilingPreference = BoilingPreference(this)
+        val boilingPreference = BoilingPref(this)
         val boilingPrefValue = boilingPreference.getValue()
         if (boilingPrefValue == 1) {
             boilingLay.visibility = View.VISIBLE
@@ -524,8 +524,8 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Melting
-        val meltingPreference = MeltingPreference(this)
-        val meltingPrefValue = meltingPreference.getValue()
+        val meltingPref = MeltingPref(this)
+        val meltingPrefValue = meltingPref.getValue()
         if (meltingPrefValue == 1) {
             meltingLay.visibility = View.VISIBLE
         }
@@ -534,7 +534,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Empirical
-        val empiricalPreference = AtomicRadiusEmpPreference(this)
+        val empiricalPreference = AtomicRadiusEmpPref(this)
         val empiricalPrefValue = empiricalPreference.getValue()
         if (empiricalPrefValue == 1) {
             aEmpiricalLay.visibility = View.VISIBLE
@@ -544,7 +544,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Calculated
-        val calculatedPreference = AtomicRadiusCalPreference(this)
+        val calculatedPreference = AtomicRadiusCalPref(this)
         val calculatedPrefValue = calculatedPreference.getValue()
         if (calculatedPrefValue == 1) {
             aCalculatedLay.visibility = View.VISIBLE
@@ -554,7 +554,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Covalent
-        val covalentPreference = AtomicCovalentPreference(this)
+        val covalentPreference = AtomicCovalentPref(this)
         val covalentPrefValue = covalentPreference.getValue()
         if (covalentPrefValue == 1) {
             covalentLay.visibility = View.VISIBLE
@@ -564,7 +564,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Van Der Waals
-        val vanPreference = AtomicVanPreference(this)
+        val vanPreference = AtomicVanPref(this)
         val vanPrefValue = vanPreference.getValue()
         if (vanPrefValue == 1) {
             vanLay.visibility = View.VISIBLE
@@ -574,8 +574,8 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Fusion Heat
-        val fusionHeatPreference = FusionHeatPreference(this)
-        val fusionHeatValue = fusionHeatPreference.getValue()
+        val fusionHeatPref = FusionHeatPref(this)
+        val fusionHeatValue = fusionHeatPref.getValue()
         if (fusionHeatValue == 1) {
             fusionHeatLay.visibility = View.VISIBLE
         }
@@ -584,8 +584,8 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Specific Heat
-        val specificHeatPreference = SpecificHeatPreference(this)
-        val specificHeatValue = specificHeatPreference.getValue()
+        val specificHeatPref = SpecificHeatPref(this)
+        val specificHeatValue = specificHeatPref.getValue()
         if (specificHeatValue == 1) {
             specificHeatLay.visibility = View.VISIBLE
         }
@@ -594,8 +594,8 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
         }
 
         //Vaporization Heat
-        val vaporizationHeatPreference = VaporizationHeatPreference(this)
-        val vaporizationHeatValue = vaporizationHeatPreference.getValue()
+        val vaporizationHeatPref = VaporizationHeatPref(this)
+        val vaporizationHeatValue = vaporizationHeatPref.getValue()
         if (vaporizationHeatValue == 1) {
             vaporizationHeatLay.visibility = View.VISIBLE
         }

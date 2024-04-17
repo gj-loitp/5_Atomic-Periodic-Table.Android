@@ -9,21 +9,21 @@ import android.widget.CheckBox
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
-import com.mckimquyen.atomicPeriodicTable.pref.AtomicCovalentPreference
-import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusCalPreference
-import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusEmpPreference
-import com.mckimquyen.atomicPeriodicTable.pref.AtomicVanPreference
-import com.mckimquyen.atomicPeriodicTable.pref.BoilingPreference
-import com.mckimquyen.atomicPeriodicTable.pref.DegreePreference
-import com.mckimquyen.atomicPeriodicTable.pref.DensityPreference
-import com.mckimquyen.atomicPeriodicTable.pref.ElectronegativityPreference
-import com.mckimquyen.atomicPeriodicTable.pref.FavoriteBarPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicCovalentPref
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusCalPref
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusEmpPref
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicVanPref
+import com.mckimquyen.atomicPeriodicTable.pref.BoilingPref
+import com.mckimquyen.atomicPeriodicTable.pref.DegreePref
+import com.mckimquyen.atomicPeriodicTable.pref.DensityPref
+import com.mckimquyen.atomicPeriodicTable.pref.ElectronegativityPref
+import com.mckimquyen.atomicPeriodicTable.pref.FavoriteBarPref
 import com.mckimquyen.atomicPeriodicTable.pref.FavoritePhase
-import com.mckimquyen.atomicPeriodicTable.pref.FusionHeatPreference
-import com.mckimquyen.atomicPeriodicTable.pref.MeltingPreference
-import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPreference
+import com.mckimquyen.atomicPeriodicTable.pref.FusionHeatPref
+import com.mckimquyen.atomicPeriodicTable.pref.MeltingPref
+import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPref
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
-import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPreference
+import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPref
 import kotlinx.android.synthetic.main.a_favorite_settings_page.*
 class FavoritePageActivity : BaseActivity() {
 
@@ -55,7 +55,7 @@ class FavoritePageActivity : BaseActivity() {
         }
         setContentView(R.layout.a_favorite_settings_page)
 
-        val molarPreference = FavoriteBarPreferences(this)
+        val molarPreference = FavoriteBarPref(this)
         val molarPrefValue = molarPreference.getValue()
         if (molarPrefValue == 1) {
             molarMassCheck.isChecked = true
@@ -73,7 +73,7 @@ class FavoritePageActivity : BaseActivity() {
             phaseCheck.isChecked = false
         }
 
-        val electronegativityPreferences = ElectronegativityPreference(this)
+        val electronegativityPreferences = ElectronegativityPref(this)
         val electronegativityPrefValue = electronegativityPreferences.getValue()
         if (electronegativityPrefValue == 1) {
             electronegativityCheck.isChecked = true
@@ -83,7 +83,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Density
-        val densityPreference = DensityPreference(this)
+        val densityPreference = DensityPref(this)
         val densityPrefValue = densityPreference.getValue()
         if (densityPrefValue == 1) {
             densityCheck.isChecked = true
@@ -93,8 +93,8 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Degree
-        val degreePreference = DegreePreference(this)
-        val degreePrefValue = degreePreference.getValue()
+        val degreePref = DegreePref(this)
+        val degreePrefValue = degreePref.getValue()
         if (degreePrefValue == 0) {
             kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
             celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
@@ -112,7 +112,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Boiling Point
-        val boilingPreference = BoilingPreference(this)
+        val boilingPreference = BoilingPref(this)
         val boilingPrefValue = boilingPreference.getValue()
         if (boilingPrefValue == 1) {
             boilingCheck.isChecked = true
@@ -122,8 +122,8 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Melting Point
-        val meltingPreference = MeltingPreference(this)
-        val meltingPrefValue = meltingPreference.getValue()
+        val meltingPref = MeltingPref(this)
+        val meltingPrefValue = meltingPref.getValue()
         if (meltingPrefValue == 1) {
             meltingCheck.isChecked = true
         }
@@ -132,7 +132,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Atomic Radius Emp Point
-        val atomicEmpPreference = AtomicRadiusEmpPreference(this)
+        val atomicEmpPreference = AtomicRadiusEmpPref(this)
         val atomicEmpPrefValue = atomicEmpPreference.getValue()
         if (atomicEmpPrefValue == 1) {
             atomicRadiusEmpiricalCheck.isChecked = true
@@ -142,7 +142,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Atomic Radius Cal Point
-        val atomicCalPreference = AtomicRadiusCalPreference(this)
+        val atomicCalPreference = AtomicRadiusCalPref(this)
         val atomicCalPrefValue = atomicCalPreference.getValue()
         if (atomicCalPrefValue == 1) {
             atomicRadiusCalculatedCheck.isChecked = true
@@ -152,7 +152,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Covalent Radius Point
-        val covalentPreference = AtomicCovalentPreference(this)
+        val covalentPreference = AtomicCovalentPref(this)
         val atomicCovalentPrefValue = covalentPreference.getValue()
         if (atomicCovalentPrefValue == 1) {
             covalentRadiusCheck.isChecked = true
@@ -162,7 +162,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Covalent Radius Point
-        val vanPreference = AtomicVanPreference(this)
+        val vanPreference = AtomicVanPref(this)
         val vanprefValue = vanPreference.getValue()
         if (vanprefValue == 1) {
             vanDerWaalsRadiusCheck.isChecked = true
@@ -172,8 +172,8 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Specific Heat Capacity
-        val specificHeatPreference = SpecificHeatPreference(this)
-        val specificHeatValue = specificHeatPreference.getValue()
+        val specificHeatPref = SpecificHeatPref(this)
+        val specificHeatValue = specificHeatPref.getValue()
         if (specificHeatValue == 1) {
             specificHeatCheck.isChecked = true
         }
@@ -182,8 +182,8 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Fusion Heat
-        val fusionheatPreference = FusionHeatPreference(this)
-        val fusionHeatValue = fusionheatPreference.getValue()
+        val fusionheatPref = FusionHeatPref(this)
+        val fusionHeatValue = fusionheatPref.getValue()
         if (fusionHeatValue == 1) {
             fusionHeatCheck.isChecked = true
         }
@@ -192,8 +192,8 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Vaporization heat
-        val vaporizationHeatPreference = VaporizationHeatPreference(this)
-        val vaporizationHeatValue = vaporizationHeatPreference.getValue()
+        val vaporizationHeatPref = VaporizationHeatPref(this)
+        val vaporizationHeatValue = vaporizationHeatPref.getValue()
         if (vaporizationHeatValue == 1) {
             vaporizationHeatCheck.isChecked = true
         }
@@ -249,7 +249,7 @@ class FavoritePageActivity : BaseActivity() {
 
     private fun onCheckboxClicked() {
         //Molar Mass
-        val molarPreference = FavoriteBarPreferences(this)
+        val molarPreference = FavoriteBarPref(this)
         var molarPrefValue = molarPreference.getValue()
         val checkBox: CheckBox = molarMassCheck
         checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
@@ -261,28 +261,28 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         kelvinBtn.setOnClickListener {
-            val degreePreference = DegreePreference(this)
-            var degreePrefValue = degreePreference.getValue()
+            val degreePref = DegreePref(this)
+            var degreePrefValue = degreePref.getValue()
 
-            degreePreference.setValue(0)
+            degreePref.setValue(0)
             kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
             celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
             fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         celsiusBtn.setOnClickListener {
-            val degreePreference = DegreePreference(this)
-            var degreePrefValue = degreePreference.getValue()
+            val degreePref = DegreePref(this)
+            var degreePrefValue = degreePref.getValue()
 
-            degreePreference.setValue(1)
+            degreePref.setValue(1)
             kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
             celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
             fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
         }
         fahrenheitbtn.setOnClickListener {
-            val degreePreference = DegreePreference(this)
-            var degreePrefValue = degreePreference.getValue()
+            val degreePref = DegreePref(this)
+            var degreePrefValue = degreePref.getValue()
 
-            degreePreference.setValue(2)
+            degreePref.setValue(2)
             kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
             celsiusBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
             fahrenheitbtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
@@ -301,19 +301,19 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Electronegativity
-        val electronegativityPreference = ElectronegativityPreference(this)
-        var electronegativityPrefValue = electronegativityPreference.getValue()
+        val electronegativityPref = ElectronegativityPref(this)
+        var electronegativityPrefValue = electronegativityPref.getValue()
         val electronegativityCheckBox: CheckBox = electronegativityCheck
         electronegativityCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                electronegativityPreference.setValue(1)
+                electronegativityPref.setValue(1)
             } else {
-                electronegativityPreference.setValue(0)
+                electronegativityPref.setValue(0)
             }
         }
 
         //Density
-        val densityPreference = DensityPreference(this)
+        val densityPreference = DensityPref(this)
         var densityPrefValue = densityPreference.getValue()
         val densityCheckBox: CheckBox = densityCheck
         densityCheckBox.setOnCheckedChangeListener { _, isChecked ->
@@ -326,7 +326,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Boiling Point
-        val boilingPreference = BoilingPreference(this)
+        val boilingPreference = BoilingPref(this)
         var boilingPrefValue = boilingPreference.getValue()
         val boilingCheckBox: CheckBox = boilingCheck
         boilingCheckBox.setOnCheckedChangeListener { _, isChecked ->
@@ -339,18 +339,18 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Melting Point
-        val meltingPreference = MeltingPreference(this)
+        val meltingPref = MeltingPref(this)
         val meltingCheckBox: CheckBox = meltingCheck
         meltingCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                meltingPreference.setValue(1)
+                meltingPref.setValue(1)
             } else {
-                meltingPreference.setValue(0)
+                meltingPref.setValue(0)
             }
         }
 
         //Atomic Radius Empirical Point
-        val atomicEmpiricalPreference = AtomicRadiusEmpPreference(this)
+        val atomicEmpiricalPreference = AtomicRadiusEmpPref(this)
         val atomicEmpiricalBox: CheckBox = atomicRadiusEmpiricalCheck
         atomicEmpiricalBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -361,7 +361,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Atomic Radius Calculated Point
-        val atomicCalculatedPreference = AtomicRadiusCalPreference(this)
+        val atomicCalculatedPreference = AtomicRadiusCalPref(this)
         val atomicCalculatedBox: CheckBox = atomicRadiusCalculatedCheck
         atomicCalculatedBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -372,7 +372,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Covalent Radius Point
-        val covalentPreference = AtomicCovalentPreference(this)
+        val covalentPreference = AtomicCovalentPref(this)
         val covalentCheckBox: CheckBox = covalentRadiusCheck
         covalentCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -383,7 +383,7 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Van Der Waals Radius Point
-        val vanPreference = AtomicVanPreference(this)
+        val vanPreference = AtomicVanPref(this)
         val vanCheckBox: CheckBox = vanDerWaalsRadiusCheck
         vanCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -394,40 +394,40 @@ class FavoritePageActivity : BaseActivity() {
         }
 
         //Specific Heat Point
-        val specificHeatPreference = SpecificHeatPreference(this)
-        var specificHeatValue = specificHeatPreference.getValue()
+        val specificHeatPref = SpecificHeatPref(this)
+        var specificHeatValue = specificHeatPref.getValue()
         val specificCheckBox: CheckBox = specificHeatCheck
         specificCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                specificHeatPreference.setValue(1)
+                specificHeatPref.setValue(1)
             } else {
-                specificHeatPreference.setValue(0)
+                specificHeatPref.setValue(0)
             }
 
         }
 
         //Fusion Heat
-        val fusionHeatPreference = FusionHeatPreference(this)
-        var fusionHeatValue = fusionHeatPreference.getValue()
+        val fusionHeatPref = FusionHeatPref(this)
+        var fusionHeatValue = fusionHeatPref.getValue()
         val fusionCheckBox: CheckBox = fusionHeatCheck
         fusionCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                fusionHeatPreference.setValue(1)
+                fusionHeatPref.setValue(1)
             } else {
-                fusionHeatPreference.setValue(0)
+                fusionHeatPref.setValue(0)
             }
 
         }
 
         //Vapor Heat
-        val vaporizationHeatPreference = VaporizationHeatPreference(this)
-        var vaporizationHeatValue = vaporizationHeatPreference.getValue()
+        val vaporizationHeatPref = VaporizationHeatPref(this)
+        var vaporizationHeatValue = vaporizationHeatPref.getValue()
         val vaporizationCheckBox: CheckBox = vaporizationHeatCheck
         vaporizationCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                vaporizationHeatPreference.setValue(1)
+                vaporizationHeatPref.setValue(1)
             } else {
-                vaporizationHeatPreference.setValue(0)
+                vaporizationHeatPref.setValue(0)
             }
 
         }
