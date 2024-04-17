@@ -111,7 +111,7 @@
                     android:textColor="?attr/actionMenuTextColor"
                     android:textColorHint="?attr/actionMenuTextColor"
                     android:textSize="12sp"
-                    tools:ignore="RtlSymmetry" />
+                    tools:ignore="Autofill,RtlSymmetry" />
             </FrameLayout>
 
             <FrameLayout
@@ -139,7 +139,7 @@
                     android:textColor="?attr/actionMenuTextColor"
                     android:textColorHint="?attr/actionMenuTextColor"
                     android:textSize="12sp"
-                    tools:ignore="RtlSymmetry" />
+                    tools:ignore="Autofill,RtlSymmetry" />
             </FrameLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>

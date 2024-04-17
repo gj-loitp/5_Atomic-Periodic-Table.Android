@@ -14,24 +14,8 @@ import com.mckimquyen.atomicPeriodicTable.activities.tables.NuclideActivity
 import com.mckimquyen.atomicPeriodicTable.activities.tables.PHActivity
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import kotlinx.android.synthetic.main.activity_solubility.backBtn
-import kotlinx.android.synthetic.main.activity_submit.viewSub
-import kotlinx.android.synthetic.main.activity_tables.commonTitleBackTab
-import kotlinx.android.synthetic.main.activity_tables.commonTitleTableColor
-import kotlinx.android.synthetic.main.activity_tables.eleButton
-import kotlinx.android.synthetic.main.activity_tables.eleTable
-import kotlinx.android.synthetic.main.activity_tables.equButton
-import kotlinx.android.synthetic.main.activity_tables.equTable
-import kotlinx.android.synthetic.main.activity_tables.ionButton
-import kotlinx.android.synthetic.main.activity_tables.ionTable
-import kotlinx.android.synthetic.main.activity_tables.nucButton
-import kotlinx.android.synthetic.main.activity_tables.nucTable
-import kotlinx.android.synthetic.main.activity_tables.phButton
-import kotlinx.android.synthetic.main.activity_tables.phTable
-import kotlinx.android.synthetic.main.activity_tables.solButton
-import kotlinx.android.synthetic.main.activity_tables.solTable
-import kotlinx.android.synthetic.main.activity_tables.tableScroll
-import kotlinx.android.synthetic.main.activity_tables.tablesTitle
-import kotlinx.android.synthetic.main.activity_tables.tablesTitleDownstate
+import kotlinx.android.synthetic.main.a_submit.viewSub
+import kotlinx.android.synthetic.main.a_tables.*
 
 class TableActivity : BaseActivity() {
 
@@ -61,7 +45,7 @@ class TableActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_tables)
+        setContentView(R.layout.a_tables)
 
         viewSub.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -102,7 +86,7 @@ class TableActivity : BaseActivity() {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         val params = commonTitleBackTab.layoutParams as ViewGroup.LayoutParams
         params.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)

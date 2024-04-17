@@ -11,19 +11,19 @@ import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import kotlinx.android.synthetic.main.a_submit.background
+import kotlinx.android.synthetic.main.a_submit.commonTitleBackSub
+import kotlinx.android.synthetic.main.a_submit.commonTitleBackSubColor
+import kotlinx.android.synthetic.main.a_submit.dropBtn
+import kotlinx.android.synthetic.main.a_submit.dropIssue
+import kotlinx.android.synthetic.main.a_submit.iBtn
+import kotlinx.android.synthetic.main.a_submit.iContent
+import kotlinx.android.synthetic.main.a_submit.iTitle
+import kotlinx.android.synthetic.main.a_submit.submitScroll
+import kotlinx.android.synthetic.main.a_submit.submitTitle
+import kotlinx.android.synthetic.main.a_submit.submitTitleDownstate
+import kotlinx.android.synthetic.main.a_submit.viewSub
 import kotlinx.android.synthetic.main.activity_solubility.backBtn
-import kotlinx.android.synthetic.main.activity_submit.background
-import kotlinx.android.synthetic.main.activity_submit.commonTitleBackSub
-import kotlinx.android.synthetic.main.activity_submit.commonTitleBackSubColor
-import kotlinx.android.synthetic.main.activity_submit.dropBtn
-import kotlinx.android.synthetic.main.activity_submit.dropIssue
-import kotlinx.android.synthetic.main.activity_submit.iBtn
-import kotlinx.android.synthetic.main.activity_submit.iContent
-import kotlinx.android.synthetic.main.activity_submit.iTitle
-import kotlinx.android.synthetic.main.activity_submit.submitScroll
-import kotlinx.android.synthetic.main.activity_submit.submitTitle
-import kotlinx.android.synthetic.main.activity_submit.submitTitleDownstate
-import kotlinx.android.synthetic.main.activity_submit.viewSub
 import kotlinx.android.synthetic.main.view_drop_issue.bug
 import kotlinx.android.synthetic.main.view_drop_issue.dataIssue
 import kotlinx.android.synthetic.main.view_drop_issue.question
@@ -56,7 +56,7 @@ class SubmitActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_submit)
+        setContentView(R.layout.a_submit)
 
         viewSub.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -96,7 +96,7 @@ class SubmitActivity : BaseActivity() {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         val params = commonTitleBackSub.layoutParams as ViewGroup.LayoutParams
         params.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
