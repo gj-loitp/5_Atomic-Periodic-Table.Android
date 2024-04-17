@@ -1,5 +1,6 @@
 package com.mckimquyen.atomicPeriodicTable.ext
 
+import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Handler
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import android.view.WindowInsets
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.pref.TemperatureUnits
@@ -68,6 +70,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
         Utils.fadeOutAnim(hoverMenuInclude, 300)
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initName(list: ArrayList<Element>) {
         for (item in list) {
             val name = item.element
@@ -99,31 +102,32 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
             if (themePrefValue == 100) {
                 when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                     Configuration.UI_MODE_NIGHT_NO -> {
-                        btn.background.setTint(resources.getColor(R.color.element_box_light))
-                        lanthanoidsBtn.background.setTint(resources.getColor(R.color.element_box_light))
-                        actinoidsBtn.background.setTint(resources.getColor(R.color.element_box_light))
+                        btn.background.setTint(ContextCompat.getColor(this, R.color.element_box_light))
+                        lanthanoidsBtn.background.setTint(ContextCompat.getColor(this, R.color.element_box_light))
+                        actinoidsBtn.background.setTint(ContextCompat.getColor(this, R.color.element_box_light))
                     }
 
                     Configuration.UI_MODE_NIGHT_YES -> {
-                        btn.background.setTint(resources.getColor(R.color.element_box_dark))
-                        lanthanoidsBtn.background.setTint(resources.getColor(R.color.element_box_dark))
-                        actinoidsBtn.background.setTint(resources.getColor(R.color.element_box_dark))
+                        btn.background.setTint(ContextCompat.getColor(this, R.color.element_box_dark))
+                        lanthanoidsBtn.background.setTint(ContextCompat.getColor(this, R.color.element_box_dark))
+                        actinoidsBtn.background.setTint(ContextCompat.getColor(this, R.color.element_box_dark))
                     }
                 }
             }
             if (themePrefValue == 0) {
-                btn.background.setTint(resources.getColor(R.color.element_box_light))
-                lanthanoidsBtn.background.setTint(resources.getColor(R.color.element_box_light))
-                actinoidsBtn.background.setTint(resources.getColor(R.color.element_box_light))
+                btn.background.setTint(ContextCompat.getColor(this, R.color.element_box_light))
+                lanthanoidsBtn.background.setTint(ContextCompat.getColor(this, R.color.element_box_light))
+                actinoidsBtn.background.setTint(ContextCompat.getColor(this, R.color.element_box_light))
             }
             if (themePrefValue == 1) {
-                btn.background.setTint(resources.getColor(R.color.element_box_dark))
-                lanthanoidsBtn.background.setTint(resources.getColor(R.color.element_box_dark))
-                actinoidsBtn.background.setTint(resources.getColor(R.color.element_box_dark))
+                btn.background.setTint(ContextCompat.getColor(this, R.color.element_box_dark))
+                lanthanoidsBtn.background.setTint(ContextCompat.getColor(this, R.color.element_box_dark))
+                actinoidsBtn.background.setTint(ContextCompat.getColor(this, R.color.element_box_dark))
             }
         }
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initBoiling(list: ArrayList<Element>) {
         val delay = Handler(Looper.getMainLooper())
         initName(elementList)
@@ -157,6 +161,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
         }, 10)
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initMelting(list: ArrayList<Element>) {
         val delay = Handler(Looper.getMainLooper())
         initName(elementList)
@@ -188,6 +193,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
         }, 10)
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initPhase(list: ArrayList<Element>) {
         val delay = Handler(Looper.getMainLooper())
         initName(elementList)
@@ -216,6 +222,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
         }, 10)
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initYear(list: ArrayList<Element>) {
         val delay = Handler(Looper.getMainLooper())
         initName(elementList)
@@ -244,6 +251,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
         }, 10)
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initElectro(list: ArrayList<Element>) {
         val delay = Handler(Looper.getMainLooper())
         initName(elementList)
@@ -314,6 +322,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
         }, 10)
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initGroups(list: ArrayList<Element>) {
         val delay = Handler(Looper.getMainLooper())
         initName(list)
@@ -332,8 +341,8 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
                 var jsonstring: String?
                 try {
                     val ext = ".json"
-                    val ElementJson: String = "$name$ext"
-                    val inputStream: InputStream = assets.open(ElementJson.toString())
+                    val elementJson = "$name$ext"
+                    val inputStream: InputStream = assets.open(elementJson)
                     jsonstring = inputStream.bufferedReader().use { it.readText() }
 
                     val jsonArray = JSONArray(jsonstring)
@@ -377,6 +386,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
         }, 10)
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initWeight(list: ArrayList<Element>) {
         val delay = Handler(Looper.getMainLooper())
         initName(list)
@@ -408,6 +418,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
         }, 10)
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initHeat(list: ArrayList<Element>) {
         initName(list)
         closeHover()
@@ -441,6 +452,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
 
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initSpecific(list: ArrayList<Element>) {
         initName(list)
         closeHover()
@@ -473,6 +485,7 @@ abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener 
         }, 10)
     }
 
+    @SuppressLint("DiscouragedApi")
     fun initVape(list: ArrayList<Element>) {
         initName(list)
         closeHover()
