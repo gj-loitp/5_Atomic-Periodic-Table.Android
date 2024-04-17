@@ -3,7 +3,6 @@
     "wikilink": "https://en.wikipedia.org/wiki/Iron",
     "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Iron_electrolytic_and_1cm3_cube.jpg/1280px-Iron_electrolytic_and_1cm3_cube.jpg ",
     "description": "Iron (/ˈaɪərn/) is a chemical element with symbol Fe (from Latin: ferrum) and atomic number 26. It is a metal that belongs to the first transition series and group 8 of the periodic table. It is by mass the most common element on Earth, forming much of Earth's outer and inner core. It is the fourth most common element in the Earth's crust.",
-
     "element": "Iron",
     "short": "Fe",
     "element_year": "Deep Antique",
@@ -13,16 +12,13 @@
     "element_electrons": "26",
     "element_protons": "26",
     "element_neutron_common": "30",
-
     "radioactive": "No",
     "neutron_cross_sectional": "2.56 (b)",
-
     "electrical_type": "Conductor",
     "resistivity": "9.7",
     "resistivity_mult": "0.00000001",
     "magnetic_type": "Ferromagnetic",
     "superconducting_point": "---",
-
     "element_atomic_number": "26",
     "element_atomicmass": "55.845 (u)",
     "element_density": "7.87 (g/cm^3)",
@@ -30,14 +26,12 @@
     "element_block": "d - block",
     "element_shells_electrons": "K2 L8 M14 N2 O0 P0 Q0 R0",
     "element_model": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Electron_shell_026_Iron_-_no_label.svg/800px-Electron_shell_026_Iron_-_no_label.svg.png",
-
     "element_boiling_kelvin": "3134 (K)",
     "element_boiling_celsius": "2862 (°C)",
     "element_boiling_fahrenheit": "5182 (°F)",
     "element_melting_kelvin": "1811 (K)",
     "element_melting_celsius": "1538 (°C)",
     "element_melting_fahrenheit": "2800 (°F)",
-
     "element_electron_config": "3d^6 4s^2",
     "element_ion_charge": "Fe^2+, Fe^3+",
     "element_ionization_energy1": "7.9024 (eV)",
@@ -70,15 +64,12 @@
     "element_atomic_radius": "156 (pm)",
     "element_covalent_radius": "125 (pm)",
     "element_van_der_waals": "--- (pm)",
-
     "element_phase": "Solid",
     "element_fusion_heat": "13.81 (kJ/mol)",
     "element_specific_heat_capacity": "0.449 J/(g·K)",
     "element_vaporization_heat": "340 (kJ/mol)",
-
     "oxidation_state_neg": "4 2 1 0",
     "oxidation_state_pos": "1 2 3 4 5 6 7",
-
     "iso_1": "Fe-45",
     "iso_mass_1": "45.01458",
     "iso_half_1": "1.89 (ms)",
@@ -86,7 +77,6 @@
     "iso_Z_1": "26",
     "iso_N_1": "19",
     "iso_A_1": "45",
-
     "iso_2": "Fe-46",
     "iso_mass_2": "46.00081",
     "iso_half_2": "9 (ms)",
@@ -94,7 +84,6 @@
     "iso_Z_2": "26",
     "iso_N_2": "20",
     "iso_A_2": "46",
-
     "iso_3": "Fe-47",
     "iso_mass_3": "46.99289",
     "iso_half_3": "21.8 (ms)",
@@ -102,7 +91,6 @@
     "iso_Z_3": "26",
     "iso_N_3": "21",
     "iso_A_3": "47",
-
     "iso_4": "Fe-48",
     "iso_mass_4": "47.98050",
     "iso_half_4": "44 (ms)",
@@ -110,7 +98,6 @@
     "iso_Z_4": "26",
     "iso_N_4": "22",
     "iso_A_4": "48",
-
     "iso_5": "Fe-49",
     "iso_mass_5": "48.97361",
     "iso_half_5": "70 (ms)",
@@ -118,7 +105,6 @@
     "iso_Z_5": "26",
     "iso_N_5": "23",
     "iso_A_5": "49",
-
     "iso_6": "Fe-50",
     "iso_mass_6": "49.96299",
     "iso_half_6": "155 (ms)",
@@ -126,7 +112,6 @@
     "iso_Z_6": "26",
     "iso_N_6": "24",
     "iso_A_6": "50",
-
     "iso_7": "Fe-51",
     "iso_mass_7": "50.956820",
     "iso_half_7": "305 (ms)",
@@ -134,7 +119,6 @@
     "iso_Z_7": "26",
     "iso_N_7": "25",
     "iso_A_7": "51",
-
     "iso_8": "Fe-52",
     "iso_mass_8": "51.948114",
     "iso_half_8": "8.275 (hours)",
@@ -142,7 +126,6 @@
     "iso_Z_8": "26",
     "iso_N_8": "26",
     "iso_A_8": "52",
-
     "iso_9": "Fe-53",
     "iso_mass_9": "52.9453079",
     "iso_half_9": "8.51 (min)",
@@ -150,7 +133,6 @@
     "iso_Z_9": "26",
     "iso_N_9": "27",
     "iso_A_9": "53",
-
     "iso_10": "Fe-54",
     "iso_mass_10": "53.9396090",
     "iso_half_10": "Observationally Stable",
@@ -158,7 +140,6 @@
     "iso_Z_10": "26",
     "iso_N_10": "28",
     "iso_A_10": "54",
-
     "iso_11": "Fe-55",
     "iso_mass_11": "54.9382934",
     "iso_half_11": "2.737 (years)",
@@ -166,7 +147,6 @@
     "iso_Z_11": "26",
     "iso_N_11": "29",
     "iso_A_11": "55",
-
     "iso_12": "Fe-56",
     "iso_mass_12": "55.9349363",
     "iso_half_12": "Stable",
@@ -174,7 +154,6 @@
     "iso_Z_12": "26",
     "iso_N_12": "30",
     "iso_A_12": "56",
-
     "iso_13": "Fe-57",
     "iso_mass_13": "56.9353928",
     "iso_half_13": "Stable",
@@ -182,7 +161,6 @@
     "iso_Z_13": "26",
     "iso_N_13": "31",
     "iso_A_13": "57",
-
     "iso_14": "Fe-58",
     "iso_mass_14": "57.9332744",
     "iso_half_14": "Stable",
@@ -190,7 +168,6 @@
     "iso_Z_14": "26",
     "iso_N_14": "32",
     "iso_A_14": "58",
-
     "iso_15": "Fe-59",
     "iso_mass_15": "58.9348755",
     "iso_half_15": "44.495 (days)",
@@ -198,7 +175,6 @@
     "iso_Z_15": "26",
     "iso_N_15": "33",
     "iso_A_15": "59",
-
     "iso_16": "Fe-60",
     "iso_mass_16": "59.934072",
     "iso_half_16": "2.6×10^6 (years)",
@@ -206,7 +182,6 @@
     "iso_Z_16": "26",
     "iso_N_16": "34",
     "iso_A_16": "60",
-
     "iso_17": "Fe-61",
     "iso_mass_17": "60.936745",
     "iso_half_17": "5.98 (min)",
@@ -214,7 +189,6 @@
     "iso_Z_17": "26",
     "iso_N_17": "35",
     "iso_A_17": "61",
-
     "iso_18": "Fe-62",
     "iso_mass_18": "61.936767",
     "iso_half_18": "68 (s)",
@@ -222,7 +196,6 @@
     "iso_Z_18": "26",
     "iso_N_18": "36",
     "iso_A_18": "62",
-
     "iso_19": "Fe-63",
     "iso_mass_19": "62.94037",
     "iso_half_19": "6.1 (s)",
@@ -230,7 +203,6 @@
     "iso_Z_19": "26",
     "iso_N_19": "37",
     "iso_A_19": "63",
-
     "iso_20": "Fe-64",
     "iso_mass_20": "63.9412",
     "iso_half_20": "2.0 (s)",
@@ -238,7 +210,6 @@
     "iso_Z_20": "26",
     "iso_N_20": "38",
     "iso_A_20": "64",
-
     "iso_21": "Fe-65",
     "iso_mass_21": "64.94538",
     "iso_half_21": "1.3 (s)",
@@ -246,7 +217,6 @@
     "iso_Z_21": "26",
     "iso_N_21": "39",
     "iso_A_21": "65",
-
     "iso_22": "Fe-66",
     "iso_mass_22": "65.94678",
     "iso_half_22": "440 (ms)",
@@ -254,7 +224,6 @@
     "iso_Z_22": "26",
     "iso_N_22": "40",
     "iso_A_22": "66",
-
     "iso_23": "Fe-67",
     "iso_mass_23": "66.95095",
     "iso_half_23": "394 (ms)",
@@ -262,7 +231,6 @@
     "iso_Z_23": "26",
     "iso_N_23": "41",
     "iso_A_23": "67",
-
     "iso_24": "Fe-68",
     "iso_mass_24": "67.95370",
     "iso_half_24": "187 (ms)",
@@ -270,7 +238,6 @@
     "iso_Z_24": "26",
     "iso_N_24": "42",
     "iso_A_24": "68",
-
     "iso_25": "Fe-69",
     "iso_mass_25": "68.95878",
     "iso_half_25": "109 (ms)",
@@ -278,7 +245,6 @@
     "iso_Z_25": "26",
     "iso_N_25": "43",
     "iso_A_25": "69",
-
     "iso_26": "Fe-70",
     "iso_mass_26": "69.96146",
     "iso_half_26": "94 (ms)",
@@ -286,7 +252,6 @@
     "iso_Z_26": "26",
     "iso_N_26": "44",
     "iso_A_26": "70",
-
     "iso_27": "Fe-71",
     "iso_mass_27": "70.96672",
     "iso_half_27": "30 (ms)",
@@ -294,7 +259,6 @@
     "iso_Z_27": "26",
     "iso_N_27": "45",
     "iso_A_27": "71",
-
     "iso_28": "Fe-72",
     "iso_mass_28": "71.96962",
     "iso_half_28": "10 (ms)",
@@ -302,7 +266,6 @@
     "iso_Z_28": "26",
     "iso_N_28": "46",
     "iso_A_28": "72",
-
     "iso_29": "Fe-73",
     "iso_mass_29": "---",
     "iso_half_29": "---",
@@ -310,7 +273,6 @@
     "iso_Z_29": "26",
     "iso_N_29": "47",
     "iso_A_29": "73",
-
     "iso_30": "Fe-74",
     "iso_mass_30": "---",
     "iso_half_30": "---",
@@ -318,7 +280,6 @@
     "iso_Z_30": "26",
     "iso_N_30": "48",
     "iso_A_30": "74",
-
     "iso_31": "Fe-75",
     "iso_mass_31": "---",
     "iso_half_31": "---",
