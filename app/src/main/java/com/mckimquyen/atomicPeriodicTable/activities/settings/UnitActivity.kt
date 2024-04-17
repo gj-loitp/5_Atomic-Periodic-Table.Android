@@ -10,16 +10,16 @@ import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.preferences.TemperatureUnits
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_unit.backBtnUnit
-import kotlinx.android.synthetic.main.activity_unit.celsiusBtn
-import kotlinx.android.synthetic.main.activity_unit.commonTitleBackunit
-import kotlinx.android.synthetic.main.activity_unit.commonTitleBackUnitColor
-import kotlinx.android.synthetic.main.activity_unit.fahrenheitbtn
-import kotlinx.android.synthetic.main.activity_unit.kelvinBtn
-import kotlinx.android.synthetic.main.activity_unit.unitScroll
-import kotlinx.android.synthetic.main.activity_unit.unitTitle
-import kotlinx.android.synthetic.main.activity_unit.unitTitleDownstate
-import kotlinx.android.synthetic.main.activity_unit.viewUnit
+import kotlinx.android.synthetic.main.a_unit.backBtnUnit
+import kotlinx.android.synthetic.main.a_unit.celsiusBtn
+import kotlinx.android.synthetic.main.a_unit.commonTitleBackunit
+import kotlinx.android.synthetic.main.a_unit.commonTitleBackUnitColor
+import kotlinx.android.synthetic.main.a_unit.fahrenheitbtn
+import kotlinx.android.synthetic.main.a_unit.kelvinBtn
+import kotlinx.android.synthetic.main.a_unit.unitScroll
+import kotlinx.android.synthetic.main.a_unit.unitTitle
+import kotlinx.android.synthetic.main.a_unit.unitTitleDownstate
+import kotlinx.android.synthetic.main.a_unit.viewUnit
 
 class UnitActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +48,7 @@ class UnitActivity : BaseActivity() {
             setTheme(R.style.AppThemeDark)
         }
 
-        setContentView(R.layout.activity_unit) //REMEMBER: Never move any function calls above this
+        setContentView(R.layout.a_unit) //REMEMBER: Never move any function calls above this
         viewUnit.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 

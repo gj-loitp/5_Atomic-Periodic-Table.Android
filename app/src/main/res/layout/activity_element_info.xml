@@ -171,7 +171,7 @@
 
             <include
                 android:id="@+id/overviewInc"
-                layout="@layout/d_overview"
+                layout="@layout/v_d_overview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -182,12 +182,12 @@
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/d_temperatures"
+                layout="@layout/v_d_temperatures"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/d_atomic"
+                layout="@layout/v_d_atomic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

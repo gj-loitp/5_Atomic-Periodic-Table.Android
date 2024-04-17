@@ -2,12 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/view_main"
-    android:orientation="vertical"
     android:background="?attr/backgroundColor"
-    tools:context=".activities.MainActivity">
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity"
+    tools:ignore="HardcodedText">
 
     <FrameLayout
         android:id="@+id/commonTitleBackMain"
@@ -24,7 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="bottom"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <FrameLayout
                 android:id="@+id/titleBox"
@@ -36,19 +38,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_gravity="center_vertical"
-                    android:clickable="true"
-                    android:elevation="0dp"
                     android:background="@drawable/shape_toast"
                     android:backgroundTint="?attr/colorSurface"
+                    android:clickable="true"
+                    android:elevation="0dp"
                     android:focusable="true"
                     android:foreground="@drawable/ripple_bkg">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:alpha="0.11"
                         android:background="@drawable/shape_toast"
-                        android:backgroundTint="?attr/colorPrimary"
-                        android:alpha="0.11"/>
+                        android:backgroundTint="?attr/colorPrimary" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -57,12 +59,12 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="16dp"
                         android:alpha="0.9"
-                        android:drawableStart="@drawable/ic_search"
                         android:drawablePadding="16dp"
                         android:gravity="center_vertical"
                         android:text="Search Elements"
                         android:textColor="?attr/colorOnSecondaryContainer"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_search" />
                 </FrameLayout>
 
             </FrameLayout>
@@ -319,7 +321,7 @@
             android:fadeScrollbars="true"
             android:fadingEdge="vertical"
             android:fadingEdgeLength="36dp"
-            android:focusable="false"
+            android:focusable="true"
             android:scrollIndicators="none"
             android:scrollbarFadeDuration="24"
             android:scrollbarThumbHorizontal="@color/transparent"
@@ -666,7 +668,8 @@
                         layout="@layout/v_group_18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingEnd="9dp" />
+                        android:paddingEnd="9dp"
+                        tools:ignore="RtlSymmetry" />
 
                 </LinearLayout>
 
@@ -683,11 +686,12 @@
         android:layout_marginBottom="32dp"
         android:backgroundTint="?attr/colorPrimary"
         android:clickable="true"
+        android:contentDescription="@string/app_name"
         android:elevation="10dp"
         android:focusable="true"
-        app:borderWidth="0dp"
         android:src="@drawable/ic_filter"
         android:tint="?attr/colorOnPrimary"
+        app:borderWidth="0dp"
         app:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="@id/navBarMain"
         app:layout_constraintEnd_toEndOf="parent"
@@ -697,9 +701,9 @@
         android:id="@+id/navBarMain"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:alpha="1"
         android:background="?attr/colorSurface"
         android:clickable="true"
-        android:alpha="1"
         android:elevation="8dp"
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -709,8 +713,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:alpha="0.08"
+            android:background="?attr/colorPrimary"
             android:elevation="9dp"
-            android:background="?attr/colorPrimary"/>
+            tools:ignore="TooManyViews" />
 
         <FrameLayout
             android:id="@+id/navContent"
@@ -726,6 +731,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:clickable="true"
+                android:contentDescription="@string/app_name"
                 android:focusable="true"
                 android:src="@drawable/ic_settings"
                 android:tint="?attr/colorOnSecondaryContainer"
@@ -739,6 +745,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:clickable="true"
+                android:contentDescription="@string/app_name"
                 android:focusable="true"
                 android:src="@drawable/ic_menu"
                 android:tint="?attr/colorOnSecondaryContainer"

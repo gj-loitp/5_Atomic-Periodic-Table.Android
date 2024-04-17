@@ -4,10 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:ignore="PrivateResource">
+    tools:ignore="PrivateResource,HardcodedText">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/physicsProperties"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
@@ -22,10 +21,10 @@
             android:layout_marginTop="9dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="9dp"
-            android:drawableStart="@drawable/overview_icon"
+            android:drawableStart="@drawable/ic_temperature"
             android:drawablePadding="9dp"
             android:drawableTint="?attr/colorPrimary"
-            android:text="@string/atomic_properties"
+            android:text="@string/temperatures"
             android:textColor="?attr/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -37,52 +36,33 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/electron_Config_title2"
+            android:id="@+id/elementBoilingKelvinTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="@string/oxidation_states"
-            android:textColor="?attr/colorOnSecondaryContainer"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <include
-            android:id="@+id/oxView"
-            layout="@layout/view_oxidiation_states"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/electronConfigTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="2dp"
-            android:text="@string/electron_configuration"
+            android:text="@string/boiling_point_kelvin"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/electronConfigText"
+            android:id="@+id/elementBoilingKelvin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/electron_config_text"
+            android:text="element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textIsSelectable="true"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView6"
+            android:id="@+id/textVisew"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -91,33 +71,33 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/ionChargeTitle"
+            android:id="@+id/elementBoilingCelsiusTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="@string/ion_charge"
+            android:text="@string/boiling_point_c"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/ionChargeText"
+            android:id="@+id/elementBoilingCelsius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/ion_charge_text"
+            android:text="element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textIsSelectable="true"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView4"
+            android:id="@+id/space"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -126,33 +106,33 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/ionization_energies_title"
+            android:id="@+id/elementBoilingFahrenheitTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="@string/ionization_energies"
+            android:text="@string/boiling_point_f"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/ionizationEnergiesText"
+            android:id="@+id/elementBoilingFahrenheit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/ionization_energies_text"
+            android:text="element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textIsSelectable="true"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView12"
+            android:id="@+id/space3"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -161,33 +141,33 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/atomicRadiusETitle"
+            android:id="@+id/elementMeltingKelvinTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="@string/atomic_radius_empirical"
+            android:text="@string/melting_point_kelvin"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/atomicRadiusEText"
+            android:id="@+id/elementMeltingKelvin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/atomic_radius_e_text"
+            android:text="element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textIsSelectable="true"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView"
+            android:id="@+id/space4"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -196,32 +176,33 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/atomicRadiusTitle"
+            android:id="@+id/elementMeltingCelsiusTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="@string/atomic_radius_calculated"
+            android:text="@string/melting_point_c"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/atomicRadiusText"
+            android:id="@+id/elementMeltingCelsius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/atomic_radius_text"
+            android:text="element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textIsSelectable="true"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/space5"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -230,64 +211,29 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/covalentRadiusTitle"
+            android:id="@+id/elementMeltingFahrenheitTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="@string/covalent_radius"
+            android:text="@string/melting_point_f"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/covalentRadiusText"
+            android:id="@+id/elementMeltingFahrenheit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/covalent_radius_text"
+            android:text="element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textIsSelectable="true"
             android:textSize="14sp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginEnd="18dp"
-            android:alpha="0.25"
-            android:background="?attr/colorOnSecondaryContainer" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/vanDerWaalsRadiusTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="2dp"
-            android:text="@string/van_der_waals_radius"
-            android:textColor="?attr/colorOnSecondaryContainer"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/vanDerWaalsRadiusText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/van_der_waals_radius_text"
-            android:textColor="?attr/colorOnSecondaryContainer"
-            android:textIsSelectable="true"
-            android:textSize="14sp" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>
