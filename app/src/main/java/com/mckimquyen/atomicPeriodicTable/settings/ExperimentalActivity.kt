@@ -6,10 +6,7 @@ import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_experimental_settings_page.backBtnExp
-import kotlinx.android.synthetic.main.activity_experimental_settings_page.commonTitleBackExp
-import kotlinx.android.synthetic.main.activity_experimental_settings_page.generalHeaderExp
-import kotlinx.android.synthetic.main.activity_experimental_settings_page.viewe
+import kotlinx.android.synthetic.main.a_experimental_settings_page.*
 
 class ExperimentalActivity : BaseActivity() {
 
@@ -27,7 +24,7 @@ class ExperimentalActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_experimental_settings_page) //Don't move down (Needs to be before we call our functions)
+        setContentView(R.layout.a_experimental_settings_page) //Don't move down (Needs to be before we call our functions)
 
         //onClickListeners() //Disabled as a result of conflicts between ACTION_DOWN and ScrollView
         viewe.systemUiVisibility =

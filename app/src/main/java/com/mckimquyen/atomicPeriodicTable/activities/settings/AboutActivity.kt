@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.a_info.imageView3
 import kotlinx.android.synthetic.main.a_info.titleBoxInfo
 import kotlinx.android.synthetic.main.a_info.versionNumber
 import kotlinx.android.synthetic.main.a_info.viewInfo
-import kotlinx.android.synthetic.main.activity_solubility.backBtn
+import kotlinx.android.synthetic.main.a_solubility.backBtn
 
 class AboutActivity : BaseActivity() {
 

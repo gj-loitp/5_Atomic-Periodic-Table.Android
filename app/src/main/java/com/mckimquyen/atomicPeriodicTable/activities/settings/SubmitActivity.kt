@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.a_submit.submitScroll
 import kotlinx.android.synthetic.main.a_submit.submitTitle
 import kotlinx.android.synthetic.main.a_submit.submitTitleDownstate
 import kotlinx.android.synthetic.main.a_submit.viewSub
-import kotlinx.android.synthetic.main.activity_solubility.backBtn
+import kotlinx.android.synthetic.main.a_solubility.backBtn
 import kotlinx.android.synthetic.main.view_drop_issue.bug
 import kotlinx.android.synthetic.main.view_drop_issue.dataIssue
 import kotlinx.android.synthetic.main.view_drop_issue.question

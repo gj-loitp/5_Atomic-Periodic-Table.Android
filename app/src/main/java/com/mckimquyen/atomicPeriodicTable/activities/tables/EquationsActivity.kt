@@ -22,17 +22,7 @@ import com.mckimquyen.atomicPeriodicTable.model.Equation
 import com.mckimquyen.atomicPeriodicTable.model.EquationModel
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import com.mckimquyen.atomicPeriodicTable.utils.Utils
-import kotlinx.android.synthetic.main.activity_equations.backBtnEqu
-import kotlinx.android.synthetic.main.activity_equations.closeEquSearch
-import kotlinx.android.synthetic.main.activity_equations.commonTitleBackEqu
-import kotlinx.android.synthetic.main.activity_equations.eInc
-import kotlinx.android.synthetic.main.activity_equations.editEqu
-import kotlinx.android.synthetic.main.activity_equations.emptySearchBoxEqu
-import kotlinx.android.synthetic.main.activity_equations.equRecycler
-import kotlinx.android.synthetic.main.activity_equations.searchBarEqu
-import kotlinx.android.synthetic.main.activity_equations.searchBtnEqu
-import kotlinx.android.synthetic.main.activity_equations.titleBoxEqu
-import kotlinx.android.synthetic.main.activity_equations.viewEqu
+import kotlinx.android.synthetic.main.a_equations.*
 import kotlinx.android.synthetic.main.view_equations_info.eBackBtn
 import kotlinx.android.synthetic.main.view_equations_info.eText
 import kotlinx.android.synthetic.main.view_equations_info.eTitle
@@ -69,7 +59,7 @@ class EquationsActivity : BaseActivity(), EquationsAdapter.OnEquationClickListen
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_equations) //REMEMBER: Never move any function calls above this
+        setContentView(R.layout.a_equations) //REMEMBER: Never move any function calls above this
 
         recyclerView()
         clickSearch()

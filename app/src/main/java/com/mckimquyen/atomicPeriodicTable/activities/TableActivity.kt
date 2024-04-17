@@ -13,7 +13,7 @@ import com.mckimquyen.atomicPeriodicTable.activities.tables.IonActivity
 import com.mckimquyen.atomicPeriodicTable.activities.tables.NuclideActivity
 import com.mckimquyen.atomicPeriodicTable.activities.tables.PHActivity
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_solubility.backBtn
+import kotlinx.android.synthetic.main.a_solubility.backBtn
 import kotlinx.android.synthetic.main.a_submit.viewSub
 import kotlinx.android.synthetic.main.a_tables.*
 

@@ -7,12 +7,7 @@ import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_solubility.backBtn
-import kotlinx.android.synthetic.main.activity_solubility.boxm
-import kotlinx.android.synthetic.main.activity_solubility.commonTitleBackSul
-import kotlinx.android.synthetic.main.activity_solubility.infoBtn
-import kotlinx.android.synthetic.main.activity_solubility.infoPanel
-import kotlinx.android.synthetic.main.activity_solubility.viewSub
+import kotlinx.android.synthetic.main.a_solubility.*
 import kotlinx.android.synthetic.main.view_panel_info.infoBackBtn
 import kotlinx.android.synthetic.main.view_panel_info.infoBackground
 import kotlinx.android.synthetic.main.view_panel_info.infoTitle
@@ -46,7 +41,7 @@ class SolubilityActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_solubility) //Don't move down (Needs to be before we call our functions)
+        setContentView(R.layout.a_solubility) //Don't move down (Needs to be before we call our functions)
         viewSub.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
