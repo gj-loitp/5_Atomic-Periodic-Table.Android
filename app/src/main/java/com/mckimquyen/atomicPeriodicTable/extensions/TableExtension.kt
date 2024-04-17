@@ -18,8 +18,8 @@ import com.mckimquyen.atomicPeriodicTable.utils.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.utils.Utils
 import kotlinx.android.synthetic.main.a_main.hoverBackground
 import kotlinx.android.synthetic.main.a_main.hoverMenuInclude
-import kotlinx.android.synthetic.main.group_3.actinoidsBtn
-import kotlinx.android.synthetic.main.group_3.lanthanoidsBtn
+import kotlinx.android.synthetic.main.v_group_3.actinoidsBtn
+import kotlinx.android.synthetic.main.v_group_3.lanthanoidsBtn
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException

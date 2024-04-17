@@ -8,7 +8,7 @@
     tools:ignore="HardcodedText,PrivateResource,SmallSp">
 
     <FrameLayout
-        android:id="@+id/scandium_frame"
+        android:id="@+id/scandiumFrame"
         android:layout_width="92dp"
         android:layout_height="92dp"
         android:layout_margin="2dp"
