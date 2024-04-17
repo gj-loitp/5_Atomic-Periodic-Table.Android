@@ -440,7 +440,7 @@
                     android:paddingTop="32dp">
 
                     <include
-                        layout="@layout/group_1"
+                        layout="@layout/v_group_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -493,7 +493,7 @@
                     android:paddingTop="32dp">
 
                     <include
-                        layout="@layout/group_5"
+                        layout="@layout/v_group_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -506,7 +506,7 @@
                     android:paddingTop="32dp">
 
                     <include
-                        layout="@layout/group_6"
+                        layout="@layout/v_group_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -572,7 +572,7 @@
                     android:paddingTop="32dp">
 
                     <include
-                        layout="@layout/group_11"
+                        layout="@layout/v_group_11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
