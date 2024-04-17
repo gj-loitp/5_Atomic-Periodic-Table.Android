@@ -47,7 +47,7 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) = Unit
 
     override fun onApplyWindowInsets(v: View, insets: WindowInsets): WindowInsets {

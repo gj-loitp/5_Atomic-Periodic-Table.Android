@@ -1,5 +1,8 @@
 package com.mckimquyen.atomicPeriodicTable.model
 
+import androidx.annotation.Keep
+
+@Keep
 object SeriesModel {
     fun getList(series: ArrayList<Series>) {
         series.add(Series("lithium", -3.04, "+", "Li"))

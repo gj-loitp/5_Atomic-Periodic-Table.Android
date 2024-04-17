@@ -3,16 +3,17 @@ package com.mckimquyen.atomicPeriodicTable.pref
 import android.content.Context
 import android.content.SharedPreferences
 
-class ElementSendAndLoad(context: Context) {
+class DictionaryPref(context: Context) {
 
-    private val prefName = "ElementSendAndLoad"
-    private val prefValue = "ElementSendAndLoadValue"
+    private val prefName = "Dictionary_Preference"
+    private val prefValue = "Dictionary_Value"
 
     private val preference: SharedPreferences =
         context.getSharedPreferences(prefName, Context.MODE_PRIVATE)
 
-    fun getValue(): String? {
-        return preference.getString(prefValue, "hydrogen")
+    fun getValue(): String {
+        return preference.getString(prefValue, "chemistry") ?: ""
+
     }
 
     fun setValue(string: String) {

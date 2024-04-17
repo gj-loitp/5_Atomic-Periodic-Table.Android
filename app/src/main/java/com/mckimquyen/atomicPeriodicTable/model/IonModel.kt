@@ -1,5 +1,8 @@
 package com.mckimquyen.atomicPeriodicTable.model
 
+import androidx.annotation.Keep
+
+@Keep
 object IonModel {
     fun getList(ion: ArrayList<Ion>) {
         ion.add(Ion("hydrogen", "H", 1))

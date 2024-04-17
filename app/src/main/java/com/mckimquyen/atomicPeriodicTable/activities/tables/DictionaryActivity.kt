@@ -26,7 +26,7 @@ import com.mckimquyen.atomicPeriodicTable.adapter.DictionaryAdapter
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Dictionary
 import com.mckimquyen.atomicPeriodicTable.model.DictionaryModel
-import com.mckimquyen.atomicPeriodicTable.pref.DictionaryPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.DictionaryPref
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_dictionary.*
@@ -78,7 +78,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
         chipListeners(itemse, recyclerView)
         clearBtn.visibility = View.GONE
 
-        val dictionaryPreference = DictionaryPreferences(this)
+        val dictionaryPreference = DictionaryPref(this)
         viewDic.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         backBtnD.setOnClickListener {
@@ -93,28 +93,28 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
     ) {
         chemistryBtn.setOnClickListener {
             updateButtonColor("chemistry_btn")
-            val dictionaryPreference = DictionaryPreferences(this)
+            val dictionaryPreference = DictionaryPref(this)
             dictionaryPreference.setValue("chemistry")
             editIso.setText("test")
             editIso.setText("")
         }
         physicsBtn.setOnClickListener {
             updateButtonColor("physics_btn")
-            val dictionaryPreference = DictionaryPreferences(this)
+            val dictionaryPreference = DictionaryPref(this)
             dictionaryPreference.setValue("physics")
             editIso.setText("test1")
             editIso.setText("")
         }
         mathBtn.setOnClickListener {
             updateButtonColor("math_btn")
-            val dictionaryPreference = DictionaryPreferences(this)
+            val dictionaryPreference = DictionaryPref(this)
             dictionaryPreference.setValue("math")
             editIso.setText("test1")
             editIso.setText("")
         }
         reactionsBtn.setOnClickListener {
             updateButtonColor("reactions_btn")
-            val dictionaryPreference = DictionaryPreferences(this)
+            val dictionaryPreference = DictionaryPref(this)
             dictionaryPreference.setValue("reactions")
             editIso.setText("test1")
             editIso.setText("")
@@ -139,7 +139,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
         clearBtn.setOnClickListener {
             val resIDB = resources.getIdentifier(btn, "id", packageName)
             val button = findViewById<Button>(resIDB)
-            val dictionaryPreference = DictionaryPreferences(this)
+            val dictionaryPreference = DictionaryPref(this)
             button?.background = getDrawable(R.drawable.shape_chip)
             dictionaryPreference.setValue("")
             editIso.setText("test1")
@@ -194,7 +194,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
     ) {
         val filteredList: ArrayList<Dictionary> = ArrayList()
         for (item in list) {
-            val dictionaryPreference = DictionaryPreferences(this)
+            val dictionaryPreference = DictionaryPref(this)
             val dictionaryPrefValue1 = dictionaryPreference.getValue()
             if (item.heading.lowercase(Locale.ROOT).contains(text.lowercase(Locale.ROOT))) {
                 if (item.category.lowercase(Locale.ROOT)
