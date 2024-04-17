@@ -33,9 +33,9 @@ import kotlinx.android.synthetic.main.activity_element_info.scrView
 import kotlinx.android.synthetic.main.activity_element_info.shell
 import kotlinx.android.synthetic.main.activity_element_info.shellBackground
 import kotlinx.android.synthetic.main.activity_element_info.view
-import kotlinx.android.synthetic.main.d_properties.electronView
-import kotlinx.android.synthetic.main.d_properties.spImg
-import kotlinx.android.synthetic.main.d_properties.spOffline
+import kotlinx.android.synthetic.main.v_d_properties.electronView
+import kotlinx.android.synthetic.main.v_d_properties.spImg
+import kotlinx.android.synthetic.main.v_d_properties.spOffline
 import kotlinx.android.synthetic.main.view_detail_emission.closeEmissionBtn
 import kotlinx.android.synthetic.main.view_favorite_bar.editFavBtn
 import kotlinx.android.synthetic.main.view_shell_view.closeShellBtn

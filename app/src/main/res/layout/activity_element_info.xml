@@ -177,7 +177,7 @@
 
             <include
                 android:id="@+id/propertiesInc"
-                layout="@layout/d_properties"
+                layout="@layout/v_d_properties"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -192,18 +192,18 @@
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/d_electromagnetic"
+                layout="@layout/v_d_electromagnetic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
                 android:id="@+id/additionPhysics"
-                layout="@layout/d_thermodynamic"
+                layout="@layout/v_d_thermodynamic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/d_nuclear"
+                layout="@layout/v_d_nuclear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

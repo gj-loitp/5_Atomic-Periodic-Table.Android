@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,7 +7,6 @@
     tools:ignore="PrivateResource">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/physicsProperties"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
@@ -23,10 +21,10 @@
             android:layout_marginTop="9dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="9dp"
-            android:drawableStart="@drawable/ic_heat"
+            android:drawableStart="@drawable/vector_fav_electronegativity"
             android:drawablePadding="9dp"
             android:drawableTint="?attr/colorPrimary"
-            android:text="@string/thermodynamic_properties"
+            android:text="@string/electromagnetic_properties"
             android:textColor="?attr/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -37,62 +35,33 @@
             android:alpha="0.75"
             android:background="?attr/colorOnSecondaryContainer" />
 
-        <FrameLayout
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/elementElectricalTypeTitle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/phaseIcon"
-                android:layout_width="64dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:padding="18dp"
-                app:srcCompat="@drawable/vector_solid"
-                app:tint="?attr/colorTertiary" />
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="64dp"
-                android:orientation="vertical">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvPhaseTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="18dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="@string/phase_stp"
-                    android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvPhaseText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginEnd="18dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/phase_text"
-                    android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textIsSelectable="true"
-                    android:textSize="14sp" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
-        </FrameLayout>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="2dp"
+            android:text="@string/electrical_type"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView6"
+            android:id="@+id/elementElectricalType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/element_name"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textIsSelectable="true"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -101,33 +70,32 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvFusionHeatTitle"
+            android:id="@+id/elementResistivityTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="@string/fusion_heat"
+            android:text="@string/resistivity"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvFusionHeatText"
+            android:id="@+id/elementResistivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/fusion_heat_text"
+            android:text="@string/element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textIsSelectable="true"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -136,33 +104,32 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvSpecificHeatTitle"
+            android:id="@+id/elementMagneticTypeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="@string/specific_heat_capacity"
+            android:text="@string/magnetic_type"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvSpecificHeatText"
+            android:id="@+id/elementMagneticType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="specific_heat_text"
+            android:text="@string/element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textIsSelectable="true"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="18dp"
@@ -171,30 +138,29 @@
             android:background="?attr/colorOnSecondaryContainer" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvVaporizationHeatTitle"
+            android:id="@+id/elementSuperconductingPointTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="2dp"
-            android:text="@string/vaporization_heat"
+            android:text="@string/superconducting_point"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvVaporizationHeatText"
+            android:id="@+id/elementSuperconductingPoint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/vaporization_heat_text"
+            android:text="@string/element_name"
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textIsSelectable="true"
             android:textSize="14sp" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>
