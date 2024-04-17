@@ -20,7 +20,7 @@ import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Series
 import com.mckimquyen.atomicPeriodicTable.model.SeriesModel
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_dictionary.searchBtn
 import kotlinx.android.synthetic.main.a_dictionary.titleBox
 import kotlinx.android.synthetic.main.a_electrode.*

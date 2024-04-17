@@ -23,8 +23,8 @@ import com.mckimquyen.atomicPeriodicTable.preferences.ElementSendAndLoad
 import com.mckimquyen.atomicPeriodicTable.preferences.IsoPreferences
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import com.mckimquyen.atomicPeriodicTable.preferences.sendIso
-import com.mckimquyen.atomicPeriodicTable.utils.ToastUtil
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kotlinx.android.synthetic.main.a_isotopes_experimental.*
 import kotlinx.android.synthetic.main.view_filter_view_iso.isoAlphabetBtn

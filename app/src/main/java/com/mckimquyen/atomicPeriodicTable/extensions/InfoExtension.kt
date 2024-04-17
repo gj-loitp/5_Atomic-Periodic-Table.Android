@@ -30,9 +30,9 @@ import com.mckimquyen.atomicPeriodicTable.preferences.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.preferences.SpecificHeatPreference
 import com.mckimquyen.atomicPeriodicTable.preferences.VaporizationHeatPreference
 import com.mckimquyen.atomicPeriodicTable.preferences.sendIso
-import com.mckimquyen.atomicPeriodicTable.utils.Pasteur
-import com.mckimquyen.atomicPeriodicTable.utils.ToastUtil
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.Pasteur
+import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.a_element_info.*
 import kotlinx.android.synthetic.main.v_d_atomic.*

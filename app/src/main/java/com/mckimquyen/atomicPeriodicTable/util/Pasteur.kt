@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.utils
+package com.mckimquyen.atomicPeriodicTable.util
 
 import android.util.Log
 

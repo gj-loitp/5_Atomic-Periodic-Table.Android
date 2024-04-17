@@ -19,7 +19,7 @@ import com.mckimquyen.atomicPeriodicTable.activities.settings.UnitActivity
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import com.mckimquyen.atomicPeriodicTable.preferences.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.settings.ExperimentalActivity
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_settings.*
 import kotlinx.android.synthetic.main.view_theme_panel.cancelBtn
 import kotlinx.android.synthetic.main.view_theme_panel.darkBtn

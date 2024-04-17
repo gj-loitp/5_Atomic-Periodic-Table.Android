@@ -13,9 +13,9 @@ import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.preferences.TemperatureUnits
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.utils.Pasteur
-import com.mckimquyen.atomicPeriodicTable.utils.ToastUtil
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.Pasteur
+import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_main.hoverBackground
 import kotlinx.android.synthetic.main.a_main.hoverMenuInclude
 import kotlinx.android.synthetic.main.v_group_3.actinoidsBtn

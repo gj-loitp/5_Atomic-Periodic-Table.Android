@@ -10,7 +10,7 @@ import android.view.ViewTreeObserver
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_submit.background
 import kotlinx.android.synthetic.main.a_submit.commonTitleBackSub
 import kotlinx.android.synthetic.main.a_submit.commonTitleBackSubColor

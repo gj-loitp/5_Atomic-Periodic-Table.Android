@@ -21,7 +21,7 @@ import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Equation
 import com.mckimquyen.atomicPeriodicTable.model.EquationModel
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_equations.*
 import kotlinx.android.synthetic.main.view_equations_info.eBackBtn
 import kotlinx.android.synthetic.main.view_equations_info.eText

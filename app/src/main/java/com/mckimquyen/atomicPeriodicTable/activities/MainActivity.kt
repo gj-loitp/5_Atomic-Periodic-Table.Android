@@ -43,7 +43,7 @@ import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.preferences.ElementSendAndLoad
 import com.mckimquyen.atomicPeriodicTable.preferences.SearchPreferences
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState
 import kotlinx.android.synthetic.main.a_main.*

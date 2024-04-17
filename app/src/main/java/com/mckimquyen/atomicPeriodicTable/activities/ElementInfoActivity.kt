@@ -17,7 +17,7 @@ import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.preferences.ElementSendAndLoad
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import com.mckimquyen.atomicPeriodicTable.preferences.OfflinePreference
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_element_info.*
 import kotlinx.android.synthetic.main.v_d_properties.electronView
 import kotlinx.android.synthetic.main.v_d_properties.spImg

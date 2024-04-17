@@ -1,5 +1,6 @@
-package com.mckimquyen.atomicPeriodicTable.widgets
+package com.mckimquyen.atomicPeriodicTable.widget
 
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
@@ -14,10 +15,11 @@ import com.mckimquyen.atomicPeriodicTable.activities.MainActivity
  * Implementation of App Widget functionality.
  */
 class ShortCommandWidget : AppWidgetProvider() {
+    @SuppressLint("RemoteViewLayout")
     override fun onUpdate(
         context: Context,
         appWidgetManager: AppWidgetManager,
-        appWidgetIds: IntArray
+        appWidgetIds: IntArray,
     ) {
 
         // There may be multiple widgets active, so update all of them

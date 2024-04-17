@@ -28,7 +28,7 @@ import com.mckimquyen.atomicPeriodicTable.model.Dictionary
 import com.mckimquyen.atomicPeriodicTable.model.DictionaryModel
 import com.mckimquyen.atomicPeriodicTable.preferences.DictionaryPreferences
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.utils.Utils
+import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_dictionary.*
 import java.util.Locale
 

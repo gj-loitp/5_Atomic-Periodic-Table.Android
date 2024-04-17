@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.utils
+package com.mckimquyen.atomicPeriodicTable.util
 
 import android.os.Handler
 import android.os.Looper
@@ -8,7 +8,7 @@ import com.sothree.slidinguppanel.SlidingUpPanelLayout
 object Utils {
     fun fadeInAnim(
         view: View,
-        time: Long
+        time: Long,
     ) {
         view.visibility = View.VISIBLE
         view.alpha = 0.0f
@@ -41,21 +41,21 @@ object Utils {
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             view.visibility = View.GONE
-        }, time+1)
+        }, time + 1)
 
     }
 
 
-    fun jsonTransition(view: View, time: Long) {
-        //Fade out
-        view.animate().duration = time
-        view.animate().alpha(0.0f)
-        //Fade In
-        val handler = Handler(Looper.getMainLooper())
-        handler.postDelayed({
-            view.animate().duration = time
-            view.animate().alpha(1.0f)
-        }, time+1)
-    }
+//    fun jsonTransition(view: View, time: Long) {
+//        //Fade out
+//        view.animate().duration = time
+//        view.animate().alpha(0.0f)
+//        //Fade In
+//        val handler = Handler(Looper.getMainLooper())
+//        handler.postDelayed({
+//            view.animate().duration = time
+//            view.animate().alpha(1.0f)
+//        }, time + 1)
+//    }
 
 }

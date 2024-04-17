@@ -15,7 +15,7 @@ import android.widget.Toast
 //TODO keystore
 
 //done
-class LApp : Application() {
+class RoyApp : Application() {
     override fun onCreate() {
         super.onCreate()
 
