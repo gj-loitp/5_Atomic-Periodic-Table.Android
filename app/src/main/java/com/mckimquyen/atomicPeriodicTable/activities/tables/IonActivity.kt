@@ -23,16 +23,7 @@ import com.mckimquyen.atomicPeriodicTable.model.IonModel
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import com.mckimquyen.atomicPeriodicTable.utils.Utils
 import kotlinx.android.synthetic.main.a_dictionary.titleBox
-import kotlinx.android.synthetic.main.activity_ion.backBtnIon
-import kotlinx.android.synthetic.main.activity_ion.closeEleSearchIon
-import kotlinx.android.synthetic.main.activity_ion.commonTitleBackIon
-import kotlinx.android.synthetic.main.activity_ion.editIon
-import kotlinx.android.synthetic.main.activity_ion.emptySearchBoxIon
-import kotlinx.android.synthetic.main.activity_ion.ionDetail
-import kotlinx.android.synthetic.main.activity_ion.ionView
-import kotlinx.android.synthetic.main.activity_ion.searchBarIon
-import kotlinx.android.synthetic.main.activity_ion.searchBtnIon
-import kotlinx.android.synthetic.main.activity_ion.viewIon
+import kotlinx.android.synthetic.main.a_ion.*
 import kotlinx.android.synthetic.main.view_ion_details.ionDetailTitle
 import kotlinx.android.synthetic.main.view_ion_details.tvDetailBackgroundIon
 import org.json.JSONArray
@@ -69,7 +60,7 @@ class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_ion) //REMEMBER: Never move any function calls above this
+        setContentView(R.layout.a_ion) //REMEMBER: Never move any function calls above this
 
         recyclerView()
         clickSearch()

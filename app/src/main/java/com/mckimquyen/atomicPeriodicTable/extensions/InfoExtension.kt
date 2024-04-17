@@ -34,7 +34,7 @@ import com.mckimquyen.atomicPeriodicTable.utils.Pasteur
 import com.mckimquyen.atomicPeriodicTable.utils.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.utils.Utils
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_element_info.*
+import kotlinx.android.synthetic.main.a_element_info.*
 import kotlinx.android.synthetic.main.v_d_atomic.*
 import kotlinx.android.synthetic.main.v_d_electromagnetic.elementElectricalType
 import kotlinx.android.synthetic.main.v_d_electromagnetic.elementMagneticType

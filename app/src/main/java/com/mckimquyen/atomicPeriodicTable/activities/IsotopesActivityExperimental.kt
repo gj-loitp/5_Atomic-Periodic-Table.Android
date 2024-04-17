@@ -26,7 +26,7 @@ import com.mckimquyen.atomicPeriodicTable.preferences.sendIso
 import com.mckimquyen.atomicPeriodicTable.utils.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
-import kotlinx.android.synthetic.main.activity_isotopes_experimental.*
+import kotlinx.android.synthetic.main.a_isotopes_experimental.*
 import kotlinx.android.synthetic.main.view_filter_view_iso.isoAlphabetBtn
 import kotlinx.android.synthetic.main.view_filter_view_iso.isoElementNumbBtn
 import kotlinx.android.synthetic.main.view_isotope_panel.frameIso
@@ -67,7 +67,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_isotopes_experimental) //Don't move down (Needs to be before we call our functions)
+        setContentView(R.layout.a_isotopes_experimental) //Don't move down (Needs to be before we call our functions)
 
         val recyclerView = findViewById<RecyclerView>(R.id.rView)
         slidingLayoutI.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED

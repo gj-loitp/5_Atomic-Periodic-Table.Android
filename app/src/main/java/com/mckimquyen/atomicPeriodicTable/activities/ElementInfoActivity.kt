@@ -18,21 +18,7 @@ import com.mckimquyen.atomicPeriodicTable.preferences.ElementSendAndLoad
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import com.mckimquyen.atomicPeriodicTable.preferences.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.utils.Utils
-import kotlinx.android.synthetic.main.activity_element_info.backBtn
-import kotlinx.android.synthetic.main.activity_element_info.commonTitleBack
-import kotlinx.android.synthetic.main.activity_element_info.detailEmission
-import kotlinx.android.synthetic.main.activity_element_info.detailEmissionBackground
-import kotlinx.android.synthetic.main.activity_element_info.frame
-import kotlinx.android.synthetic.main.activity_element_info.iBtn
-import kotlinx.android.synthetic.main.activity_element_info.nextBtn
-import kotlinx.android.synthetic.main.activity_element_info.offlineSpace
-import kotlinx.android.synthetic.main.activity_element_info.overviewInc
-import kotlinx.android.synthetic.main.activity_element_info.previousBtn
-import kotlinx.android.synthetic.main.activity_element_info.propertiesInc
-import kotlinx.android.synthetic.main.activity_element_info.scrView
-import kotlinx.android.synthetic.main.activity_element_info.shell
-import kotlinx.android.synthetic.main.activity_element_info.shellBackground
-import kotlinx.android.synthetic.main.activity_element_info.view
+import kotlinx.android.synthetic.main.a_element_info.*
 import kotlinx.android.synthetic.main.v_d_properties.electronView
 import kotlinx.android.synthetic.main.v_d_properties.spImg
 import kotlinx.android.synthetic.main.v_d_properties.spOffline
@@ -75,7 +61,7 @@ class ElementInfoActivity : InfoExtension() {
         }
         val elementSendAndLoadPreference = ElementSendAndLoad(this)
         var elementSendAndLoadValue = elementSendAndLoadPreference.getValue()
-        setContentView(R.layout.activity_element_info)
+        setContentView(R.layout.a_element_info)
         Utils.fadeInAnim(scrView, 300)
         readJson()
         shell.visibility = View.GONE

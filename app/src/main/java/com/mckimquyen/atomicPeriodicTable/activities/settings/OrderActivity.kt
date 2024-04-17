@@ -10,10 +10,7 @@ import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.adapter.OrderAdapter
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_order_settings_page.backBtnOrd
-import kotlinx.android.synthetic.main.activity_order_settings_page.commonTitleBackOrd
-import kotlinx.android.synthetic.main.activity_order_settings_page.ordRecycler
-import kotlinx.android.synthetic.main.activity_order_settings_page.viewOrd
+import kotlinx.android.synthetic.main.a_order_settings_page.*
 
 class OrderActivity : BaseActivity() {
 
@@ -43,7 +40,7 @@ class OrderActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_order_settings_page) //REMEMBER: Never move any function calls above this
+        setContentView(R.layout.a_order_settings_page) //REMEMBER: Never move any function calls above this
         val dataSet = listOf("Item 1", "Item 2", "Item 3", "Item 4", "Item 5")
         val mAdapter = OrderAdapter(dataSet)
         val mList = ordRecycler
