@@ -41,7 +41,7 @@ import com.mckimquyen.atomicPeriodicTable.extensions.shareApp
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
-import com.mckimquyen.atomicPeriodicTable.pref.SearchPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.SearchPref
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
@@ -260,7 +260,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
                 Log.v("SSDD2", filteredList.toString())
             }
         }
-        val searchPreference = SearchPreferences(this)
+        val searchPreference = SearchPref(this)
         val searchPrefValue = searchPreference.getValue()
         if (searchPrefValue == 2) {
             filteredList.sortWith { lhs, rhs ->
@@ -492,7 +492,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         elmtNumbBtn2.setOnClickListener {
             editElement.setText("")
 
-            val searchPreference = SearchPreferences(this)
+            val searchPreference = SearchPref(this)
             searchPreference.setValue(0)
 
             val filtList: ArrayList<Element> = ArrayList()
@@ -512,7 +512,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         electroBtn.setOnClickListener {
             editElement.setText("")
 
-            val searchPreference = SearchPreferences(this)
+            val searchPreference = SearchPref(this)
             searchPreference.setValue(1)
 
             val filtList: ArrayList<Element> = ArrayList()
@@ -532,7 +532,7 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
         alphabetBtn.setOnClickListener {
             editElement.setText("")
 
-            val searchPreference = SearchPreferences(this)
+            val searchPreference = SearchPref(this)
             searchPreference.setValue(2)
 
             val filtList: ArrayList<Element> = ArrayList()

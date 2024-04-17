@@ -29,7 +29,7 @@ import com.mckimquyen.atomicPeriodicTable.pref.MeltingPreference
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPreference
 import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPreference
-import com.mckimquyen.atomicPeriodicTable.pref.sendIso
+import com.mckimquyen.atomicPeriodicTable.pref.SendIso
 import com.mckimquyen.atomicPeriodicTable.util.Pasteur
 import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.util.Utils
@@ -249,7 +249,7 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             isotopesFrame.setOnClickListener {
                 val isoPreference = ElementSendAndLoad(this)
                 isoPreference.setValue(element.lowercase(Locale.getDefault())) //Send element number
-                val isoSend = sendIso(this)
+                val isoSend = SendIso(this)
                 isoSend.setValue("true") //Set flag for sent
                 val intent = Intent(this, IsotopesActivityExperimental::class.java)
                 startActivity(intent) //Send intent

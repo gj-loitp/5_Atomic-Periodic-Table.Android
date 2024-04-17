@@ -12,7 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.model.Element
-import com.mckimquyen.atomicPeriodicTable.pref.SearchPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.SearchPref
 import java.util.Locale
 
 class ElementAdapter(
@@ -52,7 +52,7 @@ class ElementAdapter(
             action: OnElementClickListener2,
             con: Context
         ) {
-            val searchPreference = SearchPreferences(con)
+            val searchPreference = SearchPref(con)
             val searchPrefValue = searchPreference.getValue()
 
             textViewElement.text = item.element

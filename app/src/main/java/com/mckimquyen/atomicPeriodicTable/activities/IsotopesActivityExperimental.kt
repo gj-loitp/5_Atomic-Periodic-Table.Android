@@ -20,9 +20,9 @@ import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
-import com.mckimquyen.atomicPeriodicTable.pref.IsoPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.IsoPref
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
-import com.mckimquyen.atomicPeriodicTable.pref.sendIso
+import com.mckimquyen.atomicPeriodicTable.pref.SendIso
 import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
@@ -130,7 +130,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
             Utils.fadeOutAnim(filterBackground, 150)
         }
         isoAlphabetBtn.setOnClickListener {
-            val isoPreference = IsoPreferences(this)
+            val isoPreference = IsoPref(this)
             isoPreference.setValue(0)
 
             val filtList: ArrayList<Element> = ArrayList()
@@ -151,7 +151,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
             )
         }
         isoElementNumbBtn.setOnClickListener {
-            val isoPreference = IsoPreferences(this)
+            val isoPreference = IsoPref(this)
             isoPreference.setValue(1)
 
             val filtList: ArrayList<Element> = ArrayList()
@@ -194,7 +194,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
 
     @SuppressLint("NotifyDataSetChanged")
     private fun filter(text: String, list: ArrayList<Element>, recyclerView: RecyclerView) {
-        val isoPreference = IsoPreferences(this)
+        val isoPreference = IsoPref(this)
         val isoPrefValue = isoPreference.getValue()
         val filteredList: ArrayList<Element> = ArrayList()
         for (item in list) {
@@ -236,7 +236,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
     }
 
     private fun sentIsotope() {
-        val isoSent = sendIso(this)
+        val isoSent = SendIso(this)
         if (isoSent.getValue() == "true") {
             drawCard(elementList)
             Utils.fadeInAnimBack(backgroundI2, 300)
