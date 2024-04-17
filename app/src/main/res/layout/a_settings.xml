@@ -685,7 +685,7 @@
                             android:background="?attr/backgroundColor"
                             android:backgroundTint="?attr/backgroundColor"
                             android:padding="10dp"
-                            app:srcCompat="@drawable/overview_icon"
+                            app:srcCompat="@drawable/ic_overview_icon"
                             app:tint="?attr/colorOnBackground" />
 
                         <androidx.appcompat.widget.LinearLayoutCompat

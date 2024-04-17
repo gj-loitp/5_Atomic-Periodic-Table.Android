@@ -30,7 +30,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="44dp"
                 android:contentDescription="@string/app_name"
-                app:srcCompat="@drawable/graphic_light_search" />
+                app:srcCompat="@drawable/bkg_graphic_light_search" />
 
             <TextView
                 android:layout_width="match_parent"

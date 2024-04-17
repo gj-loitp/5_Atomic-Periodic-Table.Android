@@ -47,7 +47,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
                 android:padding="18dp"
-                app:srcCompat="@drawable/vector_solid"
+                app:srcCompat="@drawable/ic_vector_solid"
                 app:tint="?attr/colorTertiary" />
 
             <androidx.appcompat.widget.LinearLayoutCompat

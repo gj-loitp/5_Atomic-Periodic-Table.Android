@@ -278,13 +278,13 @@ abstract class InfoExtension : AppCompatActivity(), View.OnApplyWindowInsetsList
             elementSuperconductingPoint.text = "$superconductingPoint (K)"
 
             if (phaseText.toString() == "Solid") {
-                phaseIcon.setImageDrawable(getDrawable(R.drawable.vector_solid))
+                phaseIcon.setImageDrawable(getDrawable(R.drawable.ic_vector_solid))
             }
             if (phaseText.toString() == "Gas") {
-                phaseIcon.setImageDrawable(getDrawable(R.drawable.vector_gas))
+                phaseIcon.setImageDrawable(getDrawable(R.drawable.ic_vector_gas))
             }
             if (phaseText.toString() == "Liquid") {
-                phaseIcon.setImageDrawable(getDrawable(R.drawable.liquid))
+                phaseIcon.setImageDrawable(getDrawable(R.drawable.ic_liquid))
             }
 
             if (oxidationNeg1.contains(0.toString())) {

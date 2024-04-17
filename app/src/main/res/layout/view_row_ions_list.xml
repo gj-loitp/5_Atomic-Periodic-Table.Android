@@ -66,7 +66,7 @@
             android:layout_gravity="center_vertical|end"
             android:layout_marginEnd="18dp"
             android:alpha="0.8"
-            android:drawableEnd="@drawable/outline_chevron_right_24"
+            android:drawableEnd="@drawable/ic_outline_chevron_right_24"
             android:drawablePadding="4dp"
             android:drawableTint="?attr/colorTertiary"
             android:elegantTextHeight="true"
