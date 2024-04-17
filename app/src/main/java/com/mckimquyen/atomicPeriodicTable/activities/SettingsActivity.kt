@@ -20,28 +20,7 @@ import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import com.mckimquyen.atomicPeriodicTable.preferences.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.settings.ExperimentalActivity
 import com.mckimquyen.atomicPeriodicTable.utils.Utils
-import kotlinx.android.synthetic.main.activity_settings.aboutSettings
-import kotlinx.android.synthetic.main.activity_settings.advancedBox
-import kotlinx.android.synthetic.main.activity_settings.backBtnSet
-import kotlinx.android.synthetic.main.activity_settings.cacheLay
-import kotlinx.android.synthetic.main.activity_settings.commonTitleBackSet
-import kotlinx.android.synthetic.main.activity_settings.commonTitleSettingsColor
-import kotlinx.android.synthetic.main.activity_settings.elementTitle
-import kotlinx.android.synthetic.main.activity_settings.elementTitleDownstate
-import kotlinx.android.synthetic.main.activity_settings.experimentalSettings
-import kotlinx.android.synthetic.main.activity_settings.favoriteSettings
-import kotlinx.android.synthetic.main.activity_settings.licensesSettings
-import kotlinx.android.synthetic.main.activity_settings.offlineInternetSwitch
-import kotlinx.android.synthetic.main.activity_settings.offlineSettings
-import kotlinx.android.synthetic.main.activity_settings.orderSettings
-import kotlinx.android.synthetic.main.activity_settings.personalizationBox
-import kotlinx.android.synthetic.main.activity_settings.scrollSettings
-import kotlinx.android.synthetic.main.activity_settings.submitSettings
-import kotlinx.android.synthetic.main.activity_settings.themePanel
-import kotlinx.android.synthetic.main.activity_settings.themesSettings
-import kotlinx.android.synthetic.main.activity_settings.titleBoxSettings
-import kotlinx.android.synthetic.main.activity_settings.unitSettings
-import kotlinx.android.synthetic.main.activity_settings.view
+import kotlinx.android.synthetic.main.a_settings.*
 import kotlinx.android.synthetic.main.view_theme_panel.cancelBtn
 import kotlinx.android.synthetic.main.view_theme_panel.darkBtn
 import kotlinx.android.synthetic.main.view_theme_panel.lightBtn
@@ -81,7 +60,7 @@ class SettingsActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_settings)
+        setContentView(R.layout.a_settings)
 
         if (themePrefValue == 100) {
             systemDefaultBtn.setCompoundDrawablesWithIntrinsicBounds(

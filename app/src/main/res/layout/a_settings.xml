@@ -796,7 +796,8 @@
                         android:layout_height="1dp"
                         android:layout_alignParentBottom="true"
                         android:backgroundTint="?attr/backgroundColor"
-                        android:visibility="invisible" />
+                        android:visibility="invisible"
+                        tools:ignore="TooManyViews" />
                 </RelativeLayout>
 
                 <RelativeLayout

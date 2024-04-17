@@ -24,30 +24,7 @@ import com.mckimquyen.atomicPeriodicTable.preferences.MeltingPreference
 import com.mckimquyen.atomicPeriodicTable.preferences.SpecificHeatPreference
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import com.mckimquyen.atomicPeriodicTable.preferences.VaporizationHeatPreference
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.atomicRadiusCalculatedCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.atomicRadiusEmpiricalCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.backBtnFav
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.boilingCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.celsiusBtn
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.commonTitleBackFav
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.commonTitleBackFavColor
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.covalentRadiusCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.densityCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.electronegativityCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.fahrenheitbtn
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.favSetScroll
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.favoriteSetTitle
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.favoriteSetTitleDownstate
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.fusionHeatCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.kelvinBtn
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.meltingCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.molarMassCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.phaseCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.specificHeatCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.vanDerWaalsRadiusCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.vaporizationHeatCheck
-import kotlinx.android.synthetic.main.activity_favorite_settings_page.viewf
-
+import kotlinx.android.synthetic.main.a_favorite_settings_page.*
 class FavoritePageActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,7 +53,7 @@ class FavoritePageActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_favorite_settings_page)
+        setContentView(R.layout.a_favorite_settings_page)
 
         val molarPreference = FavoriteBarPreferences(this)
         val molarPrefValue = molarPreference.getValue()

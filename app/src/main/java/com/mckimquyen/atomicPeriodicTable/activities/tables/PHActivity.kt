@@ -14,7 +14,7 @@ import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.model.Indicator
 import com.mckimquyen.atomicPeriodicTable.model.IndicatorModel
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_ph.*
+import kotlinx.android.synthetic.main.a_ph.*
 import kotlinx.android.synthetic.main.view_bar_ph_chips.bromothymolBlueBtn
 import kotlinx.android.synthetic.main.view_bar_ph_chips.congoRedBtn
 import kotlinx.android.synthetic.main.view_bar_ph_chips.methylOrangeBtn
@@ -47,7 +47,7 @@ class PHActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_ph) //REMEMBER: Never move any function calls above this
+        setContentView(R.layout.a_ph) //REMEMBER: Never move any function calls above this
 
         indicatorListener()
         viewPh.systemUiVisibility =

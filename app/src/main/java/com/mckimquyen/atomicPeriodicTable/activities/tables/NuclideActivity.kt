@@ -22,14 +22,7 @@ import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import kotlinx.android.synthetic.main.activity_nuclide.commonTitleBackNuc
-import kotlinx.android.synthetic.main.activity_nuclide.ldnPlace
-import kotlinx.android.synthetic.main.activity_nuclide.nucBackBtn
-import kotlinx.android.synthetic.main.activity_nuclide.scrollNuc
-import kotlinx.android.synthetic.main.activity_nuclide.scrollViewNuc
-import kotlinx.android.synthetic.main.activity_nuclide.seekBarNuc
-import kotlinx.android.synthetic.main.activity_nuclide.viewStub
-import kotlinx.android.synthetic.main.activity_nuclide.viewNuc
+import kotlinx.android.synthetic.main.a_nuclide.*
 import kotlinx.android.synthetic.main.view_stub_nuclide.nuc_view
 import org.json.JSONArray
 import org.json.JSONObject
@@ -67,7 +60,7 @@ class NuclideActivity : BaseActivity() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        setContentView(R.layout.activity_nuclide) //REMEMBER: Never move any function calls above this
+        setContentView(R.layout.a_nuclide) //REMEMBER: Never move any function calls above this
 
         viewStub.inflate()
 
