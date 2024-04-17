@@ -480,7 +480,7 @@
                     android:paddingTop="32dp">
 
                     <include
-                        layout="@layout/group_4"
+                        layout="@layout/v_group_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -559,7 +559,7 @@
                     android:paddingTop="32dp">
 
                     <include
-                        layout="@layout/group_10"
+                        layout="@layout/v_group_10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -624,7 +624,7 @@
                     android:paddingTop="32dp">
 
                     <include
-                        layout="@layout/group_15"
+                        layout="@layout/v_group_15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
