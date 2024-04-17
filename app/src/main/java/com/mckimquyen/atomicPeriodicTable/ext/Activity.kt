@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.extensions
+package com.mckimquyen.atomicPeriodicTable.ext
 
 import android.annotation.SuppressLint
 import android.app.Activity

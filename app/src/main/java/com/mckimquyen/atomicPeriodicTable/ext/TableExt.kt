@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.extensions
+package com.mckimquyen.atomicPeriodicTable.ext
 
 import android.content.res.Configuration
 import android.graphics.Color
@@ -26,7 +26,7 @@ import java.io.IOException
 import java.io.InputStream
 import java.util.Locale
 
-abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsListener {
+abstract class TableExt : AppCompatActivity(), View.OnApplyWindowInsetsListener {
     companion object {
         private const val TAG = "BaseActivity"
     }

@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.settings.FavoritePageActivity
 import com.mckimquyen.atomicPeriodicTable.activities.settings.SubmitActivity
-import com.mckimquyen.atomicPeriodicTable.extensions.InfoExtension
+import com.mckimquyen.atomicPeriodicTable.ext.InfoExtension
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad

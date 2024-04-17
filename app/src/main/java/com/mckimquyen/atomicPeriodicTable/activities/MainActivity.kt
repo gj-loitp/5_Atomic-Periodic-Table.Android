@@ -32,12 +32,12 @@ import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.tables.DictionaryActivity
 import com.mckimquyen.atomicPeriodicTable.adapter.ElementAdapter
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
-import com.mckimquyen.atomicPeriodicTable.extensions.TableExtension
-import com.mckimquyen.atomicPeriodicTable.extensions.moreApp
-import com.mckimquyen.atomicPeriodicTable.extensions.openBrowserPolicy
-import com.mckimquyen.atomicPeriodicTable.extensions.openUrlInBrowser
-import com.mckimquyen.atomicPeriodicTable.extensions.rateApp
-import com.mckimquyen.atomicPeriodicTable.extensions.shareApp
+import com.mckimquyen.atomicPeriodicTable.ext.TableExt
+import com.mckimquyen.atomicPeriodicTable.ext.moreApp
+import com.mckimquyen.atomicPeriodicTable.ext.openBrowserPolicy
+import com.mckimquyen.atomicPeriodicTable.ext.openUrlInBrowser
+import com.mckimquyen.atomicPeriodicTable.ext.rateApp
+import com.mckimquyen.atomicPeriodicTable.ext.shareApp
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
@@ -54,7 +54,7 @@ import kotlinx.android.synthetic.main.view_nav_menu_view.*
 import org.deejdev.twowaynestedscrollview.TwoWayNestedScrollView
 import java.util.Locale
 
-class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
+class MainActivity : TableExt(), ElementAdapter.OnElementClickListener2 {
     private var elementList = ArrayList<Element>()
     private var mAdapter =
         ElementAdapter(elementList = elementList, clickListener = this, con = this)
