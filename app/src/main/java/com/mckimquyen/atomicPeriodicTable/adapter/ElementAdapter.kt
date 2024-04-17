@@ -12,7 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.model.Element
-import com.mckimquyen.atomicPeriodicTable.preferences.SearchPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.SearchPreferences
 import java.util.Locale
 
 class ElementAdapter(

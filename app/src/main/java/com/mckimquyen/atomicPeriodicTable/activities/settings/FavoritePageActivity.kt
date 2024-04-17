@@ -9,21 +9,21 @@ import android.widget.CheckBox
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
-import com.mckimquyen.atomicPeriodicTable.preferences.AtomicCovalentPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.AtomicRadiusCalPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.AtomicRadiusEmpPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.AtomicVanPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.BoilingPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.DegreePreference
-import com.mckimquyen.atomicPeriodicTable.preferences.DensityPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.ElectronegativityPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.FavoriteBarPreferences
-import com.mckimquyen.atomicPeriodicTable.preferences.FavoritePhase
-import com.mckimquyen.atomicPeriodicTable.preferences.FusionHeatPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.MeltingPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.SpecificHeatPreference
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.preferences.VaporizationHeatPreference
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicCovalentPreference
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusCalPreference
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusEmpPreference
+import com.mckimquyen.atomicPeriodicTable.pref.AtomicVanPreference
+import com.mckimquyen.atomicPeriodicTable.pref.BoilingPreference
+import com.mckimquyen.atomicPeriodicTable.pref.DegreePreference
+import com.mckimquyen.atomicPeriodicTable.pref.DensityPreference
+import com.mckimquyen.atomicPeriodicTable.pref.ElectronegativityPreference
+import com.mckimquyen.atomicPeriodicTable.pref.FavoriteBarPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.FavoritePhase
+import com.mckimquyen.atomicPeriodicTable.pref.FusionHeatPreference
+import com.mckimquyen.atomicPeriodicTable.pref.MeltingPreference
+import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPreference
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
+import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPreference
 import kotlinx.android.synthetic.main.a_favorite_settings_page.*
 class FavoritePageActivity : BaseActivity() {
 
@@ -33,8 +33,8 @@ class FavoritePageActivity : BaseActivity() {
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
 
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {

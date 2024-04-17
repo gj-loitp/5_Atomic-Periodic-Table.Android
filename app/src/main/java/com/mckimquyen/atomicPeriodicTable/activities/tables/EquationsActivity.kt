@@ -20,7 +20,7 @@ import com.mckimquyen.atomicPeriodicTable.adapter.EquationsAdapter
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Equation
 import com.mckimquyen.atomicPeriodicTable.model.EquationModel
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_equations.*
 import kotlinx.android.synthetic.main.view_equations_info.eBackBtn
@@ -39,8 +39,8 @@ class EquationsActivity : BaseActivity(), EquationsAdapter.OnEquationClickListen
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
 
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
@@ -201,8 +201,8 @@ class EquationsActivity : BaseActivity(), EquationsAdapter.OnEquationClickListen
         Anim.fadeIn(eInc, 150)
 
         eTitle.setImageResource(title)
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
         if (themePrefValue == 1) {
             eTitle.colorFilter = ColorMatrixColorFilter(NEGATIVE)
         }

@@ -9,7 +9,7 @@ import com.ernestoyaquello.dragdropswiperecyclerview.listener.OnItemDragListener
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.adapter.OrderAdapter
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_order_settings_page.*
 
 class OrderActivity : BaseActivity() {
@@ -21,8 +21,8 @@ class OrderActivity : BaseActivity() {
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                 Configuration.UI_MODE_NIGHT_NO -> {

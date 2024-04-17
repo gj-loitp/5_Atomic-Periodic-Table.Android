@@ -40,9 +40,9 @@ import com.mckimquyen.atomicPeriodicTable.extensions.rateApp
 import com.mckimquyen.atomicPeriodicTable.extensions.shareApp
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
-import com.mckimquyen.atomicPeriodicTable.preferences.ElementSendAndLoad
-import com.mckimquyen.atomicPeriodicTable.preferences.SearchPreferences
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
+import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
+import com.mckimquyen.atomicPeriodicTable.pref.SearchPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState
@@ -69,8 +69,8 @@ class MainActivity : TableExtension(), ElementAdapter.OnElementClickListener2 {
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                 Configuration.UI_MODE_NIGHT_NO -> {

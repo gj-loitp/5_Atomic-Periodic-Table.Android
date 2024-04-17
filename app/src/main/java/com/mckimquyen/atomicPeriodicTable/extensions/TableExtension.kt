@@ -11,8 +11,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.model.Element
-import com.mckimquyen.atomicPeriodicTable.preferences.TemperatureUnits
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
+import com.mckimquyen.atomicPeriodicTable.pref.TemperatureUnits
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Pasteur
 import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.util.Utils
@@ -83,8 +83,8 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
             text.text =
                 item.element.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
             val btn = findViewById<TextView>(resIDB)
-            val themePreference = ThemePreference(this)
-            val themePrefValue = themePreference.getValue()
+            val themePref = ThemePref(this)
+            val themePrefValue = themePref.getValue()
 
             val params = text.layoutParams as ViewGroup.MarginLayoutParams
             params.leftMargin = 0
@@ -273,8 +273,8 @@ abstract class TableExtension : AppCompatActivity(), View.OnApplyWindowInsetsLis
                 } else {
                     if (item.electro == 0.0) {
                         val btn = findViewById<TextView>(resIDB)
-                        val themePreference = ThemePreference(this)
-                        val themePrefValue = themePreference.getValue()
+                        val themePref = ThemePref(this)
+                        val themePrefValue = themePref.getValue()
 
                         if (themePrefValue == 100) {
                             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {

@@ -101,7 +101,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".settings.ExperimentalActivity"
+            android:name=".setting.ExperimentalActivity"
             android:exported="true"
             android:label="EXPERIMENTAL_PAGE"
             android:screenOrientation="portrait"

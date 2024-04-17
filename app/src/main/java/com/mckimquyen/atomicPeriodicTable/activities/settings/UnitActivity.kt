@@ -8,8 +8,8 @@ import android.view.ViewTreeObserver
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
-import com.mckimquyen.atomicPeriodicTable.preferences.TemperatureUnits
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
+import com.mckimquyen.atomicPeriodicTable.pref.TemperatureUnits
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_unit.backBtnUnit
 import kotlinx.android.synthetic.main.a_unit.celsiusBtn
 import kotlinx.android.synthetic.main.a_unit.commonTitleBackunit
@@ -28,8 +28,8 @@ class UnitActivity : BaseActivity() {
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                 Configuration.UI_MODE_NIGHT_NO -> {

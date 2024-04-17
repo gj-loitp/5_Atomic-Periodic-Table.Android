@@ -14,9 +14,9 @@ import com.mckimquyen.atomicPeriodicTable.activities.settings.SubmitActivity
 import com.mckimquyen.atomicPeriodicTable.extensions.InfoExtension
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
-import com.mckimquyen.atomicPeriodicTable.preferences.ElementSendAndLoad
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.preferences.OfflinePreference
+import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
+import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_element_info.*
 import kotlinx.android.synthetic.main.v_d_properties.electronView
@@ -39,8 +39,8 @@ class ElementInfoActivity : InfoExtension() {
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
 
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {

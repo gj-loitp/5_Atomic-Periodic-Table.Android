@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.tables.EquationsActivity
 import com.mckimquyen.atomicPeriodicTable.model.Equation
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 
 class EquationsAdapter(
     var list: ArrayList<Equation>,
@@ -77,8 +77,8 @@ class EquationsAdapter(
                 equCategory.text = "NP"
             }
             equImg.setImageResource(item.equation)
-            val themePreference = ThemePreference(context)
-            val themePrefValue = themePreference.getValue()
+            val themePref = ThemePref(context)
+            val themePrefValue = themePref.getValue()
             if (themePrefValue == 1) {
                 equImg.colorFilter = ColorMatrixColorFilter(NEGATIVE)
             }

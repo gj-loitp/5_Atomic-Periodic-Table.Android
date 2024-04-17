@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.preferences
+package com.mckimquyen.atomicPeriodicTable.pref
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -12,7 +12,7 @@ import com.mckimquyen.atomicPeriodicTable.activities.tables.EquationsActivity
 import com.mckimquyen.atomicPeriodicTable.activities.tables.IonActivity
 import com.mckimquyen.atomicPeriodicTable.activities.tables.NuclideActivity
 import com.mckimquyen.atomicPeriodicTable.activities.tables.PHActivity
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_solubility.backBtn
 import kotlinx.android.synthetic.main.a_submit.viewSub
 import kotlinx.android.synthetic.main.a_tables.*
@@ -26,8 +26,8 @@ class TableActivity : BaseActivity() {
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                 Configuration.UI_MODE_NIGHT_NO -> {

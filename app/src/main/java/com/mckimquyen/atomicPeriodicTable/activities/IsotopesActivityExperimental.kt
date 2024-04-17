@@ -19,10 +19,10 @@ import com.mckimquyen.atomicPeriodicTable.adapter.IsotopeAdapter
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
-import com.mckimquyen.atomicPeriodicTable.preferences.ElementSendAndLoad
-import com.mckimquyen.atomicPeriodicTable.preferences.IsoPreferences
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.preferences.sendIso
+import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
+import com.mckimquyen.atomicPeriodicTable.pref.IsoPreferences
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
+import com.mckimquyen.atomicPeriodicTable.pref.sendIso
 import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
@@ -47,8 +47,8 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
 
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {

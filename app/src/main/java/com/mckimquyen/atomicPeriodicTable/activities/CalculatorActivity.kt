@@ -5,7 +5,7 @@ import android.view.KeyEvent
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_calculator.backBtn
 import kotlinx.android.synthetic.main.a_calculator.editElement1
 import kotlinx.android.synthetic.main.a_calculator.editNumber1
@@ -21,8 +21,8 @@ class CalculatorActivity : AppCompatActivity() {
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
         if (themePrefValue == 0) {
             setTheme(R.style.AppTheme)
         }

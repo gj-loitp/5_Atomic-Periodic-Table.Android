@@ -16,9 +16,9 @@ import com.mckimquyen.atomicPeriodicTable.activities.settings.LicensesActivity
 import com.mckimquyen.atomicPeriodicTable.activities.settings.OrderActivity
 import com.mckimquyen.atomicPeriodicTable.activities.settings.SubmitActivity
 import com.mckimquyen.atomicPeriodicTable.activities.settings.UnitActivity
-import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
-import com.mckimquyen.atomicPeriodicTable.preferences.OfflinePreference
-import com.mckimquyen.atomicPeriodicTable.settings.ExperimentalActivity
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
+import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
+import com.mckimquyen.atomicPeriodicTable.setting.ExperimentalActivity
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_settings.*
 import kotlinx.android.synthetic.main.view_theme_panel.cancelBtn
@@ -40,8 +40,8 @@ class SettingsActivity : BaseActivity() {
     }
 
     private fun setupViews() {
-        val themePreference = ThemePreference(this)
-        val themePrefValue = themePreference.getValue()
+        val themePref = ThemePref(this)
+        val themePrefValue = themePref.getValue()
 
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
@@ -267,8 +267,8 @@ class SettingsActivity : BaseActivity() {
 
     private fun themeSettings() {
         systemDefaultBtn.setOnClickListener {
-            val themePreference = ThemePreference(this)
-            themePreference.setValue(100)
+            val themePref = ThemePref(this)
+            themePref.setValue(100)
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                 Configuration.UI_MODE_NIGHT_NO -> {
                     setTheme(R.style.AppTheme)
@@ -289,8 +289,8 @@ class SettingsActivity : BaseActivity() {
             }, 302)
         }
         lightBtn.setOnClickListener {
-            val themePreference = ThemePreference(this)
-            themePreference.setValue(0)
+            val themePref = ThemePref(this)
+            themePref.setValue(0)
             setTheme(R.style.AppTheme)
             Utils.fadeOutAnim(themePanel, 300)
 
@@ -305,8 +305,8 @@ class SettingsActivity : BaseActivity() {
             }, 302)
         }
         darkBtn.setOnClickListener {
-            val themePreference = ThemePreference(this)
-            themePreference.setValue(1)
+            val themePref = ThemePref(this)
+            themePref.setValue(1)
             setTheme(R.style.AppThemeDark)
             Utils.fadeOutAnim(themePanel, 300)
 
