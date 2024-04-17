@@ -47,7 +47,7 @@ import com.mckimquyen.atomicPeriodicTable.utils.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState
 import kotlinx.android.synthetic.main.a_main.*
-import kotlinx.android.synthetic.main.search_layout.*
+import kotlinx.android.synthetic.main.layout_search_layout.*
 import kotlinx.android.synthetic.main.view_filter_view.*
 import kotlinx.android.synthetic.main.view_hover_menu.*
 import kotlinx.android.synthetic.main.view_nav_menu_view.*

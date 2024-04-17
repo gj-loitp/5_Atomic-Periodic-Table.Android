@@ -57,7 +57,7 @@ import kotlinx.android.synthetic.main.d_overview.elementYear
 import kotlinx.android.synthetic.main.d_properties.*
 import kotlinx.android.synthetic.main.d_temperatures.*
 import kotlinx.android.synthetic.main.d_thermodynamic.*
-import kotlinx.android.synthetic.main.v_detail_emission.ivSpImgFetail
+import kotlinx.android.synthetic.main.view_detail_emission.ivSpImgFetail
 import kotlinx.android.synthetic.main.view_favorite_bar.*
 import kotlinx.android.synthetic.main.view_loading_view.noImg
 import kotlinx.android.synthetic.main.view_loading_view.progressBar

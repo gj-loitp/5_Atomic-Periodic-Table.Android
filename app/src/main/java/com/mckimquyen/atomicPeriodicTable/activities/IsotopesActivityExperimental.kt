@@ -285,7 +285,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
                     val aLayout = frameIso
                     val inflater = layoutInflater
                     val fLayout: View =
-                        inflater.inflate(R.layout.row_iso_panel_title_item, aLayout, false)
+                        inflater.inflate(R.layout.view_row_iso_panel_title_item, aLayout, false)
 
                     val iTitle = fLayout.findViewById(R.id.tvIsoTitle) as TextView
                     val iExt = " Isotopes"
@@ -303,7 +303,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdapter.OnElementCli
                         val mainLayout = frameIso
                         val inflater = layoutInflater
                         val myLayout: View =
-                            inflater.inflate(R.layout.row_iso_panel_item, mainLayout, false)
+                            inflater.inflate(R.layout.view_row_iso_panel_item, mainLayout, false)
                         val name = "iso_"
                         val z = "iso_Z_"
                         val n = "iso_N_"

@@ -789,7 +789,7 @@
 
     <include
         android:id="@+id/searchMenuInclude"
-        layout="@layout/search_layout"
+        layout="@layout/layout_search_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="2000dp"

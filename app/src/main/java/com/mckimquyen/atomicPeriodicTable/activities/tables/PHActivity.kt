@@ -15,10 +15,10 @@ import com.mckimquyen.atomicPeriodicTable.model.Indicator
 import com.mckimquyen.atomicPeriodicTable.model.IndicatorModel
 import com.mckimquyen.atomicPeriodicTable.preferences.ThemePreference
 import kotlinx.android.synthetic.main.activity_ph.*
-import kotlinx.android.synthetic.main.v_bar_ph_chips.bromothymolBlueBtn
-import kotlinx.android.synthetic.main.v_bar_ph_chips.congoRedBtn
-import kotlinx.android.synthetic.main.v_bar_ph_chips.methylOrangeBtn
-import kotlinx.android.synthetic.main.v_bar_ph_chips.phenolphthaleinBtn
+import kotlinx.android.synthetic.main.view_bar_ph_chips.bromothymolBlueBtn
+import kotlinx.android.synthetic.main.view_bar_ph_chips.congoRedBtn
+import kotlinx.android.synthetic.main.view_bar_ph_chips.methylOrangeBtn
+import kotlinx.android.synthetic.main.view_bar_ph_chips.phenolphthaleinBtn
 
 class PHActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

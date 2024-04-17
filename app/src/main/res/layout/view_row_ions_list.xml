@@ -16,7 +16,7 @@
         android:backgroundTint="?attr/colorSurfaceVariant"
         android:clickable="true"
         android:focusable="true"
-        tools:ignore="PrivateResource">
+        tools:ignore="PrivateResource,UselessParent">
 
         <FrameLayout
             android:id="@+id/ionCount"

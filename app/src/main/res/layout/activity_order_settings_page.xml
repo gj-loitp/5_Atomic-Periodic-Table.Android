@@ -61,5 +61,5 @@
         android:id="@+id/ordRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:item_layout="@layout/row_order_item" />
+        app:item_layout="@layout/view_row_order_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>

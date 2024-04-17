@@ -33,7 +33,7 @@ class EquationsAdapter(
         viewType: Int
     ): ViewHolder {
         val v =
-            LayoutInflater.from(parent.context).inflate(R.layout.row_equations_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.view_row_equations_item, parent, false)
         return ViewHolder(v)
     }
 

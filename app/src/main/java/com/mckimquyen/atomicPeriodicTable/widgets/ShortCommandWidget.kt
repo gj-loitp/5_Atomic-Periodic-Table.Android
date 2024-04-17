@@ -26,7 +26,7 @@ class ShortCommandWidget : AppWidgetProvider() {
         for (appWidgetId in widgetIds) {
 
             // Construct the RemoteViews object
-            val remoteViews = RemoteViews(context.packageName, R.layout.short_command_widget)
+            val remoteViews = RemoteViews(context.packageName, R.layout.view_short_command_widget)
 
             //Open App on Widget Click
             remoteViews.setOnClickPendingIntent(

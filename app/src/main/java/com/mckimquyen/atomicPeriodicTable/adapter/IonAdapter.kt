@@ -35,7 +35,7 @@ class IonAdapter(
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.row_ions_list, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.view_row_ions_list, parent, false)
         return ViewHolder(v)
     }
 

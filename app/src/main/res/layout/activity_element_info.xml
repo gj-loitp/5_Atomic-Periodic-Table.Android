@@ -278,7 +278,7 @@
 
     <include
         android:id="@+id/detailEmission"
-        layout="@layout/v_detail_emission"
+        layout="@layout/view_detail_emission"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="30dp"
