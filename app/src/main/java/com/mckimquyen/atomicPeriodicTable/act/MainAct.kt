@@ -402,18 +402,23 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
 
     private fun mediaListeners() {
         btRate.setOnClickListener {
+            slidingLayout.panelState = PanelState.COLLAPSED
             rateApp(packageName)
         }
         btMore.setOnClickListener {
+            slidingLayout.panelState = PanelState.COLLAPSED
             moreApp()
         }
         btShare.setOnClickListener {
+            slidingLayout.panelState = PanelState.COLLAPSED
             shareApp()
         }
         btPolicy.setOnClickListener {
+            slidingLayout.panelState = PanelState.COLLAPSED
             openBrowserPolicy()
         }
         btGithub.setOnClickListener {
+            slidingLayout.panelState = PanelState.COLLAPSED
             openUrlInBrowser("https://github.com/JLindemann42/Atomic-Periodic-Table.Android")
         }
     }
