@@ -23,7 +23,16 @@ import com.mckimquyen.atomicPeriodicTable.model.IonModel
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_dictionary.titleBox
-import kotlinx.android.synthetic.main.a_ion.*
+import kotlinx.android.synthetic.main.a_ion.backBtnIon
+import kotlinx.android.synthetic.main.a_ion.closeEleSearchIon
+import kotlinx.android.synthetic.main.a_ion.commonTitleBackIon
+import kotlinx.android.synthetic.main.a_ion.editIon
+import kotlinx.android.synthetic.main.a_ion.emptySearchBoxIon
+import kotlinx.android.synthetic.main.a_ion.ionDetail
+import kotlinx.android.synthetic.main.a_ion.ionView
+import kotlinx.android.synthetic.main.a_ion.searchBarIon
+import kotlinx.android.synthetic.main.a_ion.searchBtnIon
+import kotlinx.android.synthetic.main.a_ion.viewIon
 import kotlinx.android.synthetic.main.view_ion_details.ionDetailTitle
 import kotlinx.android.synthetic.main.view_ion_details.tvDetailBackgroundIon
 import org.json.JSONArray
@@ -64,15 +73,16 @@ class IonAct : BaseAct(), IonAdapter.OnIonClickListener {
 
         recyclerView()
         clickSearch()
-        viewIon.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewIon.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         tvDetailBackgroundIon.setOnClickListener {
             Utils.fadeOutAnim(ionDetail, 300)
         }
-        backBtnIon.setOnClickListener { this.onBackPressed() }
+        backBtnIon.setOnClickListener {
+            this.onBackPressed()
+        }
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "DiscouragedApi")
     override fun ionClickListener(item: Ion, position: Int) {
         if (item.count > 1) {
             Utils.fadeInAnim(ionDetail, 300)
@@ -84,7 +94,7 @@ class IonAct : BaseAct(), IonAdapter.OnIonClickListener {
             var jsonString: String? = null
             val ext = ".json"
             val element = item.name
-            val elementJson: String = "$element$ext"
+            val elementJson = "$element$ext"
             val inputStream: InputStream = assets.open(elementJson.toString())
             jsonString = inputStream.bufferedReader().use { it.readText() }
 
@@ -120,7 +130,7 @@ class IonAct : BaseAct(), IonAdapter.OnIonClickListener {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         ionView.setPadding(
             /* left = */ 0,
@@ -204,6 +214,7 @@ class IonAct : BaseAct(), IonAdapter.OnIonClickListener {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (ionDetail.visibility == View.VISIBLE) {
             Utils.fadeOutAnim(ionDetail, 300)

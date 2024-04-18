@@ -22,7 +22,17 @@ import com.mckimquyen.atomicPeriodicTable.model.Equation
 import com.mckimquyen.atomicPeriodicTable.model.EquationModel
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
-import kotlinx.android.synthetic.main.a_equations.*
+import kotlinx.android.synthetic.main.a_equations.backBtnEqu
+import kotlinx.android.synthetic.main.a_equations.closeEquSearch
+import kotlinx.android.synthetic.main.a_equations.commonTitleBackEqu
+import kotlinx.android.synthetic.main.a_equations.eInc
+import kotlinx.android.synthetic.main.a_equations.editEqu
+import kotlinx.android.synthetic.main.a_equations.emptySearchBoxEqu
+import kotlinx.android.synthetic.main.a_equations.equRecycler
+import kotlinx.android.synthetic.main.a_equations.searchBarEqu
+import kotlinx.android.synthetic.main.a_equations.searchBtnEqu
+import kotlinx.android.synthetic.main.a_equations.titleBoxEqu
+import kotlinx.android.synthetic.main.a_equations.viewEqu
 import kotlinx.android.synthetic.main.view_equations_info.eBackBtn
 import kotlinx.android.synthetic.main.view_equations_info.eText
 import kotlinx.android.synthetic.main.view_equations_info.eTitle
@@ -31,7 +41,7 @@ import java.util.Locale
 
 class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
     private var equationList = ArrayList<Equation>()
-    var mAdapter = EquationsAdt(list = equationList, clickListener = this, context = this)
+    private var mAdapter = EquationsAdt(list = equationList, clickListener = this, context = this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,8 +76,7 @@ class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
         eBackBtn.setOnClickListener { hideInfoPanel() }
         lBackgroundE.setOnClickListener { hideInfoPanel() }
 
-        viewEqu.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewEqu.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         backBtnEqu.setOnClickListener {
             this.onBackPressed()
         }
@@ -77,7 +86,7 @@ class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         equRecycler.setPadding(
             /* left = */ 0,
@@ -104,8 +113,12 @@ class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
         val equation = ArrayList<Equation>()
 
         EquationModel.getList(equation)
-        equRecycler.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        val adapter = EquationsAdt(equation, this, this)
+        equRecycler.layoutManager = LinearLayoutManager(
+            /* context = */ this,
+            /* orientation = */ RecyclerView.VERTICAL,
+            /* reverseLayout = */ false
+        )
+        val adapter = EquationsAdt(list = equation, clickListener = this, context = this)
         equRecycler.adapter = adapter
 
         equation.sortWith { lhs, rhs ->
@@ -119,7 +132,7 @@ class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
                 s: CharSequence,
                 start: Int,
                 count: Int,
-                after: Int
+                after: Int,
             ) {
             }
 
@@ -127,7 +140,7 @@ class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
                 s: CharSequence,
                 start: Int,
                 before: Int,
-                count: Int
+                count: Int,
             ) {
             }
 
@@ -137,6 +150,7 @@ class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
         })
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (eInc.visibility == View.VISIBLE) {
             hideInfoPanel()
@@ -204,12 +218,12 @@ class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
         val themePref = ThemePref(this)
         val themePrefValue = themePref.getValue()
         if (themePrefValue == 1) {
-            eTitle.colorFilter = ColorMatrixColorFilter(NEGATIVE)
+            eTitle.colorFilter = ColorMatrixColorFilter(negative)
         }
         if (themePrefValue == 100) {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                 Configuration.UI_MODE_NIGHT_YES -> {
-                    eTitle.colorFilter = ColorMatrixColorFilter(NEGATIVE)
+                    eTitle.colorFilter = ColorMatrixColorFilter(negative)
                 }
             }
         }
@@ -220,7 +234,7 @@ class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
         Anim.fadeOutAnim(view = eInc, time = 150)
     }
 
-    private val NEGATIVE = floatArrayOf(
+    private val negative = floatArrayOf(
         -1.0f, 0f, 0f, 0f, 255f,
         0f, -1.0f, 0f, 0f, 255f,
         0f, 0f, -1.0f, 0f, 255f,

@@ -59,8 +59,7 @@ class PHAct : BaseAct() {
         setContentView(R.layout.a_ph) //REMEMBER: Never move any function calls above this
 
         indicatorListener()
-        viewPh.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewPh.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         //Title Controller
 
         backBtnPh.setOnClickListener {
@@ -117,6 +116,7 @@ class PHAct : BaseAct() {
         }
     }
 
+    @SuppressLint("DiscouragedApi")
     private fun updatePhColor(item: Indicator) {
         try {
             val leftColor = resources.getIdentifier(item.acidColor, "color", packageName)
@@ -140,7 +140,7 @@ class PHAct : BaseAct() {
         }
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+    @SuppressLint("UseCompatLoadingForDrawables", "DiscouragedApi")
     private fun updateButtonColor(btn: String) {
         methylOrangeBtn.background = getDrawable(R.drawable.shape_chip)
         bromothymolBlueBtn.background = getDrawable(R.drawable.shape_chip)
@@ -159,7 +159,7 @@ class PHAct : BaseAct() {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         val paramsTitle = commonTitleBackPh.layoutParams as ViewGroup.LayoutParams
         paramsTitle.height = top + resources.getDimensionPixelSize(R.dimen.title_bar_ph)

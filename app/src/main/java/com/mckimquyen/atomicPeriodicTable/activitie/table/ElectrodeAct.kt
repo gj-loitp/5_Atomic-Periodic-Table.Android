@@ -23,7 +23,14 @@ import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_dictionary.searchBtn
 import kotlinx.android.synthetic.main.a_dictionary.titleBox
-import kotlinx.android.synthetic.main.a_electrode.*
+import kotlinx.android.synthetic.main.a_electrode.backBtn
+import kotlinx.android.synthetic.main.a_electrode.closeEleSearch
+import kotlinx.android.synthetic.main.a_electrode.commonTitleBackElo
+import kotlinx.android.synthetic.main.a_electrode.eView
+import kotlinx.android.synthetic.main.a_electrode.editEle
+import kotlinx.android.synthetic.main.a_electrode.emptySearchBoxEle
+import kotlinx.android.synthetic.main.a_electrode.searchBarEle
+import kotlinx.android.synthetic.main.a_electrode.viewEle
 import java.util.Locale
 
 class ElectrodeAct : BaseAct() {
@@ -61,8 +68,7 @@ class ElectrodeAct : BaseAct() {
         recyclerView()
         clickSearch()
 
-        viewEle.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewEle.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         backBtn.setOnClickListener {
             this.onBackPressed()
         }
@@ -72,13 +78,13 @@ class ElectrodeAct : BaseAct() {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         eView.setPadding(
-            0,
-            resources.getDimensionPixelSize(R.dimen.title_bar) + resources.getDimensionPixelSize(R.dimen.margin_space) + top,
-            0,
-            resources.getDimensionPixelSize(R.dimen.title_bar)
+            /* left = */ 0,
+            /* top = */ resources.getDimensionPixelSize(R.dimen.title_bar) + resources.getDimensionPixelSize(R.dimen.margin_space) + top,
+            /* right = */ 0,
+            /* bottom = */ resources.getDimensionPixelSize(R.dimen.title_bar)
         )
 
         val params2 = commonTitleBackElo.layoutParams as ViewGroup.LayoutParams
@@ -111,7 +117,7 @@ class ElectrodeAct : BaseAct() {
                 s: CharSequence,
                 start: Int,
                 count: Int,
-                after: Int
+                after: Int,
             ) {
             }
 
@@ -119,7 +125,7 @@ class ElectrodeAct : BaseAct() {
                 s: CharSequence,
                 start: Int,
                 before: Int,
-                count: Int
+                count: Int,
             ) {
             }
 
@@ -133,7 +139,7 @@ class ElectrodeAct : BaseAct() {
     private fun filter(
         text: String,
         list: ArrayList<Series>,
-        recyclerView: RecyclerView
+        recyclerView: RecyclerView,
     ) {
         val filteredList: ArrayList<Series> = ArrayList()
         for (item in list) {

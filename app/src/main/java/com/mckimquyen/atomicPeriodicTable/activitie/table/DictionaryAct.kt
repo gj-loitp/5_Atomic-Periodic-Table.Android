@@ -29,7 +29,21 @@ import com.mckimquyen.atomicPeriodicTable.model.DictionaryModel
 import com.mckimquyen.atomicPeriodicTable.pref.DictionaryPref
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
-import kotlinx.android.synthetic.main.a_dictionary.*
+import kotlinx.android.synthetic.main.a_dictionary.backBtnD
+import kotlinx.android.synthetic.main.a_dictionary.chemistryBtn
+import kotlinx.android.synthetic.main.a_dictionary.clearBtn
+import kotlinx.android.synthetic.main.a_dictionary.closeIsoSearch
+import kotlinx.android.synthetic.main.a_dictionary.commonTitleBackDic
+import kotlinx.android.synthetic.main.a_dictionary.editIso
+import kotlinx.android.synthetic.main.a_dictionary.emptySearchBoxDic
+import kotlinx.android.synthetic.main.a_dictionary.mathBtn
+import kotlinx.android.synthetic.main.a_dictionary.physicsBtn
+import kotlinx.android.synthetic.main.a_dictionary.rcView
+import kotlinx.android.synthetic.main.a_dictionary.reactionsBtn
+import kotlinx.android.synthetic.main.a_dictionary.searchBarIso
+import kotlinx.android.synthetic.main.a_dictionary.searchBtn
+import kotlinx.android.synthetic.main.a_dictionary.titleBox
+import kotlinx.android.synthetic.main.a_dictionary.viewDic
 import java.util.Locale
 
 class DictionaryAct : BaseAct(), DictionaryAdt.OnDictionaryClickListener {
@@ -78,9 +92,8 @@ class DictionaryAct : BaseAct(), DictionaryAdt.OnDictionaryClickListener {
         chipListeners(itemse, recyclerView)
         clearBtn.visibility = View.GONE
 
-        val dictionaryPreference = DictionaryPref(this)
-        viewDic.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+//        val dictionaryPreference = DictionaryPref(this)
+        viewDic.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         backBtnD.setOnClickListener {
             this.onBackPressed()
         }
@@ -89,7 +102,7 @@ class DictionaryAct : BaseAct(), DictionaryAdt.OnDictionaryClickListener {
     @SuppressLint("SetTextI18n")
     private fun chipListeners(
         list: ArrayList<Dictionary>,
-        recyclerView: RecyclerView
+        recyclerView: RecyclerView,
     ) {
         chemistryBtn.setOnClickListener {
             updateButtonColor("chemistry_btn")
@@ -121,7 +134,7 @@ class DictionaryAct : BaseAct(), DictionaryAdt.OnDictionaryClickListener {
         }
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "UseCompatLoadingForDrawables", "DiscouragedApi")
     private fun updateButtonColor(btn: String) {
         chemistryBtn.background = getDrawable(R.drawable.shape_chip)
         physicsBtn.background = getDrawable(R.drawable.shape_chip)
@@ -170,11 +183,11 @@ class DictionaryAct : BaseAct(), DictionaryAdt.OnDictionaryClickListener {
         val dictionaryList = ArrayList<Dictionary>()
         DictionaryModel.getList(dictionaryList)
         recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        val adapter = DictionaryAdt(dictionaryList, this, this)
+        val adapter = DictionaryAdt(dictionaryList = dictionaryList, clickListener = this, con = this)
         recyclerView.adapter = adapter
-        dictionaryList.sortWith(Comparator { lhs, rhs ->
+        dictionaryList.sortWith { lhs, rhs ->
             if (lhs.heading < rhs.heading) -1 else if (lhs.heading < rhs.heading) 1 else 0
-        })
+        }
 
         adapter.notifyDataSetChanged()
         editIso.addTextChangedListener(object : TextWatcher {
@@ -190,7 +203,7 @@ class DictionaryAct : BaseAct(), DictionaryAdt.OnDictionaryClickListener {
     private fun filter(
         text: String,
         list: ArrayList<Dictionary>,
-        recyclerView: RecyclerView
+        recyclerView: RecyclerView,
     ) {
         val filteredList: ArrayList<Dictionary> = ArrayList()
         for (item in list) {
@@ -251,7 +264,7 @@ class DictionaryAct : BaseAct(), DictionaryAdt.OnDictionaryClickListener {
         item: Dictionary,
         wiki: TextView,
         url: String,
-        position: Int
+        position: Int,
     ) {
         wiki.setOnClickListener {
             val packageNameString = "com.android.chrome"
@@ -260,8 +273,8 @@ class DictionaryAct : BaseAct(), DictionaryAdt.OnDictionaryClickListener {
             customTabBuilder.setToolbarColor(ContextCompat.getColor(this, R.color.wikipediaColor))
             customTabBuilder.setSecondaryToolbarColor(
                 ContextCompat.getColor(
-                    this,
-                    R.color.wikipediaColor
+                    /* context = */ this,
+                    /* id = */ R.color.wikipediaColor
                 )
             )
             customTabBuilder.setShowTitle(true)
