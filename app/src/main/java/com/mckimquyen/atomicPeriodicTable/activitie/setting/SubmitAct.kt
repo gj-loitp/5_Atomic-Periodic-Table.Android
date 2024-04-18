@@ -11,6 +11,7 @@ import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
+import kotlinx.android.synthetic.main.a_solubility.backBtn
 import kotlinx.android.synthetic.main.a_submit.background
 import kotlinx.android.synthetic.main.a_submit.commonTitleBackSub
 import kotlinx.android.synthetic.main.a_submit.commonTitleBackSubColor
@@ -23,7 +24,6 @@ import kotlinx.android.synthetic.main.a_submit.submitScroll
 import kotlinx.android.synthetic.main.a_submit.submitTitle
 import kotlinx.android.synthetic.main.a_submit.submitTitleDownstate
 import kotlinx.android.synthetic.main.a_submit.viewSub
-import kotlinx.android.synthetic.main.a_solubility.backBtn
 import kotlinx.android.synthetic.main.view_drop_issue.bug
 import kotlinx.android.synthetic.main.view_drop_issue.dataIssue
 import kotlinx.android.synthetic.main.view_drop_issue.question
@@ -111,6 +111,7 @@ class SubmitAct : BaseAct() {
 
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (dropIssue.visibility == View.VISIBLE) {
             Utils.fadeOutAnim(background, 150)
@@ -161,7 +162,7 @@ class SubmitAct : BaseAct() {
             val content = iContent.text.toString()
             val request = Intent(Intent.ACTION_VIEW)
             request.data = Uri.parse(
-                Uri.parse("mailto:roy93group@gmail.com?subject=$type $title&body=$content")
+                Uri.parse("mailto:roy.mobile.dev@gmail.com?subject=$type $title&body=$content")
                     .toString()
             )
             startActivity(request)

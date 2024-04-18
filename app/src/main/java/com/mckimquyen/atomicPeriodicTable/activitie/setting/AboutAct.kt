@@ -48,8 +48,7 @@ class AboutAct : BaseAct() {
         }
         setContentView(R.layout.a_info)
 
-        viewInfo.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewInfo.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         versionNumber.text = "Version ${BuildConfig.VERSION_NAME}"
 
@@ -62,7 +61,7 @@ class AboutAct : BaseAct() {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         val params = commonTitleBackInfo.layoutParams as ViewGroup.LayoutParams
         params.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)

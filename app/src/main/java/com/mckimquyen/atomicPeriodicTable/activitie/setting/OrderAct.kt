@@ -48,8 +48,7 @@ class OrderAct : BaseAct() {
         mList.adapter = mAdapter
         mList.dragListener = onItemDragListener
 
-        viewOrd.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewOrd.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         backBtnOrd.setOnClickListener {
             this.onBackPressed()
         }

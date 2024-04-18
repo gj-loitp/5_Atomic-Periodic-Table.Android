@@ -9,8 +9,20 @@ import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
-import kotlinx.android.synthetic.main.a_settings_licenses.*
-import kotlinx.android.synthetic.main.view_license_info.*
+import kotlinx.android.synthetic.main.a_settings_licenses.backBtn
+import kotlinx.android.synthetic.main.a_settings_licenses.commonTitleBackLic
+import kotlinx.android.synthetic.main.a_settings_licenses.commonTitleBackLicColor
+import kotlinx.android.synthetic.main.a_settings_licenses.lInc
+import kotlinx.android.synthetic.main.a_settings_licenses.lSothreeBtn
+import kotlinx.android.synthetic.main.a_settings_licenses.lWikiBtn
+import kotlinx.android.synthetic.main.a_settings_licenses.licenseScroll
+import kotlinx.android.synthetic.main.a_settings_licenses.licenseTitle
+import kotlinx.android.synthetic.main.a_settings_licenses.licenseTitleDownstate
+import kotlinx.android.synthetic.main.a_settings_licenses.viewLic
+import kotlinx.android.synthetic.main.view_license_info.lBackBtn
+import kotlinx.android.synthetic.main.view_license_info.lBackground3
+import kotlinx.android.synthetic.main.view_license_info.lText
+import kotlinx.android.synthetic.main.view_license_info.lTitle
 
 class LicensesAct : BaseAct() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,8 +53,7 @@ class LicensesAct : BaseAct() {
         }
         setContentView(R.layout.a_settings_licenses) //REMEMBER: Never move any function calls above this
 
-        viewLic.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewLic.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         //Title Controller
         commonTitleBackLicColor.visibility = View.INVISIBLE
@@ -88,6 +99,7 @@ class LicensesAct : BaseAct() {
         licenseTitleDownstate.layoutParams = params3
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (lInc.visibility == View.VISIBLE) {
             hideInfoPanel()
@@ -120,6 +132,6 @@ class LicensesAct : BaseAct() {
     }
 
     private fun hideInfoPanel() {
-        Anim.fadeOutAnim(lInc, 150)
+        Anim.fadeOutAnim(view = lInc, time = 150)
     }
 }

@@ -24,7 +24,30 @@ import com.mckimquyen.atomicPeriodicTable.pref.MeltingPref
 import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPref
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPref
-import kotlinx.android.synthetic.main.a_favorite_settings_page.*
+import kotlinx.android.synthetic.main.a_favorite_settings_page.atomicRadiusCalculatedCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.atomicRadiusEmpiricalCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.backBtnFav
+import kotlinx.android.synthetic.main.a_favorite_settings_page.boilingCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.celsiusBtn
+import kotlinx.android.synthetic.main.a_favorite_settings_page.commonTitleBackFav
+import kotlinx.android.synthetic.main.a_favorite_settings_page.commonTitleBackFavColor
+import kotlinx.android.synthetic.main.a_favorite_settings_page.covalentRadiusCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.densityCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.electronegativityCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.fahrenheitbtn
+import kotlinx.android.synthetic.main.a_favorite_settings_page.favSetScroll
+import kotlinx.android.synthetic.main.a_favorite_settings_page.favoriteSetTitle
+import kotlinx.android.synthetic.main.a_favorite_settings_page.favoriteSetTitleDownstate
+import kotlinx.android.synthetic.main.a_favorite_settings_page.fusionHeatCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.kelvinBtn
+import kotlinx.android.synthetic.main.a_favorite_settings_page.meltingCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.molarMassCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.phaseCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.specificHeatCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.vanDerWaalsRadiusCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.vaporizationHeatCheck
+import kotlinx.android.synthetic.main.a_favorite_settings_page.viewf
+
 class FavoritePageAct : BaseAct() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -250,9 +273,9 @@ class FavoritePageAct : BaseAct() {
     private fun onCheckboxClicked() {
         //Molar Mass
         val molarPreference = FavoriteBarPref(this)
-        var molarPrefValue = molarPreference.getValue()
+//        var molarPrefValue = molarPreference.getValue()
         val checkBox: CheckBox = molarMassCheck
-        checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
+        checkBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 molarPreference.setValue(1)
             } else {
@@ -262,7 +285,7 @@ class FavoritePageAct : BaseAct() {
 
         kelvinBtn.setOnClickListener {
             val degreePref = DegreePref(this)
-            var degreePrefValue = degreePref.getValue()
+//            var degreePrefValue = degreePref.getValue()
 
             degreePref.setValue(0)
             kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_active)
@@ -271,7 +294,7 @@ class FavoritePageAct : BaseAct() {
         }
         celsiusBtn.setOnClickListener {
             val degreePref = DegreePref(this)
-            var degreePrefValue = degreePref.getValue()
+//            var degreePrefValue = degreePref.getValue()
 
             degreePref.setValue(1)
             kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
@@ -280,7 +303,7 @@ class FavoritePageAct : BaseAct() {
         }
         fahrenheitbtn.setOnClickListener {
             val degreePref = DegreePref(this)
-            var degreePrefValue = degreePref.getValue()
+//            var degreePrefValue = degreePref.getValue()
 
             degreePref.setValue(2)
             kelvinBtn.background = ContextCompat.getDrawable(this, R.drawable.shape_chip_outline)
@@ -290,7 +313,7 @@ class FavoritePageAct : BaseAct() {
 
         //STP Phase
         val phasePreference = FavoritePhase(this)
-        var phasePrefValue = phasePreference.getValue()
+//        var phasePrefValue = phasePreference.getValue()
         val phaseCheckBox: CheckBox = phaseCheck
         phaseCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -302,7 +325,7 @@ class FavoritePageAct : BaseAct() {
 
         //Electronegativity
         val electronegativityPref = ElectronegativityPref(this)
-        var electronegativityPrefValue = electronegativityPref.getValue()
+//        var electronegativityPrefValue = electronegativityPref.getValue()
         val electronegativityCheckBox: CheckBox = electronegativityCheck
         electronegativityCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -314,7 +337,7 @@ class FavoritePageAct : BaseAct() {
 
         //Density
         val densityPreference = DensityPref(this)
-        var densityPrefValue = densityPreference.getValue()
+//        var densityPrefValue = densityPreference.getValue()
         val densityCheckBox: CheckBox = densityCheck
         densityCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -327,7 +350,7 @@ class FavoritePageAct : BaseAct() {
 
         //Boiling Point
         val boilingPreference = BoilingPref(this)
-        var boilingPrefValue = boilingPreference.getValue()
+//        var boilingPrefValue = boilingPreference.getValue()
         val boilingCheckBox: CheckBox = boilingCheck
         boilingCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -395,7 +418,7 @@ class FavoritePageAct : BaseAct() {
 
         //Specific Heat Point
         val specificHeatPref = SpecificHeatPref(this)
-        var specificHeatValue = specificHeatPref.getValue()
+//        var specificHeatValue = specificHeatPref.getValue()
         val specificCheckBox: CheckBox = specificHeatCheck
         specificCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -408,7 +431,7 @@ class FavoritePageAct : BaseAct() {
 
         //Fusion Heat
         val fusionHeatPref = FusionHeatPref(this)
-        var fusionHeatValue = fusionHeatPref.getValue()
+//        var fusionHeatValue = fusionHeatPref.getValue()
         val fusionCheckBox: CheckBox = fusionHeatCheck
         fusionCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -421,7 +444,7 @@ class FavoritePageAct : BaseAct() {
 
         //Vapor Heat
         val vaporizationHeatPref = VaporizationHeatPref(this)
-        var vaporizationHeatValue = vaporizationHeatPref.getValue()
+//        var vaporizationHeatValue = vaporizationHeatPref.getValue()
         val vaporizationCheckBox: CheckBox = vaporizationHeatCheck
         vaporizationCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {

@@ -12,8 +12,8 @@ import com.mckimquyen.atomicPeriodicTable.pref.TemperatureUnits
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_unit.backBtnUnit
 import kotlinx.android.synthetic.main.a_unit.celsiusBtn
-import kotlinx.android.synthetic.main.a_unit.commonTitleBackunit
 import kotlinx.android.synthetic.main.a_unit.commonTitleBackUnitColor
+import kotlinx.android.synthetic.main.a_unit.commonTitleBackunit
 import kotlinx.android.synthetic.main.a_unit.fahrenheitbtn
 import kotlinx.android.synthetic.main.a_unit.kelvinBtn
 import kotlinx.android.synthetic.main.a_unit.unitScroll
@@ -49,8 +49,7 @@ class UnitAct : BaseAct() {
         }
 
         setContentView(R.layout.a_unit) //REMEMBER: Never move any function calls above this
-        viewUnit.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewUnit.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         //Title Controller
         commonTitleBackUnitColor.visibility = View.INVISIBLE
@@ -126,7 +125,7 @@ class UnitAct : BaseAct() {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         val paramsTitle = commonTitleBackunit.layoutParams as ViewGroup.LayoutParams
         paramsTitle.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
