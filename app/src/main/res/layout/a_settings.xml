@@ -9,79 +9,6 @@
     android:backgroundTint="?attr/backgroundColor"
     android:fitsSystemWindows="true">
 
-    <FrameLayout
-        android:id="@+id/commonTitleBackSet"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:alpha="1"
-        android:background="?attr/colorSurface"
-        android:elevation="0dp"
-        android:gravity="center|center_vertical"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <FrameLayout
-            android:id="@+id/commonTitleSettingsColor"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.11"
-            android:background="?attr/colorPrimary" />
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:elevation="0dp"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:id="@+id/titleBoxSettings"
-                android:layout_width="match_parent"
-                android:layout_height="56dp">
-
-                <ImageButton
-                    android:id="@+id/backBtnSet"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_gravity="center_vertical"
-                    android:contentDescription="@string/app_name"
-                    android:rotation="180"
-                    android:src="@drawable/ic_arrow_back_whit"
-                    app:tint="?attr/colorOnSecondaryContainer"
-                    tools:ignore="PrivateResource" />
-
-                <ImageButton
-                    android:id="@+id/info_btn_set"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_gravity="center_vertical|end"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/ic_info"
-                    android:visibility="gone"
-                    app:tint="?attr/colorOnSecondaryContainer"
-                    tools:ignore="PrivateResource"
-                    tools:visibility="visible" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/elementTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="56dp"
-                    android:layout_marginStart="70dp"
-                    android:alpha="0.9"
-                    android:gravity="center"
-                    android:paddingStart="0dp"
-                    android:paddingEnd="0dp"
-                    android:text="@string/settings"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:ignore="PrivateResource" />
-            </FrameLayout>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </FrameLayout>
-
     <ScrollView
         android:id="@+id/scrollSettings"
         android:layout_width="match_parent"
@@ -870,6 +797,79 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/commonTitleBackSet"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:alpha="1"
+        android:background="?attr/colorSurface"
+        android:elevation="0dp"
+        android:gravity="center|center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/commonTitleSettingsColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.11"
+            android:background="?attr/colorPrimary" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/titleBoxSettings"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageButton
+                    android:id="@+id/backBtnSetting"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:rotation="180"
+                    android:src="@drawable/ic_arrow_back_whit"
+                    app:tint="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
+
+                <ImageButton
+                    android:id="@+id/info_btn_set"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_info"
+                    android:visibility="gone"
+                    app:tint="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource"
+                    tools:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/elementTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="70dp"
+                    android:alpha="0.9"
+                    android:gravity="center"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/settings"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="PrivateResource" />
+            </FrameLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
 
     <include
         android:id="@+id/themePanel"

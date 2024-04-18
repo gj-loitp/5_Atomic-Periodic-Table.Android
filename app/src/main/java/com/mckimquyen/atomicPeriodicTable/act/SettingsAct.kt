@@ -5,6 +5,7 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
@@ -22,7 +23,7 @@ import com.mckimquyen.atomicPeriodicTable.setting.ExperimentalAct
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_settings.aboutSettings
 import kotlinx.android.synthetic.main.a_settings.advancedBox
-import kotlinx.android.synthetic.main.a_settings.backBtnSet
+import kotlinx.android.synthetic.main.a_settings.backBtnSetting
 import kotlinx.android.synthetic.main.a_settings.cacheLay
 import kotlinx.android.synthetic.main.a_settings.commonTitleBackSet
 import kotlinx.android.synthetic.main.a_settings.commonTitleSettingsColor
@@ -165,8 +166,10 @@ class SettingsAct : BaseAct() {
             val intent = Intent(this, AboutAct::class.java)
             startActivity(intent)
         }
-        backBtnSet.setOnClickListener {
+        backBtnSetting.setOnClickListener {
+            Log.d("roy93~", "onBackPressed")
             this.onBackPressed()
+//            finishScreen()
         }
         submitSettings.setOnClickListener {
             val intent = Intent(this, SubmitAct::class.java)
@@ -211,6 +214,7 @@ class SettingsAct : BaseAct() {
 
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
+        Log.d("roy93~", "onBackPressed")
         if (themePanel.visibility == View.VISIBLE) {
             Utils.fadeOutAnim(themePanel, 300) //Start Close Animation
             return
@@ -218,6 +222,16 @@ class SettingsAct : BaseAct() {
             super.onBackPressed()
         }
     }
+
+//    private fun finishScreen() {
+//        Log.d("roy93~", "onBackPressed")
+//        if (themePanel.visibility == View.VISIBLE) {
+//            Utils.fadeOutAnim(themePanel, 300) //Start Close Animation
+//            return
+//        } else {
+//            super.onBackPressed()
+//        }
+//    }
 
     private fun initOfflineSwitches() {
         val offlinePreferences = OfflinePreference(this)
