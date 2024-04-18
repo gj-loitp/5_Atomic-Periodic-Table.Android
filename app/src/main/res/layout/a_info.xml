@@ -37,7 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="38dp"
                     android:layout_marginTop="16dp"
-                    android:text="@string/roy93group"
+                    android:text="@string/mckimquyen"
                     android:textAlignment="center"
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="24sp"

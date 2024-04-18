@@ -117,7 +117,7 @@
     <string name="show_fusion_heat">Show Fusion Heat</string>
     <string name="show_specific_heat_capacity">Show Specific Heat Capacity</string>
     <string name="show_vaporization_heat">Show Vaporization Heat</string>
-    <string name="roy93group">Roy93Group</string>
+    <string name="mckimquyen">McKimQuyen</string>
     <string name="atomic_periodic_table">Atomic - Periodic Table</string>
     <string name="about">About</string>
     <string name="search_for_isotopes">Search For Isotopes</string>
