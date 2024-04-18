@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_submit.background
@@ -28,7 +28,7 @@ import kotlinx.android.synthetic.main.view_drop_issue.bug
 import kotlinx.android.synthetic.main.view_drop_issue.dataIssue
 import kotlinx.android.synthetic.main.view_drop_issue.question
 
-class SubmitActivity : BaseActivity() {
+class SubmitAct : BaseAct() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

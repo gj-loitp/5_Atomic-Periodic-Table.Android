@@ -51,7 +51,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.ElementInfoActivity"
+            android:name=".activitie.ElementInfoAct"
             android:exported="true"
             android:label="ELEMENTINFOACTIVITY"
             android:screenOrientation="portrait"
@@ -71,7 +71,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.setting.FavoritePageActivity"
+            android:name=".activitie.setting.FavoritePageAct"
             android:exported="true"
             android:label="FAVORITEPAGE"
             android:screenOrientation="portrait"
@@ -81,7 +81,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.setting.OrderActivity"
+            android:name=".activitie.setting.OrderAct"
             android:exported="true"
             android:label="ORDERPAGE"
             android:screenOrientation="portrait"
@@ -91,7 +91,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.table.IonActivity"
+            android:name=".activitie.table.IonAct"
             android:exported="true"
             android:label="IONPAGE"
             android:screenOrientation="portrait"
@@ -101,7 +101,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".setting.ExperimentalActivity"
+            android:name=".setting.ExperimentalAct"
             android:exported="true"
             android:label="EXPERIMENTAL_PAGE"
             android:screenOrientation="portrait"
@@ -120,7 +120,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.CalculatorActivity"
+            android:name=".activitie.CalculatorAct"
             android:exported="true"
             android:label="CALCULATORPAGE"
             android:screenOrientation="portrait"
@@ -130,7 +130,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.table.DictionaryActivity"
+            android:name=".activitie.table.DictionaryAct"
             android:exported="true"
             android:label="DICTIONARYPAGE"
             android:screenOrientation="portrait"
@@ -140,7 +140,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.IsotopesActivityExperimental"
+            android:name=".activitie.IsotopesActExperimental"
             android:exported="true"
             android:label="ISOTPOESPAGEEXP"
             android:screenOrientation="portrait"
@@ -150,7 +150,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.setting.AboutActivity"
+            android:name=".activitie.setting.AboutAct"
             android:exported="true"
             android:label="ABOUTPAGE"
             android:screenOrientation="portrait"
@@ -170,7 +170,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.table.ElectrodeActivity"
+            android:name=".activitie.table.ElectrodeAct"
             android:exported="true"
             android:label="ELECTRODEPAGE"
             android:screenOrientation="portrait"
@@ -180,7 +180,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.setting.SubmitActivity"
+            android:name=".activitie.setting.SubmitAct"
             android:exported="true"
             android:label="SUBMITPAGE"
             android:screenOrientation="portrait"
@@ -191,7 +191,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.setting.LicensesActivity"
+            android:name=".activitie.setting.LicensesAct"
             android:exported="true"
             android:label="LICENSESPAGE"
             android:screenOrientation="portrait"
@@ -202,7 +202,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.table.EquationsActivity"
+            android:name=".activitie.table.EquationsAct"
             android:exported="true"
             android:label="EQUATIONSACTIVITY"
             android:screenOrientation="portrait"
@@ -213,7 +213,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.table.PHActivity"
+            android:name=".activitie.table.PHAct"
             android:exported="true"
             android:label="PHACTIVITY"
             android:screenOrientation="portrait"
@@ -224,7 +224,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.setting.UnitActivity"
+            android:name=".activitie.setting.UnitAct"
             android:exported="true"
             android:label="activity_unit"
             android:screenOrientation="portrait"
@@ -235,7 +235,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.table.NuclideActivity"
+            android:name=".activitie.table.NuclideAct"
             android:exported="true"
             android:label="activity_nuclide"
             android:screenOrientation="portrait"

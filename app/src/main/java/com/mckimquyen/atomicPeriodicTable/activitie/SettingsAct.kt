@@ -10,15 +10,15 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.TextView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.AboutActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.FavoritePageActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.LicensesActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.OrderActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.SubmitActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.UnitActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.AboutAct
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.FavoritePageAct
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.LicensesAct
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.OrderAct
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.SubmitAct
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.UnitAct
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
-import com.mckimquyen.atomicPeriodicTable.setting.ExperimentalActivity
+import com.mckimquyen.atomicPeriodicTable.setting.ExperimentalAct
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_settings.aboutSettings
 import kotlinx.android.synthetic.main.a_settings.advancedBox
@@ -53,7 +53,7 @@ import kotlin.math.log10
 import kotlin.math.pow
 import kotlin.system.exitProcess
 
-class SettingsAct : BaseActivity() {
+class SettingsAct : BaseAct() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -162,22 +162,22 @@ class SettingsAct : BaseActivity() {
             })
 
         aboutSettings.setOnClickListener {
-            val intent = Intent(this, AboutActivity::class.java)
+            val intent = Intent(this, AboutAct::class.java)
             startActivity(intent)
         }
         backBtnSet.setOnClickListener {
             this.onBackPressed()
         }
         submitSettings.setOnClickListener {
-            val intent = Intent(this, SubmitActivity::class.java)
+            val intent = Intent(this, SubmitAct::class.java)
             startActivity(intent)
         }
         licensesSettings.setOnClickListener {
-            val intent = Intent(this, LicensesActivity::class.java)
+            val intent = Intent(this, LicensesAct::class.java)
             startActivity(intent)
         }
         unitSettings.setOnClickListener {
-            val intent = Intent(this, UnitActivity::class.java)
+            val intent = Intent(this, UnitAct::class.java)
             startActivity(intent)
         }
     }
@@ -237,15 +237,15 @@ class SettingsAct : BaseActivity() {
 
     private fun openPages() {
         favoriteSettings.setOnClickListener {
-            val intent = Intent(this, FavoritePageActivity::class.java)
+            val intent = Intent(this, FavoritePageAct::class.java)
             startActivity(intent)
         }
         orderSettings.setOnClickListener {
-            val intent = Intent(this, OrderActivity::class.java)
+            val intent = Intent(this, OrderAct::class.java)
             startActivity(intent)
         }
         experimentalSettings.setOnClickListener {
-            val intent = Intent(this, ExperimentalActivity::class.java)
+            val intent = Intent(this, ExperimentalAct::class.java)
             startActivity(intent)
         }
     }

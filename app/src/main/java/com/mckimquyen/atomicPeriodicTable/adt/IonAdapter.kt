@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.table.IonActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.IonAct
 import com.mckimquyen.atomicPeriodicTable.model.Ion
 import org.json.JSONArray
 import org.json.JSONObject
@@ -20,7 +20,7 @@ import java.util.Locale
 
 class IonAdapter(
     var list: ArrayList<Ion>,
-    var clickListener: IonActivity,
+    var clickListener: IonAct,
     val context: Context,
 ) :
     RecyclerView.Adapter<IonAdapter.ViewHolder>() {

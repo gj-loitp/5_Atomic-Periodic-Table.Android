@@ -9,12 +9,12 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.table.DictionaryActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.DictionaryAct
 import com.mckimquyen.atomicPeriodicTable.model.Dictionary
 
 class DictionaryAdt(
     var dictionaryList: ArrayList<Dictionary>,
-    var clickListener: DictionaryActivity,
+    var clickListener: DictionaryAct,
     val con: Context,
 ) : RecyclerView.Adapter<DictionaryAdt.ViewHolder>() {
     override fun onBindViewHolder(

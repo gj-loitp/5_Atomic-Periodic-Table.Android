@@ -14,7 +14,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.adt.ElectrodeAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Series
@@ -26,7 +26,7 @@ import kotlinx.android.synthetic.main.a_dictionary.titleBox
 import kotlinx.android.synthetic.main.a_electrode.*
 import java.util.Locale
 
-class ElectrodeActivity : BaseActivity() {
+class ElectrodeAct : BaseAct() {
     private var seriesList = ArrayList<Series>()
     private var mAdapter = ElectrodeAdt(list = seriesList, clickListener = this, context = this)
 

@@ -29,7 +29,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.BuildConfig
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.table.DictionaryActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.DictionaryAct
 import com.mckimquyen.atomicPeriodicTable.adt.ElementAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.ext.TableExt
@@ -281,7 +281,7 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
         val elementSendAndLoad = ElementSendAndLoad(this)
         elementSendAndLoad.setValue(item.element)
         val intent =
-            Intent(/* packageContext = */ this, /* cls = */ ElementInfoActivity::class.java)
+            Intent(/* packageContext = */ this, /* cls = */ ElementInfoAct::class.java)
         startActivity(intent)
     }
 
@@ -332,7 +332,7 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
         val elementSendAndLoad = ElementSendAndLoad(this)
         elementSendAndLoad.setValue(item.element)
 
-        val intent = Intent(this, ElementInfoActivity::class.java)
+        val intent = Intent(this, ElementInfoAct::class.java)
         startActivity(intent)
     }
 
@@ -446,11 +446,11 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
             startActivity(intent)
         }
         isotopesBtn.setOnClickListener {
-            val intent = Intent(this, IsotopesActivityExperimental::class.java)
+            val intent = Intent(this, IsotopesActExperimental::class.java)
             startActivity(intent)
         }
         dictionaryBtn.setOnClickListener {
-            val intent = Intent(this, DictionaryActivity::class.java)
+            val intent = Intent(this, DictionaryAct::class.java)
             startActivity(intent)
         }
     }
@@ -514,7 +514,7 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
             btn.isClickable = true
             btn.isFocusable = true
             btn.setOnClickListener {
-                val intent = Intent(this, ElementInfoActivity::class.java)
+                val intent = Intent(this, ElementInfoAct::class.java)
                 val elementSend = ElementSendAndLoad(this)
                 elementSend.setValue(item.element)
                 startActivity(intent)

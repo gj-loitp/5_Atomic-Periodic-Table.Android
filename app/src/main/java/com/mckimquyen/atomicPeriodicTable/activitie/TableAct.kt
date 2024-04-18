@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.table.ElectrodeActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.table.EquationsActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.table.IonActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.table.NuclideActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.table.PHActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.ElectrodeAct
+import com.mckimquyen.atomicPeriodicTable.activitie.table.EquationsAct
+import com.mckimquyen.atomicPeriodicTable.activitie.table.IonAct
+import com.mckimquyen.atomicPeriodicTable.activitie.table.NuclideAct
+import com.mckimquyen.atomicPeriodicTable.activitie.table.PHAct
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_solubility.backBtn
 import kotlinx.android.synthetic.main.a_submit.viewSub
@@ -33,7 +33,7 @@ import kotlinx.android.synthetic.main.a_tables.tableScroll
 import kotlinx.android.synthetic.main.a_tables.tablesTitle
 import kotlinx.android.synthetic.main.a_tables.tablesTitleDownstate
 
-class TableAct : BaseActivity() {
+class TableAct : BaseAct() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -126,43 +126,43 @@ class TableAct : BaseActivity() {
             startActivity(intent)
         }
         eleTable.setOnClickListener {
-            val intent = Intent(this, ElectrodeActivity::class.java)
+            val intent = Intent(this, ElectrodeAct::class.java)
             startActivity(intent)
         }
         eleButton.setOnClickListener {
-            val intent = Intent(this, ElectrodeActivity::class.java)
+            val intent = Intent(this, ElectrodeAct::class.java)
             startActivity(intent)
         }
         equTable.setOnClickListener {
-            val intent = Intent(this, EquationsActivity::class.java)
+            val intent = Intent(this, EquationsAct::class.java)
             startActivity(intent)
         }
         equButton.setOnClickListener {
-            val intent = Intent(this, EquationsActivity::class.java)
+            val intent = Intent(this, EquationsAct::class.java)
             startActivity(intent)
         }
         ionTable.setOnClickListener {
-            val intent = Intent(this, IonActivity::class.java)
+            val intent = Intent(this, IonAct::class.java)
             startActivity(intent)
         }
         ionButton.setOnClickListener {
-            val intent = Intent(this, IonActivity::class.java)
+            val intent = Intent(this, IonAct::class.java)
             startActivity(intent)
         }
         nucTable.setOnClickListener {
-            val intent = Intent(this, NuclideActivity::class.java)
+            val intent = Intent(this, NuclideAct::class.java)
             startActivity(intent)
         }
         nucButton.setOnClickListener {
-            val intent = Intent(this, NuclideActivity::class.java)
+            val intent = Intent(this, NuclideAct::class.java)
             startActivity(intent)
         }
         phTable.setOnClickListener {
-            val intent = Intent(this, PHActivity::class.java)
+            val intent = Intent(this, PHAct::class.java)
             startActivity(intent)
         }
         phButton.setOnClickListener {
-            val intent = Intent(this, PHActivity::class.java)
+            val intent = Intent(this, PHAct::class.java)
             startActivity(intent)
         }
     }

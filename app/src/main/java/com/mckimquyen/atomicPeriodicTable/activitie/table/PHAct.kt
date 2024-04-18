@@ -10,17 +10,26 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.model.Indicator
 import com.mckimquyen.atomicPeriodicTable.model.IndicatorModel
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
-import kotlinx.android.synthetic.main.a_ph.*
+import kotlinx.android.synthetic.main.a_ph.acidInfo
+import kotlinx.android.synthetic.main.a_ph.alkalineInfo
+import kotlinx.android.synthetic.main.a_ph.backBtnPh
+import kotlinx.android.synthetic.main.a_ph.center
+import kotlinx.android.synthetic.main.a_ph.commonTitleBackPh
+import kotlinx.android.synthetic.main.a_ph.left
+import kotlinx.android.synthetic.main.a_ph.neutralInfo
+import kotlinx.android.synthetic.main.a_ph.phScroll
+import kotlinx.android.synthetic.main.a_ph.right
+import kotlinx.android.synthetic.main.a_ph.viewPh
 import kotlinx.android.synthetic.main.view_bar_ph_chips.bromothymolBlueBtn
 import kotlinx.android.synthetic.main.view_bar_ph_chips.congoRedBtn
 import kotlinx.android.synthetic.main.view_bar_ph_chips.methylOrangeBtn
 import kotlinx.android.synthetic.main.view_bar_ph_chips.phenolphthaleinBtn
 
-class PHActivity : BaseActivity() {
+class PHAct : BaseAct() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupViews()

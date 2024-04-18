@@ -9,16 +9,30 @@ import android.os.Looper
 import android.view.View
 import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.FavoritePageActivity
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.SubmitActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.FavoritePageAct
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.SubmitAct
 import com.mckimquyen.atomicPeriodicTable.ext.InfoExt
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
-import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
-import kotlinx.android.synthetic.main.a_element_info.*
+import kotlinx.android.synthetic.main.a_element_info.backBtn
+import kotlinx.android.synthetic.main.a_element_info.commonTitleBack
+import kotlinx.android.synthetic.main.a_element_info.detailEmission
+import kotlinx.android.synthetic.main.a_element_info.detailEmissionBackground
+import kotlinx.android.synthetic.main.a_element_info.frame
+import kotlinx.android.synthetic.main.a_element_info.iBtn
+import kotlinx.android.synthetic.main.a_element_info.nextBtn
+import kotlinx.android.synthetic.main.a_element_info.offlineSpace
+import kotlinx.android.synthetic.main.a_element_info.overviewInc
+import kotlinx.android.synthetic.main.a_element_info.previousBtn
+import kotlinx.android.synthetic.main.a_element_info.propertiesInc
+import kotlinx.android.synthetic.main.a_element_info.scrView
+import kotlinx.android.synthetic.main.a_element_info.shell
+import kotlinx.android.synthetic.main.a_element_info.shellBackground
+import kotlinx.android.synthetic.main.a_element_info.view
 import kotlinx.android.synthetic.main.v_d_properties.electronView
 import kotlinx.android.synthetic.main.v_d_properties.spImg
 import kotlinx.android.synthetic.main.v_d_properties.spOffline
@@ -30,7 +44,7 @@ import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
 
-class ElementInfoActivity : InfoExt() {
+class ElementInfoAct : InfoExt() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,8 +73,8 @@ class ElementInfoActivity : InfoExt() {
         if (themePrefValue == 1) {
             setTheme(R.style.AppThemeDark)
         }
-        val elementSendAndLoadPreference = ElementSendAndLoad(this)
-        var elementSendAndLoadValue = elementSendAndLoadPreference.getValue()
+//        val elementSendAndLoadPreference = ElementSendAndLoad(this)
+//        var elementSendAndLoadValue = elementSendAndLoadPreference.getValue()
         setContentView(R.layout.a_element_info)
         Utils.fadeInAnim(scrView, 300)
         readJson()
@@ -71,22 +85,22 @@ class ElementInfoActivity : InfoExt() {
         nextPrev()
         favoriteBarSetup()
         elementAnim(overviewInc, propertiesInc)
-        view.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        view.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         backBtn.setOnClickListener {
             super.onBackPressed()
         }
         editFavBtn.setOnClickListener {
-            val intent = Intent(this, FavoritePageActivity::class.java)
+            val intent = Intent(this, FavoritePageAct::class.java)
             startActivity(intent)
         }
         iBtn.setOnClickListener {
-            val intent = Intent(this, SubmitActivity::class.java)
+            val intent = Intent(this, SubmitAct::class.java)
             startActivity(intent)
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (shellBackground.visibility == View.VISIBLE) {
             Utils.fadeOutAnim(shell, 300)

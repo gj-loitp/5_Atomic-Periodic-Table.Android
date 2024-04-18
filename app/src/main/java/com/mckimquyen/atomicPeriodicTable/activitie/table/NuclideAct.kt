@@ -18,7 +18,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.core.text.isDigitsOnly
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
@@ -29,7 +29,7 @@ import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
 
-class NuclideActivity : BaseActivity() {
+class NuclideAct : BaseAct() {
     private val elementLists = ArrayList<Element>()
     var mScale = 1f
     lateinit var mScaleDetector: ScaleGestureDetector

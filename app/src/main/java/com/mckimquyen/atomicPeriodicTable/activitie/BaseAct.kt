@@ -4,7 +4,7 @@ import android.view.View
 import android.view.WindowInsets
 import androidx.appcompat.app.AppCompatActivity
 
-abstract class BaseActivity : AppCompatActivity(), View.OnApplyWindowInsetsListener {
+abstract class BaseAct : AppCompatActivity(), View.OnApplyWindowInsetsListener {
     companion object {
         private const val TAG = "BaseActivity"
     }
@@ -25,7 +25,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnApplyWindowInsetsListe
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) = Unit
 
     override fun onApplyWindowInsets(v: View, insets: WindowInsets): WindowInsets {

@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_settings_licenses.*
 import kotlinx.android.synthetic.main.view_license_info.*
 
-class LicensesActivity : BaseActivity() {
+class LicensesAct : BaseAct() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupViews()

@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.view_panel_info.infoBackground
 import kotlinx.android.synthetic.main.view_panel_info.infoTitle
 import kotlinx.android.synthetic.main.view_panel_info.tvInfoText
 
-class SolubilityAct : BaseActivity() {
+class SolubilityAct : BaseAct() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

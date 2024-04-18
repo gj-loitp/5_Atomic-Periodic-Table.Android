@@ -9,13 +9,13 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.table.ElectrodeActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.ElectrodeAct
 import com.mckimquyen.atomicPeriodicTable.model.Series
 import java.util.Locale
 
 class ElectrodeAdt(
     var list: ArrayList<Series>,
-    var clickListener: ElectrodeActivity,
+    var clickListener: ElectrodeAct,
     val context: Context,
 ) : RecyclerView.Adapter<ElectrodeAdt.ViewHolder>() {
     override fun onBindViewHolder(

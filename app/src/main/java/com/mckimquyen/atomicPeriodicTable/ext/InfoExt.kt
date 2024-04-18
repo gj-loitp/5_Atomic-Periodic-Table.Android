@@ -13,7 +13,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.IsotopesActivityExperimental
+import com.mckimquyen.atomicPeriodicTable.activitie.IsotopesActExperimental
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicCovalentPref
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusCalPref
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusEmpPref
@@ -321,7 +321,7 @@ abstract class InfoExt : AppCompatActivity(), View.OnApplyWindowInsetsListener {
                 isoPreference.setValue(element.lowercase(Locale.getDefault())) //Send element number
                 val isoSend = SendIso(this)
                 isoSend.setValue("true") //Set flag for sent
-                val intent = Intent(this, IsotopesActivityExperimental::class.java)
+                val intent = Intent(this, IsotopesActExperimental::class.java)
                 startActivity(intent) //Send intent
             }
 

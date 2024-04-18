@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_experimental_settings_page.backBtnExp
 import kotlinx.android.synthetic.main.a_experimental_settings_page.commonTitleBackExp
 import kotlinx.android.synthetic.main.a_experimental_settings_page.generalHeaderExp
 import kotlinx.android.synthetic.main.a_experimental_settings_page.viewe
 
-class ExperimentalActivity : BaseActivity() {
+class ExperimentalAct : BaseAct() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

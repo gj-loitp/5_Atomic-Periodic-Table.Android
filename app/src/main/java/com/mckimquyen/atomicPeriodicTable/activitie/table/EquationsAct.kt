@@ -15,7 +15,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.adt.EquationsAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Equation
@@ -29,7 +29,7 @@ import kotlinx.android.synthetic.main.view_equations_info.eTitle
 import kotlinx.android.synthetic.main.view_equations_info.lBackgroundE
 import java.util.Locale
 
-class EquationsActivity : BaseActivity(), EquationsAdt.OnEquationClickListener {
+class EquationsAct : BaseAct(), EquationsAdt.OnEquationClickListener {
     private var equationList = ArrayList<Equation>()
     var mAdapter = EquationsAdt(list = equationList, clickListener = this, context = this)
 

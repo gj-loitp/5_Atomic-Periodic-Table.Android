@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.BuildConfig
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_info.commonTitleBackInfo
 import kotlinx.android.synthetic.main.a_info.imageView3
@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.a_info.versionNumber
 import kotlinx.android.synthetic.main.a_info.viewInfo
 import kotlinx.android.synthetic.main.a_solubility.backBtn
 
-class AboutActivity : BaseActivity() {
+class AboutAct : BaseAct() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

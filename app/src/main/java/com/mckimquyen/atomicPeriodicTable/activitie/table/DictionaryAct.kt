@@ -21,7 +21,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.adt.DictionaryAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Dictionary
@@ -32,7 +32,7 @@ import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_dictionary.*
 import java.util.Locale
 
-class DictionaryActivity : BaseActivity(), DictionaryAdt.OnDictionaryClickListener {
+class DictionaryAct : BaseAct(), DictionaryAdt.OnDictionaryClickListener {
     private var dictionaryList = ArrayList<Dictionary>()
     private var mAdapter = DictionaryAdt(
         dictionaryList = dictionaryList,

@@ -21,12 +21,27 @@ import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
 import com.mckimquyen.atomicPeriodicTable.pref.IsoPref
-import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.pref.SendIso
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.ToastUtil
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
-import kotlinx.android.synthetic.main.a_isotopes_experimental.*
+import kotlinx.android.synthetic.main.a_isotopes_experimental.backBtn
+import kotlinx.android.synthetic.main.a_isotopes_experimental.backgroundI2
+import kotlinx.android.synthetic.main.a_isotopes_experimental.closeIsoSearch
+import kotlinx.android.synthetic.main.a_isotopes_experimental.commonTitleBackIso
+import kotlinx.android.synthetic.main.a_isotopes_experimental.editIso
+import kotlinx.android.synthetic.main.a_isotopes_experimental.emptySearchBoxIso
+import kotlinx.android.synthetic.main.a_isotopes_experimental.filterBackground
+import kotlinx.android.synthetic.main.a_isotopes_experimental.filterBtn2
+import kotlinx.android.synthetic.main.a_isotopes_experimental.isoFilterBox
+import kotlinx.android.synthetic.main.a_isotopes_experimental.panelInfo
+import kotlinx.android.synthetic.main.a_isotopes_experimental.rView
+import kotlinx.android.synthetic.main.a_isotopes_experimental.searchBarIso
+import kotlinx.android.synthetic.main.a_isotopes_experimental.searchBtn
+import kotlinx.android.synthetic.main.a_isotopes_experimental.slidPanel
+import kotlinx.android.synthetic.main.a_isotopes_experimental.titleBox
+import kotlinx.android.synthetic.main.a_isotopes_experimental.view1
 import kotlinx.android.synthetic.main.view_filter_view_iso.isoAlphabetBtn
 import kotlinx.android.synthetic.main.view_filter_view_iso.isoElementNumbBtn
 import kotlinx.android.synthetic.main.view_isotope_panel.frameIso
@@ -37,7 +52,7 @@ import java.io.IOException
 import java.io.InputStream
 import java.util.Locale
 
-class IsotopesActivityExperimental : BaseActivity(), IsotopeAdt.OnElementClickListener {
+class IsotopesActExperimental : BaseAct(), IsotopeAdt.OnElementClickListener {
     private var elementList = ArrayList<Element>()
     var mAdapter = IsotopeAdt(elementList = elementList, clickListener = this, context = this)
 
@@ -90,7 +105,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdt.OnElementClickLi
             override fun onPanelStateChanged(
                 panel: View?,
                 previousState: SlidingUpPanelLayout.PanelState,
-                newState: SlidingUpPanelLayout.PanelState
+                newState: SlidingUpPanelLayout.PanelState,
             ) {
                 if (slidingLayoutI.panelState === SlidingUpPanelLayout.PanelState.COLLAPSED) {
                     Utils.fadeOutAnim(backgroundI2, 300)
@@ -109,8 +124,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdt.OnElementClickLi
             }
         }
 
-        view1.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        view1.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         clickSearch()
         searchFilter(elements, recyclerView)
         sentIsotope()
@@ -246,6 +260,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdt.OnElementClickLi
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (backgroundI2.visibility == View.VISIBLE) {
             slidingLayoutI.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED
@@ -302,8 +317,7 @@ class IsotopesActivityExperimental : BaseActivity(), IsotopeAdt.OnElementClickLi
                     for (i in 1..item.isotopes) {
                         val mainLayout = frameIso
                         val inflater = layoutInflater
-                        val myLayout: View =
-                            inflater.inflate(R.layout.view_row_iso_panel_item, mainLayout, false)
+                        val myLayout: View = inflater.inflate(R.layout.view_row_iso_panel_item, mainLayout, false)
                         val name = "iso_"
                         val z = "iso_Z_"
                         val n = "iso_N_"

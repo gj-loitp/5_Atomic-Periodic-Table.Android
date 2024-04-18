@@ -12,13 +12,13 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.table.EquationsActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.EquationsAct
 import com.mckimquyen.atomicPeriodicTable.model.Equation
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 
 class EquationsAdt(
     var list: ArrayList<Equation>,
-    var clickListener: EquationsActivity,
+    var clickListener: EquationsAct,
     val context: Context,
 ) : RecyclerView.Adapter<EquationsAdt.ViewHolder>() {
     override fun onBindViewHolder(

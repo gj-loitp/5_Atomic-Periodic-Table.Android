@@ -13,7 +13,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStream
 
-class CalculatorActivity : AppCompatActivity() {
+class CalculatorAct : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,7 +53,7 @@ class CalculatorActivity : AppCompatActivity() {
         val text = editElement1.text.toString()
 
         for (i in 0 until 2) {
-            var jsonstring: String?
+            var jsonString: String?
             if (text == mArray[i].toString()) {
 
                 if (text == "H") {
@@ -61,8 +61,8 @@ class CalculatorActivity : AppCompatActivity() {
                     val elementJson = "1$ext"
 
                     val inputStream: InputStream = assets.open(elementJson)
-                    jsonstring = inputStream.bufferedReader().use { it.readText() }
-                    val jsonArray = JSONArray(jsonstring)
+                    jsonString = inputStream.bufferedReader().use { it.readText() }
+                    val jsonArray = JSONArray(jsonString)
                     val jsonObject: JSONObject = jsonArray.getJSONObject(0)
                     val elementAtomicWeight1 = jsonObject.optString("element_atomicmass", "---")
 

@@ -8,7 +8,7 @@ import android.view.ViewTreeObserver
 import android.widget.CheckBox
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicCovalentPref
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusCalPref
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusEmpPref
@@ -25,7 +25,7 @@ import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPref
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPref
 import kotlinx.android.synthetic.main.a_favorite_settings_page.*
-class FavoritePageActivity : BaseActivity() {
+class FavoritePageAct : BaseAct() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

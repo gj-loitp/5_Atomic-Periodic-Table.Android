@@ -15,7 +15,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
 import com.mckimquyen.atomicPeriodicTable.adt.IonAdapter
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Ion
@@ -31,7 +31,7 @@ import org.json.JSONObject
 import java.io.InputStream
 import java.util.Locale
 
-class IonActivity : BaseActivity(), IonAdapter.OnIonClickListener {
+class IonAct : BaseAct(), IonAdapter.OnIonClickListener {
     private var ionList = ArrayList<Ion>()
     private var mAdapter = IonAdapter(list = ionList, clickListener = this, context = this)
 
