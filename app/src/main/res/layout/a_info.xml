@@ -85,16 +85,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
+                    android:background="@drawable/riple_chip_ripple"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
                     android:text="@string/get_forked_source_code"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorError"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btGithub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:background="@drawable/riple_chip_ripple"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
                     android:text="@string/get_original_source_code"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorError"
+                    android:textStyle="bold" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </ScrollView>
