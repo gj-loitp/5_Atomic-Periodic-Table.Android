@@ -5,7 +5,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -13,14 +12,14 @@ import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.tables.DictionaryActivity
 import com.mckimquyen.atomicPeriodicTable.model.Dictionary
 
-class DictionaryAdapter(
+class DictionaryAdt(
     var dictionaryList: ArrayList<Dictionary>,
     var clickListener: DictionaryActivity,
-    val con: Context
-) : RecyclerView.Adapter<DictionaryAdapter.ViewHolder>() {
+    val con: Context,
+) : RecyclerView.Adapter<DictionaryAdt.ViewHolder>() {
     override fun onBindViewHolder(
         holder: ViewHolder,
-        position: Int
+        position: Int,
     ) {
 
         holder.initialize(item = dictionaryList[position], action = clickListener, con = con)
@@ -28,7 +27,7 @@ class DictionaryAdapter(
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.view_text_list_item, parent, false)
         return ViewHolder(v)
@@ -39,15 +38,15 @@ class DictionaryAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val heading = itemView.findViewById(R.id.tvTitle) as TextView
-        private val text = itemView.findViewById(R.id.tvText) as TextView
-        private val wikiBtn = itemView.findViewById(R.id.tvWikiBtn) as TextView
-        private val frame = itemView.findViewById(R.id.rCard) as FrameLayout
+        private val heading: TextView = itemView.findViewById(R.id.tvTitle)
+        private val text: TextView = itemView.findViewById(R.id.tvText)
+        private val wikiBtn: TextView = itemView.findViewById(R.id.tvWikiBtn)
+//        private val frame: FrameLayout = itemView.findViewById(R.id.rCard)
 
         fun initialize(
             item: Dictionary,
             action: OnDictionaryClickListener,
-            con: Context
+            con: Context,
         ) {
 
             heading.text = item.heading
@@ -59,7 +58,13 @@ class DictionaryAdapter(
             wikiBtn.isFocusable = true
 
             wikiBtn.setOnClickListener {
-                action.dictionaryClickListener(item, wikiBtn, url, adapterPosition)
+//                action.dictionaryClickListener(item, wikiBtn, url, adapterPosition)
+                action.dictionaryClickListener(
+                    item = item,
+                    wiki = wikiBtn,
+                    url = url,
+                    position = bindingAdapterPosition
+                )
             }
         }
     }

@@ -15,21 +15,21 @@ import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.pref.SearchPref
 import java.util.Locale
 
-class ElementAdapter(
+class ElementAdt(
     var elementList: ArrayList<Element>,
     var clickListener: OnElementClickListener2,
-    val con: Context
-) : RecyclerView.Adapter<ElementAdapter.ViewHolder>() {
+    val con: Context,
+) : RecyclerView.Adapter<ElementAdt.ViewHolder>() {
     override fun onBindViewHolder(
         holder: ViewHolder,
-        position: Int
+        position: Int,
     ) {
         holder.initialize(item = elementList[position], action = clickListener, con = con)
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): ViewHolder {
         val v =
             LayoutInflater.from(parent.context).inflate(R.layout.view_isotope_list_item, parent, false)
@@ -42,21 +42,21 @@ class ElementAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //        private val cardHolder = itemView.findViewById(R.id.rCard) as FrameLayout
-        private val elementCard = itemView.findViewById(R.id.elemntCard) as FrameLayout
-        private val textViewElement = itemView.findViewById(R.id.tvIsoType) as TextView
-        private val textViewShort = itemView.findViewById(R.id.tvIcIsoType) as TextView
-        private val textViewNumb = itemView.findViewById(R.id.tvIsoNumb) as TextView
+        private val elementCard: FrameLayout = itemView.findViewById(R.id.elemntCard)
+        private val textViewElement: TextView = itemView.findViewById(R.id.tvIsoType)
+        private val textViewShort: TextView = itemView.findViewById(R.id.tvIcIsoType)
+        private val textViewNumb: TextView = itemView.findViewById(R.id.tvIsoNumb)
 
         fun initialize(
             item: Element,
             action: OnElementClickListener2,
-            con: Context
+            con: Context,
         ) {
             val searchPreference = SearchPref(con)
             val searchPrefValue = searchPreference.getValue()
 
             textViewElement.text = item.element
-            textViewElement.text = item.element.capitalize(Locale.getDefault())
+            textViewElement.text = item.element.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
             textViewShort.text = item.short
 
             itemView.foreground =
@@ -73,12 +73,10 @@ class ElementAdapter(
                 if (item.electro == 0.0) {
                     elementCard.background.setTint(Color.argb(255, 180, 180, 180))
                     textViewNumb.text = "---"
-                }
-                else {
+                } else {
                     if (item.electro > 1) {
                         elementCard.background.setTint(Color.argb(255, 255, 225.div(item.electro).toInt(), 0))
-                    }
-                    else {
+                    } else {
                         elementCard.background.setTint(Color.argb(255, 255, 255, 0))
                     }
                 }
@@ -88,7 +86,8 @@ class ElementAdapter(
             }
 
             itemView.setOnClickListener {
-                action.elementClickListener2(item, adapterPosition)
+//                action.elementClickListener2(item, adapterPosition)
+                action.elementClickListener2(item, bindingAdapterPosition)
             }
         }
     }
@@ -100,5 +99,6 @@ class ElementAdapter(
     @SuppressLint("NotifyDataSetChanged")
     fun filterList(filteredList: ArrayList<Element>) {
         elementList = filteredList
-        notifyDataSetChanged() }
+        notifyDataSetChanged()
+    }
 }

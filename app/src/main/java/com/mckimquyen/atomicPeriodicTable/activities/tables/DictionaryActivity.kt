@@ -22,7 +22,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
-import com.mckimquyen.atomicPeriodicTable.adt.DictionaryAdapter
+import com.mckimquyen.atomicPeriodicTable.adt.DictionaryAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Dictionary
 import com.mckimquyen.atomicPeriodicTable.model.DictionaryModel
@@ -32,9 +32,9 @@ import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_dictionary.*
 import java.util.Locale
 
-class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickListener {
+class DictionaryActivity : BaseActivity(), DictionaryAdt.OnDictionaryClickListener {
     private var dictionaryList = ArrayList<Dictionary>()
-    private var mAdapter = DictionaryAdapter(
+    private var mAdapter = DictionaryAdt(
         dictionaryList = dictionaryList,
         clickListener = this,
         con = this
@@ -170,7 +170,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
         val dictionaryList = ArrayList<Dictionary>()
         DictionaryModel.getList(dictionaryList)
         recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        val adapter = DictionaryAdapter(dictionaryList, this, this)
+        val adapter = DictionaryAdt(dictionaryList, this, this)
         recyclerView.adapter = adapter
         dictionaryList.sortWith(Comparator { lhs, rhs ->
             if (lhs.heading < rhs.heading) -1 else if (lhs.heading < rhs.heading) 1 else 0
@@ -213,7 +213,7 @@ class DictionaryActivity : BaseActivity(), DictionaryAdapter.OnDictionaryClickLi
             }, 10)
             mAdapter.notifyDataSetChanged()
             mAdapter.filterList(filteredList)
-            recyclerView.adapter = DictionaryAdapter(
+            recyclerView.adapter = DictionaryAdt(
                 dictionaryList = filteredList,
                 clickListener = this,
                 con = this

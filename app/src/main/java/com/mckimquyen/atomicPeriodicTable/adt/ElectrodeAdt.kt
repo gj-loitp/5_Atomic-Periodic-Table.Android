@@ -13,24 +13,23 @@ import com.mckimquyen.atomicPeriodicTable.activities.tables.ElectrodeActivity
 import com.mckimquyen.atomicPeriodicTable.model.Series
 import java.util.Locale
 
-class ElectrodeAdapter(
+class ElectrodeAdt(
     var list: ArrayList<Series>,
     var clickListener: ElectrodeActivity,
-    val context: Context
-) : RecyclerView.Adapter<ElectrodeAdapter.ViewHolder>() {
+    val context: Context,
+) : RecyclerView.Adapter<ElectrodeAdt.ViewHolder>() {
     override fun onBindViewHolder(
         holder: ViewHolder,
-        position: Int
+        position: Int,
     ) {
         holder.initialize(list[position], context)
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): ViewHolder {
-        val v =
-            LayoutInflater.from(parent.context).inflate(R.layout.view_electrode_list_item, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.view_electrode_list_item, parent, false)
         return ViewHolder(v)
     }
 
@@ -39,17 +38,17 @@ class ElectrodeAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val textViewName = itemView.findViewById(R.id.tvName) as TextView
-        private val textViewShort = itemView.findViewById(R.id.tvShort) as TextView
-        private val textViewCharge = itemView.findViewById(R.id.tvCharge) as TextView
-        private val textViewVoltage = itemView.findViewById(R.id.tvVoltage) as TextView
+        private val textViewName: TextView = itemView.findViewById(R.id.tvName)
+        private val textViewShort: TextView = itemView.findViewById(R.id.tvShort)
+        private val textViewCharge: TextView = itemView.findViewById(R.id.tvCharge)
+        private val textViewVoltage: TextView = itemView.findViewById(R.id.tvVoltage)
 
         fun initialize(
             item: Series,
-            context: Context
+            context: Context,
         ) {
             textViewName.text = item.name
-            textViewName.text = item.name.capitalize(Locale.ROOT)
+            textViewName.text = item.name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
             textViewShort.text = item.short
             val voltage = item.voltage.toString()
             val shortVolt = " (Volt)"

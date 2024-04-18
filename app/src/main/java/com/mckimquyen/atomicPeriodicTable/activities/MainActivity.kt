@@ -30,7 +30,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.BuildConfig
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.tables.DictionaryActivity
-import com.mckimquyen.atomicPeriodicTable.adt.ElementAdapter
+import com.mckimquyen.atomicPeriodicTable.adt.ElementAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.ext.TableExt
 import com.mckimquyen.atomicPeriodicTable.ext.moreApp
@@ -54,10 +54,10 @@ import kotlinx.android.synthetic.main.view_nav_menu_view.*
 import org.deejdev.twowaynestedscrollview.TwoWayNestedScrollView
 import java.util.Locale
 
-class MainActivity : TableExt(), ElementAdapter.OnElementClickListener2 {
+class MainActivity : TableExt(), ElementAdt.OnElementClickListener2 {
     private var elementList = ArrayList<Element>()
     private var mAdapter =
-        ElementAdapter(elementList = elementList, clickListener = this, con = this)
+        ElementAdt(elementList = elementList, clickListener = this, con = this)
 
     private var mScale = 1f
     private lateinit var mScaleDetector: ScaleGestureDetector
@@ -98,7 +98,7 @@ class MainActivity : TableExt(), ElementAdapter.OnElementClickListener2 {
         )
         val elements = ArrayList<Element>()
         ElementModel.getList(elements)
-        val adapter = ElementAdapter(elementList = elements, clickListener = this, con = this)
+        val adapter = ElementAdt(elementList = elements, clickListener = this, con = this)
         recyclerView.adapter = adapter
         editElement.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
@@ -277,7 +277,7 @@ class MainActivity : TableExt(), ElementAdapter.OnElementClickListener2 {
                 emptySearchBox.visibility = View.GONE
             }
         }, 10)
-        recyclerView.adapter = ElementAdapter(
+        recyclerView.adapter = ElementAdt(
             elementList = filteredList,
             clickListener = this,
             con = this
@@ -503,7 +503,7 @@ class MainActivity : TableExt(), ElementAdapter.OnElementClickListener2 {
             Utils.fadeOutAnim(background, 150)
             mAdapter.filterList(filtList)
             mAdapter.notifyDataSetChanged()
-            recyclerView.adapter = ElementAdapter(
+            recyclerView.adapter = ElementAdt(
                 elementList = filtList,
                 clickListener = this,
                 con = this
@@ -523,7 +523,7 @@ class MainActivity : TableExt(), ElementAdapter.OnElementClickListener2 {
             Utils.fadeOutAnim(background, 150)
             mAdapter.filterList(filtList)
             mAdapter.notifyDataSetChanged()
-            recyclerView.adapter = ElementAdapter(
+            recyclerView.adapter = ElementAdt(
                 elementList = filtList,
                 clickListener = this,
                 con = this
@@ -546,7 +546,7 @@ class MainActivity : TableExt(), ElementAdapter.OnElementClickListener2 {
             }
             mAdapter.filterList(filtList)
             mAdapter.notifyDataSetChanged()
-            recyclerView.adapter = ElementAdapter(
+            recyclerView.adapter = ElementAdt(
                 elementList = filtList,
                 clickListener = this,
                 con = this

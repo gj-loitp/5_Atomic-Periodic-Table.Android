@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
-import com.mckimquyen.atomicPeriodicTable.adt.ElectrodeAdapter
+import com.mckimquyen.atomicPeriodicTable.adt.ElectrodeAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Series
 import com.mckimquyen.atomicPeriodicTable.model.SeriesModel
@@ -28,7 +28,7 @@ import java.util.Locale
 
 class ElectrodeActivity : BaseActivity() {
     private var seriesList = ArrayList<Series>()
-    private var mAdapter = ElectrodeAdapter(list = seriesList, clickListener = this, context = this)
+    private var mAdapter = ElectrodeAdt(list = seriesList, clickListener = this, context = this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -101,7 +101,7 @@ class ElectrodeActivity : BaseActivity() {
             /* orientation = */ RecyclerView.VERTICAL,
             /* reverseLayout = */ false
         )
-        val adapter = ElectrodeAdapter(list = series, clickListener = this, context = this)
+        val adapter = ElectrodeAdt(list = series, clickListener = this, context = this)
         recyclerView.adapter = adapter
 
         adapter.notifyDataSetChanged()
@@ -151,7 +151,7 @@ class ElectrodeActivity : BaseActivity() {
         }, 10)
         mAdapter.filterList(filteredList)
         mAdapter.notifyDataSetChanged()
-        recyclerView.adapter = ElectrodeAdapter(filteredList, this, this)
+        recyclerView.adapter = ElectrodeAdt(filteredList, this, this)
     }
 
     private fun clickSearch() {
