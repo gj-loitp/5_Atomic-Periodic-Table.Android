@@ -9,66 +9,6 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/commonTitleBackFav"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="?attr/colorSurface"
-        android:elevation="1dp"
-        android:gravity="center|center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <FrameLayout
-            android:id="@+id/commonTitleBackFavColor"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.11"
-            android:background="?attr/colorPrimary" />
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:id="@+id/titleBox"
-                android:layout_width="match_parent"
-                android:layout_height="56dp">
-
-                <ImageButton
-                    android:id="@+id/backBtnFav"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_gravity="center_vertical"
-                    android:contentDescription="@string/app_name"
-                    android:elevation="2dp"
-                    android:rotation="180"
-                    android:src="@drawable/ic_arrow_back_whit"
-                    app:tint="?attr/colorOnSecondaryContainer"
-                    tools:ignore="PrivateResource" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/favoriteSetTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="56dp"
-                    android:layout_marginStart="70dp"
-                    android:alpha="0.9"
-                    android:gravity="center"
-                    android:paddingStart="0dp"
-                    android:paddingEnd="0dp"
-                    android:text="@string/favorite_settings_title"
-                    android:textAlignment="center"
-                    android:textColor="?attr/colorOnSecondaryContainer"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
-                    tools:ignore="PrivateResource" />
-            </FrameLayout>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </FrameLayout>
-
     <ScrollView
         android:id="@+id/favSetScroll"
         android:layout_width="match_parent"
@@ -610,4 +550,64 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/commonTitleBackFav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorSurface"
+        android:elevation="1dp"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/commonTitleBackFavColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.11"
+            android:background="?attr/colorPrimary" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/titleBox"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageButton
+                    android:id="@+id/backBtnFav"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:elevation="2dp"
+                    android:rotation="180"
+                    android:src="@drawable/ic_arrow_back_whit"
+                    app:tint="?attr/colorOnSecondaryContainer"
+                    tools:ignore="PrivateResource" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/favoriteSetTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="70dp"
+                    android:alpha="0.9"
+                    android:gravity="center"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/favorite_settings_title"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    tools:ignore="PrivateResource" />
+            </FrameLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
