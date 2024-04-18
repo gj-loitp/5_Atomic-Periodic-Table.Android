@@ -6,8 +6,6 @@ import android.widget.Toast
 //TODO firebase
 //TODO ad applovin
 
-//TODO keystore
-
 //done
 //rate app
 //more app
@@ -17,6 +15,7 @@ import android.widget.Toast
 //leak canary
 //ic launcher
 //splash screen xml
+//keystore
 
 //done
 class RoyApp : Application() {
