@@ -22,12 +22,10 @@ import android.view.animation.ScaleAnimation
 import android.view.inputmethod.InputMethodManager
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.mckimquyen.atomicPeriodicTable.BuildConfig
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.act.table.DictionaryAct
 import com.mckimquyen.atomicPeriodicTable.adt.ElementAdt
@@ -416,15 +414,7 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
             openBrowserPolicy()
         }
         btGithub.setOnClickListener {
-            if (BuildConfig.DEBUG) {
-                openUrlInBrowser("https://github.com/tplloi/Atomic-Periodic-Table.Android/tree/dev")
-            } else {
-                Toast.makeText(
-                    /* context = */ this,
-                    /* text = */ "This feature is only available in Debug mode",
-                    /* duration = */ Toast.LENGTH_SHORT
-                ).show()
-            }
+            openUrlInBrowser("https://github.com/JLindemann42/Atomic-Periodic-Table.Android")
         }
     }
 

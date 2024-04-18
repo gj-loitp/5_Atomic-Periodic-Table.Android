@@ -8,13 +8,16 @@ import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.BuildConfig
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.act.BaseAct
+import com.mckimquyen.atomicPeriodicTable.ext.openUrlInBrowser
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
+import kotlinx.android.synthetic.main.a_info.backBtn
+import kotlinx.android.synthetic.main.a_info.btGithub
+import kotlinx.android.synthetic.main.a_info.btGithubForked
 import kotlinx.android.synthetic.main.a_info.commonTitleBackInfo
 import kotlinx.android.synthetic.main.a_info.imageView3
 import kotlinx.android.synthetic.main.a_info.titleBoxInfo
 import kotlinx.android.synthetic.main.a_info.versionNumber
 import kotlinx.android.synthetic.main.a_info.viewInfo
-import kotlinx.android.synthetic.main.a_solubility.backBtn
 
 class AboutAct : BaseAct() {
 
@@ -54,6 +57,12 @@ class AboutAct : BaseAct() {
 
         backBtn.setOnClickListener {
             this.onBackPressed()
+        }
+        btGithubForked.setOnClickListener {
+            openUrlInBrowser("https://github.com/gj-loitp/Atomic-Periodic-Table.Android")
+        }
+        btGithub.setOnClickListener {
+            openUrlInBrowser("https://github.com/JLindemann42/Atomic-Periodic-Table.Android")
         }
     }
 

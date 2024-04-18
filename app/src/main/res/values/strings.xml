@@ -241,5 +241,7 @@
     <string name="policy">Policy</string>
     <string name="github">Github</string>
     <string name="specific_heat_text">specific_heat_text</string>
+    <string name="get_forked_source_code">Get forked Source code</string>
+    <string name="get_original_source_code">Get original Source code</string>
 
 </resources>
