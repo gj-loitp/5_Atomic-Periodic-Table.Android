@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activitie
+package com.mckimquyen.atomicPeriodicTable.act
 
 import android.os.Bundle
 import android.view.KeyEvent

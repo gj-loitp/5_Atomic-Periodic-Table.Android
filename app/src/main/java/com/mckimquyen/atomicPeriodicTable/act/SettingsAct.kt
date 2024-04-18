@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activitie
+package com.mckimquyen.atomicPeriodicTable.act
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -10,12 +10,12 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.TextView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.AboutAct
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.FavoritePageAct
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.LicensesAct
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.OrderAct
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.SubmitAct
-import com.mckimquyen.atomicPeriodicTable.activitie.setting.UnitAct
+import com.mckimquyen.atomicPeriodicTable.act.setting.AboutAct
+import com.mckimquyen.atomicPeriodicTable.act.setting.FavoritePageAct
+import com.mckimquyen.atomicPeriodicTable.act.setting.LicensesAct
+import com.mckimquyen.atomicPeriodicTable.act.setting.OrderAct
+import com.mckimquyen.atomicPeriodicTable.act.setting.SubmitAct
+import com.mckimquyen.atomicPeriodicTable.act.setting.UnitAct
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.setting.ExperimentalAct

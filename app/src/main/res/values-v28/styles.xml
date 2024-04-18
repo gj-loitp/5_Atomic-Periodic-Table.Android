@@ -71,16 +71,16 @@
 
     </style>
 
-    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/ic_background</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:navigationBarColor">@color/colorLightPrimaryDark</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@color/transparent</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+<!--    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">-->
+<!--        <item name="android:windowBackground">@drawable/ic_background</item>-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:navigationBarColor">@color/colorLightPrimaryDark</item>-->
+<!--        <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+<!--        <item name="android:statusBarColor">@color/transparent</item>-->
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+<!--        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>-->
 
-    </style>
+<!--    </style>-->
 
     <declare-styleable name="ShadowView">
         <attr name="shadowDx" format="dimension" />

@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.table.ElectrodeAct
+import com.mckimquyen.atomicPeriodicTable.act.table.ElectrodeAct
 import com.mckimquyen.atomicPeriodicTable.model.Series
 import java.util.Locale
 

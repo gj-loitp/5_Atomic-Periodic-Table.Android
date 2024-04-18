@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activitie.setting
+package com.mckimquyen.atomicPeriodicTable.act.setting
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
+import com.mckimquyen.atomicPeriodicTable.act.BaseAct
 import com.mckimquyen.atomicPeriodicTable.pref.TemperatureUnits
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_unit.backBtnUnit

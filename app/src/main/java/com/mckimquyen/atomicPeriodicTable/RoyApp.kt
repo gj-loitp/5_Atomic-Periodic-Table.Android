@@ -7,6 +7,7 @@ import android.widget.Toast
 //TODO ad applovin
 
 //TODO keystore
+//TODO splash screen xml
 
 //done
 //rate app

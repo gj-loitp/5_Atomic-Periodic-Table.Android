@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activitie.table
+package com.mckimquyen.atomicPeriodicTable.act.table
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
@@ -20,7 +20,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.text.isDigitsOnly
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.BaseAct
+import com.mckimquyen.atomicPeriodicTable.act.BaseAct
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref

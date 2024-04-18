@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activitie
+package com.mckimquyen.atomicPeriodicTable.act
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.table.ElectrodeAct
-import com.mckimquyen.atomicPeriodicTable.activitie.table.EquationsAct
-import com.mckimquyen.atomicPeriodicTable.activitie.table.IonAct
-import com.mckimquyen.atomicPeriodicTable.activitie.table.NuclideAct
-import com.mckimquyen.atomicPeriodicTable.activitie.table.PHAct
+import com.mckimquyen.atomicPeriodicTable.act.table.ElectrodeAct
+import com.mckimquyen.atomicPeriodicTable.act.table.EquationsAct
+import com.mckimquyen.atomicPeriodicTable.act.table.IonAct
+import com.mckimquyen.atomicPeriodicTable.act.table.NuclideAct
+import com.mckimquyen.atomicPeriodicTable.act.table.PHAct
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_solubility.backBtn
 import kotlinx.android.synthetic.main.a_submit.viewSub
