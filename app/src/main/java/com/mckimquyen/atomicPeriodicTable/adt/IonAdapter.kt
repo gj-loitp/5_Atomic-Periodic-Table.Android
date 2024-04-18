@@ -21,19 +21,19 @@ import java.util.Locale
 class IonAdapter(
     var list: ArrayList<Ion>,
     var clickListener: IonActivity,
-    val context: Context
+    val context: Context,
 ) :
     RecyclerView.Adapter<IonAdapter.ViewHolder>() {
     override fun onBindViewHolder(
         holder: ViewHolder,
-        position: Int
+        position: Int,
     ) {
         holder.initialize(item = list[position], action = clickListener, context = context)
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.view_row_ions_list, parent, false)
         return ViewHolder(v)
@@ -44,17 +44,17 @@ class IonAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val cardView = itemView.findViewById(R.id.ionCard) as FrameLayout
-        private val textViewName = itemView.findViewById(R.id.tvNameD) as TextView
-        private val textViewShort = itemView.findViewById(R.id.tvShortD) as TextView
-        private val textViewCharge = itemView.findViewById(R.id.tvEnd) as TextView
-        private val textViewVoltage = itemView.findViewById(R.id.tvIonization) as TextView
+        private val cardView: FrameLayout = itemView.findViewById(R.id.ionCard)
+        private val textViewName: TextView = itemView.findViewById(R.id.tvNameD)
+        private val textViewShort: TextView = itemView.findViewById(R.id.tvShortD)
+        private val textViewCharge: TextView = itemView.findViewById(R.id.tvEnd)
+        private val textViewVoltage: TextView = itemView.findViewById(R.id.tvIonization)
 
         @SuppressLint("SetTextI18n")
         fun initialize(
             item: Ion,
             action: OnIonClickListener,
-            context: Context
+            context: Context,
         ) {
             val jsonString: String?
             try {

@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
-import com.mckimquyen.atomicPeriodicTable.adt.EquationsAdapter
+import com.mckimquyen.atomicPeriodicTable.adt.EquationsAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Equation
 import com.mckimquyen.atomicPeriodicTable.model.EquationModel
@@ -29,9 +29,9 @@ import kotlinx.android.synthetic.main.view_equations_info.eTitle
 import kotlinx.android.synthetic.main.view_equations_info.lBackgroundE
 import java.util.Locale
 
-class EquationsActivity : BaseActivity(), EquationsAdapter.OnEquationClickListener {
+class EquationsActivity : BaseActivity(), EquationsAdt.OnEquationClickListener {
     private var equationList = ArrayList<Equation>()
-    var mAdapter = EquationsAdapter(list = equationList, clickListener = this, context = this)
+    var mAdapter = EquationsAdt(list = equationList, clickListener = this, context = this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -105,7 +105,7 @@ class EquationsActivity : BaseActivity(), EquationsAdapter.OnEquationClickListen
 
         EquationModel.getList(equation)
         equRecycler.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        val adapter = EquationsAdapter(equation, this, this)
+        val adapter = EquationsAdt(equation, this, this)
         equRecycler.adapter = adapter
 
         equation.sortWith { lhs, rhs ->
@@ -164,7 +164,7 @@ class EquationsActivity : BaseActivity(), EquationsAdapter.OnEquationClickListen
         }, 10)
         mAdapter.filterList(filteredList)
         mAdapter.notifyDataSetChanged()
-        recyclerView.adapter = EquationsAdapter(filteredList, this, this)
+        recyclerView.adapter = EquationsAdt(filteredList, this, this)
     }
 
     private fun clickSearch() {

@@ -16,24 +16,23 @@ import com.mckimquyen.atomicPeriodicTable.activities.tables.EquationsActivity
 import com.mckimquyen.atomicPeriodicTable.model.Equation
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 
-class EquationsAdapter(
+class EquationsAdt(
     var list: ArrayList<Equation>,
     var clickListener: EquationsActivity,
-    val context: Context
-) : RecyclerView.Adapter<EquationsAdapter.ViewHolder>() {
+    val context: Context,
+) : RecyclerView.Adapter<EquationsAdt.ViewHolder>() {
     override fun onBindViewHolder(
         holder: ViewHolder,
-        position: Int
+        position: Int,
     ) {
         holder.initialize(item = list[position], action = clickListener, context = context)
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): ViewHolder {
-        val v =
-            LayoutInflater.from(parent.context).inflate(R.layout.view_row_equations_item, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.view_row_equations_item, parent, false)
         return ViewHolder(v)
     }
 
@@ -43,9 +42,9 @@ class EquationsAdapter(
 
     @SuppressLint("SetTextI18n")
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val equTitle = itemView.findViewById(R.id.tvEqu) as TextView
-        private val equCategory = itemView.findViewById(R.id.tvIcEqu) as TextView
-        private val equImg = itemView.findViewById(R.id.ivIcEqView) as ImageView
+        private val equTitle: TextView = itemView.findViewById(R.id.tvEqu)
+        private val equCategory: TextView = itemView.findViewById(R.id.tvIcEqu)
+        private val equImg: ImageView = itemView.findViewById(R.id.ivIcEqView)
 
         fun initialize(item: Equation, action: OnEquationClickListener, context: Context) {
             equTitle.text = item.equationTitle
@@ -93,7 +92,8 @@ class EquationsAdapter(
             itemView.isClickable = true
             itemView.isFocusable = true
             itemView.setOnClickListener {
-                action.equationClickListener(item, adapterPosition)
+//                action.equationClickListener(item, adapterPosition)
+                action.equationClickListener(item, bindingAdapterPosition)
             }
         }
 
