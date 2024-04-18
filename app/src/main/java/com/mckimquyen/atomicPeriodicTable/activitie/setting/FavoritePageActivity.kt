@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activities.settings
+package com.mckimquyen.atomicPeriodicTable.activitie.setting
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.ViewTreeObserver
 import android.widget.CheckBox
 import androidx.core.content.ContextCompat
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicCovalentPref
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusCalPref
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicRadiusEmpPref

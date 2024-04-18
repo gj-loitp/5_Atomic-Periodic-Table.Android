@@ -29,7 +29,7 @@
         </receiver>
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activitie.MainActivity"
             android:exported="true"
             android:label="MAINACTIVITY"
             android:theme="@style/AppTheme"
@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SplashActivity"
+            android:name=".activitie.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -51,7 +51,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.ElementInfoActivity"
+            android:name=".activitie.ElementInfoActivity"
             android:exported="true"
             android:label="ELEMENTINFOACTIVITY"
             android:screenOrientation="portrait"
@@ -61,7 +61,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name=".activitie.SettingsActivity"
             android:exported="true"
             android:label="SETTINGS"
             android:screenOrientation="portrait"
@@ -71,7 +71,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.FavoritePageActivity"
+            android:name=".activitie.setting.FavoritePageActivity"
             android:exported="true"
             android:label="FAVORITEPAGE"
             android:screenOrientation="portrait"
@@ -81,7 +81,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.OrderActivity"
+            android:name=".activitie.setting.OrderActivity"
             android:exported="true"
             android:label="ORDERPAGE"
             android:screenOrientation="portrait"
@@ -91,7 +91,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.IonActivity"
+            android:name=".activitie.table.IonActivity"
             android:exported="true"
             android:label="IONPAGE"
             android:screenOrientation="portrait"
@@ -111,7 +111,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SolubilityActivity"
+            android:name=".activitie.SolubilityActivity"
             android:exported="true"
             android:label="SOLUBILITYPAGE"
             android:screenOrientation="portrait">
@@ -120,7 +120,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.CalculatorActivity"
+            android:name=".activitie.CalculatorActivity"
             android:exported="true"
             android:label="CALCULATORPAGE"
             android:screenOrientation="portrait"
@@ -130,7 +130,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.DictionaryActivity"
+            android:name=".activitie.table.DictionaryActivity"
             android:exported="true"
             android:label="DICTIONARYPAGE"
             android:screenOrientation="portrait"
@@ -140,7 +140,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.IsotopesActivityExperimental"
+            android:name=".activitie.IsotopesActivityExperimental"
             android:exported="true"
             android:label="ISOTPOESPAGEEXP"
             android:screenOrientation="portrait"
@@ -150,7 +150,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.AboutActivity"
+            android:name=".activitie.setting.AboutActivity"
             android:exported="true"
             android:label="ABOUTPAGE"
             android:screenOrientation="portrait"
@@ -160,7 +160,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.TableActivity"
+            android:name=".activitie.TableActivity"
             android:exported="true"
             android:label="TABLEPAGE"
             android:screenOrientation="portrait"
@@ -170,7 +170,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.ElectrodeActivity"
+            android:name=".activitie.table.ElectrodeActivity"
             android:exported="true"
             android:label="ELECTRODEPAGE"
             android:screenOrientation="portrait"
@@ -180,7 +180,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.SubmitActivity"
+            android:name=".activitie.setting.SubmitActivity"
             android:exported="true"
             android:label="SUBMITPAGE"
             android:screenOrientation="portrait"
@@ -191,7 +191,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.LicensesActivity"
+            android:name=".activitie.setting.LicensesActivity"
             android:exported="true"
             android:label="LICENSESPAGE"
             android:screenOrientation="portrait"
@@ -202,7 +202,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.EquationsActivity"
+            android:name=".activitie.table.EquationsActivity"
             android:exported="true"
             android:label="EQUATIONSACTIVITY"
             android:screenOrientation="portrait"
@@ -213,7 +213,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.PHActivity"
+            android:name=".activitie.table.PHActivity"
             android:exported="true"
             android:label="PHACTIVITY"
             android:screenOrientation="portrait"
@@ -224,7 +224,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.settings.UnitActivity"
+            android:name=".activitie.setting.UnitActivity"
             android:exported="true"
             android:label="activity_unit"
             android:screenOrientation="portrait"
@@ -235,7 +235,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.tables.NuclideActivity"
+            android:name=".activitie.table.NuclideActivity"
             android:exported="true"
             android:label="activity_nuclide"
             android:screenOrientation="portrait"

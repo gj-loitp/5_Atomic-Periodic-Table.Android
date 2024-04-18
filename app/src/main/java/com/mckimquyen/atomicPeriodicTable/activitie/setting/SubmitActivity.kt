@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activities.settings
+package com.mckimquyen.atomicPeriodicTable.activitie.setting
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import kotlinx.android.synthetic.main.a_submit.background

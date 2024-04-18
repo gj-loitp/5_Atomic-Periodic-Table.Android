@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activities.settings
+package com.mckimquyen.atomicPeriodicTable.activitie.setting
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.BuildConfig
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_info.commonTitleBackInfo
 import kotlinx.android.synthetic.main.a_info.imageView3

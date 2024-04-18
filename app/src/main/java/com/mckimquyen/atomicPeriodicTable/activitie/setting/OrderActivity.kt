@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activities.settings
+package com.mckimquyen.atomicPeriodicTable.activitie.setting
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ernestoyaquello.dragdropswiperecyclerview.listener.OnItemDragListener
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.adt.OrderAdt
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_order_settings_page.*

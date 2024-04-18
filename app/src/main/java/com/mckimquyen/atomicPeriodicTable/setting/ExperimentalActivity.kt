@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_experimental_settings_page.backBtnExp
 import kotlinx.android.synthetic.main.a_experimental_settings_page.commonTitleBackExp

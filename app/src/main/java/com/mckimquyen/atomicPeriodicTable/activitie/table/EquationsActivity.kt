@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activities.tables
+package com.mckimquyen.atomicPeriodicTable.activitie.table
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -15,7 +15,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.adt.EquationsAdt
 import com.mckimquyen.atomicPeriodicTable.anim.Anim
 import com.mckimquyen.atomicPeriodicTable.model.Equation

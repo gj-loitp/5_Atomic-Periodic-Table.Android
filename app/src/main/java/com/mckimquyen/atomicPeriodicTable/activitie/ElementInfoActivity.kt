@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activities
+package com.mckimquyen.atomicPeriodicTable.activitie
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -9,8 +9,8 @@ import android.os.Looper
 import android.view.View
 import android.view.ViewGroup
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.settings.FavoritePageActivity
-import com.mckimquyen.atomicPeriodicTable.activities.settings.SubmitActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.FavoritePageActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.setting.SubmitActivity
 import com.mckimquyen.atomicPeriodicTable.ext.InfoExt
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel

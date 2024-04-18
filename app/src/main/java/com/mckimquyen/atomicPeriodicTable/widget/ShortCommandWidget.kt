@@ -9,7 +9,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.MainActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.MainActivity
 
 /**
  * Implementation of App Widget functionality.

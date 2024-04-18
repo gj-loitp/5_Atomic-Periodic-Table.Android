@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activities
+package com.mckimquyen.atomicPeriodicTable.activitie
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -7,15 +7,31 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.tables.ElectrodeActivity
-import com.mckimquyen.atomicPeriodicTable.activities.tables.EquationsActivity
-import com.mckimquyen.atomicPeriodicTable.activities.tables.IonActivity
-import com.mckimquyen.atomicPeriodicTable.activities.tables.NuclideActivity
-import com.mckimquyen.atomicPeriodicTable.activities.tables.PHActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.ElectrodeActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.EquationsActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.IonActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.NuclideActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.PHActivity
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import kotlinx.android.synthetic.main.a_solubility.backBtn
 import kotlinx.android.synthetic.main.a_submit.viewSub
-import kotlinx.android.synthetic.main.a_tables.*
+import kotlinx.android.synthetic.main.a_tables.commonTitleBackTab
+import kotlinx.android.synthetic.main.a_tables.commonTitleTableColor
+import kotlinx.android.synthetic.main.a_tables.eleButton
+import kotlinx.android.synthetic.main.a_tables.eleTable
+import kotlinx.android.synthetic.main.a_tables.equButton
+import kotlinx.android.synthetic.main.a_tables.equTable
+import kotlinx.android.synthetic.main.a_tables.ionButton
+import kotlinx.android.synthetic.main.a_tables.ionTable
+import kotlinx.android.synthetic.main.a_tables.nucButton
+import kotlinx.android.synthetic.main.a_tables.nucTable
+import kotlinx.android.synthetic.main.a_tables.phButton
+import kotlinx.android.synthetic.main.a_tables.phTable
+import kotlinx.android.synthetic.main.a_tables.solButton
+import kotlinx.android.synthetic.main.a_tables.solTable
+import kotlinx.android.synthetic.main.a_tables.tableScroll
+import kotlinx.android.synthetic.main.a_tables.tablesTitle
+import kotlinx.android.synthetic.main.a_tables.tablesTitleDownstate
 
 class TableActivity : BaseActivity() {
 
@@ -47,8 +63,7 @@ class TableActivity : BaseActivity() {
         }
         setContentView(R.layout.a_tables)
 
-        viewSub.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        viewSub.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         //Title Controller
         commonTitleTableColor.visibility = View.INVISIBLE

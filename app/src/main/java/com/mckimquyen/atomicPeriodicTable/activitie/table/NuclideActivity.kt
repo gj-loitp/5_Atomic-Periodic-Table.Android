@@ -1,4 +1,4 @@
-package com.mckimquyen.atomicPeriodicTable.activities.tables
+package com.mckimquyen.atomicPeriodicTable.activitie.table
 
 import android.content.res.Configuration
 import android.graphics.Color
@@ -18,7 +18,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.core.text.isDigitsOnly
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.BaseActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.BaseActivity
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref

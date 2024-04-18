@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activities.tables.DictionaryActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.table.DictionaryActivity
 import com.mckimquyen.atomicPeriodicTable.model.Dictionary
 
 class DictionaryAdt(
