@@ -16,11 +16,32 @@ import com.mckimquyen.atomicPeriodicTable.activitie.setting.LicensesActivity
 import com.mckimquyen.atomicPeriodicTable.activitie.setting.OrderActivity
 import com.mckimquyen.atomicPeriodicTable.activitie.setting.SubmitActivity
 import com.mckimquyen.atomicPeriodicTable.activitie.setting.UnitActivity
-import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
+import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.setting.ExperimentalActivity
 import com.mckimquyen.atomicPeriodicTable.util.Utils
-import kotlinx.android.synthetic.main.a_settings.*
+import kotlinx.android.synthetic.main.a_settings.aboutSettings
+import kotlinx.android.synthetic.main.a_settings.advancedBox
+import kotlinx.android.synthetic.main.a_settings.backBtnSet
+import kotlinx.android.synthetic.main.a_settings.cacheLay
+import kotlinx.android.synthetic.main.a_settings.commonTitleBackSet
+import kotlinx.android.synthetic.main.a_settings.commonTitleSettingsColor
+import kotlinx.android.synthetic.main.a_settings.elementTitle
+import kotlinx.android.synthetic.main.a_settings.elementTitleDownstate
+import kotlinx.android.synthetic.main.a_settings.experimentalSettings
+import kotlinx.android.synthetic.main.a_settings.favoriteSettings
+import kotlinx.android.synthetic.main.a_settings.licensesSettings
+import kotlinx.android.synthetic.main.a_settings.offlineInternetSwitch
+import kotlinx.android.synthetic.main.a_settings.offlineSettings
+import kotlinx.android.synthetic.main.a_settings.orderSettings
+import kotlinx.android.synthetic.main.a_settings.personalizationBox
+import kotlinx.android.synthetic.main.a_settings.scrollSettings
+import kotlinx.android.synthetic.main.a_settings.submitSettings
+import kotlinx.android.synthetic.main.a_settings.themePanel
+import kotlinx.android.synthetic.main.a_settings.themesSettings
+import kotlinx.android.synthetic.main.a_settings.titleBoxSettings
+import kotlinx.android.synthetic.main.a_settings.unitSettings
+import kotlinx.android.synthetic.main.a_settings.view
 import kotlinx.android.synthetic.main.view_theme_panel.cancelBtn
 import kotlinx.android.synthetic.main.view_theme_panel.darkBtn
 import kotlinx.android.synthetic.main.view_theme_panel.lightBtn
@@ -32,7 +53,7 @@ import kotlin.math.log10
 import kotlin.math.pow
 import kotlin.system.exitProcess
 
-class SettingsActivity : BaseActivity() {
+class SettingsAct : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -113,8 +134,7 @@ class SettingsActivity : BaseActivity() {
             offlineInternetSwitch.toggle()
         }
 
-        view.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        view.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         //Title Controller
         commonTitleSettingsColor.visibility = View.INVISIBLE
@@ -166,7 +186,7 @@ class SettingsActivity : BaseActivity() {
         top: Int,
         bottom: Int,
         left: Int,
-        right: Int
+        right: Int,
     ) {
         val params = commonTitleBackSet.layoutParams as ViewGroup.LayoutParams
         params.height = top + resources.getDimensionPixelSize(R.dimen.title_bar)
@@ -189,6 +209,7 @@ class SettingsActivity : BaseActivity() {
 
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (themePanel.visibility == View.VISIBLE) {
             Utils.fadeOutAnim(themePanel, 300) //Start Close Animation
@@ -283,7 +304,7 @@ class SettingsActivity : BaseActivity() {
                 finish()
                 overridePendingTransition(0, 0)
                 startActivity(intent)
-                SettingsActivity().finish()
+                SettingsAct().finish()
                 exitProcess(0)
                 overridePendingTransition(0, 0)
             }, 302)
@@ -299,7 +320,7 @@ class SettingsActivity : BaseActivity() {
                 finish()
                 overridePendingTransition(0, 0)
                 startActivity(intent)
-                SettingsActivity().finish()
+                SettingsAct().finish()
                 exitProcess(0)
                 overridePendingTransition(0, 0)
             }, 302)
@@ -315,7 +336,7 @@ class SettingsActivity : BaseActivity() {
                 finish()
                 overridePendingTransition(0, 0)
                 startActivity(intent)
-                SettingsActivity().finish()
+                SettingsAct().finish()
                 exitProcess(0)
                 overridePendingTransition(0, 0)
             }, 302)

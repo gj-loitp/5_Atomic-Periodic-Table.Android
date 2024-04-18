@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
 @SuppressLint("CustomSplashScreen")
-class SplashActivity : AppCompatActivity() {
+class SplashAct : AppCompatActivity() {
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun setupViews() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, MainAct::class.java)
         startActivity(intent)
         finish()
     }

@@ -29,7 +29,7 @@
         </receiver>
 
         <activity
-            android:name=".activitie.MainActivity"
+            android:name=".activitie.MainAct"
             android:exported="true"
             android:label="MAINACTIVITY"
             android:theme="@style/AppTheme"
@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.SplashActivity"
+            android:name=".activitie.SplashAct"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -61,7 +61,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.SettingsActivity"
+            android:name=".activitie.SettingsAct"
             android:exported="true"
             android:label="SETTINGS"
             android:screenOrientation="portrait"
@@ -111,7 +111,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.SolubilityActivity"
+            android:name=".activitie.SolubilityAct"
             android:exported="true"
             android:label="SOLUBILITYPAGE"
             android:screenOrientation="portrait">
@@ -160,7 +160,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitie.TableActivity"
+            android:name=".activitie.TableAct"
             android:exported="true"
             android:label="TABLEPAGE"
             android:screenOrientation="portrait"

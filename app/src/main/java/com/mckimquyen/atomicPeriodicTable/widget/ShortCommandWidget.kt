@@ -9,7 +9,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
 import com.mckimquyen.atomicPeriodicTable.R
-import com.mckimquyen.atomicPeriodicTable.activitie.MainActivity
+import com.mckimquyen.atomicPeriodicTable.activitie.MainAct
 
 /**
  * Implementation of App Widget functionality.
@@ -36,7 +36,7 @@ class ShortCommandWidget : AppWidgetProvider() {
                 PendingIntent.getActivity(
                     /* context = */ context,
                     /* requestCode = */ 0,
-                    /* intent = */ Intent(context, MainActivity::class.java),
+                    /* intent = */ Intent(context, MainAct::class.java),
                     /* flags = */ PendingIntent.FLAG_IMMUTABLE
                 )
             )

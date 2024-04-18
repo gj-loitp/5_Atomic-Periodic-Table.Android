@@ -33,7 +33,7 @@ import kotlinx.android.synthetic.main.a_tables.tableScroll
 import kotlinx.android.synthetic.main.a_tables.tablesTitle
 import kotlinx.android.synthetic.main.a_tables.tablesTitleDownstate
 
-class TableActivity : BaseActivity() {
+class TableAct : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -118,11 +118,11 @@ class TableActivity : BaseActivity() {
 
     private fun tableListeners() {
         solTable.setOnClickListener {
-            val intent = Intent(this, SolubilityActivity::class.java)
+            val intent = Intent(this, SolubilityAct::class.java)
             startActivity(intent)
         }
         solButton.setOnClickListener {
-            val intent = Intent(this, SolubilityActivity::class.java)
+            val intent = Intent(this, SolubilityAct::class.java)
             startActivity(intent)
         }
         eleTable.setOnClickListener {

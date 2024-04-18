@@ -46,18 +46,63 @@ import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState
-import kotlinx.android.synthetic.main.a_main.*
-import kotlinx.android.synthetic.main.layout_search_layout.*
-import kotlinx.android.synthetic.main.view_filter_view.*
-import kotlinx.android.synthetic.main.view_hover_menu.*
-import kotlinx.android.synthetic.main.view_nav_menu_view.*
+import kotlinx.android.synthetic.main.a_main.commonTitleBackMain
+import kotlinx.android.synthetic.main.a_main.corner
+import kotlinx.android.synthetic.main.a_main.hoverBackground
+import kotlinx.android.synthetic.main.a_main.hoverMenuInclude
+import kotlinx.android.synthetic.main.a_main.leftBar
+import kotlinx.android.synthetic.main.a_main.menuBtn
+import kotlinx.android.synthetic.main.a_main.moreBtn
+import kotlinx.android.synthetic.main.a_main.navBackground
+import kotlinx.android.synthetic.main.a_main.navBarMain
+import kotlinx.android.synthetic.main.a_main.navContent
+import kotlinx.android.synthetic.main.a_main.navMenuInclude
+import kotlinx.android.synthetic.main.a_main.scrollLin
+import kotlinx.android.synthetic.main.a_main.scrollView
+import kotlinx.android.synthetic.main.a_main.searchBox
+import kotlinx.android.synthetic.main.a_main.searchMenuInclude
+import kotlinx.android.synthetic.main.a_main.settingsBtn
+import kotlinx.android.synthetic.main.a_main.topBar
+import kotlinx.android.synthetic.main.a_main.view_main
+import kotlinx.android.synthetic.main.layout_search_layout.background
+import kotlinx.android.synthetic.main.layout_search_layout.btFilterBtn
+import kotlinx.android.synthetic.main.layout_search_layout.closeElementSearch
+import kotlinx.android.synthetic.main.layout_search_layout.commonTitleBackSearch
+import kotlinx.android.synthetic.main.layout_search_layout.editElement
+import kotlinx.android.synthetic.main.layout_search_layout.emptySearchBox
+import kotlinx.android.synthetic.main.layout_search_layout.filterBox
+import kotlinx.android.synthetic.main.layout_search_layout.rvElement
+import kotlinx.android.synthetic.main.view_filter_view.alphabetBtn
+import kotlinx.android.synthetic.main.view_filter_view.electroBtn
+import kotlinx.android.synthetic.main.view_filter_view.elmtNumbBtn2
+import kotlinx.android.synthetic.main.view_hover_menu.atomicWeightBtn
+import kotlinx.android.synthetic.main.view_hover_menu.boilingBtn
+import kotlinx.android.synthetic.main.view_hover_menu.btRandomBtn
+import kotlinx.android.synthetic.main.view_hover_menu.hElectronegativityBtn
+import kotlinx.android.synthetic.main.view_hover_menu.hFusionBtn
+import kotlinx.android.synthetic.main.view_hover_menu.hGroupBtn
+import kotlinx.android.synthetic.main.view_hover_menu.hNameBtn
+import kotlinx.android.synthetic.main.view_hover_menu.hPhaseBtn
+import kotlinx.android.synthetic.main.view_hover_menu.hSpecificBtn
+import kotlinx.android.synthetic.main.view_hover_menu.hVaporizatonBtn
+import kotlinx.android.synthetic.main.view_hover_menu.hYearBtn
+import kotlinx.android.synthetic.main.view_hover_menu.meltingPoint
+import kotlinx.android.synthetic.main.view_nav_menu_view.btGithub
+import kotlinx.android.synthetic.main.view_nav_menu_view.btMore
+import kotlinx.android.synthetic.main.view_nav_menu_view.btPolicy
+import kotlinx.android.synthetic.main.view_nav_menu_view.btRate
+import kotlinx.android.synthetic.main.view_nav_menu_view.btShare
+import kotlinx.android.synthetic.main.view_nav_menu_view.dictionaryBtn
+import kotlinx.android.synthetic.main.view_nav_menu_view.isotopesBtn
+import kotlinx.android.synthetic.main.view_nav_menu_view.navLin
+import kotlinx.android.synthetic.main.view_nav_menu_view.slidingLayout
+import kotlinx.android.synthetic.main.view_nav_menu_view.solubilityBtn
 import org.deejdev.twowaynestedscrollview.TwoWayNestedScrollView
 import java.util.Locale
 
-class MainActivity : TableExt(), ElementAdt.OnElementClickListener2 {
+class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
     private var elementList = ArrayList<Element>()
-    private var mAdapter =
-        ElementAdt(elementList = elementList, clickListener = this, con = this)
+    private var mAdapter = ElementAdt(elementList = elementList, clickListener = this, con = this)
 
     private var mScale = 1f
     private lateinit var mScaleDetector: ScaleGestureDetector
@@ -121,8 +166,7 @@ class MainActivity : TableExt(), ElementAdt.OnElementClickListener2 {
         moreBtn.setOnClickListener { openHover() }
         hoverBackground.setOnClickListener { closeHover() }
         btRandomBtn.setOnClickListener { getRandomItem() }
-        view_main.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        view_main.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         val handler = android.os.Handler(Looper.getMainLooper())
         handler.postDelayed({
@@ -292,6 +336,7 @@ class MainActivity : TableExt(), ElementAdt.OnElementClickListener2 {
         startActivity(intent)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (navBackground.visibility == View.VISIBLE) {
             slidingLayout.panelState = PanelState.COLLAPSED
@@ -397,7 +442,7 @@ class MainActivity : TableExt(), ElementAdt.OnElementClickListener2 {
             Utils.fadeOutAnim(navBackground, 100)
         }
         solubilityBtn.setOnClickListener {
-            val intent = Intent(this, TableActivity::class.java)
+            val intent = Intent(this, TableAct::class.java)
             startActivity(intent)
         }
         isotopesBtn.setOnClickListener {
@@ -448,11 +493,12 @@ class MainActivity : TableExt(), ElementAdt.OnElementClickListener2 {
 
     private fun setupNavListeners() {
         settingsBtn.setOnClickListener {
-            val intent = Intent(this, SettingsActivity::class.java)
+            val intent = Intent(this, SettingsAct::class.java)
             startActivity(intent)
         }
     }
 
+    @SuppressLint("DiscouragedApi")
     private fun setOnCLickListenerSetups(list: ArrayList<Element>) {
         for (item in list) {
             val name = item.element
