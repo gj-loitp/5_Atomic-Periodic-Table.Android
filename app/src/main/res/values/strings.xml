@@ -243,5 +243,7 @@
     <string name="specific_heat_text">specific_heat_text</string>
     <string name="get_forked_source_code"><u>Get forked Source code</u></string>
     <string name="get_original_source_code"><u>Get original Source code</u></string>
+    <string name="_20_tester_for_closed_testing">20 tester for closed testing</string>
+    <string name="become_a_tester">Become a tester</string>
 
 </resources>

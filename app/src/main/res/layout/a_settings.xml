@@ -728,6 +728,76 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/github20TesterSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="?attr/backgroundColor"
+                    android:clickable="true"
+                    android:elevation="0dp"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_d_ripple">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/github20TesterLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/backgroundColor"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/github20TesterSettingsIcon"
+                            android:layout_width="56dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:background="?attr/backgroundColor"
+                            android:backgroundTint="?attr/backgroundColor"
+                            android:padding="10dp"
+                            app:srcCompat="@drawable/baseline_playlist_add_check_circle_24"
+                            app:tint="?attr/colorOnBackground" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/github20TesterTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="4dp"
+                                android:text="@string/become_a_tester"
+                                android:textColor="?attr/colorOnBackground"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/github20TesterContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:alpha="0.5"
+                                android:paddingEnd="18dp"
+                                android:text="@string/_20_tester_for_closed_testing"
+                                android:textColor="?attr/colorOnBackground"
+                                android:textSize="12sp"
+                                tools:ignore="RtlSymmetry" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:backgroundTint="?attr/backgroundColor"
+                        android:visibility="invisible"
+                        tools:ignore="TooManyViews" />
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:id="@+id/experimentalSettings"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"

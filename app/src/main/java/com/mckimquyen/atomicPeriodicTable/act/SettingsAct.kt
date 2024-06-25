@@ -17,6 +17,7 @@ import com.mckimquyen.atomicPeriodicTable.act.setting.LicensesAct
 import com.mckimquyen.atomicPeriodicTable.act.setting.OrderAct
 import com.mckimquyen.atomicPeriodicTable.act.setting.SubmitAct
 import com.mckimquyen.atomicPeriodicTable.act.setting.UnitAct
+import com.mckimquyen.atomicPeriodicTable.ext.openUrlInBrowser
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.setting.ExperimentalAct
@@ -31,6 +32,7 @@ import kotlinx.android.synthetic.main.a_settings.elementTitle
 import kotlinx.android.synthetic.main.a_settings.elementTitleDownstate
 import kotlinx.android.synthetic.main.a_settings.experimentalSettings
 import kotlinx.android.synthetic.main.a_settings.favoriteSettings
+import kotlinx.android.synthetic.main.a_settings.github20TesterSettings
 import kotlinx.android.synthetic.main.a_settings.licensesSettings
 import kotlinx.android.synthetic.main.a_settings.offlineInternetSwitch
 import kotlinx.android.synthetic.main.a_settings.offlineSettings
@@ -165,6 +167,9 @@ class SettingsAct : BaseAct() {
         aboutSettings.setOnClickListener {
             val intent = Intent(this, AboutAct::class.java)
             startActivity(intent)
+        }
+        github20TesterSettings.setOnClickListener {
+            openUrlInBrowser("https://github.com/gj-loitp/20-TESTER-FOR-CLOSED-TESTING/tree/main")
         }
         backBtnSetting.setOnClickListener {
             Log.d("roy93~", "onBackPressed")

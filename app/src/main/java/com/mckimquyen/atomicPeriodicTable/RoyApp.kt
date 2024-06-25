@@ -16,6 +16,7 @@ import android.widget.Toast
 //ic launcher
 //splash screen xml
 //keystore
+//github 20 tester
 
 //done
 class RoyApp : Application() {
