@@ -4,17 +4,34 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.roy93group.science",
+  "applicationId": "com.mckimquyen.atomicPeriodicTable",
   "variantName": "productionRelease",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 20230506,
-      "versionName": "2023.05.06",
-      "outputFile": "com.roy93group.sciencerelease_2023.05.06_20230506.apk"
+      "versionCode": 20240623,
+      "versionName": "2024.06.23",
+      "outputFile": "com.mckimquyen.atomicPeriodicTablerelease_2024.06.23_20240623.apk"
     }
   ],
-  "elementType": "File"
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/com.mckimquyen.atomicPeriodicTablerelease_2024.06.23_20240623.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/com.mckimquyen.atomicPeriodicTablerelease_2024.06.23_20240623.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 23
 }
