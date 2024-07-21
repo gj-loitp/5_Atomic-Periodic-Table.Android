@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.TextView
+import com.applovin.mediation.ads.MaxAdView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.act.setting.AboutAct
 import com.mckimquyen.atomicPeriodicTable.act.setting.FavoritePageAct
@@ -22,6 +23,8 @@ import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.setting.ExperimentalAct
 import com.mckimquyen.atomicPeriodicTable.util.Utils
+import com.mckimquyen.atomicPeriodicTable.util.createAdBanner
+import com.mckimquyen.atomicPeriodicTable.util.destroyAdBanner
 import kotlinx.android.synthetic.main.a_settings.aboutSettings
 import kotlinx.android.synthetic.main.a_settings.advancedBox
 import kotlinx.android.synthetic.main.a_settings.backBtnSetting
@@ -32,6 +35,7 @@ import kotlinx.android.synthetic.main.a_settings.elementTitle
 import kotlinx.android.synthetic.main.a_settings.elementTitleDownstate
 import kotlinx.android.synthetic.main.a_settings.experimentalSettings
 import kotlinx.android.synthetic.main.a_settings.favoriteSettings
+import kotlinx.android.synthetic.main.a_settings.flAd
 import kotlinx.android.synthetic.main.a_settings.github20TesterSettings
 import kotlinx.android.synthetic.main.a_settings.licensesSettings
 import kotlinx.android.synthetic.main.a_settings.offlineInternetSwitch
@@ -58,9 +62,16 @@ import kotlin.system.exitProcess
 
 class SettingsAct : BaseAct() {
 
+    private var adView: MaxAdView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupViews()
+    }
+
+    override fun onDestroy() {
+        flAd.destroyAdBanner(adView)
+        super.onDestroy()
     }
 
     private fun setupViews() {
@@ -188,6 +199,12 @@ class SettingsAct : BaseAct() {
             val intent = Intent(this, UnitAct::class.java)
             startActivity(intent)
         }
+
+        adView = this.createAdBanner(
+            logTag = SettingsAct::class.simpleName,
+            viewGroup = flAd,
+            isAdaptiveBanner = true,
+        )
     }
 
     override fun onApplySystemInsets(

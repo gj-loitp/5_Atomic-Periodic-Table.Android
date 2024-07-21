@@ -422,6 +422,13 @@
                 android:background="?attr/colorOutline"
                 tools:ignore="PrivateResource" />
 
+            <FrameLayout
+                android:id="@+id/flAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:layout_marginBottom="8sp" />
+
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/advancedBox"
                 android:layout_width="match_parent"
