@@ -3,6 +3,8 @@ package com.mckimquyen.atomicPeriodicTable.util
 import android.app.Activity
 import android.content.Context
 import android.graphics.Color
+import android.util.Log.e
+import android.util.Log.i
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.Toast
@@ -150,7 +152,7 @@ fun Activity.createAdBanner(
         if (enableAdBanner) {
             ad.setBackgroundColor(bkgColor)
         } else {
-            ad.setBackgroundColor(getColor(R.color.red))
+            ad.setBackgroundColor(Color.TRANSPARENT)
         }
         viewGroup?.addView(adView)
         ad.loadAd()
