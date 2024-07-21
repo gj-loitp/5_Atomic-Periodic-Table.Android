@@ -180,6 +180,13 @@
                 android:textStyle="normal|normal"
                 tools:ignore="RtlSymmetry" />
 
+            <FrameLayout
+                android:id="@+id/flAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:layout_marginBottom="8sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

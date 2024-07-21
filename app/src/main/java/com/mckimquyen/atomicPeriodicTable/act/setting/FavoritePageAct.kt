@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.CheckBox
 import androidx.core.content.ContextCompat
+import com.applovin.mediation.ads.MaxAdView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.act.BaseAct
 import com.mckimquyen.atomicPeriodicTable.pref.AtomicCovalentPref
@@ -24,35 +25,22 @@ import com.mckimquyen.atomicPeriodicTable.pref.MeltingPref
 import com.mckimquyen.atomicPeriodicTable.pref.SpecificHeatPref
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.pref.VaporizationHeatPref
-import kotlinx.android.synthetic.main.a_favorite_settings_page.atomicRadiusCalculatedCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.atomicRadiusEmpiricalCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.backBtnFav
-import kotlinx.android.synthetic.main.a_favorite_settings_page.boilingCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.celsiusBtn
-import kotlinx.android.synthetic.main.a_favorite_settings_page.commonTitleBackFav
-import kotlinx.android.synthetic.main.a_favorite_settings_page.commonTitleBackFavColor
-import kotlinx.android.synthetic.main.a_favorite_settings_page.covalentRadiusCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.densityCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.electronegativityCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.fahrenheitbtn
-import kotlinx.android.synthetic.main.a_favorite_settings_page.favSetScroll
-import kotlinx.android.synthetic.main.a_favorite_settings_page.favoriteSetTitle
-import kotlinx.android.synthetic.main.a_favorite_settings_page.favoriteSetTitleDownstate
-import kotlinx.android.synthetic.main.a_favorite_settings_page.fusionHeatCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.kelvinBtn
-import kotlinx.android.synthetic.main.a_favorite_settings_page.meltingCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.molarMassCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.phaseCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.specificHeatCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.vanDerWaalsRadiusCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.vaporizationHeatCheck
-import kotlinx.android.synthetic.main.a_favorite_settings_page.viewf
+import com.mckimquyen.atomicPeriodicTable.util.createAdBanner
+import com.mckimquyen.atomicPeriodicTable.util.destroyAdBanner
+import kotlinx.android.synthetic.main.a_favorite_settings_page.*
 
 class FavoritePageAct : BaseAct() {
+
+    private var adView: MaxAdView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupViews()
+    }
+
+    override fun onDestroy() {
+        flAd.destroyAdBanner(adView)
+        super.onDestroy()
     }
 
     private fun setupViews() {
@@ -255,6 +243,12 @@ class FavoritePageAct : BaseAct() {
         backBtnFav.setOnClickListener {
             this.onBackPressed()
         }
+
+        adView = this.createAdBanner(
+            logTag = FavoritePageAct::class.simpleName,
+            viewGroup = flAd,
+            isAdaptiveBanner = true,
+        )
     }
 
     override fun onApplySystemInsets(top: Int, bottom: Int, left: Int, right: Int) {
