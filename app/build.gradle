@@ -9,8 +9,8 @@ android {
         applicationId "com.mckimquyen.atomicPeriodicTable"
         minSdkVersion 23
         targetSdkVersion 34
-        versionCode 20240623
-        versionName "2024.06.23"
+        versionCode 20240721
+        versionName "2024.07.21"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
