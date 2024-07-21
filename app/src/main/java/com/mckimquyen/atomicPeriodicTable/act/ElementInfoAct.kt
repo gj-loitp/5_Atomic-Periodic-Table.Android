@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.view.ViewGroup
+import com.applovin.mediation.ads.MaxAdView
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.act.setting.FavoritePageAct
 import com.mckimquyen.atomicPeriodicTable.act.setting.SubmitAct
@@ -18,10 +19,13 @@ import com.mckimquyen.atomicPeriodicTable.pref.ElementSendAndLoad
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.util.Utils
+import com.mckimquyen.atomicPeriodicTable.util.createAdBanner
+import com.mckimquyen.atomicPeriodicTable.util.destroyAdBanner
 import kotlinx.android.synthetic.main.a_element_info.backBtn
 import kotlinx.android.synthetic.main.a_element_info.commonTitleBack
 import kotlinx.android.synthetic.main.a_element_info.detailEmission
 import kotlinx.android.synthetic.main.a_element_info.detailEmissionBackground
+import kotlinx.android.synthetic.main.a_element_info.flAdRoy
 import kotlinx.android.synthetic.main.a_element_info.frame
 import kotlinx.android.synthetic.main.a_element_info.iBtn
 import kotlinx.android.synthetic.main.a_element_info.nextBtn
@@ -46,10 +50,17 @@ import java.io.InputStream
 
 class ElementInfoAct : InfoExt() {
 
+    private var adView: MaxAdView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setupViews()
+    }
+
+    override fun onDestroy() {
+        flAdRoy.destroyAdBanner(adView)
+        super.onDestroy()
     }
 
     private fun setupViews() {
@@ -98,6 +109,12 @@ class ElementInfoAct : InfoExt() {
             val intent = Intent(this, SubmitAct::class.java)
             startActivity(intent)
         }
+
+        adView = this.createAdBanner(
+            logTag = ElementInfoAct::class.simpleName,
+            viewGroup = flAdRoy,
+            isAdaptiveBanner = true,
+        )
     }
 
     @Deprecated("Deprecated in Java")
