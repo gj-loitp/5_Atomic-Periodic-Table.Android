@@ -18,7 +18,7 @@ import com.mckimquyen.atomicPeriodicTable.act.setting.LicensesAct
 import com.mckimquyen.atomicPeriodicTable.act.setting.OrderAct
 import com.mckimquyen.atomicPeriodicTable.act.setting.SubmitAct
 import com.mckimquyen.atomicPeriodicTable.act.setting.UnitAct
-import com.mckimquyen.atomicPeriodicTable.ext.openUrlInBrowser
+import com.mckimquyen.atomicPeriodicTable.ext.rateApp
 import com.mckimquyen.atomicPeriodicTable.pref.OfflinePreference
 import com.mckimquyen.atomicPeriodicTable.pref.ThemePref
 import com.mckimquyen.atomicPeriodicTable.setting.ExperimentalAct
@@ -180,7 +180,8 @@ class SettingsAct : BaseAct() {
             startActivity(intent)
         }
         github20TesterSettings.setOnClickListener {
-            openUrlInBrowser("https://github.com/gj-loitp/20-TESTER-FOR-CLOSED-TESTING/tree/main")
+            rateApp("com.mckimquyen.bemytester")
+//            openUrlInBrowser("https://github.com/gj-loitp/20-TESTER-FOR-CLOSED-TESTING/tree/main")
         }
         backBtnSetting.setOnClickListener {
             Log.d("roy93~", "onBackPressed")
