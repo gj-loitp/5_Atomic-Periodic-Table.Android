@@ -9,8 +9,8 @@ android {
         applicationId "com.mckimquyen.atomicPeriodicTable"
         minSdkVersion 23
         targetSdkVersion 34
-        versionCode 20240721
-        versionName "2024.07.21"
+        versionCode 20241005
+        versionName "2024.10.05"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -116,10 +116,10 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.11'
     implementation 'com.github.ar-android:AndroidSvgLoader:1.0.2'
-    implementation 'com.chauthai.overscroll:overscroll-bouncy:0.1.1'
+//    implementation 'com.chauthai.overscroll:overscroll-bouncy:0.1.1'
     implementation 'com.sothree.slidinguppanel:library:3.4.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.beust:klaxon:5.0.1'
+//    implementation 'com.beust:klaxon:5.0.1'
     implementation 'com.github.mmin18:realtimeblurview:1.2.1'
     implementation 'com.google.android.material:material:1.9.0'//migrate later
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
