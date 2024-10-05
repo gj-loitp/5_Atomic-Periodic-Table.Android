@@ -18,6 +18,7 @@ import com.mckimquyen.atomicPeriodicTable.util.setupApplovinAd
 //keystore
 //github 20 tester
 //ad applovin
+//font scale
 
 //done
 class RoyApp : Application() {

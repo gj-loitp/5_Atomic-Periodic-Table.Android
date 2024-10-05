@@ -1,5 +1,7 @@
 package com.mckimquyen.atomicPeriodicTable.act
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.KeyEvent
 import android.widget.Toast
@@ -14,6 +16,13 @@ import org.json.JSONObject
 import java.io.InputStream
 
 class CalculatorAct : AppCompatActivity() {
+
+    override fun attachBaseContext(context: Context) {
+        val override = Configuration(context.resources.configuration)
+        override.fontScale = 1.0f
+        applyOverrideConfiguration(override)
+        super.attachBaseContext(context)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,8 +1,10 @@
 package com.mckimquyen.atomicPeriodicTable.ext
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.net.Uri
 import android.text.TextUtils
 import android.util.Log
@@ -149,6 +151,13 @@ abstract class InfoExt : AppCompatActivity(), View.OnApplyWindowInsetsListener {
     }
 
     private var systemUiConfigured = false
+
+    override fun attachBaseContext(context: Context) {
+        val override = Configuration(context.resources.configuration)
+        override.fontScale = 1.0f
+        applyOverrideConfiguration(override)
+        super.attachBaseContext(context)
+    }
 
     override fun onStart() {
         super.onStart()

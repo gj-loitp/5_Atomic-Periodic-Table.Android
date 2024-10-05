@@ -41,8 +41,8 @@ import java.io.InputStream
 class NuclideAct : BaseAct() {
     private val elementLists = ArrayList<Element>()
     var mScale = 1f
-    lateinit var mScaleDetector: ScaleGestureDetector
-    lateinit var gestureDetector: GestureDetector
+    private lateinit var mScaleDetector: ScaleGestureDetector
+    private lateinit var gestureDetector: GestureDetector
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

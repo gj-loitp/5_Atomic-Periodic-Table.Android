@@ -1,5 +1,7 @@
 package com.mckimquyen.atomicPeriodicTable.act
 
+import android.content.Context
+import android.content.res.Configuration
 import android.view.View
 import android.view.WindowInsets
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +12,13 @@ abstract class BaseAct : AppCompatActivity(), View.OnApplyWindowInsetsListener {
     }
 
     private var systemUiConfigured = false
+
+    override fun attachBaseContext(context: Context) {
+        val override = Configuration(context.resources.configuration)
+        override.fontScale = 1.0f
+        applyOverrideConfiguration(override)
+        super.attachBaseContext(context)
+    }
 
     override fun onStart() {
         super.onStart()

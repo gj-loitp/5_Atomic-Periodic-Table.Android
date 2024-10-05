@@ -113,6 +113,13 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
 
     private var interstitialAd: MaxInterstitialAd? = null
 
+    override fun attachBaseContext(context: Context) {
+        val override = Configuration(context.resources.configuration)
+        override.fontScale = 1.0f
+        applyOverrideConfiguration(override)
+        super.attachBaseContext(context)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupViews()
