@@ -6,10 +6,13 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.net.Uri
+import android.os.Build
 import android.text.TextUtils
 import android.util.Log
+import android.view.Display
 import android.view.View
 import android.view.WindowInsets
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.browser.customtabs.CustomTabsIntent
@@ -158,6 +161,7 @@ abstract class InfoExt : AppCompatActivity(), View.OnApplyWindowInsetsListener {
         applyOverrideConfiguration(override)
         super.attachBaseContext(context)
     }
+
 
     override fun onStart() {
         super.onStart()
@@ -681,6 +685,36 @@ abstract class InfoExt : AppCompatActivity(), View.OnApplyWindowInsetsListener {
         }
         if (vaporizationHeatValue == 0) {
             vaporizationHeatLay.visibility = View.GONE
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            enableAdaptiveRefreshRate()
+        }
+    }
+
+    private fun enableAdaptiveRefreshRate() {
+        val wm = getSystemService(WINDOW_SERVICE) as WindowManager
+        val display: Display? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            display // Sử dụng API mới
+        } else {
+            @Suppress("DEPRECATION")
+            wm.defaultDisplay // Fallback cho API thấp hơn
+        }
+
+
+        if (display != null) {
+            val supportedModes = display.supportedModes
+            val highestRefreshRateMode = supportedModes.maxByOrNull { it.refreshRate }
+
+            if (highestRefreshRateMode != null) {
+                window.attributes = window.attributes.apply {
+                    preferredDisplayModeId = highestRefreshRateMode.modeId
+                }
+                println("Adaptive refresh rate applied: ${highestRefreshRateMode.refreshRate} Hz")
+            }
         }
     }
 }

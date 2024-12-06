@@ -2,8 +2,11 @@ package com.mckimquyen.atomicPeriodicTable.act
 
 import android.content.Context
 import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
+import android.view.Display
 import android.view.KeyEvent
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mckimquyen.atomicPeriodicTable.R
@@ -81,6 +84,36 @@ class CalculatorAct : AppCompatActivity() {
                     Toast.makeText(this, final, Toast.LENGTH_SHORT).show()
                 }
 
+            }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            enableAdaptiveRefreshRate()
+        }
+    }
+
+    private fun enableAdaptiveRefreshRate() {
+        val wm = getSystemService(WINDOW_SERVICE) as WindowManager
+        val display: Display? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            display // Sử dụng API mới
+        } else {
+            @Suppress("DEPRECATION")
+            wm.defaultDisplay // Fallback cho API thấp hơn
+        }
+
+
+        if (display != null) {
+            val supportedModes = display.supportedModes
+            val highestRefreshRateMode = supportedModes.maxByOrNull { it.refreshRate }
+
+            if (highestRefreshRateMode != null) {
+                window.attributes = window.attributes.apply {
+                    preferredDisplayModeId = highestRefreshRateMode.modeId
+                }
+                println("Adaptive refresh rate applied: ${highestRefreshRateMode.refreshRate} Hz")
             }
         }
     }

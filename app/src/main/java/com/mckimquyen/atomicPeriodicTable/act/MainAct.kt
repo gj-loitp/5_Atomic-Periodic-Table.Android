@@ -10,6 +10,7 @@ import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.Display
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.MotionEvent
@@ -18,6 +19,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnScrollChangedListener
 import android.view.WindowInsets
+import android.view.WindowManager
 import android.view.animation.ScaleAnimation
 import android.view.inputmethod.InputMethodManager
 import android.widget.LinearLayout
@@ -779,6 +781,36 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
         } else {
             Toast.makeText(this, "Applovin show ad Inter in debug mode", Toast.LENGTH_SHORT).show()
             runnable?.run()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            enableAdaptiveRefreshRate()
+        }
+    }
+
+    private fun enableAdaptiveRefreshRate() {
+        val wm = getSystemService(WINDOW_SERVICE) as WindowManager
+        val display: Display? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            display // Sử dụng API mới
+        } else {
+            @Suppress("DEPRECATION")
+            wm.defaultDisplay // Fallback cho API thấp hơn
+        }
+
+
+        if (display != null) {
+            val supportedModes = display.supportedModes
+            val highestRefreshRateMode = supportedModes.maxByOrNull { it.refreshRate }
+
+            if (highestRefreshRateMode != null) {
+                window.attributes = window.attributes.apply {
+                    preferredDisplayModeId = highestRefreshRateMode.modeId
+                }
+                println("Adaptive refresh rate applied: ${highestRefreshRateMode.refreshRate} Hz")
+            }
         }
     }
 }
