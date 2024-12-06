@@ -7,6 +7,7 @@ import com.mckimquyen.atomicPeriodicTable.util.setupApplovinAd
 //TODO firebase
 
 //done
+//120hz
 //rate app
 //more app
 //share app
