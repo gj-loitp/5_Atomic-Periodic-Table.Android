@@ -4,7 +4,8 @@ import android.app.Application
 import android.widget.Toast
 import com.mckimquyen.atomicPeriodicTable.util.setupApplovinAd
 
-//TODO firebase
+//TODO roy93~ firebase
+//TODO roy93~ review in app
 
 //done
 //120hz
