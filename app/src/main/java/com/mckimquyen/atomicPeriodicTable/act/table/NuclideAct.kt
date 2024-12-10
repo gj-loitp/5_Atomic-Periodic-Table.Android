@@ -107,8 +107,8 @@ class NuclideAct : BaseAct() {
                     scaleAnimation.fillAfter = true
                     scaleAnimation.willChangeBounds()
                     scaleAnimation.willChangeTransformationMatrix()
-                    val layout = scrollNuc as LinearLayout
-                    layout.startAnimation(scaleAnimation)
+                    val layout = scrollNuc as LinearLayout?
+                    layout?.startAnimation(scaleAnimation)
 
                     return true
                 }
