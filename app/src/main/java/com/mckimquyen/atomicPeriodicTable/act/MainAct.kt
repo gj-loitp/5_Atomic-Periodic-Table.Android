@@ -42,6 +42,7 @@ import com.mckimquyen.atomicPeriodicTable.ext.moreApp
 import com.mckimquyen.atomicPeriodicTable.ext.openBrowserPolicy
 import com.mckimquyen.atomicPeriodicTable.ext.openUrlInBrowser
 import com.mckimquyen.atomicPeriodicTable.ext.rateApp
+import com.mckimquyen.atomicPeriodicTable.ext.rateAppInApp
 import com.mckimquyen.atomicPeriodicTable.ext.shareApp
 import com.mckimquyen.atomicPeriodicTable.model.Element
 import com.mckimquyen.atomicPeriodicTable.model.ElementModel
@@ -789,6 +790,7 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             enableAdaptiveRefreshRate()
         }
+        rateAppInApp(forceRateInApp = false)
     }
 
     private fun enableAdaptiveRefreshRate() {
