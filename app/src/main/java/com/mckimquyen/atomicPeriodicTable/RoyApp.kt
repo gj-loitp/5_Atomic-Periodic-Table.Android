@@ -7,7 +7,7 @@ import com.mckimquyen.atomicPeriodicTable.util.setupApplovinAd
 //TODO roy93~ firebase
 
 //done
-//review in app
+//review in app bingo
 //120hz
 //rate app
 //more app
