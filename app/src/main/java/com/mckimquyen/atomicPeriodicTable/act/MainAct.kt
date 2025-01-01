@@ -33,6 +33,7 @@ import com.applovin.mediation.MaxAd
 import com.applovin.mediation.MaxAdListener
 import com.applovin.mediation.MaxError
 import com.applovin.mediation.ads.MaxInterstitialAd
+import com.mckimquyen.atomicPeriodicTable.BuildConfig
 import com.mckimquyen.atomicPeriodicTable.R
 import com.mckimquyen.atomicPeriodicTable.act.table.DictionaryAct
 import com.mckimquyen.atomicPeriodicTable.adt.ElementAdt
@@ -772,7 +773,12 @@ class MainAct : TableExt(), ElementAdt.OnElementClickListener2 {
 //                            ad.showAd()
 //                            runnable?.run()
 //                        }
-                        ad.showAd()
+                        if (BuildConfig.DEBUG) {
+                            Toast.makeText(this@MainAct, "interstitialAd showAd SUCCESSFULLY", Toast.LENGTH_SHORT)
+                                .show()
+                        } else {
+                            ad.showAd()
+                        }
                         runnable?.run()
                     } else {
                         runnable?.run()
