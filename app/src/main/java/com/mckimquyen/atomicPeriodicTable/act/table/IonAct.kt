@@ -112,8 +112,8 @@ class IonAct : BaseAct(), IonAdapter.OnIonClickListener {
                     findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
                 val dot = "."
                 val space = " "
-                iText.text = "$i$dot$space$ionization"
-                iText.visibility = View.VISIBLE
+                iText?.text = "$i$dot$space$ionization"
+                iText?.visibility = View.VISIBLE
             }
             for (i in (item.count + 1)..30) {
                 val extText = i.toString()
@@ -121,7 +121,7 @@ class IonAct : BaseAct(), IonAdapter.OnIonClickListener {
                 val eView = "$name$extText"
                 val iText =
                     findViewById<TextView>(resources.getIdentifier(eView, "id", packageName))
-                iText.visibility = View.GONE
+                iText?.visibility = View.GONE
             }
         }
     }
