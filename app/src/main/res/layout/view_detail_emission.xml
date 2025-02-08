@@ -16,12 +16,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.github.mmin18.widget.RealtimeBlurView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.95"
-            app:realtimeBlurRadius="1dp"
-            app:realtimeOverlayColor="@color/colorDarkPrimary" />
+            android:alpha="0.5"
+            android:background="@color/colorDarkPrimary" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/closeEmissionBtn"

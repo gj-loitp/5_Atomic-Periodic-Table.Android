@@ -10,8 +10,8 @@ android {
         minSdkVersion 23
         //noinspection EditedTargetSdkVersion
         targetSdkVersion 35
-        versionCode 20250101
-        versionName "2025.01.01"
+        versionCode 20250208
+        versionName "2025.02.08"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -121,7 +121,7 @@ dependencies {
     implementation 'com.sothree.slidinguppanel:library:3.4.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
 //    implementation 'com.beust:klaxon:5.0.1'
-    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+//    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
     implementation 'com.google.android.material:material:1.9.0'//migrate later
 //    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
 //    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"//migrate later

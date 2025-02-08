@@ -2,8 +2,8 @@ buildscript {
     ext.support_lib_version = '30.0.3'
     repositories {
         google()
+        jcenter()
         gradlePluginPortal()
-        mavenCentral()
         mavenCentral()
     }
     dependencies {
@@ -15,6 +15,7 @@ buildscript {
 allprojects {
     repositories {
         google()
+        jcenter()
         gradlePluginPortal()
         mavenCentral()
         maven { url 'https://jitpack.io' }

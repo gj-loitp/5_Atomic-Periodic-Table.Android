@@ -161,8 +161,8 @@
                 android:id="@+id/flAdRoy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8sp"
-                android:layout_marginBottom="8sp" />
+                android:layout_marginTop="0sp"
+                android:layout_marginBottom="0sp" />
 
             <Space
                 android:id="@+id/offlineDiv"
@@ -239,33 +239,31 @@
 
     </ScrollView>
 
-    <com.github.mmin18.widget.RealtimeBlurView
+    <LinearLayout
         android:id="@+id/shellBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#A8000000"
         android:elevation="12dp"
+        android:orientation="horizontal"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:realtimeBlurRadius="4dp"
-        app:realtimeOverlayColor="#A80B0B0B" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.github.mmin18.widget.RealtimeBlurView
+    <LinearLayout
         android:id="@+id/detailEmissionBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#A8000000"
         android:elevation="12dp"
+        android:orientation="horizontal"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:realtimeBlurRadius="4dp"
-        app:realtimeOverlayColor="#A80B0B0B" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         android:id="@+id/shell"
