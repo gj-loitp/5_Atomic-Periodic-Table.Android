@@ -17,6 +17,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.content.ContextCompat
 import androidx.core.text.isDigitsOnly
 import com.mckimquyen.atomicPeriodicTable.R
@@ -107,7 +108,7 @@ class NuclideAct : BaseAct() {
                     scaleAnimation.fillAfter = true
                     scaleAnimation.willChangeBounds()
                     scaleAnimation.willChangeTransformationMatrix()
-                    val layout = scrollNuc as LinearLayout?
+                    val layout = scrollNuc as LinearLayoutCompat?
                     layout?.startAnimation(scaleAnimation)
 
                     return true
